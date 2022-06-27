@@ -1,0 +1,606 @@
+<!-- IT Resume for Larry Scott  1305 Corte De Los Vecinos, Walnut Creek, CA, 94598 cell: 925-765-2883 -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org" />
+
+  <title>Larry Scott Resume - August 2011</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+    body, p, tr, td, ul, li {color: #000000; font-family: Arial; font-size: 12px;}
+    table#t0  {
+      padding:0px;
+      border-spacing:0px;
+      border-collapse:collapse;
+      border-width:0px;
+      border: 2px #000060 solid;}
+  /*]]>*/
+  </style>
+</head>
+
+<body bgcolor="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
+  <table width="840px" bgcolor="#FFFFFF" align="center">
+    <tr>
+      <td>
+        <table id="t0" width="830px" bgcolor="#FFFFFF" align="center">
+          <tr>
+            <td>
+              <table width="780px" align="center">
+                <tr>
+                  <td>
+                    <table width="100%">
+                      <tr>
+                        <td colspan="2" align="center" bgcolor="#BBBBBB"><b>INFORMATION
+                        &nbsp;TECHNOLOGY &nbsp;RESUME &nbsp;FOR &nbsp;LARRY
+                        &nbsp;SCOTT</b></td>
+                      </tr>
+
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+
+                      <tr>
+                        <td align="left">Larry Scott<br />
+                        1305 Corte De Los Vecinos<br />
+                        Walnut Creek, California, 94598<br /></td>
+
+                        <td align="right">&nbsp;<br />
+                        Cell: 925-765-2883<br />
+                        EMail: larry@lldrs.com<br /></td>
+                      </tr>
+
+                      <tr>
+                        <td><br /></td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="2">
+                          <p align="justify">Information Technology
+                          professional with over 30 years of experience as
+                          a project manager, systems designer, business analyst, and
+                          software developer. My core strength is application development 
+                          using state of the art programming tools in large financial, 
+                          retail, distribution, and manufacturing environments. My career
+                          spans a wide variety of Fortune 500 companies. Since 1998, my
+                          primary focus has been browser based development of intranet
+                          applications in the banking, telecom, and semiconductor manufacturing
+                          industries. I have a proven track record of delivering complex
+                          projects on-time and within budget. I am very 'hands-on' and always 
+                          become one of the "go-to" guys on the team. I can provide an extensive
+                          list of excellent references.</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td><br /></td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="2" align="center" bgcolor="#BBBBBB"><b>TOOLS
+                        &nbsp;OF &nbsp;MY &nbsp;TRADE</b></td>
+                      </tr>
+
+                      <tr>
+                        <td><br /></td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="2">
+                          <table width="100%">
+                            <tr>
+                              <td><b>Languages:</b></td>
+
+                              <td>MS Visual Studio 2010, C#, ASP.NET, AJAX, Java J2EE
+                              (JSP/EJB/JNDI/RMI/JMS...), PHP, XML (DTD,XSLT), SOAP</td>
+                            </tr>
+
+                            <tr>
+                              <td><b>Platforms:</b></td>
+
+                              <td>Windows XP, Windows 7, Windows Server 2003 R2 SP2, RedHat Linux (Fedora 12)</td>
+                            </tr>
+
+                            <tr>
+                              <td><b>Databases:</b></td>
+
+                              <td>MS SQL Server 2005 (Management Studio, Profiler, Query
+                              Analyzer) ,Oracle 9i, MySQL, TOAD, Erwin</td>
+                            </tr>
+
+                            <tr>
+                              <td><b>App Servers:</b></td>
+
+                              <td>Microsoft IIS, Sun One / Glassfish, BEA Web Logic, Oracle 9iAS,
+                              Apache/Tomcat</td>
+                            </tr>
+
+                           <tr>
+                              <td><b>Mail Servers:</b></td>
+                              <td>Send Mail (SMTP), Postfix, Dovecot (POP3 and IMAP) installation and configuration</td>
+                            </tr>
+
+                            <tr>
+                              <td><b>Other Stuff:</b></td>
+
+                              <td>RSA Public/Private Key Cryptography, Server Security
+                              Certificates</td>
+                            </tr>
+
+                            <tr>
+                              <td><b>Tools:</b></td>
+
+                              <td>UML Modeling, MS Project, VISIO, Power Point, Remedy,
+                              Business Objects, Actuate, Crystal Reports, Informatica
+                              ETL, CVS</td>
+                            </tr>
+
+                            <tr>
+                              <td><b>Education:</b></td>
+
+                              <td>B.S. Computer Science, San Francisco State
+                              University.  &nbsp;&nbsp; California Real Estate Broker (lic 01498626)</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><br /></td>
+                </tr>
+
+                <tr>
+                  <td colspan="2" align="center" bgcolor="#BBBBBB"><b>PROFESSIONAL
+                  &nbsp;EXPERIENCE &nbsp;- &nbsp;APRIL 1986 &nbsp;TO
+                  &nbsp;PRESENT.</b></td>
+                </tr>
+
+                <tr>
+                  <td><br /></td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>Wells Fargo, Wachovia, World Savings</b><br />
+                    Employee / Application Systems Engineer 4 - June 2005 to Present<br />
+                    Application Engineer / Technical Lead responsible for numerous Information Technology
+                    projects within Wells Fargo's Mortgage Division including Real Estate Owned (REO) 
+                    portfolio, Real Estate Quality Assurance Department,
+                    Wells Fargo Mortgage Investor Services Department, Wachovia's Real Estate division, 
+                    and World Saving's Mortgage Incentive Compensation Department. 
+                    Technologies used: Visual Studio 2010 C#/ASP.Net V4.0/AJAX, 
+                    Microsoft IIS  V6, Microsoft SQL Server 2005, Java J2SE 4.0,  
+                    J2EE 1.4, JBoss 3.2 application servers, Oracle 9i, IBM DB2, and Microsoft SQL Server databases. .
+                    </p>
+
+                    <table width="96%" align="right">
+                      <tr>
+                        <td>
+                          Significant Accomplishments: (most recent to oldest)
+
+                          <ul>
+ 
+                           <li>Designed, developed, and implemented a browser based REO (Real Estate Owned) quality assurance
+                            & regulatory compliance tracking application used to audit residential real estate sold by Wells Fargo. 
+                            The system is currently used nationally (and India) by 1000+ Wells Fargo employees.
+                            At it's peak, the system was used to audit from a pool of 35,000 bank owned properties 
+                            valued at roughly 10 billion dollars (2010 max stats). 
+                            The system was evaluated and endorsed by Price Waterhouse in summer 2010. 
+                            The system was approved to satisfy Wells Fargo regulator compliance by the 
+                            US Department of the Treasury, Office of the Comptroller of the Currency (OCC) in 2010.</li>
+
+                            <li>Designed, developed, and implemented a browser based Investor Services
+                            maintenance application used by Wells Fargo's Mortgage Investor
+                            Services Department to track investor participation Wells Fargo's REO portfolio. 
+                            The system is used by 800+ Wells Fargo employees nationally.  </li>
+
+                            <li>Team member supporting implementation and integration of DRI (vendor) REO (Real Estate Owned)
+                            management application into World Saving's Mortgage REO Department.
+                            System interfaces built to pull mortgage transactions from
+                            World Saving's Mortgage Loan Origination Department, Fidelity Loan Servicing system, 
+                            World's Foreclosure Department, and PeopleSoft HR system. 
+                            </li>
+
+                            <li>Designed, built, and implemented Informatica ETL workflows to
+                            integrate Siebel's Motiva 'Incentive Compensation Management' system with PeopleSoft HR &amp;
+                            PeopleSoft GL and Fidelity CPI (Loan Servicing) systems.
+                            Commission calculations prepared semi-monthly for 5,500 brokers, sales reps, and  
+                            underwriters. Commissions posted to PeopleSoft Payroll system. </li>
+
+                            <li>Mentor junior staff in Java J2EE technologies and
+                            Microsoft C#, ASP.Net technologies.<br /></li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>Advanced Provisioning Inc.</b> (telecom service
+                    provisioning software)<br />
+                    Consultant, Technical Lead / Senior Software Engineer - May 2004 to
+                    May 2005<br />
+                    Advanced Provisioning was a telecom software vendor that developed automated
+                    telecom service activation software for telecom customer to activate 
+                    (or deactivate) telecom services via the web.  My job involved  
+                    installation of Sun's OSS/J (Operational Systems Support/Java) telecom
+                    service provisioning and activation software, then wrap the application 
+                    with a Java J2EE based customer self-service portal (that I designed and developed). 
+                    Worked with Sun Software Engineers in Palo Alto,
+                    France, and Switzerland to become Sun's first business partner to
+                    implement their telecom OSS/J package on Sun's J2EE Platform Edition Version 8
+                    application server.</p>
+
+                    <table width="96%" align="right">
+ 
+                      <tr>
+                        <td>
+                          Significant Accomplishments:
+
+                          <ul>
+                           <li>Developed UML "use case" diagrams and ERD diagrams (database schema) to model the telecom service activation process.<br /></li>
+
+                            <li>Build development, test, and production Java J2EE server environments.<br /></li>
+
+                            <li>Installed and configured Sun's OSS/J (Operational Systems Support/Java) telecom service activation package.<br /></li>
+ 
+                            <li>Designed and coded screens for customer self-service telecom portal in JSP & EJB.<br /></li>
+
+                            <li>Used Java JCA public key/private key cryptography for
+                            user sign-on validation.<br /></li>
+
+                            <li>Designed and coded EJB "session beans" for the "business
+                            logic" layer.<br /></li>
+
+                            <li>Designed and coded SOAP service to receive customer
+                            service activation requests from the web site.<br /></li>
+
+                            <li>Designed and coded JMS "message beans" to send customer
+                            service activation from the SOAP service to the OSS/J
+                            system.<br /></li>
+
+                            <li>Designed and coded EJB "entity beans" for the "data
+                            access layer".<br /></li>
+
+                            <li>Performed most of the DBA activity using Toad.<br /></li>
+
+                            <li>Used Java JCA "blowfish" cryptography to encrypt
+                            sensitive credit card information.<br /></li>
+
+                            <li>Worked with service provisioning team to integrate
+                            OSS/J system with Asterisk Linux PBX switch.<br /></li>
+
+                            <li>Participated in technical demonstrations of service
+                            activation portal with business partners and potential
+                            customers.<br /></li>
+
+                             <li>Prepared system documentation.<br /></li>
+
+                            <li>Project managed using MS Project.<br /></li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>Osram / Siemens</b><br />
+                    Consultant/ Technical Lead / Senior Software Engineer - October 2002
+                    to March 2005<br />
+                    OSRAM pioneered development of Organic LED displays and monitors. 
+                    I was a technical lead / software engineer responsible
+                    for the design, development, and implementation of software systems to stress
+                    test racks of OLED displays. Fifty displays would be placed in a rack
+                    which would be placed in an oven. My software would
+                    control oven temperature and stress test individual monitors by varying 
+                    display test patterns, operating voltage,
+                    and operating current. Performance data would be collected for each display 
+                    once a minute, 24 hours a day, 7 days a week, 365 days a year, until the
+                    display failed. Multiple ovens were run in parallel in a "clean-room"
+                    environment (requiring clean-room suits to be worn).</p>
+
+                    <table width="96%" align="right">
+                      <tr>
+                        <td>
+                          Significant Accomplishments:
+
+                          <ul>
+                            <li>Wrote NI LabView programs (in 'G' programming language) to
+                            control oven test racks in a 'cleanroom' lab environment.</li>
+
+                            <li>Wrote java JMS 'consumer' (on client PC) application to control oven 
+                            temperature and display parameters.</li>
+
+                           <li>Wrote java JMS 'producer' (on client PC) to send display performance data 
+                               to host management server. </li>
+
+                            <li>Wrote java JMS producer (on host server / management console) to issue oven commands to client PC.</li>
+
+                            <li>Wrote java JMS consumer' (on host server / management console) to receive performance data from oven controllers.</li>
+
+                            <li>Installed and configured Solaris, Java J2EE environment, MySQL, and Network Services on a Sun server</li>
+
+                            <li>Built Java J2EE (JSP/EJB) based management dashboard to
+                            remotely control test parameters for each oven, rack, and
+                            display.</li>
+
+                            <li>Designed MySQL database schema to record display stress test scenarios and capture JMS 
+                            performance data from each display.</li>
+
+                            <li>Built alarm notification system to send automated emails
+                            and pager alerts.</li>
+
+                            <li>Developed portal based reporting system producing html
+                            pages, excel spreadsheets, and 'Origin' graphics.</li>
+
+                            <li>Implemented Concurrent Versions Systems (CVS) source code
+                            versioning system.</li>
+
+                            <li>Mentored junior staff on software development
+                            technologies.</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>Ejasent Inc. / Sun Microsystems</b><br> 
+                    Consultant / Technical Lead / Senior Systems Engineer - September 2000 to June 2002<br>
+                    Technical Lead responsible for design, development, and
+                    implementation of J2EE based system to collect, rate, and invoice 
+                    server resource usage. Resource metric consisted of CPU usage,
+                    memory usage, hard disk usage, and network traffic. Resource metrics collected 
+                    from Solaris server farms running Ejasent modified Solaris kernel. 
+                    Resource data then rated and billed to Ejasent customers (Exodus and EDS).
+                    Systems developed using J2EE technologies on Windows 2000 desktops. 
+                    System deployed to production BEA Weblogic application servers 
+                    running on Sun Solaris application servers and Oracle 8i databases. 
+                    Ejasent was purchased by Veritas in January 2004.<br /></p>
+
+                    <table width="96%" align="right">
+                      <tr>
+                        <td>
+                          Significant Accomplishments:
+
+                          <ul>
+                            <li>Developed Use Case and State diagrams to model data
+                            collection, rating, billing, and financial systems
+                            interfaces using Rational Rose modeler.</li>
+
+                            <li>Reviewed models with systems engineering, sales and
+                            marketing, and finance groups.</li>
+
+                            <li>Developed database ERDs using Erwin.</li>
+
+                            <li>Built database schema using Erwin and Toad (table
+                            structures, column attributes, indexes, primary keys, foreign
+                            keys, triggers, and database constraints).</li>
+
+                            <li>Implemented Windows 2000 and Solaris Weblogic application
+                            servers with Oracle 8i databases using Type 4 JDBC
+                            drivers.</li>
+
+                            <li>Configured Weblogic connection pool sizes and Oracle
+                            database to maximize application and database
+                            through-put and performance.</li>
+
+                            <li>Designed, coded, and implemented Oracle Package based
+                            rating system with JSP/EJB dashboard to rate (assign cost and
+                            revenue) hardware and software usage metrics collected by the
+                            data collections module.</li>
+
+                            <li>Rated CPU usage, memory usage, disk usage, application
+                            usage based on SLA parameters.</li>
+
+                            <li>JSPs linked to Oracle Packages and procedures launched
+                            using java.sql package callable statements.</li>
+
+                            <li>Designed, coded, and implemented a J2EE based billing
+                            system.</li>
+
+                            <li>Wrote Oracle 8i 'packages' to post customer billing
+                            information to web portal.</li>
+
+                            <li>Used javax.mail package to automate daily customer
+                            statements.</li>
+
+                            <li>Developed SOAP interface for Exodus and EDS to pull encrypted end user billing data.</li>
+
+                            <li>Evaluated Quest Shareplex database replication tool to
+                            synchronize Oracle 8i databases.</li>
+
+                            <li>Modeled and implemented a temporary data replication
+                            process using Oracle redo logs, Java Messaging (JMS) and RMI
+                            applications.</li>
+
+                            <li>Participated in sales demonstrations and pilot projects
+                            with Sun, Charles Schwab, EDS, Unisys, and Exodus.</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>Pacific Gateway Exchange, Inc. (wholesale telecom)</b><br />
+                    Employee / Director IT / Senior Systems Engineer - May1996 to August 2000<br />
+                    Technical manager (staff of 25) responsible for design, development, and
+                    implementation of data collection and portal reporting systems
+                    supporting PGE's global telecom network. (PGE's telecom network 
+                    provided a large portion of the world's telecom bandwidth to Australia, 
+                    Philippines, Japan, Russia, England, Belgium, and Germany).
+                    All core back-office systems (data collection, rating, invoicing, portal
+                    reporting remittance, and CRM) were developed in-house by PGE for PGE
+                    and their service resellers (such as AT&T, Sprint, British Telecom, ....).
+                    Technologies used were: IBM AS400 / RPGIII / DB2-400, Borland C++, Microsoft's WinSock (IP sockets),
+                    Java J2EE,  Windows NT, Sun Solaris servers, BEA
+                    WebLogic application servers, and Oracle 8i databases.</p>
+
+                    <table width="96%" align="right">
+                      <tr>
+                        <td>
+                          Significant Accomplishments:
+
+                          <ul>
+                            <li>Designed and developed 'WinSock' connectivity from IBM PC to Nortel DMS 200 telecom switch.<br>
+                            (worked in Ottawa, Canada with Nortel engineers.  Code was packaged with Notel DMS 200 switch).</li>
+
+                            <li>Nortel DMS connectivity package migrated to AS400 and rewritten in IBM C.</li>
+
+                            <li>Socket based CDR collections deployed to numerous international Nortel telcom switches.</li>
+
+                            <li>Data collection system throughput often exceeded 100+
+                            million call records transactions  per day</li>
+
+                            <li>Designed and implemented customer &amp; vendor settlement
+                            systems in Borland Delphi &amp; IBM DB2.</li>
+
+                            <li>Designed, coded, and implemented Delphi / DB2 database
+                            fraud monitoring system.</li>
+
+                            <li>Managed development team construction of web based invoicing, statement, 
+                            credit card processing (First Data), and customer self-service provisioning portal.<br>
+
+                            (systems written using Java J2EE technologieson Solaris
+                            servers running BEA WebLogic application servers and Oracle
+                            8i databases).</li>
+
+                            <li>Designed, prototyped, and managed development of customer
+                            &amp; vendor trouble reporting and management system used in PGE's call
+                            center.</li>
+
+                            <li>Participated in customer sales presentations and vendor
+                            partnering development<br /></li>
+
+                            <li>Prepared numerous board of directors presentations and bank funding presentations.<br /></li>
+
+                            <li>Pacific Gateway was included in Business Week's Top 100
+                            IT Companies for 1998.</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>LifeScan Inc. (Johnson &amp; Johnson)</b><br />
+                    Consultant / Senior Systems Engineer - March 95 to May 96<br />
+                    Technical lead responsible supporting EDI sales and EDI remittance processing 
+                    of LifeScan's blood glucose meter to J&J warehouses & distributors.  
+                    Revamped EDI 850 (purchase order receipts) 
+                    EDI 810 (customer invoices), EDI 812 (invoice chargebacks), 
+                    and EDI 820 (invoice remittance processing) transaction sets.
+                    EDI maps built and deployed to Gentran translators running 
+                    on Sun Solaris servers. 
+                    Client/Server dashboard written to manage EDI processes. 
+                    All work performed in Borland Delphi and Oracle 7 PL SQL stored procedures & packages.</p><br>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>Apple Computer</b><br />
+                    Employee / Senior Systems Engineer - Dec 93 - March 95<br />
+                    Returned to Apple Computer as technical lead responsible for 
+                    implementation of Apple's EDI 850 (purchase order receipts), 
+                    EDI 856 (advance shipping notice),
+                    EDI 810 (invoicing), and 
+                    EDI 820 (remittance processing) transaction sets. 
+                    Applications written in RPG III and run on an IBM AS400
+                    with a DB2 database. Extract files sent to a VAX / Gentran translators.  
+ 
+                    Initiated EDI communication, negotiated EDI programming, 
+                    requirements, and successfully deployed
+                    EDI 850, 856, 810, 820, and 856 transaction 
+                    sets with CompUSA, Office Max, Office Depot, 
+                    KMart, Wards, Sears, and Target .<b> In 1994, my team was
+                    awarded Apple's annual 'Pat Hackett Quality Award' 
+                    for sucessfully automating the supply chain of Apples top 50 customers and resellers.</b> 
+                    The project was delivered 6 months ahead of schedule with minimal system or implementation issues. </p><br>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>The Solaris Group (Chevron / Monsanto Chemical)</b><br />
+                    Consultant / Technical Lead / Senior Programmer - Dec 91 to Dec 93<br />
+                    Technical Lead responsible for migrating components of 
+                    Chevron Chemical's "Ortho Retail" 
+                    MRP (manufacturing requirements planning) system and 
+                    DRP (distribution requirements planning) system to Monsanto Chemical.   
+                    Post migration responsibilities include implementing 
+                    EDI 850 (inbound purchase orders),
+                    EDI 810 (outbound invoices), and 
+                    EDI 820 (invoice remittance) 
+                    transaction sets with Walmart, Kmart, Home Depot, Lowes, and 
+                    other major retailers. EDI Systems written in RPG III and DB2 for IBM AS400
+                    and Premenos translator.  MRP and DRP systems work performed in C++ on IBM OS2 
+                    platforms running DB2 databases.
+                    Solaris used JD Edwards financial systems, JD Edwards MRP systems, and Manugistics DRP systems.  
+                    </p><br>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>Valent U.S.A. Corporation (Chevron / Sumitomo Chemical)</b><br />
+                    Employee / Technical Lead / Senior Programmer - April 88 to Dec 91<br />
+                    Technical Lead responsible for migration of Chevron Chemical's
+                    mainframe based "Ortho Wholesale" order processing and inventory systems to Sumitomo
+                    Chemical. Responsible for design, coding, and implementation of
+                    programs  to perform initial load from Chevron's MVS mainframe to  
+                    IBM AS400/DB2 running JD Edwards financial and DRP software
+ 
+                    <br><br>
+
+                    Post conversion responsibilities include design, coding, and deployment 
+                    of a national warehouse communications system to transmit new orders, 
+                    and print packing slips, bills of lading, and MSDS (material safety data sheets). 
+
+                    Additionally responsible for the design, coding, and implementation of a
+                    national 800 number "roll-over" dial-up network for the sales force to pull daliy 
+                    sales reports, inventory reports, and accounts receivables aging reports 
+                    to their laptops.  
+                    .</p><br>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <p align="justify"><b>Apple Computer</b><br />
+                    Consultant / Business Analyst / Senior Programmer - April 1986 - Nov 86<br />
+                    Contractor hired to support "The 90's Project" (the
+                    migration of Apple's AS400 / Pansophic RMS order processing environment to
+                    VAX / Tolas environment.  My responsibilities were to map Pansophic RMS 
+                    inventory data elements to corresponding Tolas inventory data 
+                    elements. Wrote AS400 RPG III programs to migrate warehouse inventories to Vax Tolas. 
+                    I have a funny tale to tell here!</p><br>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+

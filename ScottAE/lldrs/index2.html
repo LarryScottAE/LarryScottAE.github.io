@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head> 
+<title>LLDRS</title>
+<link rel="shortcut icon" href="./favicon.ico">
+<link href="./style.css" rel="stylesheet" type="text/css" />
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Author" content="Larry Scott">
+<META NAME="description" content="Truckee Designs, Electrical Engineering, Software Engineering, Web Development, Web Engineering">
+<META NAME="keywords" content="Truckee,Music, Programming, Electrical Engineering,Development,shopping cart,shopping cart software,cart,web programming,programming,IT consultant,java,jsp,ejb,mysql.NET,C#,C Sharp,Aspx,web services,Linux,Larry Scott, Linda Scott, Dan Scott, Rebecca Scott">
+<META NAME="organization" content="Truckee Designs, LLDRS">
+<META NAME="products" content="Software Engineering, Electrical Engineering, Web Engineering, Web Development">
+<META NAME="contact email" content="larry@lldrs.com">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ 
+
+<SCRIPT LANGUAGE="JavaScript">
+//<!--
+ 
+    function displayDate() {
+     var dt = new Date();
+ //  document.write(dt)
+     document.forms[0].time.value=dt.toLocaleString();  
+     return dt;
+    }
+
+    function displayStatusText(message) {
+          window.status=message 
+       // setfocus to userid field  
+       // document.forms[0].userid.focus() 
+     return
+     }
+ 
+    function showUser(user) {
+      //    document.forms[0].userid.value=user;
+     return
+     }
+ 
+    function getURLParam(strParamName)
+    { 
+    var strReturn = "";
+    var strHref = window.location.href;
+    if ( strHref.indexOf("?") > -1 ){
+        var strQueryString = strHref.substr(strHref.indexOf("?")).toLowerCase();
+        var aQueryString = strQueryString.split("&");
+        for ( var iParam = 0; iParam < aQueryString.length; iParam++ ){
+          if ( aQueryString[iParam].indexOf(strParamName + "=") > -1 ){
+            var aParam = aQueryString[iParam].split("=");
+            strReturn = aParam[1];
+            break;
+          }
+        }
+      }
+    return strReturn;
+    } 
+ 
+//-->
+</SCRIPT>
+</head>
+
+
+ 
+<!-- ============= -->
+ 
+<BODY bgcolor="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  onLoad="displayStatusText(getURLParam('status')),displayDate()" >
+<FORM method="POST" name="index" action="http://www.lldrs.com:8080/lldrs/index.jsp">    
+
+ 
+
+      <div id="header">
+      </div>
+ 
+      <div id="menu"> 
+      </div>
+ 
+      <div id="page">
+ 
+      <div id="page-top">
+
+      <!--  table 0-->
+      <center>    
+      <TABLE id=t1 border=0 cellspacing=0 cellpadding=0 bordercolor=#880000 align=center height=100 width=998> 
+      <td>
+
+         <!-- table 1-->
+         <table  width=100% bgcolor=#FFFFFF border=0 >
+             <TR> 
+             <TD valign=center width="15%" align=center> &nbsp;
+                 <IMG src="./images/software.jpeg" border=0>
+             </td> 
+ 
+             <TD valign=center width="65%" align=left>
+                <IMG src="./images/LLDRS_logo.jpg" border=0>
+                <!--This is for the google web crawler-->
+                <br>
+                <font size=1 color=#FFFFFF>
+                LLDRS Inc. 1305 Corte De Los Vecinos, Walnut Creek, CA. 94598  (Ph) 925-765-2883 
+                </font>
+             </td> 
+
+             <td width="20%"  valign=center align=right>
+                <br>
+                <table width=100% bgcolor=#FFFFFF border=0 >
+                <tr>
+                <td  align=left> 
+                <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+                User ID:
+                </td>
+                <td align=left> 
+                <INPUT id=inputI1 onfocus="showUser(getURLParam('userid'))" name=userid  size=16 maxlength=16> 
+                </td>
+                </tr>
+                <tr>
+                <td align=left> 
+                <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+                Password:
+                </td>
+                <td align=left>  
+                <INPUT id=inputI1 type=password name=password size=16 maxlength=16> 
+                </td>
+                </tr>
+                <tr>
+                <td>&nbsp;</td>
+                <td align=left> 
+                <INPUT id=submitG1 type=submit value='LOGIN' name=submitLogin
+                  onmouseover="this.style.backgroundColor='#006699'" 
+                  onmouseout="this.style.backgroundColor='#D19D00'"> 
+                </font>
+                </td>
+                </tr>
+                <tr>
+                <td>&nbsp;</td>
+                <td  align=left> 
+                <font style="font-size:8pt; color:#bbbbbb; font-family:Helvetica;">
+                <u>Lost Password</u>
+                </td>
+                </tr>
+                </table>  
+             </td> 
+
+
+             </TR>
+  
+             <tr>
+             <td colspan=5 align=center>
+             <HR width=98% size=2 align=center valign=top color=#000066>
+             </td>
+             </tr>
+ 
+         </table>
+         <!-- table 1-->
+ 
+         <br>
+ 
+
+         <center>
+         <!-- table 2-->
+         <table border=0 width=980px align=center >
+  
+         <tr>
+         <td width=200px  valign=top align=left>
+              
+           <br><br>
+
+           <INPUT id=submitG2 type=submit value=' HOME ' name=submitHome 
+                onmouseover="this.style.backgroundColor='#006699'" 
+                onmouseout="this.style.backgroundColor='#D19D00'" >
+                <!-- onClick="location.href ='http://lldrs.com'" --> 
+           <br><br>
+           <INPUT id=submitG2 type=submit value=' PRODUCTS ' name=submitProducts 
+                onmouseover="this.style.backgroundColor='#006699'" 
+                onmouseout="this.style.backgroundColor='#D19D00'" >
+                <!-- onClick="location.href ='http://lldrs.com:8080/lldrs/products.jsp'" -->
+          <br><br>
+           <INPUT id=submitG2 type=submit value=' SUPPORT ' name=submitSupport 
+                onmouseover="this.style.backgroundColor='#006699'" 
+                onmouseout="this.style.backgroundColor='#D19D00'" >
+                <!--  onClick="location.href ='http://lldrs.com:8080/lldrs/support.jsp'" -->
+          <br><br>
+          <INPUT id=submitG2 type=submit value=' CONTACT US ' name=submitContactUs 
+                onmouseover="this.style.backgroundColor='#006699'" 
+                onmouseout="this.style.backgroundColor='#D19D00'" >
+                <!--  onClick="location.href ='http://lldrs.com:8080/lldrs/contactus.jsp'" --> 
+
+<!--
+          <br><br>
+          <INPUT id=submitG2 type=submit value=' SHOPPING CART ' name=submitShopping
+                onmouseover="this.style.backgroundColor='#006699'" 
+                onmouseout="this.style.backgroundColor='#D19D00'" >
+-->
+                <!--  onClick="location.href ='https://freewarecart.com:8181/shop/order0PR.jsp?company=lldrs'" -->
+         </td>
+
+
+         <td width=780px  valign=top align=left>
+
+             <!-- table 3-->
+             <table cellpadding=0 cellspacing=0 width=600 height=400 bgcolor=#FFFFFF border=0 >
+ 
+             <tr>
+             <td valign=top>
+             <br>
+             <center>
+             <font style="font-size:11pt; font-weight:bold; color:#000044; font-family:Helvetica;">
+             Welcome to LLDRS - Software Engineering and Electrical Engineering
+             </font>
+             </center>
+             <br>
+
+             <p align="justify">
+             <font style="font-size:9pt; font-weight:normal; color:#000000; font-family:Helvetica;">
+             
+                          LLDRS is an information technology company with more than 25 years of experience 
+                          in project management, systems architecture,  business analysis, 
+                          software development, systems integration, systems testing, and systems implementation.
+                         
+                          Our client have included Apple Computer, Chevron Chemical, Monsanto Chemical, Sumitomo Chemical,
+                          Johnson & Johnson, Siems Optical Semiconductors (OSRAM), World Savings and Loan, Wachovia, and
+                          currently Wells Fargo Bank.<br><br>
+
+                          Since 1998, our primary focus has been browser based development of intranet
+                          applications. We have a proven track record of delivering complex projects on-time 
+                          and within budget. We can provide an extensive list of excellent references.</p>
+             </font>
+             <br>
+
+             <font style="font-size:9pt; color:#000000; font-family:Helvetica;">
+             Programming Expertise:
+             </font>
+            
+             <ul style="margin-left: 0; padding-left: 30px;">
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>Languages .NET:</b> MS Visual Studio 2010, CSharp /VB / Ajax / ASP.NET 4.1<br> 
+             </font>
+
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>Languages Java:</b> Java J2EE (JSP/EJB/JNDI/RMI/JAXP), PHP, XML (DTD,XSLT), SOAP<br> 
+             </font>
+
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>Operating Systems:</b> Windows XP, Windows 7, Windows Server 2003 R2 SP2, RedHat Linux (Fedora 12)<br> 
+             </font>
+
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>Databases:</b> MS SQL Server 2005 (Management Studio, Profiler, Query Analyzer) ,Oracle 9i, MySQL, TOAD, Erwin<br> 
+             </font>
+
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>App Servers:</b> Microsoft IIS, Sun One / Glassfish, BEA Web Logic, Oracle 9iAS, Apache/Tomcat<br> 
+             </font>
+
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>Mail Servers:</b> Send Mail (SMTP), Postfix, Dovecot (POP3 and IMAP) installation and configuration<br> 
+             </font>
+
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>Other Stuff:</b> RSA Public/Private Key Cryptography, Server Security Certificates<br> 
+             </font>
+
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>Other Tools:</b> MS Project, VISIO, Power Point, Remedy, Business Objects, Actuate, Crystal Reports, CVS<br> 
+             </font>
+
+             <li style="font-size: 12px; color: #880000;" >
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             <b>More Tools:</b> Informatica ETL,Lombardi BPMN (Business Process Modeling Notation), Wire Shark, Fiddler <br> 
+             </font>
+ 
+            </td>
+            </tr>
+           </table>
+           <!-- table 3-->
+
+         </td>
+         </tr> 
+         </table>
+         <!-- table 2--> 
+         </center>
+
+      <br><br>
+ 
+      </td>
+      </TABLE>
+      <!-- table 0-->
+ 
+      </center>
+      </div>    <!-- page -->
+      </div>    <!-- page-top --> 
+ 
+      <div id="footer"><br>
+      <table width=100%>
+      <td align=left>
+      <font style="font-size:8pt; font-weight:Bold; color:#FFFFFF; font-family:Helvetica;">
+      &nbsp;Copyright &#169;2011 LLDRS Inc.
+      </font>
+      </td>
+      </table>
+      </div>
+ 
+      <div id="header">
+      <div>
+ 
+
+</body>
+</html>
+

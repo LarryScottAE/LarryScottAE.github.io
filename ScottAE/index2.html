@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head> 
+<title>ScottAE</title>
+<link rel="icon" type="image/png" href="./images/GoldStar.png" />
+<link rel="shortcut icon" type="image/icon" href="./images/GoldStar.ico" />
+
+<!-- scottae style sheet -->
+<link href="./style.css" rel="stylesheet" type="text/css" />
+
+<!-- jqwidgets stylesheets and javascripts -->
+<link rel="stylesheet" href="jqwidgets-ver4.0.0/jqwidgets/styles/jqx.base.css" type="text/css" />
+<link rel="stylesheet" href="jqwidgets-ver4.0.0/jqwidgets/styles/jqx.summer.css" type="text/css" />
+<link rel="stylesheet" href="jqwidgets-ver4.0.0/jqwidgets/styles/jqx.fresh.css" type="text/css" />
+
+<script type="text/javascript" src="jqwidgets-ver4.0.0/scripts/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="jqwidgets-ver4.0.0/scripts/demos.js"></script>
+<script type="text/javascript" src="jqwidgets-ver4.0.0/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="jqwidgets-ver4.0.0/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="jqwidgets-ver4.0.0/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="jqwidgets-ver4.0.0/jqwidgets/jqxpanel.js"></script>
+<script type="text/javascript" src="jqwidgets-ver4.0.0/jqwidgets/jqxmenu.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Author" content="Larry Scott" />
+<META NAME="description" content="Audio Engineering & DIY kits, arduino, stompboxes, and pedalboards" />
+<META NAME="keywords" content="Audio Engineering, DIY, arduino, stompboxes, and pedalboards" />
+<META NAME="organization" content="ScottAE" />
+<META NAME="products" content="arduino, stompboxes, and pedalboards" />
+<META NAME="contact email" content="larry@lldrs.com" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<!-- jqwidgets jquery javascript -->
+<script type="text/javascript">
+    $(document).ready(function () {          
+
+       // change theme here - two stylesheets have been imported: 'summer' and 'fresh'
+       $("#jqxMenu").jqxMenu({ width: '1180', height: '28px', theme: 'fresh'});
+            
+       var centerItems = function () {
+       // update filter item's margin.
+       var firstItem = $($("#jqxMenu ul:first").children()[0]);
+       firstItem.css('margin-left', 0);
+       var width = 0;
+       var borderOffset = 2;
+       // calculate the summary items width.  
+       $.each($("#jqxMenu ul:first").children(), function () {
+           width += $(this).outerWidth(true) + borderOffset;
+       });
+       // get the menu's width.
+       var menuWidth = $("#jqxMenu").outerWidth();
+       // center the menu items by changing the margin of the first item.
+       firstItem.css('margin-left', (menuWidth / 2 ) - (width / 2));
+       }
+
+  // center menu items.
+     centerItems();
+     $(window).resize(function () { centerItems(); } );
+     });
+</script>
+
+<!-- invalid login attempt - return from login submit handler -->
+<script type="text/javascript">
+    $(document).ready(function () {   
+
+    // get request parameters
+    $.extend({
+	  getUrlVars: function(){
+	    var vars = [], hash;
+	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	    for(var i = 0; i < hashes.length; i++)
+	    {
+	      hash = hashes[i].split('=');
+	      vars.push(hash[0]);
+	      vars[hash[0]] = hash[1];
+	    }
+	    return vars;
+	  },
+	  getUrlVar: function(name){
+	    return $.getUrlVars()[name];
+	  }
+	});   
+
+    var login = $.getUrlVar('login');
+    if (login=="invalid") { 
+        alert("Login attempt failed\n\nUserID or Password was not correct\n\nPlease try again");
+    }
+  }); 
+</script>
+
+<style>
+#pic1img, #pic2img, #pic3img, #pic4img, #pic5img, #pic6img, #pic7img, #pic8img { display: none; }
+#pic1Ximg, #pic2Ximg, #pic3Ximg, #pic4Ximg, #pic5Ximg, #pic6Ximg, #pic7Ximg, #pic8Ximg { display: none; }
+</style>
+</head>
+
+<!-- --------------------------------------------------------------- -->
+
+<BODY link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  class='default' style='background: #222222' onload="loginError()">                                                                                               <!-- class=default is a jqxMenu parameter -->
+                                                                                             <!-- onload looks for failed login attempt / request parameter -->
+<FORM method="POST" name="index" action="http://www.scottae.com:8088/lldrs/index.jsp">    
+
+<div id="header">
+</div>
+ 
+<div id="menu"> 
+</div>
+ 
+<div id="page">
+
+<div id="page-top">
+
+<center>    
+<!-- table 1--> 
+<table id=t0 width=1190 bgcolor=#FFFFFF >
+<tr>
+<td align=center>
+<!-- table 2--> 
+<table id=t0 width=1160 bgcolor=#FFFFFF >
+<tr>
+<td colspan=3 align=center> 
+
+	<!-- table 3 begin-->
+    <table id=t0 width=1160 bgcolor=#FFFFFF border=0>
+	<tr>
+    <td align=center valign=top align=left nowrap width=150>
+        <IMG src="./images/software.jpeg" border=0>
+    </td> 
+    <td align=left valign=top align=left nowrap width=850>
+        <br> 
+        <IMG src="./images/ScottAudioElectronics.jpg">
+        <b><font style="font-family:Helvetica; font-size:11;">
+        <br>&nbsp;&nbsp;13155 Falcon Point Place<br>&nbsp;&nbsp;Truckee, CA 96161<br>&nbsp;&nbsp;Cell: 925-765-2883<br>
+        </font>
+    </td>
+    <td width="200"  valign=center align=right>
+	
+                <br>
+                <table width=100% bgcolor=#FFFFFF border=0 >
+
+                <tr>
+                <td  align=left> 
+                <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+                User ID:
+                </td>
+                <td align=left> 
+                <INPUT id=inputI1 onfocus="showUser(getURLParam('userid'))" name=userid  size=16 maxlength=16> 
+                </td>
+                </tr>
+                <tr>
+                <td align=left> 
+                <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+                Password:
+                </td>
+                <td align=left>  
+                <INPUT id=inputI1 type=password name=password size=16 maxlength=16> 
+                </td>
+                </tr>
+                <tr>
+                <td>&nbsp;</td>
+                <td align=left> &nbsp;&nbsp;&nbsp;&nbsp;
+                <INPUT id=submitG1 type=submit value='LOGIN' name=submitLogin
+                  onmouseover="this.style.backgroundColor='#006699'" 
+                  onmouseout="this.style.backgroundColor='#D19D00'"> 
+                </font>
+                </td>
+                </tr>
+                </table>
+   </td>
+   <td valign=center align=right nowrap width=160>
+       <!--  <IMG src="./images/Taylor512-2.png" border=0> -->
+       <IMG src="./images/musicBarGraph.gif" border=0> 
+    </td>
+    </table>
+	<!-- table 3 end-->
+	</tr>
+	<tr>
+	<td>
+	 <!-- <HR width=1180 size=4 align=center valign=top color=#000066> -->
+     <!--This is for the google web crawler-->
+     <font size=1 color=#ffffff>
+     <!-- Larry Scott, Scott Audio Engineering, 13155 Falcon Point Place, Truckee, CA. 96161  925-765-2883 larry@scottae.com, Arduino, DIY Audio Electronics, Stompbox, PedalBoard -->
+     </font>
+    <br>
+    <div id='jqxMenu'>
+    <ul>
+        <li><a href="#Home">
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           Home
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul style='width: 250px;'>
+                 <li><a href="/index3.html">Software Development</a></li>
+                 <li><a href="/index2.html">Hardware Development</a></li>
+            </ul>
+           </a>
+        </li>
+
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Hardware
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul style='width: 250px;'>
+                 <li><a href="#Stompbox">Stompbox</a></li>
+                 <li><a href="#Mp3Preamp">MP3 Preamp</a></li>
+                 <li><a href="#MidiInteface">Midi Interface</a></li>
+                 <li><a href="#MidiConductor">Midi Conductor</a></li>
+                 <li><a href="#Racks">Rack Enclosures</a></li>
+            </ul>
+        </li>
+    
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Software
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul style='width: 300px;'>
+                <li><a href="#MidiControl">Midi Control</a></li>
+                <li><a href="#MidiLauncher">Midi Program Launcher</a></li>
+                <li type='separator'></li>
+                <li>Shopping Cart Demo
+                    <ul style='width: 300px;'>
+                        <li><a href="#OrderProcess">Order Processing</a></li>
+                        <li><a href="#BackOffice">Back Office</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Support
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul style='width: 200px;'>
+                <li><a href="#ReaperAction">Reaper Action List</a></li>
+                <li><a href="mailto:larry@scottae.com?subject=ScottAE Website Inquiry">ContactUs EMail</a></li>
+                <li><a href="http://scottae.com:8088/Trac1/uploadFile.do">ContactUs Form</a></li>
+            </ul>
+        </li>
+
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Miscellaneous
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul style='width: 180px;'>
+                 <li><a href="#Photos">Photos</a></li>
+                <li><a href="#JamTracks">JamTracks</a></li>
+                <li type='separator'></li>
+                <li><a href="http://scottae.com:8088/Trac1/userAgent.html">Browser Agent</a></li>
+                <li type='separator'></li>
+                <li><a href="http://scottae.com:8088/abook/qs7.jsp">Amortization Calculator</a></li>
+                <li type='separator'></li>
+                <li><a href="http://www.scottae.com/webmail/index.php">Web EMail Client</a></li>
+            </ul>
+        </li>
+
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Let's Go Shopping!
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul style='width: 200px;'>
+                <li><a href="http://scottae.com:8088/Trac1/orders.html">Product Catalog</a></li>
+                <li><a href="http://scottae.com:8088/Trac1/order1.html">View Shopping Cart</a></li>
+                <li><a href="http://scottae.com:8088/Trac1/order6.html">Customer Login</a></li>
+                <li><a href="http://scottae.com:8088/Trac1/bo.html">Back Office Login</a></li>
+            </ul>
+        </li>
+
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#" onClick="window.open('http://scottae.com:8088/Trac1/orders.html', '_blank')">
+            <IMG src="./images/cart2ss.png" border=0></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </li>
+    </ul>
+    </div>
+	</td>
+	</tr>
+	</table>
+	<!-- table 2 end-->
+
+</td>
+<tr>
+<td align=center> 
+             <!-- table 3-->
+             <table cellpadding=0 cellspacing=0 width=1100  border=0 >
+             <tr>
+             <td valign=top>
+
+             <br>
+             <center>
+             <font style="font-size:11pt; font-weight:bold; color:#000044; font-family:Helvetica;">
+             SCOTTAE SOFTWARE ENGINEERING
+             </font>
+             </center>
+             <br>
+
+             <p align="justify">
+             <font style="font-size:10pt; font-weight:normal; color:#000000; font-family:Helvetica;">
+             
+                          SCOTTAE is an information technology company with more than 25 years of experience 
+                          in project management, systems architecture, software development, systems integration, systems testing, and systems implementation.
+                         
+                          My employment history includes Apple Computer, Chevron Chemical, Monsanto Chemical, Sumitomo Chemical,
+                          Johnson & Johnson, Siems Optical Semiconductors (OSRAM), World Savings, Wachovia, Wells Fargo, and currently University of California, Office of the PBank.<br><br>
+
+                          Since 1998, my primary focus has been development of browser based applications. 
+                          I have a proven track record of delivering complex projects on-time and within budget. 
+                          I can provide an extensive list of excellent references.
+             
+             </font>
+             </p>
+
+             <br>
+                    <center>
+
+                   <!-- table 4-->
+                   <table id=t0 width=1100  >
+                   <tr>
+                   <td width=49% valign=top>  
+
+                   <br>
+                   <font size="+0">
+                   <b>Programming Expertise:</b>
+                   </font>
+
+		   <br><br> 
+		   <b>Operating Systems:</b><br>      
+		   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Windows 7, Windows 10</span><br>  
+		   <span id="tab"><font color=#880000>&#149;</font>&nbsp;RedHat Enterprise Linux (Fedora 12), Ubuntu 14</span><br>
+  
+                   <br>
+                   <b>Java Technologies:</b><br>
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Java 1.7 / Javascript / JSON</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Spring STS MVC, JSP, JSTL, JSF, JNDI, JDBC, JMail API, XML DTD, CSS ...</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Spring STS RESTful Web Services</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Hibernate HQL</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Struts 1.1</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;POI Excel interface</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;CVS, GIT</span><br>  
+
+                   <br>
+                   <b>Security</b><br>
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;RSA public/private key cryptography</span><br>  
+		   <span id="tab"><font color=#880000>&#149;</font>&nbsp;AES 128 bit symmetric-key data encryption</span><br>  
+		   <span id="tab"><font color=#880000>&#149;</font>&nbsp;JKS (.jks keystore), Keytool, generate CSR request, import CA signed cert, cert chaining</span><br>  
+		   <span id="tab"><font color=#880000>&#149;</font>&nbsp;PKCS12 (.p12 keystore), OpenSSL, CSR requests, import CA-signed cert, cert chaining</span><br>  
+		   <span id="tab"><font color=#880000>&#149;</font>&nbsp;X.509 format for PKI 'public key infratstucture' and TLS communication</span><br>  
+		   <span id="tab"><font color=#880000>&#149;</font>&nbsp;SHA & MD5 secure hash algorithm, 128 bit digest/fingerprint</span><br>  
+
+
+                   <br>
+                   <b>Java Web Application Servers:</b><br>
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Apache (virtual hosting)</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Tomcat</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;IBM Web Sphere</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;BEA Web Logic</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Oracle 9iAS</span><br>  
+                   <br>
+
+                   <b>Mail Servers:</b><br>
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;GMail TLS mail API</span><br>   
+		   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Send Mail (SMTP)</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Postfix, Dovecot (POP3 and IMAP), white-listing, black-listing</span><br>  
+                   <br> 
+                   </td>
+            
+                   <td width=2%>&nbsp;</td>   <!-- ======================================================================== -->
+ 
+                   <td width=49%>
+                   <br>
+
+                   <b>Microsoft .NET technologies:</b><br>
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Visual Studio 2013 - ASP.NET Web Applications, Windows Forms Applications, GDI</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;IIS Internet Information Server - setup, configuration, and web application deployment.</span><br>  
+                
+		   <br>
+                   <b>Databases:</b><br>
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;IBM DB2, DBVisualizer</span><br> 
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Oracle 12, PLSql,  TOAD</span><br>   
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Microsoft SQL Server, Management Studio, Query Analyzer, Profiler</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;MySQL, MySQL Workbench, Heidi SQL</span><br>  
+
+                   <br> 
+                   <b>Networking:</b><br>
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;NetGear, D-Link, Linksys, 3Com router setup & configuration</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;LAN, WAN, DNS configuration</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Static routing</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Port forwarding</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;VPN tunneling</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;DMZ setup</span><br>  
+
+                   <br>
+                   <b>Other Tools:</b><br>
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;MS Excel</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;MS Project</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;MS VISIO</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Business Objects (report writer)</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Actuate (report writer)</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Crystal Reports (report writer)</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Informatica ETL</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Wire Shark - TCP packet analysis</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;Fiddler - TCP packet analysis</span><br>  
+                   <span id="tab"><font color=#880000>&#149;</font>&nbsp;LabView - National Instruments</span><br>  		
+                   <br> 
+
+            </td>
+            </tr>
+           </table>
+           <!-- table 4-->
+           </center>
+
+           </td>
+           </tr>
+           </table>
+           <!-- table 3-->
+</td></tr>
+</tr>
+</table>
+<!-- table 1-->
+</center>
+
+</td>
+</tr>
+
+
+</div>    <!-- page -->
+</div>    <!-- page-top --> 
+ 
+
+<div id="footer">
+<br>
+      <table width=100%>
+      <td align=left>
+      <font style="font-size:8pt; font-weight:Bold; color:#FFFFFF; font-family:Helvetica;">
+      &nbsp;Copyright &#169;2011-2016 Scott Audio Engineering
+      </font>
+      </td>
+      </table>
+</div>
+ 
+<div id="header">
+</div>
+
+<!-- --------------------------------------------------------------- -->
+
+</form>
+</body>
+</html>

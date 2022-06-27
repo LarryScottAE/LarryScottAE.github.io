@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head> 
+<title>ScottAE</title>
+<link rel="icon" type="image/png" href="./images/GoldStar.png">
+<link rel="shortcut icon" type="image/icon" href="./images/GoldStar.ico">
+<link href="./style.css" rel="stylesheet" type="text/css" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Author" content="Larry Scott">
+<META NAME="description" content="Audio Engineering & DIY kits, arduino, stompboxes, and pedalboards">
+<META NAME="keywords" content="Audio Engineering, DIY, arduino, stompboxes, and pedalboards">
+<META NAME="organization" content="ScottAE">
+<META NAME="products" content="arduino, stompboxes, and pedalboards">
+<META NAME="contact email" content="larry@lldrs.com">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+<script type="text/javascript">
+function changeImage(i,src) {
+	document.getElementById("img").src=src;
+	document.getElementById("img").height=400;
+	document.getElementById("img").width=600;
+
+	var divImageText1 = document.getElementById('divImageText1');
+	var divImageText2 = document.getElementById('divImageText2');
+	var divImageText3 = document.getElementById('divImageText3');
+	var divImageText4 = document.getElementById('divImageText4');
+
+	if (i==1) document.getElementById("divComment").innerHTML = divImageText1.innerHTML;
+	if (i==2) document.getElementById("divComment").innerHTML = divImageText2.innerHTML;
+	if (i==3) document.getElementById("divComment").innerHTML = divImageText3.innerHTML;
+	if (i==4) document.getElementById("divComment").innerHTML = divImageText4.innerHTML;
+}
+
+</script>
+</head>
+
+<!-- --------------------------------------------------------------- -->
+
+<BODY bgcolor="#DDDDDD" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF" >
+<FORM method="POST" name="index" action="http://www.lldrs.com:8080/lldrs/index.jsp">    
+
+<!--This is for the google web crawler-->
+<font size=1 color=#111111>
+Larry Scott, Scott Audio Engineering, 1305 Corte De Los Vecinos, Walnut Creek, CA. 94598  925-765-2883 larry@scottae.com, Arduino, DIY Audio Electronics, Stompbox, PedalBoard
+</font>
+
+<div id="header">
+</div>
+ 
+<div id="menu"> 
+</div>
+ 
+<div id="page">
+<div id="page-top">
+
+<center>    
+<!-- table 1--> 
+<table id=t0 width=1190 bgcolor=#FFFFFF >
+<tr>
+<td align=center>
+<!-- table 2--> 
+<table id=t0 width=1160 bgcolor=#FFFFFF >
+<tr>
+<td colspan=3 align=center> 
+
+    <!-- Heading -->
+    <table id=t0 width=1160 bgcolor=#FFFFFF>
+    <td align=left valign=top align=left nowrap width=50>
+    <IMG src="./images/TrebleClef2-2.png">
+    </td> 
+    <td align=left valign=top align=left nowrap>
+    <IMG src="./images/ScottAudioElectronics.jpg">
+    <b><font style="font-family:Helvetica; font-size:11;">
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;1305 Corte De Los Vecinos<br>&nbsp;&nbsp;&nbsp;&nbsp;Walnut Creek, CA 94598<br>&nbsp;&nbsp;&nbsp;&nbsp;Cell: 925-765-2883<br>
+    </font>
+    </td> 
+    <td valign=center align=left nowrap>
+    <IMG src="./images/bose901L.jpg" border=0>               
+    </td> 
+    <td valign=center align=right nowrap>
+    <IMG src="./images/bose901R.jpg" border=0>              
+    </td> 
+    <td valign=center align=right  nowrap>
+    <IMG src="./images/Taylor512-2.png" border=0>  
+    </td>
+    </table>
+
+     <HR width=100% size=2 align=center valign=top color=#000066>
+
+</td>
+</tr>
+
+<!-- --------------------------------------------------------------- -->
+<!-- Table Body -->
+
+<tr>
+<td colspan=2 valign=center>
+
+    <div id="padding">
+    <br>
+    <b>Scott Stompbox</b><br>
+    This project started out three years ago as a simple attempt to change a guitar effects processor's patch via a foot controlled stompbox.
+    My first attempt was little more than a switch debounce circuit sending a midi command from an 8 bit mcu.
+    After a number of design enhancements and build iterations, I am confident that this stompbox compete's well with similar commercially available stompbox.
+    One sad fact I learned from building these stompbox prototypes is; as an individual, the raw materials necessary to build this stompbox are more expensive than a fully assembled unit from some of the lower cost providers.
+    This fact alone will liekly prevent me from mass producing this stompbox, but it does provide useful information for other DIY guitar accessory enthusiasts.<br>
+    <br>
+    <center> 
+    <table id=t1 width=800>
+    <tr>
+    <td>
+    <img src=./images/test.jpg height=98 width=98 border=1 onclick='changeImage(1,"./images/guitarLogo.jpg");'><br>
+    <img src=./images/test.jpg height=98 width=98 border=1 onclick='changeImage(2,"./images/image5B.jpeg");'><br> 
+    <img src=./images/test.jpg height=98 width=98 border=1 onclick='changeImage(3,"./images/logo1.jpg");'><br> 
+    <img src=./images/test.jpg height=98 width=98 border=1 onclick='changeImage(4,"./images/mountain.jpg");'>
+    </td>
+
+    <td>
+    <img id="img" src="./images/StompBoxCpu1.jpg" height=400 width=600 border=1><br>
+    </td>
+
+    <td>
+    <img src=./images/test.jpg height=98 width=98 border=1><br>
+    <img src=./images/test.jpg height=98 width=98 border=1><br> 
+    <img src=./images/test.jpg height=98 width=98 border=1><br> 
+    <img src=./images/test.jpg height=98 width=98 border=1>
+    </td>
+    </tr>
+
+    <tr>
+    <td colspan=3>
+    <div id="divComment"> 
+    This is the default text
+    </div>
+    </td>
+    </tr>
+    </table>
+    </center>   
+
+    <br>
+    <b>Scott Stompbox Features:</b><br>
+    <b>1:</b> &nbsp;Pedalboad provides 16 independently assignable foot switches used to send MIDI program change, control change, .... sys ex messages.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(see http://en.wikipedia.org/wiki/MIDI)<br>
+    <b>2:</b> &nbsp;Windows based control program (download installer below) lets you assign MIDI functions to each footswitch<br>
+    <b>3:</b> &nbsp;Easily toggle between 4 configurations in realtime providing (4x16) 64 available foot commands.<br>
+    <b>3:</b> &nbsp;Midi transmit and receive function via standard midi cables or USB cable. (midi yoke)<br>
+    <b>4:</b> &nbsp;Stompbox is compatible with most DAWs. <br> 
+    <b>5:</b> &nbsp;Buttons can be configured as latch (toggle on/off) or pulse function<br>
+    <b>6:</b> &nbsp;Pedalboard has an Atmel 8-bit AVR RISC-based microcontroller (ATmega168) dedicated to monitoring footswitch press.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(see http://arduino.cc/en/Main/ArduinoBoardProMini)<br> 
+    <b>7:</b> &nbsp;Stompbox has an Atmel SAM3X8E ARM Cortex-M3 CPU microprocessor dedicated to footswitch processing, midi processing, display processing, and SD file processing.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(see http://arduino.cc/en/Main/arduinoBoardDue)<br>
+    <b>8:</b> &nbsp;Stompbox has an AdaFruit Micro SD memory card reader equipeed with a 2 gig Micro SD memory card to retain configuration information while poewered off.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(see http://www.adafruit.com/product/254)<br>
+    <b>9:</b> &nbsp;Stompbox has a large 4 line, 20 character, blue backlit display is easy to read at a distance.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(see http://www.hantronix.com/files/data/127855682920416lb.pdf)<br>
+    <b>10:</b> &nbsp;Custom Reaper 'Action List' is provided to demonstarte the capabilities of the stompbox with Reaper(download provided below)<br>
+    <br>    
+
+    <b><a href = http://www.reaper.fm/><font color=#000088><u>Reaper</u></font></a> 'Action Lists' commands:</b><br>
+    1: Transport commands: start, stop, pause, rewind, fast foward, record arm. start/stop recording. <br>
+    2: Marker commands:    set markers in your Repaer project and jump to a marker via a switch press.<br>
+    3: Looping commands:   press a foot switch set loop begin points and loop endpoints. <br> 
+    4: Speed commands:     press a foot switch to increase or decrease the tempo of a loop.<br>
+    5: Track commands:     press a foot switch to scro/l through tracks and arm/disarm tracks for recording .<br>   
+    <br>
+    </div>
+
+</td>
+</tr>
+
+<!-- --------------------------------------------------------------- -->
+
+<tr>
+<td colspan=2 valign=center>
+
+<div id="padding2">
+<br>
+<b>Custom 19" Rack Enclosures</b><br>
+19 inch rack are the standard for mounting professional audio equipment. <br>
+<br>
+<center> 
+<table id=t1 width=800>
+<tr>
+<td>
+<img src=./images/test.jpg height=98 width=98 border=1 onclick='changeImage(1,"./images/guitarLogo.jpg");'><br>
+<img src=./images/test.jpg height=98 width=98 border=1 onclick='changeImage(2,"./images/image5B.jpeg");'><br> 
+<img src=./images/test.jpg height=98 width=98 border=1 onclick='changeImage(3,"./images/logo1.jpg");'><br> 
+<img src=./images/test.jpg height=98 width=98 border=1 onclick='changeImage(4,"./images/mountain.jpg");'>
+</td>
+
+<td>
+<img id="img" src="./images/Rack1.jpg" height=400 width=600 border=1><br>
+</td>
+
+<td>
+<img src=./images/test.jpg height=98 width=98 border=1><br>
+<img src=./images/test.jpg height=98 width=98 border=1><br> 
+<img src=./images/test.jpg height=98 width=98 border=1><br> 
+<img src=./images/test.jpg height=98 width=98 border=1>
+</td>
+</tr>
+
+<tr>
+<td colspan=3>
+<div id="divComment"> 
+This is the default text
+</div>
+</td>
+</tr>
+</table>
+</center>   
+
+
+
+<br>
+<b>Scott 19" Rack Features</b><br>
+
+<br>    
+<br>
+</div>
+
+</td>
+</tr>
+
+<!-- --------------------------------------------------------------- -->
+
+
+<tr height=36><td>&nbsp;</td></tr>
+
+<tr>
+<td colspan=2 valign=center>
+<b>MP3 Preamplifiers</b>  
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+</td>
+</tr>
+
+<tr height=36><td colspan=3>&nbsp;</td></tr>
+
+<tr>
+<td colspan=2 valign=center>
+<b>MIDI Interfacess</b> 
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+</td>
+</tr>
+
+<tr height=36><td colspan=3>&nbsp;</td></tr>
+
+<tr>
+<td colspan=2 valign=center>
+<b>MIDI Triggered Audio</b> 
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+</td>
+</tr>
+
+<tr height=36><td colspan=3>&nbsp;</td></tr>
+
+</td> 
+</tr>
+
+<tr>
+<!-- Footer -->
+<td colspan=3 align=center>
+<br>
+<font style="font-size:8pt; font-weight:Bold; color:#000000; font-family:Helvetica;">
+Copyright &#169;2014 Scott Audio Engineering
+</font>
+</td>
+</tr>
+</table>
+<!-- table 1-->
+</td>
+</tr>
+</table>
+<!-- table 2-->
+</center>
+
+
+
+<div id="divImageText1" style="visibility: hidden;"> 
+This is text for image1
+</div>
+<div id="divImageText2" style="visibility: hidden;"> 
+This is text for image2
+</div>
+<div id="divImageText3" style="visibility: hidden;"> 
+This is text for image3
+</div>
+<div id="divImageText4" style="visibility: hidden;"> 
+This is text for image4
+</div>
+
+
+
+      </div>    <!-- page -->
+      </div>    <!-- page-top --> 
+ 
+      <div id="footer"><br>
+      <table width=100%>
+      <td align=left>
+      <font style="font-size:8pt; font-weight:Bold; color:#FFFFFF; font-family:Helvetica;">
+      &nbsp;Copyright &#169;2011 LLDRS Inc.
+      </font>
+      </td>
+      </table>
+      </div>
+ 
+      <div id="header">
+      <div>
+
+</body>
+</html>
+

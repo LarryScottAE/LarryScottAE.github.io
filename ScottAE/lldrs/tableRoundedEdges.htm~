@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Rounded Table Edges</title>
+<style type="text/css">
+table.curvedEdges { border:4px solid #880000;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16x; }
+table.curvedEdges td, table.curvedEdges th { border-bottom:1px dotted black;padding:5px; }
+table.curvedEdges2 { border:10px solid #98FB98;-webkit-border-radius:13px;-moz-border-radius:13px;border-radius:13px; }
+table.curvedEdges2 td, table.curvedEdges th { border-bottom:1px dotted black;padding:5px; }
+</style>
+</head>
+<body>
+<table class="curvedEdges">
+<tr>
+<th>Table header</th><th>Table header</th>
+</tr>
+<tr>
+<td>Table cell 1</td><td>Table cell 2</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,103 @@
+<style>
+
+  body, p, ul, li
+	{color: #000000; font-family: Helvetica; font-size: 10px;}
+  a, a:link, a:visited, a:active
+	{color: #000088; text-decoration: none; }
+  a:hover
+	{color: #660000;}
+ 
+  INPUT       {color: black;   font-size: 11px;  font-family: Helvetica}
+  #inputI1    {color: black;   font-size: 10px;  font-family: Helvetica background-color:#aaaaaa}
+  TEXTAREA    {color: black;   font-size: 11px;  font-family: Helvetica}  
+  SELECT      {color: black;   font-size: 11px;  font-family: Helvetica}
+  LABEL       {color: black;   font-size: 11px;  font-family: Helvetica}
+  BUTTON      {color: blue;    font-size: 11px;  font-family: Helvetica; font-weight: bold} 
+  #submit     {color: black;   font-size: 10px;  font-family: Helvetica;}
+  #submitG1   {color: white;   font-size: 10px;  font-family: Helvetica; background-color:#D19D00;} 
+  #submitG2   {color: #3B3B3B; font-size: 10px;  font-family: Helvetica; background-color:#FFCC66; border:1px #AAAAAA solid;}
+  #submitG2S  {color: #3B3B3B; font-size: 9px;   font-family: Helvetica; background-color:#FFCC66; border:1px #AAAAAA solid;}
+  #submitG2SX {color: #3B3B3B; font-size: 8px;   font-family: Helvetica; background-color:#FFCC66; border:1px #AAAAAA solid; height: 14px;}
+  #submitG2SS {color: #3B3B3B; font-size: 7px;   font-family: Helvetica; background-color:#FFCC66; border:1px #AAAAAA solid;}
+  #submitG3   {color: white;   font-size: 10px;  font-family: Helvetica; background-color:#778899 }
+  #submitG4   {color: white;   font-size: 10px;  font-family: Helvetica; background-color:#006400 }    
+  #submitG5   {color: white;   font-size: 10px;  font-family: Helvetica; background-color:#CDAD00 }
+  #submitG6   {color: white;   font-size: 10px;  font-family: Helvetica; background-color:#D19D00 height: 20px; width: 30px}  
+  #submitG2B  {color: #3B3B3B; font-size: 10px;  font-family: Helvetica; background-color:#FFEC8B;}
+  #submitG2C  {color: #3B3B3B; font-size: 10px;  font-family: Helvetica; background-color:#FFEC8B; border:1px #CDAD00 solid;}
+
+  <!-- order0.jsp un-selected menu --> 
+  #submitM2  {color: black; font-size: 11px%;  font-family: Helvetica; background-color:#CCCCCC; width:180px; border:1px #888888 solid;}
+
+  <!-- order0.jsp selected menu --> 
+  #submitM3  {color: black; font-size: 11px%;  font-family: Helvetica; background-color:#CCCCCC; width:180px; border:2px #424299 solid;}
+
+  #INPUTRED  {color: red;   font-size: 9px; font-family: Verdana}
+  #SELECTRED {color: red;   font-size: 9px; font-family: Verdana} 
+  #BUTTONRED {black; font-size: 9px; font-family: Verdana; font-weight: bold} 
+ 
+  <!-- align image to bottom --> 
+  img { vertical-align: bottom }
+
+  td.col00 {border: 1px #000000 solid;}
+  tr.row00 {border: 1px #000000 solid;} 
+
+  td.colAA {border: 1px #BBBBBB solid; }
+  tr.rowAA {border: 1px #BBBBBB solid; } 
+
+  td.colMenu2 {border: 0px #FFFFFF solid; padding-left: 2px;  padding-right: 2px; padding-top: 2px; padding-bottom: 2px; vertical-align: text-bottom;}
+  tr.rowMenu2 {border: 0px #FFFFFF solid; padding-left: 2px;  padding-right: 2px; padding-top: 2px; padding-bottom: 2px; vertical-align: text-bottom;}
+
+  <!--
+  If nested div statements are needed, use this format
+  nested <div> tags do not work,  this does
+  ex: <table ID="t4" align=center width=96% >
+  -->
+
+  <!-- Use the folowing with <table id=t0 -->
+  
+ table#t0img {
+            background-image: url("./images/PanoramaTahoe3.jpg");
+            padding:20px;
+            border-spacing:20px;
+            border-collapse:collapse;
+            border-width:1px;
+            border: 1px #AAAAAA solid;
+            }
+
+  table#t0  {padding:20px;
+            border-spacing:20px;
+            border-collapse:collapse;
+            border-width:1px;
+            border: 0px #AAAAAA solid;
+            }
+
+   table#t1
+        {
+        padding:0px;
+        border-spacing:0px;
+        border-collapse:collapse;
+        border-width:1px;
+        border: 2px #cccccc solid;}
+        
+  table#t1R
+        {
+        padding:0px;
+        border-spacing:0px;
+        border-collapse:collapse;
+        border-width:1px;
+        border: 2px #dddddd solid;}
+             
+
+
+
+  <!-- For Firefox --> 
+  table.noborder {
+     border-top: 0px solid #FFFFFF;
+     border-left: 0px solid #FFFFFF;
+     border-bottom: 0px solid #FFFFFF;
+     border-right: 0px solid #FFFFFF;
+     }
+
+</style>
+

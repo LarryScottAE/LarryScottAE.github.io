@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head> 
+<title>LLDRS Web Development, Shopping Cart Systems, and Web Commerce Systems</title>
+<link rel="shortcut icon" href="./favicon.ico">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Author" content="Larry Scott">
+<META NAME="description" content="LLDRS Web Development, Shopping Cart Systems, and Web Commerce Systems">
+<META NAME="keywords" content="LLDRS,Web Commerce,Web Development,Web,Commerce,Development,shopping cart,shopping carts,cart,product catalog, product catalogs,web programming,programming,IT consultant,java,jsp,ejb,mysql.NET,C#,C Sharp,Aspx,sql server,content,web service,web services,Linux,Orinda,Berkeley,Oakland,East Bay,Bay Area,San Francisco,California,Sacamento,Los Angeles">
+<META NAME="organization" content="LLDRS Web Commerce Systems">
+<META NAME="products" content="shopping carts,product catalogs,web programming,Linux server setup,search engine optimization">
+<META NAME="contact email" content="larry@lldrs.com">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<SCRIPT LANGUAGE="JavaScript">
+//<!--
+
+    function displayDate() {
+     var dt = new Date();
+ //  document.write(dt)
+     document.forms[0].time.value=dt.toLocaleString();  
+     return dt;
+    }
+
+
+    function displayStatusText(message) {
+          window.status=message 
+       // setfocus to userid field  
+       // document.forms[0].userid.focus() 
+     return
+     }
+
+    function showUser(user) {
+          document.forms[0].userid.value=user;
+     return
+     }
+
+
+    function getURLParam(strParamName)
+    { 
+    var strReturn = "";
+    var strHref = window.location.href;
+    if ( strHref.indexOf("?") > -1 ){
+        var strQueryString = strHref.substr(strHref.indexOf("?")).toLowerCase();
+        var aQueryString = strQueryString.split("&");
+        for ( var iParam = 0; iParam < aQueryString.length; iParam++ ){
+          if ( aQueryString[iParam].indexOf(strParamName + "=") > -1 ){
+            var aParam = aQueryString[iParam].split("=");
+            strReturn = aParam[1];
+            break;
+          }
+        }
+      }
+    return strReturn;
+    } 
+
+//-->
+</SCRIPT>
+
+
+<style>
+/** Common Styles */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #393939;
+     	line-height: 16px;
+	text-align: justify;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+
+
+#header {
+	width: 1000px;
+	height: 25px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#menu {
+	width: 960px;
+	height: 43px;
+	margin: 0 auto;
+	padding: 0 20px;
+	background: url(images2/image01.jpg) no-repeat left top;
+}
+
+#menu ul {
+	margin: 0;
+	list-style: none;
+	padding-top: 10px;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	padding: 0 20px;
+	background: url(images2/image06.gif) no-repeat right 50%;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#menu a:hover {
+}
+
+#menu .first a  {
+	padding-left: 0;
+}
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	background: url(images2/image05.jpg) repeat-y;
+}
+
+#page-top {
+	background: url(images2/image03.jpg) no-repeat left top;
+}
+
+#page-bottom {
+	background: url(images2/image04.jpg) no-repeat left bottom;
+}
+
+#content {
+	float: right;
+	width: 420px;
+ 	padding: 0px 0px 0px 0px;
+}
+
+
+table#t1 {
+        padding: 4px;
+        padding-left:0px;
+        padding-right:0px;
+        padding-top:0px;
+        padding-bottom:0px;
+        border-spacing:0px;
+        border-width:0px;
+        border:0px #880000 solid;
+        align:center;
+}
+
+table#t2 {
+        padding: 0px;
+        padding-left:0px;
+        padding-right:2px;
+        padding-top:4px;
+        padding-bottom:0px;
+        border-spacing:0px;
+        border-width:0px;
+        border:0px #880000 solid;
+        align:center;
+}
+
+table#t3 {
+        padding: 0px;
+        padding-left:0px;
+        padding-right:0px;
+        padding-top:4px;
+        padding-bottom:0px;
+        border-spacing:0px;
+        border-width:0px;
+        border:0px #880000 solid;
+        align:center;
+}
+
+table#t4 {
+        padding: 0px;
+        padding-left:0px;
+        padding-right:0px;
+        padding-top:0px;
+        padding-bottom:0px;
+        border-spacing:0px;
+        border-width:0px;
+        border:4px #FFFFFF solid;
+        valign:center;
+}
+
+
+
+table#t5 {
+        padding: 0px;
+        padding-left:0px;
+        padding-right:0px;
+        padding-top:0px;
+        padding-bottom:4px;
+        border-spacing:0px;
+        border-width:0px;
+        border:0px #880000 solid;
+        align:center;
+}
+
+#footer {
+	width: 1000px;
+	height: 43px;
+	margin: 0 auto;
+	padding: 0 0 20px 0;
+	background: url(images2/image02.jpg) no-repeat left top;
+}
+
+a {
+color:#008800;
+text-decoration:none;
+}
+
+  #lired     {color: #880000; }      
+
+  .indented
+   {
+   font-size: 10px;  
+   font-family: Helvetica;
+   padding-left: 10pt;
+   padding-right: 10pt;
+   }
+
+  .indented2
+   {
+   font-size: 10px;
+   font-family: Helvetica;
+   padding-left: 20pt;
+   padding-right: 10pt;
+   }
+
+  #inputI1   {color: #660000; font-size: 10px;  font-family: Helvetica;}
+  #inputB1   {color: #660000; font-size: 11px;  font-family: Helvetica;}
+  #submit    {color: black;   font-size: 10px;  font-family: Helvetica;}
+  #submitG1  {color: white;   font-size: 10px;  font-family: Helvetica; background-color:#D19D00;} 
+  #submitG2  {color: #3B3B3B; font-size: 10px;  font-family: Helvetica; background-color:#FFCC66; border:1px #oooooo solid;}
+
+</style>
+</head>
+
+<!-- ============= -->
+
+<BODY bgcolor="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  onLoad="displayStatusText(getURLParam('status')),displayDate()" > 
+<FORM method="POST" name="security" action="http://www.freewarecart.com:8080/abook/index.jsp">   
+
+
+      <div id="header">
+      </div>
+
+      <div id="menu"> 
+      </div>
+
+      <div id="page">
+
+      <div id="page-top">
+
+
+      <!--  table 0-->
+      <center>    
+      <TABLE id=t1 border=0 cellspacing=0 cellpadding=0 bordercolor=#880000 align=center height=100 width=998> 
+      <td>
+
+         <!-- table 1-->
+         <table cellpadding=0 cellspacing=0 width=100% bgcolor=#FFFFFF border=0 >
+             <TR> 
+             <TD vAlign=center width="10%" align=center> &nbsp;
+             <IMG src="/images/circle.gif" border=0><br>
+             </td> 
+
+             <TD vAlign=left width="80%" align=left><br>&nbsp;&nbsp;&nbsp;
+             <font style="font-size:14pt; color:#000044; font-family:Helvetica Bold;">
+             LLDRS Systems<br>
+             </font>
+             &nbsp;&nbsp;&nbsp;
+             <font style="font-size:10pt; color:#AAAAAA; font-family:Helvetica Bold;">
+             1305 Corte De Los Vecinosr<br> 
+             </font>
+             &nbsp;&nbsp;&nbsp;
+             <font style="font-size:10pt; color:#AAAAAA; font-family:Helvetica Bold;"> 
+             Walnut Creek, California, 94598<br>
+             </font>
+             &nbsp;&nbsp;&nbsp;
+             <font style="font-size:10pt; color:#AAAAAA; font-family:Helvetica Bold;"> 
+             Cell: 925-765-2883<br>
+             </font>
+             &nbsp;&nbsp;&nbsp;
+             <font style="font-size:10pt; color:#AAAAAA; font-family:Helvetica Bold;"> 
+             EMail: larry@lldrs.com<br>
+             </font>
+             </td> 
+
+             <td vAlign=bottom width="10%" align=center> 
+             <IMG src="/images3/image5.jpeg" border=0><br>
+             </td> 
+             </TR>
+
+             <tr>
+             <td colspan=3 align=center><br>
+             <HR width=98% size=2 align=center valign=top color=#000066>
+             </td>
+             </tr>
+
+             <TR> 
+             <TD colspan=2 align=left nowrap>&nbsp;&nbsp;&nbsp;
+             <INPUT id=inputB1 type=button size=60 name=time>
+             </font>
+             </TD> 
+             <TD colspan=1 valign=center align=right nowrap> 
+             <font style="font-size:8pt; color:#000000; font-family:Helvetica;">
+             Login ID: &nbsp; <INPUT id=inputI1 onfocus="showUser(getURLParam('userid'))" name=userid  size=16 maxlength=16> 
+             &nbsp;&nbsp;&nbsp; 
+             Password: <INPUT id=inputI1 type=password name=password size=16 maxlength=16> 
+             &nbsp;&nbsp;&nbsp; 
+             <INPUT id=submitG1 type=submit value=Login name=submit> 
+             &nbsp;&nbsp;&nbsp; 
+             </font> 
+             </TD> 
+             </TR> 
+         </table>
+         <!-- table 1-->
+ 
+         <center>
+         <br>
+
+         <!-- table 2-->
+         <table border=0 width=800 height=300px border=0 align=center>
+         <tr>
+         <td width=10% align=center valign=top>
+            <a href="http://java.sun.com" title="Java"><img src=./logos/java.jpg alt="Java" border=0></a> 
+            <br><br>
+            <a href="https://glassfish.dev.java.net/ "title="Sun Glassfish web application server"><img src=./logos/glassfish.jpg alt="Sun Glassfish Application Server" border=0 ></a> 
+            <br><br>
+            <a href="http://www.redhat.com/rhel/" title="RedHat Enterprise Linux"><img src=./logos/redhat.jpg alt="RedHat Enterprise Linux" border=0></a> 
+            <br><br>
+            <a href="http://www.mysql.com" title="mySQL database server"><img src=./logos/mysql.jpg alt="MySQL database server"  border=0></a> 
+            <br><br>
+            <a href="http://www.godaddy.com/gdshop/default.asp" title="goDaddy domain registration"><img src=./logos/godaddy.jpg alt="GoDaddy domain registration" border=0></a> 
+            <br><br>
+            <a href="http://www.verisign.com" title="Verisign SSL certificates"><img src=./logos/verisign.jpg alt="Verisign SSL Certificates" border=0></a>  
+            <br><br>
+            <a href="http://www.firstdata.com" title="First Data Credit Card Processing"><img src=./logos/firstdata.jpg alt="First Data Credit Card Processing" border=0></a> 
+            <br><br>
+            <a href="http://www.ups.com" title="United Parcel Service"><img src=./logos/ups.gif alt="United Parcel Service" border=0></a>  
+         </td>
+
+         <td width=5%>
+         &nbsp;
+         </td>
+
+         <td width=75% align=center valign=top >
+   
+         <!-- table 3-->
+         <table border=0 align=left >
+ 
+         <tr>
+         <td width= colspan=2 valign=top align=left>
+           <div class="detail2">
+           <p align=justify >
+           <font style="font-size:9pt; color:#000000; font-family:Helvetica;">
+           As an individual, I have been developing retail, financial, distribution, and manufacturing software for Fortune 500 companies since 1976.
+           Since 1998, my primary focus has been web application development with a more recent focus on web retail store-fronts.  Our products include 
+           software to manage and publish web product catalogs, web shopping carts, a First Data credit card payment processing gateway, 
+           a UPS Shipping rate calculation gateway, and extensive back office product management and order processing software.  
+           Security, stability, scalability, and ease of use are the cornerstone of our system designs. 
+           <br><br>
+           Our web retail store-front software was designed to run on your servers and was developed using 100% 'open source' software (ie: Java programming language, Sun's Glassfish
+           Sun's Glassfish Java Application Server, MySQL database management system, and RedHat Enterprise Linux operating system). Our software is provided 100% free 
+           of charge to individuals or corporations and includes program source code and database schema. An installation guide is provided to
+           guide you through the implementation process and an online tutorial provides basic system usage instruction.
+           <br><br> 
+           </p>
+
+           <p align=left>
+           The following steps outline the process to implement a 
+           <a href=http://freewarecart.com:8080/index.jsp><font color=#000044><u>LLDRS retail store-front</u></font></a>. 
+           <div class="indented">
+           <font color=#880000>&nbsp;1:&nbsp;&nbsp;</b><font color=#000000>A PC server (Pentium 4, 4Gb memory, 500Gb disk) is procured.<br> 
+           <font color=#880000>&nbsp;2:&nbsp;&nbsp;</b><font color=#000000>A Red Hat Enterprise Linux (V7) operating system is installed.<br> 
+           <font color=#880000>&nbsp;3:&nbsp;&nbsp;</b><font color=#000000>A DSL connection to the internet is configured.<br>
+           <font color=#880000>&nbsp;4:&nbsp;&nbsp;</b><font color=#000000>A MySQL database server software is installed.<br>
+           <font color=#880000>&nbsp;5:&nbsp;&nbsp;</b><font color=#000000>A Verisign or GoDaddy security certificate is installed.<br>  
+           <font color=#880000>&nbsp;6:&nbsp;&nbsp;</b><font color=#000000>LLDRS web shopping cart software is installed.<br>
+           <font color=#880000>&nbsp;7:&nbsp;&nbsp;</b><font color=#000000>LLDRS credit card payment processing gateway is configured.<br>
+           <font color=#880000>&nbsp;8:&nbsp;&nbsp;</b><font color=#000000>Your products are setup and published in your product catalog.<br>
+           <font color=#880000>&nbsp;9:&nbsp;&nbsp;</b><font color=#000000>Your new web store-front is linked to your existing website.<br>
+           <font color=#880000>10:&nbsp;&nbsp;</b><font color=#000000>Your products are now available for purchase over the web!<br>
+           <font color=#880000>11:&nbsp;&nbsp;</b><font color=#000000>You manage and ship your product orders.<br>
+           <font color=#880000>12:&nbsp;&nbsp;</b><font color=#000000>Your merchant account is debited with your product sales!<br>
+           </div>
+           </p>
+           <br>
+           Items 3,5, and 7 have recurring monthly charges estimated to total approximately $100/month.
+
+           <br><br>
+           LLDRS web retail store-front can be configured to work with any credit card processing gateway (requires programming).  
+           A free First Data credit card processing gateway module is available after signing a LLDRS non-disclosure agreement. First Data is the 
+           largest credit card processor in the United States. First Data charges are approx $100 to set up and $15/month plus 'per transaction' fees
+
+           <br><br>
+           LLDRS web retail store-front also includes an optional UPS shipment rating module to calculate shipping charges during the shopping cart checkout process. 
+           If the customer selects a UPS shipping option during the checkout process, UPS shipping charges are calculated (via a UPS web service) 
+           and added to the customer order.  A UPS tracking number is attached to the order and provided on the customer order confirmation (email).   
+
+
+           <br><br>
+           <font style="font-size:9pt; color:#000000; font-family:Helvetica;">
+           LLDRS also provides the following services: 
+           </div>
+         </td>
+         </tr>
+
+         <tr> 
+         <td valign=top nowrap align=left>
+           <div class="indented2">
+           <li id=lired><font color=#000000>Red Hat Enterprise Linux server setup & training.
+           <li id=lired><font color=#000000>SMTP, POP3, & IMAP mail server setup & configuration.
+           <li id=lired><font color=#000000>TCP/IP network configuration.
+           <li id=lired><font color=#000000>Router, DNS support, and VPN support.
+           <li id=lired><font color=#000000>Java J2EE programming support.  
+           <li id=lired><font color=#000000>MySQL database installation and training.
+           <li id=lired><font color=#000000>Windows XP Server and Windows SQL Server support.
+           <li id=lired><font color=#000000>First Data credit card process integration.
+           <li id=lired><font color=#000000>UPS shipping and shipment tracking integration.
+           <li id=lired><font color=#000000>Web penetration testing and vulnerability analysis.
+           <li id=lired><font color=#000000>Search engine optimization and site analysis.
+           <li id=lired><font color=#000000>Google Adsense & Adword revenue generation.
+           </div>
+
+         </td>
+         </tr>
+         </table>
+         <!-- table 3-->
+
+ 
+         <td nowrap width=10 align=center valign=top>
+         &nbsp;
+         </td>  
+
+         </table>
+         <!-- table 2-->
+
+         <br>
+         </center>
+
+      </td>
+      </TABLE>
+      <!-- table 0-->
+
+      </center>
+      </div>    <!-- page -->
+      </div>    <!-- page-top --> 
+
+      <div id="footer"><br>
+      <font size=2 color=#000000>
+      <p>&nbsp;&nbsp;Copyright © 2009 <a href="http://www.lldrs.com"><font size=2 color=#000000>LLDRS.com</a>.</p>
+      </div>
+
+      <div id="header">
+      <div>
+
+
+</body>
+</html>
