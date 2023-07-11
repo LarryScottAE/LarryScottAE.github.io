@@ -38,6 +38,7 @@
   var initialLoad = true;
   var imageLast = "pic1img";
   var imageLastX = "pic1Ximg";
+  var imageLastY = "pic1Yimg";
   $(document).ready(function() { 
 
   function chgText(i) {
@@ -64,10 +65,14 @@
   if (i==8) document.getElementById("divComment").innerHTML = divImageText8.innerHTML;
   }
 
-  function hello() {
-  // alert("hello2!");
+  function chgTextX(i) {
+  // alert("No MidiControl text is changed!");
   }
 
+  function chgTextY(i) {
+  // alert("No MidiXLATE text is changed!");
+  }
+  
   // load these images on first cycle
   if(initialLoad){ 
      initialLoad = false;
@@ -75,8 +80,10 @@
      $('#pic1img').fadeIn(1500);
   // $('#pic1img').fadeIn(1500).delay(3500).fadeOut(1500);
      $('#pic1Ximg').fadeIn(1500);
+ $('#pic1Yimg').fadeIn(1500);
      chgText(1);
      chgTextX(1);
+// chgTextY(1);
     }
 
   $(".hello").click(function() { alert("hello!");  });
@@ -99,27 +106,72 @@
   $(".pic6X").click(function()   { $("#" + imageLastX).fadeOut("slow", function() { $("#pic6Ximg").fadeIn("slow"); }); chgTextX(6); imageLastX="pic6Ximg"; });
   $(".pic7X").click(function()   { $("#" + imageLastX).fadeOut("slow", function() { $("#pic7Ximg").fadeIn("slow"); }); chgTextX(7); imageLastX="pic7Ximg"; });
   $(".pic8X").click(function()   { $("#" + imageLastX).fadeOut("slow", function() { $("#pic8Ximg").fadeIn("slow"); }); chgTextX(8); imageLastX="pic8Ximg"; });
+  
+  $(".pic1Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic1Yimg").fadeIn("slow"); }); chgTextY(1); imageLastY="pic1Yimg"; });
+  $(".pic2Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic2Yimg").fadeIn("slow"); }); chgTextY(2); imageLastY="pic2Yimg"; });
+  $(".pic3Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic3Yimg").fadeIn("slow"); }); chgTextY(3); imageLastY="pic3Yimg"; });
+  $(".pic4Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic4Yimg").fadeIn("slow"); }); chgTextY(4); imageLastY="pic4Yimg"; });
+  $(".pic5Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic5Yimg").fadeIn("slow"); }); chgTextY(5); imageLastY="pic5Yimg"; });
+  $(".pic6Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic6Yimg").fadeIn("slow"); }); chgTextY(6); imageLastY="pic6Yimg"; });
+  $(".pic7Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic7Yimg").fadeIn("slow"); }); chgTextY(7); imageLastY="pic7Yimg"; });
+  $(".pic8Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic8Yimg").fadeIn("slow"); }); chgTextY(8); imageLastY="pic8Yimg"; });
 });
 
 
 function winOpen(pic) {
   //alert("Hello! "+pic);
   //window.open("./index2B.html?pic=" + pic);
-  window.open("./index2B.html?pic=" + pic, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=100, left=100, width=1200, height=800");
+  window.open("./indexPic.html?pic=" + pic, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=100, left=100, width=1200, height=800"); 
 }
 </script>
+
+
+<!-- jqwidgets jquery javascript -->
+<script type="text/javascript">
+    $(document).ready(function () {          
+
+       // change theme here - two stylesheets have been imported: 'summer' and 'fresh'
+       $("#jqxMenu").jqxMenu({ width: '1180', height: '28px', theme: 'fresh'});
+            
+       var centerItems = function () {
+       // update filter item's margin.
+       var firstItem = $($("#jqxMenu ul:first").children()[0]);
+       firstItem.css('margin-left', 0);
+       var width = 0;
+       var borderOffset = 2;
+       // calculate the summary items width.  
+       $.each($("#jqxMenu ul:first").children(), function () {
+           width += $(this).outerWidth(true) + borderOffset;
+       });
+       // get the menu's width.
+       var menuWidth = $("#jqxMenu").outerWidth();
+       // center the menu items by changing the margin of the first item.
+       firstItem.css('margin-left', (menuWidth / 2 ) - (width / 2));
+       }
+
+  // center menu items.
+     centerItems();
+     $(window).resize(function () { centerItems(); } );
+     });
+</script>
+
+
+
 
 <style>
 #pic1img, #pic2img, #pic3img, #pic4img, #pic5img, #pic6img, #pic7img, #pic8img { display: none; }
 #pic1Ximg, #pic2Ximg, #pic3Ximg, #pic4Ximg, #pic5Ximg, #pic6Ximg, #pic7Ximg, #pic8Ximg { display: none; }
+#pic1Yimg, #pic2Yimg, #pic3Yimg, #pic4Yimg, #pic5Yimg, #pic6Yimg, #pic7Yimg, #pic8Yimg { display: none; }
 </style>
 </head>
 
 <!-- ========================================================================================================================================================= -->
-<!-- BODY -->
+<!-- BODY (HEADING)-->
 
-<BODY bgcolor="#DDDDDD" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  class='default' style='background: #222222'>   
-                                                                                    
+<BODY bgcolor="#DDDDDD" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  class='default' style='background: #222222' onload="loginError()">   
+                                                                                             <!-- class=default is a jqxMenu parameter -->
+                                                                                             <!-- onload looks for failed login attempt / request parameter -->   
+ 
 <div id="header">
 </div>
  
@@ -141,7 +193,7 @@ function winOpen(pic) {
 
     <table id=t0 width=1100 bgcolor=#FFFFFF border=0>
     <tr>
-    <td align=left valign=top align=left nowrap width=900>
+    <td align=left valign=top nowrap width=600>
         <br> 
 	    <table id=tt width=400>
 		<tr>
@@ -165,7 +217,18 @@ function winOpen(pic) {
 		</tr>
 		</table>
     </td>
-	<td valign=bottom align=right nowrap width=200>
+	<td valign=bottom align=left nowrap width=350>
+	  <br>
+	  <ul>
+	  <b><font style="font-family:Helvetica; font-size:11;">
+      <li>Embedded Systems Design</li>
+      <li>Java and CSharp Programming</li>
+      <li>Mechanical CAD and 3D Printing</li>
+      <li>Custom High Power PC Builds</li>
+	  </font>
+	  </ul>
+	<td>
+	<td valign=bottom align=right nowrap width=150>
        <!--  <IMG src="./images/Taylor512-2.png" border=0> -->
        <IMG src="./images/musicBarGraph.gif" height=60 border=0> 
     </td>
@@ -185,8 +248,13 @@ function winOpen(pic) {
 
 <tr><td colspan=2>&nbsp;</td></tr>
 
-<tr>   <!-- row3--> 
+<!-- ========================================================================================================================================================= -->
+<!-- MIDIXLATE -->
+
+<tr>
 <td colspan=2 valign=center>
+     <div id="padding">
+     <a name="MidiXLate"></a>
 
      <center>  
      <table id=t0 width=1100 bgcolor=#FFFFFF >
@@ -206,108 +274,221 @@ function winOpen(pic) {
 	 MIDI data can be transferred via MIDI or USB cable, or recorded to a sequencer or digital audio workstation to be edited or played back. 
 
 	 <br><br>
-	 <b><font color=#000000>Midi Router</font></b> <br>
+	 <b><font color=#000000>MidiXLate Midi Router</font></b> <br>
 	 
 	 Midi Routing is the process that forwards midi packets (digitally encoded music notes and control messages) from one musical device to anoth musical device. 
 	 The Midi Router allows you to Route midi trafic, translate midi trafic, and channel lock midi trafic.  Examples of these concepts will be explained below. 
+	  
+	   <table id=t0 width=1080 bgcolor=#FFFFFF >
+       <tr> 
+       <td>
 	 
+	   <br>
+       <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>MidiXLate Router Detail</u></b><br>
+       </a>
 	 
-	 <table id=t0 width=1100 bgcolor=#FFFFFF >
-     <tr> 
-     <td>
+	   <br>
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>MidiXLate PDF Manual</u></b><br>
+       </a>
 	 
-	 <br>
-     <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>A TCP/IP Router Analogy</u></b><br>
-     </a>
+	   <br>
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>MidiXLate Software Download</u></b> (Windows 10 and above) <br>
+       </a> 
 	 
-	 <br>
-	 <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>Midi XLate PDF Manual></u></b><br>
-     </a>
+	   <br>
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>Windows .NetFramework Verison 4.6.1</u></b><br>
+       </a>  
+	
+	   <br>
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>Video Tutorial 1: &nbsp;MidiXLate Router Overview</u></b><br>
+       </a>
 	 
+	   <br>
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>Video Tutorial 2:  &nbsp;MidiXLate Software Download Installation</u></b><br>
+       </a>
 	 
-	 <br>
-	 <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>Midi XLate Video Tutorial 1: MidiXLate Router Overview></u></b><br>
-     </a>
+	   <br>
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>Video Tutorial 3:  &nbsp;MidiXLate Routing</u></b><br>
+       </a>
 	 
-	 <br>
-	 <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>Midi XLate Video Tutorial 2:  MidiXLate Software Download Installation></u></b><br>
-     </a>
+	   <br>
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>Video Tutorial 4:  &nbsp;MidiXLate Translation</u></b><br>
+       </a>
 	 
-	 <br>
-	 <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>Midi XLate Video Tutorial 3:  MidiXLate Routing></u></b><br>
-     </a>
+	   <br>
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>Video Tutorial 5:  &nbsp;MidiXLate Chanel Locking</u></b><br>
+       </a> 
+	   </td>
+	 	 
+	   <td align=right>
+	     <img src="./images/Router1.jpg"     alt="Router1.jpg"    width="610" id="pic1Yimg" onclick="winOpen('Router1.jpg')"/>
+         <img src="./images/Router2.jpg"     alt="Router2.jpg"    width="610" id="pic2Yimg" onclick="winOpen('Router2.jpg')"/>
+         <img src="./images/Router3.jpg"     alt="Router3.jpg"    width="610" id="pic3Yimg" onclick="winOpen('Router3.jpg')"/>
+         <img src="./images/Router4.jpg"     alt="Router4.jpg"    width="610" id="pic4Yimg" onclick="winOpen('Router4.jpg')"/>
+		 <img src="./images/Router5.jpg"     alt="Router5.jpg"    width="610" id="pic5Yimg" onclick="winOpen('Router5.jpg')"/>
+		 <img src="./images/RouterFace.jpg"  alt="RouterFace.jpg" width="610" id="pic6Yimg" onclick="winOpen('RouterFace.jpg')"/>
+		 <img src="./images/RouterTop.jpg"   alt="RouterTop.jpg"  width="610" id="pic7Yimg" onclick="winOpen('RouterTop.jpg')"/>
+		 <img src="./images/RouterRear.jpg"  alt="RouterRear.jpg" width="610" id="pic8Yimg" onclick="winOpen('RouterRear.jpg')"/>
+	     <br><br>
+	     <img src=./images/Router1.jpg       alt="Router1.jpg"    height=50 width=50 border=1 style="border-color:#000088" class="pic1Y" />
+         &nbsp;&nbsp;&nbsp;
+         <img src=./images/Router2.jpg       alt="Router2.jpg"    height=50 width=50 border=1 style="border-color:#000088" class="pic2Y" />
+	     &nbsp;&nbsp;&nbsp;
+         <img src=./images/Router3.jpg       alt="Router3.jpg"    height=50 width=50 border=1 style="border-color:#000088" class="pic3Y" />
+	     &nbsp;&nbsp;&nbsp;
+         <img src=./images/Router4.jpg       alt="Router4.jpg"    height=50 width=50 border=1 style="border-color:#000088" class="pic4Y" />
+	     &nbsp;&nbsp;&nbsp;
+         <img src=./images/Router5.jpg       alt="Router5.jpg"    height=50 width=50 border=1 style="border-color:#000088" class="pic5Y" />
+	     &nbsp;&nbsp;&nbsp;
+         <img src=./images/RouterFace.jpg    alt="RouterFace.jpg" height=50 width=50 border=1 style="border-color:#000088" class="pic6Y" />
+	     &nbsp;&nbsp;&nbsp;
+         <img src=./images/RouterTop.jpg     alt="RouterTop.jpg" height=50 width=50 border=1 style="border-color:#000088" class="pic7Y" />	
+	     &nbsp;&nbsp;&nbsp;
+         <img src=./images/RouterRear.jpg    alt="RouterRear.jpg" height=50 width=50 border=1 style="border-color:#000088" class="pic8Y" />
+		 
+ 	   </td>
+	   </tr>
+	   </table>
 	 
-	 <br>
-	 <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>Midi XLate Video Tutorial 4:  MidiXLate Translation></u></b><br>
-     </a>
-	 
-	 <br>
-	 <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>Midi XLate Video Tutorial 5:  MidiXLate Chanel Locking></u></b><br>
-     </a> 
-	 
-	 <br>
-	 <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>Midi XLate Software Download</u></b> (Windows 10 and above) <br>
-     </a> 
-	 
-	 <br>
-	 <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-     <b><u>Windows .NetFramework Verison 4.6.1</u></b><br>
-     </a>  
 	 </td>
-	 
-	 <td align=right>
-	 <img src="./images/Router1.jpg" alt="Router1.jpg" width="610" > 
-	 <br><br>
-	 <img src="./images/Router1.jpg" alt="Router1.jpg" width="50" height="50" border=2>
-     &nbsp;&nbsp;&nbsp;
-	 <img src="./images/Router2.jpg" alt="Router2.jpg" width="50" height="50" border=2>
-	 &nbsp;&nbsp;&nbsp;
-	 <img src="./images/Router2.jpg" alt="Router2.jpg" width="50" height="50" border=2>
-	 &nbsp;&nbsp;&nbsp;
-	 <img src="./images/Router2.jpg" alt="Router2.jpg" width="50" height="50" border=2>
-	 &nbsp;&nbsp;&nbsp;
-	 <img src="./images/Router2.jpg" alt="Router2.jpg" width="50" height="50" border=2>
-	 &nbsp;&nbsp;&nbsp;
-	 <img src="./images/Router2.jpg" alt="Router2.jpg" width="50" height="50" border=2>
-	 &nbsp;&nbsp;&nbsp;
-	 <img src="./images/Router2.jpg" alt="Router2.jpg" width="50" height="50" border=2>	
-	 &nbsp;&nbsp;&nbsp;
-	 <img src="./images/Router2.jpg" alt="Router2.jpg" width="50" height="50" border=2>
-	 &nbsp;&nbsp;&nbsp;
-	 <img src="./images/Router2.jpg" alt="Router2.jpg" width="50" height="50" border=2>	
-	 </td>
-	 
 	 </tr>
 	 </table>
-	 
-	 
-	 
-	 
-	 
-	 </td>
-	 </tr>
-	 </table>
+
      </center>  
      <br><br>	
- 	 <HR width=1180 size=4 align=center valign=top color=#000066>
 	 
+     </div>	 
 </td>
 </tr>   
-   
-   
-   
-   
-   
-<tr>   <!-- row3--> 
+  
+
+<!-- ========================================================================================================================================================= -->
+<!-- MIDICONTROL -->
+
+<tr>
 <td colspan=2 valign=center>
+    <hr width="98%" align="center" size=4 color=#000066><br>
+    <div id="padding">
+    <a name="MidiControl"></a>
+    <font color=#000066 style="font-family:Helvetica; font-size:18;">
+    <b>Sierra Digital Audio MidiControl Software for Windows 10 and above</b>
+    </font>
+    <br>
+
+Sierra Digital Audio MidiControl provides computer desktop control of midi devices using 'program change', 'continuous control', or 'system exclusive' messages.
+MidiControl is not to play midi files.
+A typical musician likely has many midi devices such as keyboards, guitar effects, drum machines, voice processors, and many more. 
+All of these devices can be controlled and synchronized using MidiControl.
+To start, connect all of your midi devices to your computer with a USB hub (like a 
+<a href="#" onClick="window.open('http://www.m-audio.com/products/view/midisport-4x4-anniversary-edition#.VVpMGUZWerY', '_blank')"> MidiSport 4x4</a> 
+). Next, download MidiControl, install Scott MidiControl (FREE!), and configure MidiControl.
+You now have a simple means to control all of your Midi devices from your PC!
+<br><br>
+
+    <table with=1120 border=0>
+    <td width=510 align=left valign=top>
+
+        <table with=1120 border=0>
+        <tr>
+        <td align=center> 
+        <a href='./downloads/MidiControl.zip'><img src=./images/Midi2.png></a>
+        </td>
+        <td align=left>&nbsp;&nbsp;&nbsp;
+        <a href='./downloads/MidiControl.zip'>Download MidiControl V1.1 Installer</a> 
+        </td>
+        </tr>
+
+        <tr>
+        <td align=center> 
+        <a href='./downloads/MidiControlHelp.zip'><img src=./images/chm.png></a>
+        </td>
+        <td align=left>&nbsp;&nbsp;&nbsp;
+        <a href='./downloads/MidiControlHelp.zip'>Download MidiControl Help File V1.1 (.chm)</a>
+        </td>
+        </tr>
+
+        <tr>
+        <td align=center> 
+        <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry"><img src=./images/email.png></a>
+        </td>
+        <td align=left>&nbsp;&nbsp;&nbsp;
+        <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">Enhancement request & bug notifications</a> 
+        </td>
+        </tr>
+        </table>
+
+    </td> 
+
+    <td width=610 valign=top  align=center border=0>
+       <br>
+       <table with=602 id=t1> 
+       <tr>
+       <td valign=top align=center>
+         <table id=t0 with=602> 
+         
+		 <tr height=300>
+         <td width=600 align=center valign=center cellspacing=1 cellpadding=1 colspan=16>
+         <!-- all of the following pictures have been set to width=600, height=variable (to keep aspect ratio) -->
+         <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('control1L.png')"/>
+         <img src="./images/control2M.png"   id="pic2Ximg" onclick="winOpen('control2L.png')"/>
+         <img src="./images/control3M.png"   id="pic3Ximg" onclick="winOpen('control3L.png')"/>
+         <img src="./images/blankImage.jpg"  id="pic4Ximg" onclick="winOpen('blankImage.jpg')"/>
+         </td>
+         </tr>
+		 
+         <tr height=60>
+         <td width=4>&nbsp;</td>
+         <td width=62><img src=./images/control1S.png   alt="image1X" height=40 width=60 border=1 style="border-color:#000088" class="pic1X" /></td>
+         <td width=4>&nbsp;</td>
+         <td width=62><img src=./images/control2S.png   alt="imageX2" height=40 width=60 border=1 style="border-color:#000088" class="pic2X" /></td>
+         <td width=4>&nbsp;</td> 
+         <td width=62><img src=./images/control3S.png   alt="image3X" height=40 width=60 border=1 style="border-color:#000088" class="pic3X" /></td>
+         <td width=4>&nbsp;</td>
+         <td width=62><img src=./images/blankImage.jpg  alt="image4X" height=40 width=60 border=1 style="border-color:#000088" class="pic4X" /></td>
+         <td width=4>&nbsp;</td>
+         <td width=62><img src=./images/blankImage.jpg  alt="image5X" height=40 width=60 border=1 style="border-color:#000088" class="pic5X" /></td>
+         <td width=4>&nbsp;</td>
+         <td width=62><img src=./images/blankImage.jpg  alt="image6X" height=40 width=60 border=1 style="border-color:#000088" class="pic6X" /></td>
+         <td width=4>&nbsp;</td>
+         <td width=62><img src=./images/blankImage.jpg  alt="image7X" height=40 width=60 border=1 style="border-color:#000088" class="pic7X" /></td>
+         <td width=4>&nbsp;</td>
+         <td width=62><img src=./images/blankImage.jpg  alt="image8X" height=40 width=60 border=1 style="border-color:#000088" class="pic8X" /></td>
+         </tr>
+         </table>
+       </td>
+       </tr>
+       </table>
+
+    </td>
+    </table>
+    </div>
+
+<br>
+New features will be added as Scott MidiControl evolves.  If you have a particular feature you would like added, please 
+ <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">email us</a>.  
+<br>
+
+</td>
+</tr>
+
+<tr height=36><td>&nbsp;</td></tr>
+
+
+<!-- ========================================================================================================================================================= -->
+<!-- STOMPBOX -->  
+   
+<tr>    
+<td colspan=2 valign=center>
+    <hr width="98%" align="center" size=4 color=#000066><br>
     <a name="Stompbox"></a>
     <br>
     <div id="padding">
