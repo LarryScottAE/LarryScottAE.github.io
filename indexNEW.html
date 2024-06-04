@@ -36,67 +36,104 @@
 <script type="text/javascript">
 
   var initialLoad = true;
-  var imageLast = "pic1img";
   var imageLastX = "pic1Ximg";
   var imageLastY = "pic1Yimg";
+  var imageLastZ = "pic1Zimg";
   $(document).ready(function() { 
 
-  function chgText(i) {
+  function chgTextX(i) {
+  // alert("MidiControl text changed i=" + i.toString());
   // document.getElementById("img").src=src;
   // document.getElementById("img").height=400;
   // document.getElementById("img").width=600;
 
-  var divImageText1 = document.getElementById('divImageText1');
-  var divImageText2 = document.getElementById('divImageText2');
-  var divImageText3 = document.getElementById('divImageText3');
-  var divImageText4 = document.getElementById('divImageText4');
-  var divImageText5 = document.getElementById('divImageText5');
-  var divImageText6 = document.getElementById('divImageText6');
-  var divImageText7 = document.getElementById('divImageText7');
-  var divImageText8 = document.getElementById('divImageText8');
+  var divImageXText1 = document.getElementById('divImageXText1');
+  var divImageXText2 = document.getElementById('divImageXText2');
+  var divImageXText3 = document.getElementById('divImageXText3');
+  var divImageXText4 = document.getElementById('divImageXText4');
+  var divImageXText5 = document.getElementById('divImageXText5');
+  var divImageXText6 = document.getElementById('divImageXText6');
+  var divImageXText7 = document.getElementById('divImageXText7');
+  var divImageXText8 = document.getElementById('divImageXText8');
 
-  if (i==1) document.getElementById("divComment").innerHTML = divImageText1.innerHTML;
-  if (i==2) document.getElementById("divComment").innerHTML = divImageText2.innerHTML;
-  if (i==3) document.getElementById("divComment").innerHTML = divImageText3.innerHTML;
-  if (i==4) document.getElementById("divComment").innerHTML = divImageText4.innerHTML;
-  if (i==5) document.getElementById("divComment").innerHTML = divImageText5.innerHTML;
-  if (i==6) document.getElementById("divComment").innerHTML = divImageText6.innerHTML;
-  if (i==7) document.getElementById("divComment").innerHTML = divImageText7.innerHTML;
-  if (i==8) document.getElementById("divComment").innerHTML = divImageText8.innerHTML;
-  }
-
-  function chgTextX(i) {
-  // alert("No MidiControl text is changed!");
+  if (i==1) document.getElementById("divXComment").innerHTML = divImageXText1.innerHTML;
+  if (i==2) document.getElementById("divXComment").innerHTML = divImageXText2.innerHTML;
+  if (i==3) document.getElementById("divXComment").innerHTML = divImageXText3.innerHTML;
+  if (i==4) document.getElementById("divXComment").innerHTML = divImageXText4.innerHTML;
+  if (i==5) document.getElementById("divXComment").innerHTML = divImageXText5.innerHTML;
+  if (i==6) document.getElementById("divXComment").innerHTML = divImageXText6.innerHTML;
+  if (i==7) document.getElementById("divXComment").innerHTML = divImageXText7.innerHTML;
+  if (i==8) document.getElementById("divXComment").innerHTML = divImageXText8.innerHTML;
   }
 
   function chgTextY(i) {
-  // alert("No MidiXLATE text is changed!");
+  // alert("MidiRouter text changed i=" + i.toString());
+  // document.getElementById("img").src=src;
+  // document.getElementById("img").height=400;
+  // document.getElementById("img").width=600;
+
+  var divImageYText1 = document.getElementById('divImageYText1');
+  var divImageYText2 = document.getElementById('divImageYText2');
+  var divImageYText3 = document.getElementById('divImageYText3');
+  var divImageYText4 = document.getElementById('divImageYText4');
+  var divImageYText5 = document.getElementById('divImageYText5');
+  var divImageYText6 = document.getElementById('divImageYText6');
+  var divImageYText7 = document.getElementById('divImageYText7');
+  var divImageYText8 = document.getElementById('divImageYText8');
+  var divImageYText9 = document.getElementById('divImageYText9');
+
+  if (i==1) document.getElementById("divYComment").innerHTML = divImageYText1.innerHTML;
+  if (i==2) document.getElementById("divYComment").innerHTML = divImageYText2.innerHTML;
+  if (i==3) document.getElementById("divYComment").innerHTML = divImageYText3.innerHTML;
+  if (i==4) document.getElementById("divYComment").innerHTML = divImageYText4.innerHTML;
+  if (i==5) document.getElementById("divYComment").innerHTML = divImageYText5.innerHTML;
+  if (i==6) document.getElementById("divYComment").innerHTML = divImageYText6.innerHTML;
+  if (i==7) document.getElementById("divYComment").innerHTML = divImageYText7.innerHTML;
+  if (i==8) document.getElementById("divYComment").innerHTML = divImageYText8.innerHTML;
+  if (i==9) document.getElementById("divYComment").innerHTML = divImageYText9.innerHTML;
+  }
+  
+  function chgTextZ(i) {
+  // alert("MidiOrganize text changed i=" + i.toString());
+  // document.getElementById("img").src=src;
+  // document.getElementById("img").height=400;
+  // document.getElementById("img").width=600;
+
+  var divImageZText1 = document.getElementById('divImageZText1');
+  var divImageZText2 = document.getElementById('divImageZText2');
+  var divImageZText3 = document.getElementById('divImageZText3');
+  var divImageZText4 = document.getElementById('divImageZText4');
+  var divImageZText5 = document.getElementById('divImageZText5');
+  var divImageZText6 = document.getElementById('divImageZText6');
+  var divImageZText7 = document.getElementById('divImageZText7');
+  var divImageZText8 = document.getElementById('divImageZText8');
+
+  if (i==1) document.getElementById("divZComment").innerHTML = divImageZText1.innerHTML;
+  if (i==2) document.getElementById("divZComment").innerHTML = divImageZText2.innerHTML;
+  if (i==3) document.getElementById("divZComment").innerHTML = divImageZText3.innerHTML;
+  if (i==4) document.getElementById("divZComment").innerHTML = divImageZText4.innerHTML;
+  if (i==5) document.getElementById("divZComment").innerHTML = divImageZText5.innerHTML;
+  if (i==6) document.getElementById("divZComment").innerHTML = divImageZText6.innerHTML;
+  if (i==7) document.getElementById("divZComment").innerHTML = divImageZText7.innerHTML;
+  if (i==8) document.getElementById("divZComment").innerHTML = divImageZText8.innerHTML;
   }
   
   // load these images on first cycle
   if(initialLoad){ 
      initialLoad = false;
-  // alert("hello2!");
-     $('#pic1img').fadeIn(1500);
+  // alert("Hello!");
   // $('#pic1img').fadeIn(1500).delay(3500).fadeOut(1500);
      $('#pic1Ximg').fadeIn(1500);
- $('#pic1Yimg').fadeIn(1500);
-     chgText(1);
-     chgTextX(1);
-// chgTextY(1);
+     $('#pic1Yimg').fadeIn(1500);
+	 $('#pic1Zimg').fadeIn(1500);
+     chgTextX(1);  
+     chgTextY(1);  
+     chgTextZ(1);  
     }
 
   $(".hello").click(function() { alert("hello!");  });
 
   // load image when image clicked
-  $(".pic1").click(function()   { $("#" + imageLast).fadeOut("slow", function() { $("#pic1img").fadeIn("slow"); }); chgText(1); imageLast="pic1img"; });
-  $(".pic2").click(function()   { $("#" + imageLast).fadeOut("slow", function() { $("#pic2img").fadeIn("slow"); }); chgText(2); imageLast="pic2img"; });
-  $(".pic3").click(function()   { $("#" + imageLast).fadeOut("slow", function() { $("#pic3img").fadeIn("slow"); }); chgText(3); imageLast="pic3img"; });
-  $(".pic4").click(function()   { $("#" + imageLast).fadeOut("slow", function() { $("#pic4img").fadeIn("slow"); }); chgText(4); imageLast="pic4img"; });
-  $(".pic5").click(function()   { $("#" + imageLast).fadeOut("slow", function() { $("#pic5img").fadeIn("slow"); }); chgText(5); imageLast="pic5img"; });
-  $(".pic6").click(function()   { $("#" + imageLast).fadeOut("slow", function() { $("#pic6img").fadeIn("slow"); }); chgText(6); imageLast="pic6img"; });
-  $(".pic7").click(function()   { $("#" + imageLast).fadeOut("slow", function() { $("#pic7img").fadeIn("slow"); }); chgText(7); imageLast="pic7img"; });
-  $(".pic8").click(function()   { $("#" + imageLast).fadeOut("slow", function() { $("#pic8img").fadeIn("slow"); }); chgText(8); imageLast="pic8img"; });
 
   $(".pic1X").click(function()   { $("#" + imageLastX).fadeOut("slow", function() { $("#pic1Ximg").fadeIn("slow"); }); chgTextX(1); imageLastX="pic1Ximg"; });
   $(".pic2X").click(function()   { $("#" + imageLastX).fadeOut("slow", function() { $("#pic2Ximg").fadeIn("slow"); }); chgTextX(2); imageLastX="pic2Ximg"; });
@@ -115,13 +152,23 @@
   $(".pic6Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic6Yimg").fadeIn("slow"); }); chgTextY(6); imageLastY="pic6Yimg"; });
   $(".pic7Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic7Yimg").fadeIn("slow"); }); chgTextY(7); imageLastY="pic7Yimg"; });
   $(".pic8Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic8Yimg").fadeIn("slow"); }); chgTextY(8); imageLastY="pic8Yimg"; });
+  $(".pic9Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic9Yimg").fadeIn("slow"); }); chgTextY(9); imageLastY="pic9Yimg"; });
+  
+  $(".pic1Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic1Zimg").fadeIn("slow"); }); chgTextZ(1); imageLastZ="pic1Zimg"; });
+  $(".pic2Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic2Zimg").fadeIn("slow"); }); chgTextZ(2); imageLastZ="pic2Zimg"; });
+  $(".pic3Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic3Zimg").fadeIn("slow"); }); chgTextZ(3); imageLastZ="pic3Zimg"; });
+  $(".pic4Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic4Zimg").fadeIn("slow"); }); chgTextZ(4); imageLastZ="pic4Zimg"; });
+  $(".pic5Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic5Zimg").fadeIn("slow"); }); chgTextZ(5); imageLastZ="pic5Zimg"; });
+  $(".pic6Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic6Zimg").fadeIn("slow"); }); chgTextZ(6); imageLastZ="pic6Zimg"; });
+  $(".pic7Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic7Zimg").fadeIn("slow"); }); chgTextZ(7); imageLastZ="pic7Zimg"; });
+  $(".pic8Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic8Zimg").fadeIn("slow"); }); chgTextZ(8); imageLastZ="pic8Zimg"; });
 });
 
 
 function winOpen(pic) {
   //alert("Hello! "+pic);
   //window.open("./index2B.html?pic=" + pic);
-  window.open("./indexPic.html?pic=" + pic, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=100, left=100, width=1200, height=800"); 
+  window.open("./indexPic.html?pic=" + pic, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=100, left=100, width=1400, height=900"); 
 }
 </script>
 
@@ -159,9 +206,9 @@ function winOpen(pic) {
 
 
 <style>
-#pic1img, #pic2img, #pic3img, #pic4img, #pic5img, #pic6img, #pic7img, #pic8img { display: none; }
 #pic1Ximg, #pic2Ximg, #pic3Ximg, #pic4Ximg, #pic5Ximg, #pic6Ximg, #pic7Ximg, #pic8Ximg { display: none; }
-#pic1Yimg, #pic2Yimg, #pic3Yimg, #pic4Yimg, #pic5Yimg, #pic6Yimg, #pic7Yimg, #pic8Yimg { display: none; }
+#pic1Yimg, #pic2Yimg, #pic3Yimg, #pic4Yimg, #pic5Yimg, #pic6Yimg, #pic7Yimg, #pic8Yimg, #pic9Yimg  { display: none; }
+#pic1Zimg, #pic2Zimg, #pic3Zimg, #pic4Zimg, #pic5Zimg, #pic6Zimg, #pic7Zimg, #pic8Zimg { display: none; }
 </style>
 </head>
 
@@ -221,8 +268,8 @@ function winOpen(pic) {
 	  <br>
 	  <ul>
 	  <b><font style="font-family:Helvetica; font-size:11;">
-      <li>Embedded Systems Design</li>
-      <li>Java and CSharp Programming</li>
+      <li>Midi System Designs</li>
+      <li>Embedded Systems Programming</li>
       <li>Mechanical CAD and 3D Printing</li>
       <li>Custom High Power PC Builds</li>
 	  </font>
@@ -261,97 +308,165 @@ function winOpen(pic) {
      <tr> 
      <td>
 	 
-	 <a href="https://en.wikipedia.org/wiki/MIDI"  target="popup" onclick="window.open('https://en.wikipedia.org/wiki/MIDI','popup'); return false;">
-     <b><u><font color=#000000>Wikipedia MIDI Definition</font></u></b> <br>
-     </a>
+	  <a href="https://en.wikipedia.org/wiki/MIDI"  target="popup" onclick="window.open('https://en.wikipedia.org/wiki/MIDI','popup'); return false;">
+      <b><u><font color=#000000>Wikipedia MIDI Definition</font></u></b> <br>
+      </a>
 	 
-	 MIDI (Musical Instrument Digital Interface) is a technical standard that describes a communications protocol, digital interface, and electrical connectors 
-	 that connect a wide variety of electronic musical instruments, computers, and related audio devices for playing, editing, and recording music.
-     A single MIDI cable can carry up to sixteen channels of MIDI data, each of which can be routed to a separate device. 
-	 Each interaction with a key, button, knob or slider is converted into a MIDI event, which specifies musical instructions, such as a note's pitch, 
-	 timing and loudness. 	 One common MIDI application is to play a MIDI keyboard or other controller and use it to trigger a digital sound module 
-	 (which contains synthesized musical sounds) to generate sounds, which the audience hears produced by a keyboard amplifier. 
-	 MIDI data can be transferred via MIDI or USB cable, or recorded to a sequencer or digital audio workstation to be edited or played back. 
+	  <details>
+      <summary>Click on this arrow for very basic Midi overview</summary>
+      <p>
+	  <br>
+	  <a href="https://en.wikipedia.org/wiki/MIDI"  target="popup" onclick="window.open('https://en.wikipedia.org/wiki/MIDI','popup'); return false;">
+	  <b><u><font color=#000000>MIDI</font></u></b> 
+	  </a>
+	  (Musical Instrument Digital Interface) is a technical standard (communication protocol) that allows musical devices (instruments, computers, 
+	  recording software (DAW), pedalboards, effects processors, and more) to communicate with each other. I will oversimplify and say that 
+	  Midi has three main purposes: 
+	  <br><br>
+	  <b>First</b>, Midi can be used to record and play musical <b>NOTE information</b>. For example, when you press a note on a digital 
+	  piano keyboard, the note and velocity (pressure) is converted to digital Midi data which can be recorded (and played back) by your 
+	  computer's recording (DAW) software. Software such as Pro Tools, Reaper, Cubase, ....
+      <br><br>	  
+	  <b>Second</b>, your digital piano keyboard likely has button, sliders, foot pedals, and wheels. In Midi jargon, are called <b>'continuouse controllers'</b>.  
+	  Controllers do not change the note being played but rather transmit control information' to the listening device.  
+	  For example, your keyboard may have a slider that you use to control the volume of your keyboard.  
+	  This slider does not affect the note being played, but 'controls' (the volume) of the note being played by sending Midi 'continuous 
+	  controller 7' information to your PC, amplifier, or PA system. The listening device recognizes the volume controller and adjusts the 
+	  keyboard volume accordingly. 
+      <br><br>	  
+	  <b>Third</b>, Midi provides a free form Midi format called <b>'System Exclusive'</b> which allows musical equipment manaufacturers 
+      to provide custom manufacturer specific functions to their musical equipment. For example, a guitar effects processor manufacturer may define 
+	  a set of custom Midi commands used to backup and restore their effects processor configuration to your PC. Each Midi device manufacturer has 
+	  proprietary and unique device architecture. Note information and Continuous Controller information is standardized accross all Midi manufacturers, 
+	  but Midi commands, such as device configuration backup and restore to your PC, are different across all equiment manufacturers, thus the Midi SysEx 
+	  protocol was developed to give Midi equipment manufactures the ability to custom define Midi commands to control their proprietary equipment. 	  
+      <br><br>
+      A single MIDI cable can carry up to sixteen channels of MIDI data, each of which can be routed to a separate device. 
+	  Each interaction with a key, button, knob or slider is converted into a MIDI event, which specifies musical instructions, such as a note's pitch, 
+	  timing and loudness. 	 One common MIDI application is to play a MIDI keyboard or other controller and use it to trigger a digital sound module 
+	  (which contains synthesized musical sounds) to generate sounds, which the audience hears produced by a keyboard amplifier. 
+	  MIDI data can be transferred via MIDI or USB cable, or recorded to a sequencer or digital audio workstation to be recorded, edited, or played back.   
+      </p>
+      </details>
 
-	 <br><br>
-	 <b><font color=#000000>MidiXLate Midi Router</font></b> <br>
+      <br>
+  	  <b><font color=#000000>MidiXLate Midi Router</font></b> <br>
 	 
-	 Midi Routing is the process that forwards midi packets (digitally encoded music notes and control messages) from one musical device to anoth musical device. 
-	 The Midi Router allows you to Route midi trafic, translate midi trafic, and channel lock midi trafic.  Examples of these concepts will be explained below. 
+	  Midi Routing is the process of forwarding midi packets (digitally encoded music notes and control messages) from one musical device to another musical device. 
+	  Typically, Midi Routing is accomplished by connecting all Midi devices to a midi 'hub' (or 'switch') and 'broadcasting' all midi commands to all midi devices 
+	  connected to the midi hub / switch. This is technically not routing because midi commands are 'broadcast', not 'routed' to their intended destination. 
+	  Obviously, the hub / switch approach is not optimal because it generates excessive midi network traffic and Midi device configuration is overly 
+	  complicated to setup (to 'filtering' out what is intended for each midi device) and troubleshoot. 
+      <br><br>
+      The MidiXLate router is a true router, meaning individual midi packets (information) are inspected and 'routed' to their intended destinations. 
+	  Routing eliminates flooding the midi network with extraneous (unused) midi data.  Lastly, the sending and receiving midi devices are much simpler to configure, 
+	  because the midi information received at a midi device is guaranteed to be intended solely for that midi device.  Routing midi data is much more efficient 
+	  and simpler to configure than hub broadcasting of midi data.
+	 
+      <details>
+      <summary>Click on this arrow for more MidiXLate router benefits</summary>
+      <p>
+      <br>	  
+      In addition to Midi routing, the MidiXLate router provides Network Address <b>Translation</b> (NAT) features such as 'translating' midi data from one midi format 
+	  (such as note data) to another Midi format (such as continuous controller) and <b>Channel Locking</b> where you can lock midi data sent out an output port 
+      to a particular midi channel. Lastly, with MidiXLate, you can blanket select, port select, or command select which midi functions (message formats) will 
+	  be processed by the router. This has huge implications allowing you to define Midi configurations not possible with Midi hubs. For example, assume a
+      Roland Integra 7 tone generator needs simultaneous input from a DAW and keyboard simultaneous. Further assume the DAW midi data needs to be stripped 
+	  of Continueous Control midi before sending to the Roland Integra 7 tone generator, where keyboard continuous control data (such as volume sliders and patch
+	  select control) are required by the DAW. Next, further require that the Integra 7 tone is input to the DAW for recording. This configuration is very difficult 
+	  to setup using a midi hub, but very simple using the MidiXLate router.   
+	  As for router performance, the heart of the MidiXLate router is a blinding fast Atmel SAM3X8E ARM Cortex-M3 processor running at 84 MHz, which guarantee's undetectible latency,  
+	  </p>
+      </details>
+	 
+	  <br>
+      The MidiXLate router was the result of my many home studio music production issues. I found I could not adequately simultaneously configure or control 
+	  my many midi devices without the routing, translation, and channel locking features provided by the MidiXLate midi router. These routers are custom builds. 
+	  I typically build 10-20 routers per year. If you would like to 'try before buy' a MidiXLate router, send me an email at
+      <a href="mailto:lscott@gmail.com?subject=MidiXLate Inquiry">LScottAE@gmail.com</a>. 
+	  I rent a demo router for $100 month. Customer pays for shipping (both ways).  I you want to purchase a new router, the purchase price is $850. 
+	  I build and test these routers in the mountains of northern California. Unfortunately, the cost of materials and time required to build a MidiXLate 
+	  router is not going to make me rich, but it is a passion of mine.  My customers receive excellent phone support and priority for requested customizations.   	  
+	 
+      <br><br>
 	  
 	   <table id=t0 width=1080 bgcolor=#FFFFFF >
-       <tr> 
-       <td>
-	 
-	   <br>
-       <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-       <b><u>MidiXLate Router Detail</u></b><br>
+       <td valign=top> 
+       <div id="divYComment"> 
+         This is divYComment
+       </div>
+	   
+	   <br>	   
+	   <!-- links -->
+	   <b>Links</b> <br>
+	   
+	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
+       <b><u>MidiXLate PDF Manual</u></b>
        </a>
 	 
 	   <br>
 	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-       <b><u>MidiXLate PDF Manual</u></b><br>
-       </a>
-	 
-	   <br>
-	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-       <b><u>MidiXLate Software Download</u></b> (Windows 10 and above) <br>
+       <b><u>MidiXLate Version x.x Software Download</u></b> 
        </a> 
-	 
-	   <br>
+
+       <br>
 	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-       <b><u>Windows .NetFramework Verison 4.6.1</u></b><br>
+       <b><u>Microsoft .NetFramework Verison 4.6.1</u></b>
        </a>  
-	
-	   <br>
+
+       <br>
 	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 1: &nbsp;MidiXLate Router Overview</u></b><br>
+       <b><u>Video Tutorial 1: &nbsp;MidiXLate Router Overview</u></b>
        </a>
 	 
 	   <br>
 	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 2:  &nbsp;MidiXLate Software Download Installation</u></b><br>
+       <b><u>Video Tutorial 2:  &nbsp;MidiXLate Software Download Installation</u></b>
        </a>
 	 
 	   <br>
 	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 3:  &nbsp;MidiXLate Routing</u></b><br>
+       <b><u>Video Tutorial 3:  &nbsp;MidiXLate Routing</u></b>
        </a>
 	 
 	   <br>
 	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 4:  &nbsp;MidiXLate Translation</u></b><br>
+       <b><u>Video Tutorial 4:  &nbsp;MidiXLate Translation</u></b>
        </a>
-	 
+
 	   <br>
 	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 5:  &nbsp;MidiXLate Chanel Locking</u></b><br>
+       <b><u>Video Tutorial 5:  &nbsp;MidiXLate Chanel Locking</u></b>
        </a> 
+
+		  
 	   </td>
 	 	 
-	   <td align=right>
-	     <img src="./images/RouterFace.jpg"  alt="RouterFace.jpg"  width="700" id="pic1Yimg" onclick="winOpen('RouterFace.jpg')"/>
-		 <img src="./images/RouterFace2.jpg" alt="RouterFace2.jpg" width="500" id="pic2Yimg" onclick="winOpen('RouterFace2.jpg')"/>
-         <img src=./images/RouterRear.jpg    alt="RouterRear.jpg"  width="700" id="pic3Yimg" onclick="winOpen('RouterRear.jpg')"/>
-         <img src="./images/Router3.jpg"     alt="Router3.jpg"     width="700" id="pic4Yimg" onclick="winOpen('Router3.jpg')"/>
-		 <img src="./images/Router5.jpg"     alt="Router5.jpg"     width="700" id="pic5Yimg" onclick="winOpen('Router5.jpg')"/>
-		 <img src="./images/RouterTop.jpg"   alt="RouterTop.jpg"   width="700" id="pic6Yimg" onclick="winOpen('RouterTop.jpg')"/>
+	   <td align=center>
+	     <img src="./images/RouterFace.jpg"              alt="RouterFace.jpg"               width="700" id="pic1Yimg" onclick="winOpen('RouterFace.jpg')"/>
+         <img src="./images/RouterRear.jpg"              alt="RouterRear.jpg"               width="700" id="pic2Yimg" onclick="winOpen('RouterRear.jpg')"/>
+         <img src="./images/RouterScreen1.jpg"           alt="RouterScreen1.jpg"            width="700" id="pic3Yimg" onclick="winOpen('RouterScreen1.jpg')"/>
+		 <img src="./images/RouterConfig1.jpg"           alt="RouterConfig1.jpg"            width="700" id="pic4Yimg" onclick="winOpen('RouterConfig1.jpg')"/>
+		 <img src="./images/RouterConfig2.jpg"           alt="RouterConfig2.jpg"            width="700" id="pic5Yimg" onclick="winOpen('RouterConfig2.jpg')"/>
+		 <img src="./images/RouterConfig3.jpg"           alt="RouterConfig3.jpg"            width="700" id="pic6Yimg" onclick="winOpen('RouterConfig3.jpg')"/>
+
 	     <br><br>
-	     <img src=./images/RouterFace.jpg   alt="RouterFace.jpg"  height=50 width=100 border=1 style="border-color:#000088" class="pic1Y" />
+	     <img src=./images/RouterFace.jpg               alt="RouterFace.jpg"              height=50 width=100 border=1 style="border-color:#000088" class="pic1Y" />
          &nbsp;&nbsp;&nbsp;
-		 <img src=./images/RouterFace2.jpg  alt="RouterFace2jpg"  height=50 width=100 border=1 style="border-color:#000088" class="pic2Y" />
+		 <img src=./images/RouterRear.jpg               alt="RouterRear.jpg"              height=50 width=100 border=1 style="border-color:#000088" class="pic2Y" />
          &nbsp;&nbsp;&nbsp;
-          <img src=./images/RouterRear.jpg   alt="RouterRear.jpg" height=50 width=100 border=1 style="border-color:#000088" class="pic3Y" />
+          <img src=./images/RouterScreen1.jpg           alt="RouterScreen1.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic3Y" />
 	     &nbsp;&nbsp;&nbsp;
-         <img src=./images/Router4.jpg       alt="Router4.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic4Y" />
-	     &nbsp;&nbsp;&nbsp;
-         <img src=./images/Router5.jpg       alt="Router5.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic5Y" />
-	     &nbsp;&nbsp;&nbsp;
-         <img src=./images/RouterTop.jpg     alt="RouterTop.jpg"  height=50 width=100 border=1 style="border-color:#000088" class="pic6Y" />		 
+         <img src=./images/RouterConfig1.jpg            alt="RouterConfig1.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic4Y" />
+         &nbsp;&nbsp;&nbsp;
+		 <img src=./images/RouterConfig2.jpg            alt="RouterConfig2.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic5Y" />
+         &nbsp;&nbsp;&nbsp;
+		 <img src=./images/RouterConfig3.jpg            alt="RouterConfig3.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic6Y" />
+         &nbsp;&nbsp;&nbsp;
+		 		 
  	   </td>
-	   </tr>
 	   </table>
-	 
+ 
 	 </td>
 	 </tr>
 	 </table>
@@ -362,7 +477,6 @@ function winOpen(pic) {
      </div>	 
 </td>
 </tr>   
-  
 
 <!-- ========================================================================================================================================================= -->
 <!-- MIDICONTROL -->
@@ -372,73 +486,87 @@ function winOpen(pic) {
     <hr width="98%" align="center" size=4 color=#000066><br>
     <div id="padding">
     <a name="MidiControl"></a>
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Sierra Digital Audio MidiControl Software for Windows 10 and above</b>
+  
+    <center>
+    <!-- table3 begin -->
+    <table with=1100 border=0>
+    <td width=1100 align=left valign=top>
+	
+	<font color=#000066 style="font-size:14px">
+    <b>MidiControl Software (for Windows 10 and above)</b>
+	</font>
+	<font color=#AA0000 style="font-size:16px">
+    <b>&nbsp;&nbsp;&nbsp;&nbsp;FREE!</b>
+	</font>
+	<br><br>
+  
+	<font color=#000000 style="font-size:12px">
+    Have you every wanted to catalog and control your midi devices from your Windows PC?
+	Sierra Digital Audio's <b>FREE</b> MidiControl program provides Windows PC control of midi devices using 'program change', 
+	'continuous control', or 'system exclusive' messages.     
+	MidiControl is not designed to play midi files, rather to control midi devices from your desktop.
+    A typical musician likely has many midi devices such as keyboards, guitar effects, drum machines, voice processors, ....
+    For example, assume you have a live gig and every song requires a different keyboad patch, drum pathch, guitar patch, guitar volume, ....
+    With MidiControl, you can define the 'tabs' by song and list all the midi commands required to setup that song. 
+	Alternatively, as shown in the example screens, each tab can represent a musical device and the midi commands to control the device. 
+    To start, connect all of your midi devices to your computer with a USB hub .
+    Next, download MidiControl, install Scott MidiControl (FREE!), and configure MidiControl.
+    You now have a simple means to control all of your Midi devices from your PC!
     </font>
-    <br>
+    </td>
+    </table>
+	<!-- table3 end -->
+	</center>
 
-Sierra Digital Audio MidiControl provides computer desktop control of midi devices using 'program change', 'continuous control', or 'system exclusive' messages.
-MidiControl is not to play midi files.
-A typical musician likely has many midi devices such as keyboards, guitar effects, drum machines, voice processors, and many more. 
-All of these devices can be controlled and synchronized using MidiControl.
-To start, connect all of your midi devices to your computer with a USB hub (like a 
-<a href="#" onClick="window.open('http://www.m-audio.com/products/view/midisport-4x4-anniversary-edition#.VVpMGUZWerY', '_blank')"> MidiSport 4x4</a> 
-). Next, download MidiControl, install Scott MidiControl (FREE!), and configure MidiControl.
-You now have a simple means to control all of your Midi devices from your PC!
-<br><br>
+    <br><br>
 
-    <table with=1120 border=0>
-    <td width=510 align=left valign=top>
+    <!-- table4 begin -->
+    <table width=1120 border=0>
+	<tr>
+	<td width=40 align=left valign=top>
+	&nbsp;
+	</td>
 
-        <table with=1120 border=0>
+    <td width=460 align=left valign=top>
+	    <!-- table5 begin -->
+        <table border=0>
         <tr>
         <td align=center> 
-        <a href='./downloads/MidiControl.zip'><img src=./images/Midi2.png></a>
-        </td>
-        <td align=left>&nbsp;&nbsp;&nbsp;
-        <a href='./downloads/MidiControl.zip'>Download MidiControl V1.1 Installer</a> 
-        </td>
-        </tr>
-
-        <tr>
-        <td align=center> 
-        <a href='./downloads/MidiControlHelp.zip'><img src=./images/chm.png></a>
-        </td>
-        <td align=left>&nbsp;&nbsp;&nbsp;
-        <a href='./downloads/MidiControlHelp.zip'>Download MidiControl Help File V1.1 (.chm)</a>
-        </td>
-        </tr>
-
-        <tr>
-        <td align=center> 
-        <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry"><img src=./images/email.png></a>
-        </td>
-        <td align=left>&nbsp;&nbsp;&nbsp;
-        <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">Enhancement request & bug notifications</a> 
+		
+		<div id="divXComment"> 
+            This is divXComment
+        </div>
+		
         </td>
         </tr>
         </table>
-
+		<!-- table5 end -->
     </td> 
 
-    <td width=610 valign=top  align=center border=0>
+    <td width=620 valign=top  align=center border=0>
        <br>
-       <table with=602 id=t1> 
+	   <!-- table6 begin -->
+       <table width=610 id=t0> 
        <tr>
        <td valign=top align=center>
-         <table id=t0 with=602> 
-         
-		 <tr height=300>
-         <td width=600 align=center valign=center cellspacing=1 cellpadding=1 colspan=16>
+	   
+	     <!-- table7 begin -->
+         <table id=t0 width=610> 
+		 <tr>
+         <td align=center valign=center cellspacing=1 cellpadding=1 colspan=16>
          <!-- all of the following pictures have been set to width=600, height=variable (to keep aspect ratio) -->
+		 <font size=1>Click on picture to open larger image in new window.  Click at thumbnail under picture to view next picture.</font> 
          <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('control1L.png')"/>
          <img src="./images/control2M.png"   id="pic2Ximg" onclick="winOpen('control2L.png')"/>
          <img src="./images/control3M.png"   id="pic3Ximg" onclick="winOpen('control3L.png')"/>
-         <img src="./images/blankImage.jpg"  id="pic4Ximg" onclick="winOpen('blankImage.jpg')"/>
+         <img src="./images/control4M.png"   id="pic4Ximg" onclick="winOpen('control4L.png')"/>
+		 <img src="./images/control5M.png"   id="pic5Ximg" onclick="winOpen('control5L.png')"/>
+ 		 <img src="./images/control6M.png"   id="pic6Ximg" onclick="winOpen('control6L.png')"/>
          </td>
          </tr>
+
 		 
-         <tr height=60>
+         <tr height=80>
          <td width=4>&nbsp;</td>
          <td width=62><img src=./images/control1S.png   alt="image1X" height=40 width=60 border=1 style="border-color:#000088" class="pic1X" /></td>
          <td width=4>&nbsp;</td>
@@ -446,157 +574,186 @@ You now have a simple means to control all of your Midi devices from your PC!
          <td width=4>&nbsp;</td> 
          <td width=62><img src=./images/control3S.png   alt="image3X" height=40 width=60 border=1 style="border-color:#000088" class="pic3X" /></td>
          <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/blankImage.jpg  alt="image4X" height=40 width=60 border=1 style="border-color:#000088" class="pic4X" /></td>
+         <td width=62><img src=./images/control4S.png  alt="image4X" height=40 width=60 border=1 style="border-color:#000088" class="pic4X" /></td>
          <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/blankImage.jpg  alt="image5X" height=40 width=60 border=1 style="border-color:#000088" class="pic5X" /></td>
+         <td width=62><img src=./images/control5S.png  alt="image5X" height=40 width=60 border=1 style="border-color:#000088" class="pic5X" /></td>
          <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/blankImage.jpg  alt="image6X" height=40 width=60 border=1 style="border-color:#000088" class="pic6X" /></td>
-         <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/blankImage.jpg  alt="image7X" height=40 width=60 border=1 style="border-color:#000088" class="pic7X" /></td>
-         <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/blankImage.jpg  alt="image8X" height=40 width=60 border=1 style="border-color:#000088" class="pic8X" /></td>
+         <td width=62><img src=./images/control6S.png  alt="image6X" height=40 width=60 border=1 style="border-color:#000088" class="pic6X" /></td>
+
          </tr>
          </table>
+		 <!-- table7 end -->
        </td>
        </tr>
        </table>
+	   <!-- table6 end -->
 
     </td>
+	</tr>
     </table>
-    </div>
+	<!-- table4 end -->
 
-<br>
-New features will be added as Scott MidiControl evolves.  If you have a particular feature you would like added, please 
- <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">email us</a>.  
-<br>
+	<br>
+    <br>xx
+	
+	<!-- table8 begin -->
+	<table width=1120 border=0>
+	<td width=40 align=left valign=top>&nbsp;</td>
+	<td width=1080 align=left valign=top>
+    New features will be added as Scott MidiControl evolves.  If you have a particular feature you would like added, please
+	<a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">email us</a>. 
+	</td>
+	</table>
+	<!-- table8 end -->
+	
+    </div>
 
 </td>
 </tr>
-
-<tr height=36><td>&nbsp;</td></tr>
 
 
 <!-- ========================================================================================================================================================= -->
-<!-- STOMPBOX -->  
-   
-<tr>    
+<!-- MIDIORGANIZE -->
+
+<tr>
 <td colspan=2 valign=center>
     <hr width="98%" align="center" size=4 color=#000066><br>
-    <a name="Stompbox"></a>
-    <br>
     <div id="padding">
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox Prototype</b>
+    <a name="MidiControl"></a>
+  
+    <center>
+    <!-- table3 begin -->
+    <table with=1100 border=0>
+    <td width=1100 align=left valign=top>
+	
+	<font color=#000066 style="font-size:14px">
+    <b>MidiOrganize Software (for Windows 10 and above)</b>
+	</font>
+	<font color=#AA0000 style="font-size:16px">
+    <b>&nbsp;&nbsp;&nbsp;&nbsp;FREE!</b>
+	</font>
+	<br><br>
+  
+	<font color=#000000 style="font-size:12px">
+    MidiOrganize is a midi file organizer (not a VST) designed to catalog midi drum loops / patches. 
+	Midi drum loops are typically arranged by genere, beat, time signature, and pattern. 
+    There are many drum loop VSTs available for ProTools, Reaper, Cubase, ...
+	These drum VSTs typically are very expensive, must be licensed, require your PC to be connected to the internet,
+	and (in my case, most importantly) the VSTs have place a heavy burden on the CPU.    
+	For example, on my rack music optimized PC (32 gig memory, 1TB HD, Intel 7 CPU, Reaper)
+	I start to see performance degredation after only a few drum VSTs. 
+    VSTs do have benefits and conveniences, but I prefer to limit my VST usage to optimize my performance.
+    Midi Organize is a stand alone PC application.  During setup, you specify the directories of all your drum loops. 
+	When working with your DAW (ProTools, Reaper, CuBase,...) you drag and drop MidiOrganize drum tracks into you DAW drum tack. 
+	Unlike the VST which will play the drum track, set your drum track to route the drum midi to your external drum machine. 
+	In my case, I have a Yamaha MU15 and a Roland Integra7. 
+	The MU15 (or Integra7) audio output is an input on my mixer which is in turn recorded by my DAW. 
+	Not only is this a <b>FREE</b> solution, but the performance hit on your DAW is significantly reduced. 
+    In my case, with Reaper, the final mix rendered audio is free of chop and dropouts due to the VST footprint.  	
+	MidiOrganize follows the format of EZ Drummer. If you understand the drilldown structure of EZ Drummer, MidiOrganize will feel very natural. 
+
+    You now have a FREE and simple means to organize your midi drum loops and optimize the performance of your DAW mixes!
     </font>
-    <br>
+    </td>
+    </table>
+	<!-- table3 end -->
+	</center>
 
-    This stompbox gives a musician   
-    <a href="#" onClick="window.open('http://en.wikipedia.org/wiki/MIDI', '_blank')">MIDI</a> 
-    foot control of audio effects while performing.
-    This stompbox is particulaly well suited for use with audio software such as 
-    <a href="#" onClick="window.open('http://www.reaper.fm/', '_blank')">Reaper,</a> 
-    <a href="#" onClick="window.open('https://www.avid.com/US/products/pro-tools-software', '_blank')">ProTools,</a> 
-    <a href="#" onClick="http://www.cakewalk.com/', '_blank')">CakeWalk,</a>and  
-    <a href="#" onClick="window.open('https://www.steinberg.net/en/shop/buy_product/product/cubase-pro-8.html', '_blank')">Cubase</a>.
-    With this stompbox, you can also control a Digital Audio Workstation
-    <a href="#" onClick="window.open('http://en.wikipedia.org/wiki/Digital_audio_workstation', '_blank')">(DAW)</a> 
-    equipment such as a keyboards and/or synthesizers. For example, with the press of a switch, you can set the patch and effects 
-    on any DAW.  Lastly, this stompbox can be used to control lighting functions using
-    <a href="#" onClick="window.open('http://en.wikipedia.org/wiki/MIDI_Show_Control', '_blank')">Midi Show Control</a>.  
-    Press a footswitch to change any lighting scene setting. &nbsp;&nbsp;     
+    <br><br>
 
-    To assign switch Midi functions, download (registered users only) the Windows based stompbox control program, connect the stompbox to 
-    your PC using a USB cable, launch the program,  and assign 'Program Change', 'Continuous Control' and/or 'System Exclusive' commands
-    to the individual switches. The stompbox provides multiple configuration 'maps' allowing the user to toggle between multiple groups 
-    of switch functions in real time.  
-    <br>
-    <!-- table1 BEGIN --> 
+    <!-- table4 begin -->
     <table width=1120 border=0>
-    <td width=510 align=left valign=top>
-        <div id="divComment"> 
-        This is the default text
+	<tr>
+	<td width=40 align=left valign=top>
+	&nbsp;
+	</td>
+
+    <td width=460 align=left valign=top>
+	    <!-- table5 begin -->
+        <table border=0>
+        <tr>
+        <td align=center> 
+		<div id="divZComment"> 
+            This is divZComment
         </div>
+        </td>
+        </tr>
+        </table>
+		<!-- table5 end -->
     </td> 
 
-    <td width=610 valign=top  align=center border=0>
+    <td width=620 valign=top  align=center border=0>
        <br>
-       <!-- table2 BEGIN --> 
-       <table with=602 id=t1> 
+	   <!-- table6 begin -->
+       <table width=610 id=t0> 
        <tr>
        <td valign=top align=center>
-         <!-- table3 BEGIN --> 
-         <table id=t1 with=602 border=0> 
-         <tr height=300>
-         <td width=600 align=center valign=center cellspacing=1 cellpadding=1 colspan=16>
+	   
+	     <!-- table7 begin -->
+         <table id=t0 width=610> 
+		 <tr>
+         <td align=center valign=center cellspacing=1 cellpadding=1 colspan=16>
          <!-- all of the following pictures have been set to width=600, height=variable (to keep aspect ratio) -->
-         <img src="./images/Stompbox1MM.jpg"       id="pic1img" onclick="winOpen('Stompbox1L.jpg')"/>
-         <img src="./images/Stompbox2MM.jpg"       id="pic2img" onclick="winOpen('Stompbox2L.jpg')"/>
-         <img src="./images/StompBoxCpu2M.jpg"     id="pic3img" onclick="winOpen('StompBoxCpu2L.jpg')"/>
-         <img src="./images/StompBoxCpu1M.jpg"     id="pic4img" onclick="winOpen('StompBoxCpu1L.jpg')"/>
-         <img src="./images/StompBoxPrimer1M.jpg"  id="pic5img" onclick="winOpen('StompBoxPrimer1L.jpg')"/>
-         <img src="./images/PCBLayoutM.png"        id="pic6img" onclick="winOpen('PCBLayoutL.png')"/>
-         <img src="./images/PCB1M.jpg"             id="pic7img" onclick="winOpen('PCB1L.jpg')"/>
-         <img src="./images/Config1M.png"          id="pic8img" onclick="winOpen('Config1L.png')"/>
+		 <font size=1>Click on picture to open larger image in new window.  Click at thumbnail under picture to view next picture.</font> 
+         <img src="./images/organize1M.png"  id="pic1Zimg" onclick="winOpen('organize1L.png')"/>
+         <img src="./images/control2M.png"   id="pic2Zimg" onclick="winOpen('control2L.png')"/>
+         <img src="./images/control3M.png"   id="pic3Zimg" onclick="winOpen('control3L.png')"/>
+         <img src="./images/control4M.png"   id="pic4Zimg" onclick="winOpen('control4L.png')"/>
+		 <img src="./images/control5M.png"   id="pic5Zimg" onclick="winOpen('control5L.png')"/>
+ 		 <img src="./images/control6M.png"   id="pic6Zimg" onclick="winOpen('control6L.png')"/>
          </td>
          </tr>
-         <tr height=60>
+
+		 
+         <tr height=80>
          <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/Stompbox1S.jpg       alt="image1" height=40 width=60 border=1 style="border-color:#000088" class="pic1" /></td>
+         <td width=62><img src=./images/control1S.png   alt="image1X" height=40 width=60 border=1 style="border-color:#000088" class="pic1Z" /></td>
          <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/Stompbox2S.jpg       alt="image2" height=40 width=60 border=1 style="border-color:#000088" class="pic2" /></td>
+         <td width=62><img src=./images/control2S.png   alt="imageX2" height=40 width=60 border=1 style="border-color:#000088" class="pic2Z" /></td>
+         <td width=4>&nbsp;</td> 
+         <td width=62><img src=./images/control3S.png   alt="image3X" height=40 width=60 border=1 style="border-color:#000088" class="pic3Z" /></td>
          <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/StompBoxCpu2S.jpg    alt="image3" height=40 width=60 border=1 style="border-color:#000088" class="pic3" /></td>
+         <td width=62><img src=./images/control4S.png  alt="image4X" height=40 width=60 border=1 style="border-color:#000088" class="pic4Z" /></td>
          <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/StompBoxCpu1S.jpg    alt="image4" height=40 width=60 border=1 style="border-color:#000088" class="pic4" /></td>
+         <td width=62><img src=./images/control5S.png  alt="image5X" height=40 width=60 border=1 style="border-color:#000088" class="pic5Z" /></td>
          <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/StompBoxPrimer1S.jpg alt="image5" height=40 width=60 border=1 style="border-color:#000088" class="pic5" /></td>
-         <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/PCBLayoutS.png       alt="image6" height=40 width=60 border=1 style="border-color:#000088" class="pic6" /></td>
-         <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/PCB1S.jpg            alt="image7" height=40 width=60 border=1 style="border-color:#000088" class="pic7" /></td>
-         <td width=4>&nbsp;</td>
-         <td width=62><img src=./images/Config1S.png         alt="image8" height=40 width=60 border=1 style="border-color:#000088" class="pic8" /></td>
+         <td width=62><img src=./images/control6S.png  alt="image6X" height=40 width=60 border=1 style="border-color:#000088" class="pic6Z" /></td>
+
          </tr>
          </table>
-         <!-- table3 END --> 
+		 <!-- table7 end -->
        </td>
        </tr>
        </table>
-       <!-- table2 END --> 
+	   <!-- table6 end -->
 
     </td>
+	</tr>
     </table>
-    <!-- table1 END --> 
+	<!-- table4 end -->
 
+	<br>
+    <br>
+	
+	<!-- table8 begin -->
+	<table width=1120 border=0>
+	<td width=40 align=left valign=top>&nbsp;</td>
+	<td width=1080 align=left valign=top>
+    New features will be added as Scott MidiControl evolves.  If you have a particular feature you would like added, please
+	<a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">email us</a>. 
+	</td>
+	</table>
+	<!-- table8 end -->
+	
     </div>
 
-    <br>
-    A typical configuration is to use the stompbox to control Reaper playback of rhythm and bass tracks when developing a lead or jamming. 
-    To minimize disruption of the creative process, jumping between verse markers, chorus markers, and bridge markers needs to be seamless.
-    A particularly useful configuration is set the bottom row of 6 switches to jump between chorus, verse, and bridge markers in an audio project, 
-    with the next row of 6 switches used to enable / disable tracks during playback.  For example, you may want to work with different rhythm tracks 
-    while working out a lead. Just press the stompbox switch to toggle between different rhythm tracks. Reaper has a particularly nice feature called
-    'smooth seeking' that advances to the next marker/section on completion of the current marker/section.  
-    The top row of 4 switches is used to control start/stop/record, tempo increase/decrease, loop on/off, and toggle between midi maps.
-    Since all of the switches are independently configurable, you can setup the stompbox to best suit your individual needs.
-    <br><br>
-    I am confident that this stompbox's performance competes well with any commercially available stompbox.
-    One sad fact I learned building this stompbox prototype is; the raw materials (alone) that are necessary to build this stompbox are more 
-    expensive than a fully assembled, commercial unit from many stompbox providers.
-    This fact alone will likely prevent me from mass producing this stompbox, 
-    but it does provide useful information for other DIY guitar accessory
-
-</td>
-</tr> <!-- row3--> 
-
-<tr height=36><td colspan=3>&nbsp;</td></tr>
-
-</table>
-<!-- table 1-->
 </td>
 </tr>
-</table>
-<!-- table 2-->
+</table>  <!-- table2 -->
+</td>
+</tr>
+</table>  <!-- table1 -->
+
 </center>
 
 </div>    <!-- page -->
@@ -618,208 +775,146 @@ New features will be added as Scott MidiControl evolves.  If you have a particul
 <!-- ========================================================================================================================================================= -->
 <!-- SUBROUTINES -->
 
-<div id="divImageText1" style="visibility: hidden;"> 
+<div id="divImageXText1" style="visibility: hidden;"> 
+    <a href='./downloads/MidiControl.zip'><img src=./images/Midi2.png></a>
+    &nbsp;&nbsp;
+    <a href='./downloads/MidiControl.zip'>Download MidiControl V1.1 Installer</a> 
     <br>
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox Features:</b>
-    </font> 
-    <br>
-    <div id="indented"> 
-    <ul>
-    <li>Sixteen independently configurable foot switches per map.</li>
-    <li>Toggle between four distinct configuration maps in real time.</li>
-    <li>Send MIDI program change, continuous control, and system exclusive commands.</li>
-    <li>Midi transmit and receive function via standard midi cables or USB cable. (midi yoke).</li>
-    <li>Windows USB based program used to define configuration maps and switch functions.</li>
-    <li>Compatible with all major digital analog workstations (DAWs).</li>
-    <li>Switches can be configured as latch (toggle on/off) or pulse function.</li>
-    <li>Configuration map and switch function shown in display upon switch press.</li>
-    <li>Atmel 8-bit AVR microprocessor 
-        <a href="#" onClick="window.open('http://arduino.cc/en/Main/ArduinoBoardProMini', '_blank')">(ATmega168)</a> 
-        dedicated to monitoring footswitch press.</li> 
-    <li>Atmel ARM Cortex-M3 CPU  
-        <a href="#" onClick="window.open('http://arduino.cc/en/Main/ArduinoBoardProMini', '_blank')">(SAM3X8E)</a> 
-        dedicated to supervisory functions.</li> 
-    <li>AdaFruit Micro SD  
-        <a href="#" onClick="window.open('http://www.adafruit.com/product/254', '_blank')">(Micro SD)</a> 
-        memory card holds up to 16 gig of config.</li> 
-    <li>A large 4 line,20 character,Hantronix blue backlit display.</li>
-    <li>Free Custom Reaper 'Action List' to demonstrate the Reaper capabilities</li>
-    <li>Rugged 16 gauge sheet metal enclosure can take a lot of abuse!</li>
-    <li>Powered by standard 12 volt / 2 amp wall adapter</li>
-    </ul>
-    <br>
-    <font color=#000066 style="font-family:Helvetica; font-size:9;">
-     Click on thumbnail image to the right for more information >>
-    </font> 
-    </div>
-<br>
+	<br>
+    <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry"><img src=./images/email.png></a>
+	&nbsp;&nbsp;
+    <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">Enhancement request & bug notifications</a> 
 </div>
 
-<!-- ============================================================================================= -->
-
-<div id="divImageText2" style="visibility: hidden;"> 
-    <br>
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox Connections:</b>
-    </font> 
-    <br>
-    <div id="indented"> 
-    <ul>
-    <li>USB connection to Windows PC for realtime programming & configuration.</li>
-    <li>Power connector providing 12 volt /2 amps of power.</li>
-    <li>MIDI input plug to receive remote MIDI instructions (such as map changes).</li>
-    <li>Midi output plug to send MIDI commands to your DAW.</li>
-    <li>USB connector can also be used as a Midi input/output using 'MIDI Yoke'.</li>
-    </ul>
-    </div>
-    <br>
-    Be aware that MIDI cables, although not as fast as a MIDI USB connection, are designed to be run over long lengths.
-    A midi cable can easily run 100+ feet without any signal degredation issues. By contrast, Midi over a usb cable using 
-    Midi Yoke is limited to the USB cables.  USB cables typically experience signal degredation when the USB cable exceeds 
-    six feet. A third alternative (where I had had good experience) is using a 
-    <a href="#" onClick="window.open('http://www.amazon.com/VicTsing-Cable-Converter-Keyboard-Adapter/dp/B00ACGMOA6/ref=sr_1_1?ie=UTF8&qid=1428530948&sr=8-1&keywords=usb+cable+midi', '_blank')">MIDI USB cable</a>
+<div id="divImageXText2" style="visibility: hidden;"> 
+    divImageXText2
 </div>
 
-<!-- ============================================================================================= -->
-
-<div id="divImageText3" style="visibility: hidden;"> 
-    <br>
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox Internals:</b>
-    </font> 
-    <br>
-    <div id="indented"> 
-    <ul>
-    <li>Switch connections are in blue. </li>
-    <li>Panel mount led connections are in red.</li>
-    <li>Ground connections are in black.</li>
-    <li>Connections to controller using .1 inch Molex connectors</li>
-    <li>Blue CPU is the Atmel ARM Cortex-M3 CPU  
-        <a href="#" onClick="window.open('http://arduino.cc/en/Main/ArduinoBoardProMini', '_blank')">(SAM3X8E)</a> 
-        dedicated to supervisory functions.</li> 
-    <li>Yellow PCB contains switch, led, memory, and disply interface circuitry.
-    </ul>
-    </div>
-    <br>
+<div id="divImageXText3" style="visibility: hidden;"> 
+    divImageXText3
 </div>
 
-<!-- ============================================================================================= -->
-
-<div id="divImageText4" style="visibility: hidden;">
-    <br> 
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox Brains</b>  
-    </font>
-    <br>
-    An <a href="#" onClick="window.open('http://arduino.cc/en/Main/arduinoBoardDue', '_blank')">Arduino Due</a>
-    microprocessor is the primary controller for the Scott Stompbox (blue board in picture). It's primary job 
-    is to control stompbox input and output.  
-    <br><br>
-    The Scott interface baord (yellow board in picture) contains 
-    a voltage requlator, midi interface circuitry, 16 gig
-    <a href="#" onClick="window.open('http://www.adafruit.com/products/254?gclid=COino8vV-8QCFQeSfgodgogAiA', '_blank')">Micro SD</a> 
-    card, 5 volt to 3 volt 
-    <a href="#" onClick="window.open('https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide', '_blank')">level shifters</a>
-    for midi interfaces and display output),
-
-    Atmel 8-bit AVR microprocessor 
-    <a href="#" onClick="window.open('http://arduino.cc/en/Main/ArduinoBoardProMini', '_blank')">(ATmega168)</a> 
-    dedicated to monitoring footswitch press.
-
-    16 channel 
-    <a href="#" onClick="window.open('http://www.ti.com/lit/ds/symlink/cd4067b.pdf', '_blank')">CD4067</a> multiplexer, 
-    to monitor switch press, and two
-    <a href="#" onClick="window.open('https://www.sparkfun.com/products/733', '_blank')">74HC595</a> 8 output shift registers
-    (to drive the LED's above each switch). 
-    <br><br>
-
-    Arduino Due features include:
-    <div id="due" style="margin-left: 2em;">
-    <ul>
-    <li>Atmel SAM3X8E ARM 32-bit CPU</li>
-    <li>CPU clock rate of 84Mhz.</li>
-    <li>96 KBytes of static RAM.</li>
-    <li>512 KBytes of flash memory (code memory).</li>
-    <li>54 digital input/output pins.</li>
-    <li>4 UARTs (hardware serial ports).</li>
-    <li>USB-serial port on the SAM3X chip.
-    <li>A DMA controller to relieve CPU of memory intensive tasks.</li>
-    <li>** 98% of today's cell phones contain ARM processors.</li> 
-    </ul>
-    </div>
+<div id="divImageXText4" style="visibility: hidden;"> 
+    divImageXText4
 </div>
 
-<!-- ============================================================================================= -->
-
-<div id="divImageText5" style="visibility: hidden;"> 
-    <br>
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox CASE:</b>
-    </font> 
-    <br>
-    The Scott Stombox case was fabricated in my garage using a Baliegh 36 inch sheet metal brake,
-    a Miller Spectrum 375 plasma cutter, an Ingersol Rand 50 gallon / 120 CFM air compressor, and a 
-    Sear's 20,000 rpm air gun sander.
-    <br><br>
-    The case in made of 16 guage sheet metal and is approximately 24 inches wide by 10 inches height.
-    Front depth is 1 inch and rear depth is 2 inches. The weight of the stompbox is roughly 8 lbs.
-    Even the most aggressive stomping will not dent this case !
-    <br><br>
-    Primer base coat is DupliColor 'self etching primer'.  The final coats are Krylon black expoxy Refrigerator paint.
-    (I experimented with Duplicolor black enamel, but, given my weak paint skills, 
-     I got a smoother and tougher finish with Krylon expoxy paint).
+<div id="divImageXText5" style="visibility: hidden;"> 
+    divImageXText5
 </div>
 
-<!-- ============================================================================================= -->
-
-<div id="divImageText6" style="visibility: hidden;"> 
-    <br>
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox PCB1:</b>
-    </font> 
-    <br>
-    This image shows the PCB layout for the Scott Stompbox printed circuit board (see image 3).
-    The CAD software and PCB fabrication is provided by 
-    <a href="#" onClick="window.open('http://www.expresspcb.com/', '_blank')">Express PCB</a>.
-    I designed the PCB's using the CAD software and sent the CAD drawing to Express PCB to be built.
-    Three (2 sideds) PCBs cost approximately $100.  Apparently, Gerber files can be puchased from 
-    Express PCB (which I did not need).  In the future, If I need mass production, I may switch 
-    to Protel PCB layout software and send the Gerber files to a lower cost PCB fabricator.
-    <br>
-    <br>
-    In the image shown to the right, the red traces are PCB top level traces, the green traces are 
-    PCB bottom level traces, and the yellow traces are documentation only.
-    Express PCB does provide multi level tracing, but the cost is significantly higher.
+<div id="divImageXText6" style="visibility: hidden;"> 
+    divImageXText6
 </div>
 
-<!-- ============================================================================================= -->
-
-<div id="divImageText7" style="visibility: hidden;"> 
-    <br>
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox PCB2:</b>
-    </font> 
-    <br>
-    This image is the PCB created by  
-    <a href="#" onClick="window.open('http://www.expresspcb.com/', '_blank')">Express PCB</a>
-    based on the CAD diagram (see previous image).
+<div id="divImageXText7" style="visibility: hidden;"> 
+    divImageXText7
 </div>
 
-<!-- ============================================================================================= -->
+<div id="divImageXText8" style="visibility: hidden;"> 
+    divImageXText8
+</div>
 
-<div id="divImageText8" style="visibility: hidden;"> 
-    <br>
-    <font color=#000066 style="font-family:Helvetica; font-size:18;">
-    <b>Scott Stompbox Configuration</b>
-    </font> 
-    <br>
-    This image shows the C# Windows application used to configure the stompbox. Download the 
-    Scott Stompbox configuration software / installer (not yet available), and the plug a usb 2.0
-    cable into the back of the stompbox and your windows computer, and start the program.
-    <br>
-    <br>
-    Configuration options are.....
+<div id="divImageYText1" style="visibility: hidden;"> 
+	 <b>Router Face</b>  &nbsp;(divImageYText1)
+ <ul style="padding-left:10px">
+  <li>Power button: Power on and off the router.</li>
+  <li>Logger button: Dump midi activity to screen or TTY port.</li>
+  <li>Config button: Download router config from PC.</li>
+  <li>LEDs: Blink as Midi traffic received and sent.</li>
+  <li>Screen: Display config and realtime midi activity.</li>
+</ul> 
+</div>
+
+<div id="divImageYText2" style="visibility: hidden;"> 
+	 <b>Router Rear</b>  &nbsp;(divImageYText2)
+ <ul style="padding-left:10px">
+  <li>Midi Ports: Six midi 5 pin din input ports and six output ports.</li>
+  <li>Log Port: USB port to dump router activity to terminal emulator.</li>
+  <li>CFG Port: USB port used to receive router config from PC.</li>
+  <li>USB (not used):  USB port for future use.</li>
+  <li>PGM (not used):  USB port to update firmware.</li>
+  <li>PWR jack: 9V center positive power barrel connector.</li>
+  <li>SD Card: Micro SD card( MS FAT32 format) router configuration.</li>
+</ul> 
+</div>
+
+<div id="divImageYText3" style="visibility: hidden;"> 
+	 <b>Router Screens</b>  &nbsp;(divImageYText3)
+ <ul style="padding-left:10px">
+  <li>Splash Page: Displayed for two seconds at router powered on.</li>
+  <li>Router Services: Summary of services configured for router. </li>
+  <li>Port Routings: Summary of how router ports are connected.</li>
+  <li>Port Filtering: Shows the midi commands allowed by midi port.</li>
+</ul> 
+</div>
+
+<div id="divImageYText4" style="visibility: hidden;"> 
+	 <b>Router PC Configuration</b>  &nbsp;(divImageYText4)
+ <ul style="padding-left:10px">
+  <li>Power button: Power on and off the router.</li>
+  <li>Logger button: Dump midi activity to screen or TTY port.</li>
+  <li>Config button: Download router config from PC.</li>
+  <li>LEDs: Blink as Midi traffic received and sent.</li>
+  <li>Screen: Display config and realtime midi activity.</li>
+</ul> 
+</div>
+
+<div id="divImageYText5" style="visibility: hidden;"> 
+    divImageYText5
+</div>
+
+<div id="divImageYText6" style="visibility: hidden;"> 
+    divImageYText6
+</div>
+
+<div id="divImageYText7" style="visibility: hidden;"> 
+    divImageYText7
+</div>
+
+<div id="divImageYText8" style="visibility: hidden;"> 
+    divImageYText8
+</div>
+
+<div id="divImageYText9" style="visibility: hidden;"> 
+    divImageYText9
+</div>
+
+<div id="divImageZText1" style="visibility: hidden;"> 
+    <a href='./downloads/MidiControl.zip'><img src=./images/Midi2.png></a>
+    &nbsp;&nbsp;
+    <a href='./downloads/MidiControl.zip'>Download MidiOrganize V1.1 Installer</a> 
+    <br><br> 
+    <a href="mailto:larry@scottae.com?subject=ScottAE MidiOrganize Inquiry"><img src=./images/email.png></a>
+    &nbsp;&nbsp;
+    <a href="mailto:larry@scottae.com?subject=ScottAE MidiOrganize Inquiry">Enhancement request & bug notifications</a> 
+</div>
+
+<div id="divImageZText2" style="visibility: hidden;"> 
+    divImageZText2
+</div>
+
+<div id="divImageZText3" style="visibility: hidden;"> 
+    divImageZText3
+</div>
+
+<div id="divImageZText4" style="visibility: hidden;"> 
+    divImageZText4
+</div>
+
+<div id="divImageZText5" style="visibility: hidden;"> 
+    divImageZText5
+</div>
+
+<div id="divImageZText6" style="visibility: hidden;"> 
+    divImageZText6
+</div>
+
+<div id="divImageZText7" style="visibility: hidden;"> 
+    divImageZText7
+</div>
+
+<div id="divImageZText8" style="visibility: hidden;"> 
+    divImageZText8
 </div>
 
 </body>
