@@ -23,8 +23,7 @@
 
 <script type="text/javascript" src="scottScript/scott.js"></script> 
 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta name="Author" content="Larry Scott">
+<META name="Author" content="Larry Scott">
 <META NAME="description" content="Audio Engineering & DIY kits, midi, router, arduino, stompboxes, and pedalboards">
 <META NAME="keywords" content="Digital Audio Engineering, DIY, midi, arduino, router, stompboxes, and pedalboards">
 <META NAME="organization" content="SierraDigitalAudio">
@@ -165,11 +164,43 @@
 });
 
 
+function browserCheck() { 
+    let userAgent = navigator.userAgent;
+    let browser = "Unknown";
+    
+    // Detect Chrome
+    if (/Chrome/.test(userAgent) && !/Chromium/.test(userAgent)) {
+        browser = "Google Chrome";
+    }
+    // Detect Chromium-based Edge
+    else if (/Edg/.test(userAgent)) {
+        browser = "Microsoft Edge";
+    }
+    // Detect Firefox
+    else if (/Firefox/.test(userAgent)) {
+        browser = "Mozilla Firefox";
+    }
+    // Detect Safari
+    else if (/Safari/.test(userAgent)) {
+        browser = "Apple Safari";
+    }
+    // Detect Internet Explorer
+    else if (/Trident/.test(userAgent)) {
+        browser = "Internet Explorer";
+    }
+    
+//	document.write(browser);
+    document.getElementById('browserID').innerHTML=browser;
+    return browser;
+}
+
+
 function winOpen(pic) {
   //alert("Hello! "+pic);
   //window.open("./index2B.html?pic=" + pic);
   window.open("./indexPic.html?pic=" + pic, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=100, left=100, width=1400, height=900"); 
 }
+
 </script>
 
 
@@ -202,9 +233,6 @@ function winOpen(pic) {
      });
 </script>
 
-
-
-
 <style>
 #pic1Ximg, #pic2Ximg, #pic3Ximg, #pic4Ximg, #pic5Ximg, #pic6Ximg, #pic7Ximg, #pic8Ximg { display: none; }
 #pic1Yimg, #pic2Yimg, #pic3Yimg, #pic4Yimg, #pic5Yimg, #pic6Yimg, #pic7Yimg, #pic8Yimg, #pic9Yimg  { display: none; }
@@ -215,11 +243,17 @@ function winOpen(pic) {
 <!-- ========================================================================================================================================================= -->
 <!-- BODY (HEADING)-->
 
-<BODY bgcolor="#DDDDDD" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  class='default' style='background: #222222' onload="loginError()">   
+<BODY bgcolor="#DDDDDD" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  class='default' style='background: #222222' onload="browserCheck()">   
                                                                                              <!-- class=default is a jqxMenu parameter -->
                                                                                              <!-- onload looks for failed login attempt / request parameter -->   
  
-<div id="header">
+<div id="header" align=right>
+  <br><br><br>
+  <font size=1 color=#AAAAAA>
+  Browser: 
+  <label name="browserID" id='browserID'>Browser ID goes here </label>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  </font>
 </div>
  
 <div id="menu"> 
@@ -244,7 +278,7 @@ function winOpen(pic) {
 	    <table id=tt width=400>
 		<tr>
 		<td colspan=2>
-        <IMG src="./images/SierraDigitalAudio.png">
+        <IMG src="./images/SierraDigitalAudio.png"></image>
 		</td>
 		</tr>
 		<tr>
@@ -252,13 +286,14 @@ function winOpen(pic) {
         <b><font style="font-family:Helvetica; font-size:11;">
         13155 Falcon Point Place
 		<br>Truckee, CA 96161 USA<br>
-        </font>
+        </b></font>
 		</td>
 		<td>
         <b><font style="font-family:Helvetica; font-size:11;">
         cell: &nbsp;925-765-2885
 		<br>email: &nbsp;<a href="mailto:lscott@gmail.com?subject=Sierra Digital Audio Inquiry">LScottAE@gmail.com</a> <br>
-        </font>
+        </b>
+		</font>
 		</td>
 		</tr>
 		</table>
@@ -271,7 +306,7 @@ function winOpen(pic) {
 	<td valign=bottom align=left nowrap width=100>
        <!-- <IMG src="./images/Taylor512-2.png" border=0> -->
        <!-- <IMG src="./images/musicBarGraph.gif" height=60 border=0> -->
-	   <IMG src="./images/guitarist.gif" height=80 border=0> 
+	   <IMG src="./images/guitarist.gif" alt="Image by danblaushild@gmail.com" title='Image by danblaushild@gmail.com' height=80 border=0> 
     </td>
 
 	<td valign=bottom align=left nowrap width=200>
@@ -282,7 +317,7 @@ function winOpen(pic) {
       <li>Embedded Systems Programming</li>
       <li>Mechanical CAD and 3D Printing</li>
       <li>Custom High Power PC Builds</li>
-	  </font>
+	  </b></font>
 	  </ul>
 	<td>
     </table>
@@ -309,6 +344,7 @@ function winOpen(pic) {
      <a name="MidiXLate"></a>
 
      <center>  
+	 <!-- table3 begin-->
      <table id=t0 width=1100 bgcolor=#FFFFFF >
      <tr> 
      <td>
@@ -395,8 +431,9 @@ function winOpen(pic) {
 	 
       <br><br>
 	  
+	   <!-- table4 begin3 -->
 	   <table id=t0 width=1080 bgcolor=#FFFFFF >
-       <td valign=top> 
+       <td valign=top nowrap> 
        <div id="divYComment"> 
          This is divYComment
        </div>
@@ -405,83 +442,84 @@ function winOpen(pic) {
 	   <!-- links -->
 	   <b>Links</b> <br>
 	   
-	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-       <b><u>MidiXLate PDF Manual</u></b>
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiXLate.docx','popup','width=1400'); return false;">
+       <b><u>MidiXLate MS Word Manual</u></b>
        </a>
 	 
 	   <br>
-	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-       <b><u>MidiXLate Version x.x Software Download</u></b> 
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/setupMidiXlate-V1.3.exe','popup','width=1280'); return false;">
+       <b><u>MidiXLate Version 1.3 Windows exe Installer</u></b> 
        </a> 
 
        <br>
-	   <a href="./text1.html"  target="popup" onclick="window.open('./text1.html','popup','width=1280'); return false;">
-       <b><u>Microsoft .NetFramework Verison 4.6.1</u></b>
+	   <a href="./index.html"  target="popup" onclick="window.open('https://dotnet.microsoft.com/en-us/download/dotnet-framework','popup','width=1280'); return false;">
+       <b><u>Microsoft .NetFramework Verison 4.6.1 (or newer)</u></b>
        </a>  
 
        <br>
-	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
        <b><u>Video Tutorial 1: &nbsp;MidiXLate Router Overview</u></b>
        </a>
 	 
 	   <br>
-	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
        <b><u>Video Tutorial 2:  &nbsp;MidiXLate Software Download Installation</u></b>
        </a>
 	 
 	   <br>
-	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
        <b><u>Video Tutorial 3:  &nbsp;MidiXLate Routing</u></b>
        </a>
 	 
 	   <br>
-	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
        <b><u>Video Tutorial 4:  &nbsp;MidiXLate Translation</u></b>
        </a>
 
 	   <br>
-	   <a href="./tutorials/MidiNetwork.png"  target="popup" onclick="window.open('./tutorials/MidiNetwork.png','popup','width=1280'); return false;">
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
        <b><u>Video Tutorial 5:  &nbsp;MidiXLate Chanel Locking</u></b>
-       </a> 
-
-		  
+       </a>  
 	   </td>
 	 	 
-	   <td align=center>
-	     <img src="./images/RouterFace.jpg"              alt="RouterFace.jpg"               width="700" id="pic1Yimg" onclick="winOpen('RouterFace.jpg')"/>
-         <img src="./images/RouterRear.jpg"              alt="RouterRear.jpg"               width="700" id="pic2Yimg" onclick="winOpen('RouterRear.jpg')"/>
-         <img src="./images/RouterScreen1.jpg"           alt="RouterScreen1.jpg"            width="700" id="pic3Yimg" onclick="winOpen('RouterScreen1.jpg')"/>
-		 <img src="./images/RouterConfig1.jpg"           alt="RouterConfig1.jpg"            width="700" id="pic4Yimg" onclick="winOpen('RouterConfig1.jpg')"/>
-		 <img src="./images/RouterConfig2.jpg"           alt="RouterConfig2.jpg"            width="700" id="pic5Yimg" onclick="winOpen('RouterConfig2.jpg')"/>
-		 <img src="./images/RouterConfig3.jpg"           alt="RouterConfig3.jpg"            width="700" id="pic6Yimg" onclick="winOpen('RouterConfig3.jpg')"/>
+	   <td align=center nowrap>
+	   <img src="./images/RouterFace.jpg"              alt="RouterFace.jpg"               width="700" id="pic1Yimg" onclick="winOpen('RouterFace.jpg')"/>
+	   <img src="./images/RouterRear.jpg"              alt="RouterRear.jpg"               width="700" id="pic2Yimg" onclick="winOpen('RouterRear.jpg')"/>
+	   <img src="./images/RouterScreen1.jpg"           alt="RouterScreen1.jpg"            width="700" id="pic3Yimg" onclick="winOpen('RouterScreen1.jpg')"/>
+	   <img src="./images/RouterConfig1.jpg"           alt="RouterConfig1.jpg"            width="700" id="pic4Yimg" onclick="winOpen('RouterConfig1.jpg')"/>
+	   <img src="./images/RouterConfig2.jpg"           alt="RouterConfig2.jpg"            width="700" id="pic5Yimg" onclick="winOpen('RouterConfig2.jpg')"/>
+	   <img src="./images/RouterConfig3.jpg"           alt="RouterConfig3.jpg"            width="700" id="pic6Yimg" onclick="winOpen('RouterConfig3.jpg')"/>
 
-	     <br><br>
-	     <img src=./images/RouterFace.jpg               alt="RouterFace.jpg"              height=50 width=100 border=1 style="border-color:#000088" class="pic1Y" />
-         &nbsp;&nbsp;&nbsp;
-		 <img src=./images/RouterRear.jpg               alt="RouterRear.jpg"              height=50 width=100 border=1 style="border-color:#000088" class="pic2Y" />
-         &nbsp;&nbsp;&nbsp;
-          <img src=./images/RouterScreen1.jpg           alt="RouterScreen1.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic3Y" />
-	     &nbsp;&nbsp;&nbsp;
-         <img src=./images/RouterConfig1.jpg            alt="RouterConfig1.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic4Y" />
-         &nbsp;&nbsp;&nbsp;
-		 <img src=./images/RouterConfig2.jpg            alt="RouterConfig2.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic5Y" />
-         &nbsp;&nbsp;&nbsp;
-		 <img src=./images/RouterConfig3.jpg            alt="RouterConfig3.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic6Y" />
-         &nbsp;&nbsp;&nbsp;
+	   <br><br>
+	   <img src=./images/RouterFace.jpg               alt="RouterFace.jpg"              height=50 width=100 border=1 style="border-color:#000088" class="pic1Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterRear.jpg               alt="RouterRear.jpg"              height=50 width=100 border=1 style="border-color:#000088" class="pic2Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterScreen1.jpg           alt="RouterScreen1.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic3Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterConfig1.jpg            alt="RouterConfig1.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic4Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterConfig2.jpg            alt="RouterConfig2.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic5Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterConfig3.jpg            alt="RouterConfig3.jpg"           height=50 width=100 border=1 style="border-color:#000088" class="pic6Y" />
+	   &nbsp;&nbsp;&nbsp;
 		 		 
  	   </td>
 	   </table>
+	   <!-- table4 end -->
  
 	 </td>
 	 </tr>
 	 </table>
+	 <!-- table3 end -->
 
      </center>  
      <br><br>	
 	 
      </div>	 
-</td>
-</tr>   
+	 
+</td> <!-- table2 -->
+</tr> <!-- table2 -->   
 
 <!-- ========================================================================================================================================================= -->
 <!-- MIDICONTROL -->
@@ -493,7 +531,7 @@ function winOpen(pic) {
     <a name="MidiControl"></a>
   
     <center>
-    <!-- table3 begin -->
+    <!-- table5 begin -->
     <table with=1100 border=0>
     <td width=1100 align=left valign=top>
 	
@@ -517,15 +555,16 @@ function winOpen(pic) {
     To start, connect all of your midi devices to your computer with a USB hub .
     Next, download MidiControl, install Scott MidiControl (FREE!), and configure MidiControl.
     You now have a simple means to control all of your Midi devices from your PC!
+	
     </font>
     </td>
     </table>
-	<!-- table3 end -->
+	<!-- table5 end -->
 	</center>
 
     <br><br>
 
-    <!-- table4 begin -->
+    <!-- table6 begin -->
     <table width=1120 border=0>
 	<tr>
 	<td width=40 align=left valign=top>
@@ -570,7 +609,6 @@ function winOpen(pic) {
          </td>
          </tr>
 
-		 
          <tr height=80>
          <td width=4>&nbsp;</td>
          <td width=62><img src=./images/control1S.png   alt="image1X" height=40 width=60 border=1 style="border-color:#000088" class="pic1X" /></td>
@@ -596,25 +634,25 @@ function winOpen(pic) {
     </td>
 	</tr>
     </table>
-	<!-- table4 end -->
+	<!-- table6 end -->
 
 	<br>
-    <br>xx
 	
-	<!-- table8 begin -->
+	<!-- table7 begin -->
 	<table width=1120 border=0>
 	<td width=40 align=left valign=top>&nbsp;</td>
 	<td width=1080 align=left valign=top>
-    New features will be added as Scott MidiControl evolves.  If you have a particular feature you would like added, please
+    New features will be added as MidiControl evolves.  If you have a particular feature you would like added, please
 	<a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">email us</a>. 
 	</td>
 	</table>
-	<!-- table8 end -->
+	<!-- table7 end -->
+    <br>
 	
     </div>
 
-</td>
-</tr>
+</td>  <!-- table2 -->
+</tr>  <!-- table2 -->
 
 
 <!-- ========================================================================================================================================================= -->
@@ -624,10 +662,10 @@ function winOpen(pic) {
 <td colspan=2 valign=center>
     <hr width="98%" align="center" size=4 color=#000066><br>
     <div id="padding">
-    <a name="MidiControl"></a>
+    <a name="MidiOrganize"></a>
   
     <center>
-    <!-- table3 begin -->
+    <!-- table8 begin -->
     <table with=1100 border=0>
     <td width=1100 align=left valign=top>
 	
@@ -640,33 +678,40 @@ function winOpen(pic) {
 	<br><br>
   
 	<font color=#000000 style="font-size:12px">
-    MidiOrganize is a midi file organizer (not a VST) designed to catalog midi drum loops / patches. 
-	Midi drum loops are typically arranged by genere, beat, time signature, and pattern. 
-    There are many drum loop VSTs available for ProTools, Reaper, Cubase, ...
-	These drum VSTs typically are very expensive, must be licensed, require your PC to be connected to the internet,
-	and (in my case, most importantly) the VSTs have place a heavy burden on the CPU.    
-	For example, on my rack music optimized PC (32 gig memory, 1TB HD, Intel 7 CPU, Reaper)
-	I start to see performance degredation after only a few drum VSTs. 
-    VSTs do have benefits and conveniences, but I prefer to limit my VST usage to optimize my performance.
+	MidiOrganize provides a FREE and simple means to organize your midi drum loops and optimize the performance and flexibility of your DAW mixes! 	
+    MidiOrganize is a PC midi file organizer (not a VST) designed to catalog midi drum loops and midi (guitar, bass, horn,...) patches. 
+    There are many license based drum loop VSTs available for ProTools, Reaper, Cubase,...
+	Most drum VSTs typically are very expensive, must be licensed and require your PC to be connected to the internet,
+	and (in my case, the most irritating issue) these licensed VSTs place a heavy burden on the CPU introducing 
+	latency and popping in my final mix.  MidiOrganize is a FREE standalone PC application.  You may choose to download Groove Monkee's excellent 
+    <a href="https://groovemonkee.com/pages/free-midi-loops"  target="popup" onclick="window.open('https://groovemonkee.com/pages/free-midi-loops','popup'); return false;">
+    <b><u><font color=#000000>FREE drumloops</font></u></b> 
+    </a>
+	and easily configure for use with MidiOrganize. Additionally, you can use MidiOrganize with any of your purchased drum loops.  
+		
+    <br><br>
+    My PC rack computer is a  music optimized PC (32 gig memory, 1TB HD, Intel 7 CPU, Reaper).
+	I typically start to see performance degredation after only loading a few drum VSTs. 
+    VSTs do have benefits and conveniences, but I prefer to limit my VST usage to optimize my 
+	performance and maximize patch selection flexibilty during playback.
     Midi Organize is a stand alone PC application.  During setup, you specify the directories of all your drum loops. 
 	When working with your DAW (ProTools, Reaper, CuBase,...) you drag and drop MidiOrganize drum tracks into you DAW drum tack. 
 	Unlike the VST which will play the drum track, set your drum track to route the drum midi to your external drum machine. 
 	In my case, I have a Yamaha MU15 and a Roland Integra7. 
 	The MU15 (or Integra7) audio output is an input on my mixer which is in turn recorded by my DAW. 
-	Not only is this a <b>FREE</b> solution, but the performance hit on your DAW is significantly reduced. 
-    In my case, with Reaper, the final mix rendered audio is free of chop and dropouts due to the VST footprint.  	
-	MidiOrganize follows the format of EZ Drummer. If you understand the drilldown structure of EZ Drummer, MidiOrganize will feel very natural. 
-
-    You now have a FREE and simple means to organize your midi drum loops and optimize the performance of your DAW mixes!
-    </font>
+	Not only is this a <b>FREE</b> solution, but the PC CPU performance hit on your DAW is significantly reduced. 
+    In my case, with Reaper, the final mix rendered audio is free of chop, pops, and dropouts due to VST memory usage. 
+    MidiOrganize follows the format of EZ Drummer. If you understand the drilldown structure of EZ Drummer, MidiOrganize will feel very natural.  	
+	</font>
+	
     </td>
     </table>
-	<!-- table3 end -->
+	<!-- table8 end -->
 	</center>
 
     <br><br>
 
-    <!-- table4 begin -->
+    <!-- table9 begin -->
     <table width=1120 border=0>
 	<tr>
 	<td width=40 align=left valign=top>
@@ -674,7 +719,7 @@ function winOpen(pic) {
 	</td>
 
     <td width=460 align=left valign=top>
-	    <!-- table5 begin -->
+	    <!-- table10 begin -->
         <table border=0>
         <tr>
         <td align=center> 
@@ -684,17 +729,17 @@ function winOpen(pic) {
         </td>
         </tr>
         </table>
-		<!-- table5 end -->
+		<!-- table10 end -->
     </td> 
 
     <td width=620 valign=top  align=center border=0>
        <br>
-	   <!-- table6 begin -->
+	   <!-- table11 begin -->
        <table width=610 id=t0> 
        <tr>
        <td valign=top align=center>
 	   
-	     <!-- table7 begin -->
+	     <!-- table12 begin -->
          <table id=t0 width=610> 
 		 <tr>
          <td align=center valign=center cellspacing=1 cellpadding=1 colspan=16>
@@ -709,7 +754,6 @@ function winOpen(pic) {
          </td>
          </tr>
 
-		 
          <tr height=80>
          <td width=4>&nbsp;</td>
          <td width=62><img src=./images/control1S.png   alt="image1X" height=40 width=60 border=1 style="border-color:#000088" class="pic1Z" /></td>
@@ -726,21 +770,20 @@ function winOpen(pic) {
 
          </tr>
          </table>
-		 <!-- table7 end -->
+		 <!-- table12 end -->
        </td>
        </tr>
        </table>
-	   <!-- table6 end -->
+	   <!-- table11 end -->
 
     </td>
 	</tr>
     </table>
-	<!-- table4 end -->
+	<!-- table9 end -->
 
 	<br>
-    <br>
 	
-	<!-- table8 begin -->
+	<!-- table13 begin -->
 	<table width=1120 border=0>
 	<td width=40 align=left valign=top>&nbsp;</td>
 	<td width=1080 align=left valign=top>
@@ -748,8 +791,9 @@ function winOpen(pic) {
 	<a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">email us</a>. 
 	</td>
 	</table>
-	<!-- table8 end -->
+	<!-- table13 end -->
 	
+	<br>
     </div>
 
 </td>
@@ -774,21 +818,25 @@ function winOpen(pic) {
       </table>
 </div>
  
-<div id="header">
-<div>
+
 
 <!-- ========================================================================================================================================================= -->
 <!-- SUBROUTINES -->
 
-<div id="divImageXText1" style="visibility: hidden;"> 
-    <a href='./downloads/MidiControl.zip'><img src=./images/Midi2.png></a>
+<div id="divImageXText1" style="visibility: hidden;">
+    <table border=0>
+    <td>	
+    <br>
+    <a href='./downloads/setupMidiControl-V1.3.exe'><img src=./images/Midi2.png border=0></a>
     &nbsp;&nbsp;
-    <a href='./downloads/MidiControl.zip'>Download MidiControl V1.1 Installer</a> 
+    <a href='./downloads/setupMidiControl-V1.3.exe'>Download MidiControl V1.3 Windows exe Installer</a> 
     <br>
 	<br>
     <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry"><img src=./images/email.png></a>
 	&nbsp;&nbsp;
     <a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">Enhancement request & bug notifications</a> 
+	</td>
+	</table>
 </div>
 
 <div id="divImageXText2" style="visibility: hidden;"> 
@@ -820,7 +868,7 @@ function winOpen(pic) {
 </div>
 
 <div id="divImageYText1" style="visibility: hidden;"> 
-	 <b>Router Face</b>  &nbsp;(divImageYText1)
+ <b>Router Face</b>  
  <ul style="padding-left:10px">
   <li>Power button: Power on and off the router.</li>
   <li>Logger button: Dump midi activity to screen or TTY port.</li>
@@ -831,7 +879,7 @@ function winOpen(pic) {
 </div>
 
 <div id="divImageYText2" style="visibility: hidden;"> 
-	 <b>Router Rear</b>  &nbsp;(divImageYText2)
+ <b>Router Rear</b>  
  <ul style="padding-left:10px">
   <li>Midi Ports: Six midi 5 pin din input ports and six output ports.</li>
   <li>Log Port: USB port to dump router activity to terminal emulator.</li>
@@ -844,7 +892,7 @@ function winOpen(pic) {
 </div>
 
 <div id="divImageYText3" style="visibility: hidden;"> 
-	 <b>Router Screens</b>  &nbsp;(divImageYText3)
+ <b>Router Screens</b>  
  <ul style="padding-left:10px">
   <li>Splash Page: Displayed for two seconds at router powered on.</li>
   <li>Router Services: Summary of services configured for router. </li>
@@ -854,22 +902,67 @@ function winOpen(pic) {
 </div>
 
 <div id="divImageYText4" style="visibility: hidden;"> 
-	 <b>Router PC Configuration</b>  &nbsp;(divImageYText4)
+ <b>PC Router Configuration</b><br>
+The router configuration is created on the PC and<br>
+downloaded to the router via the router download<br>
+screen (not shown) and USB cable. <br>
+
+<br>
  <ul style="padding-left:10px">
-  <li>Power button: Power on and off the router.</li>
-  <li>Logger button: Dump midi activity to screen or TTY port.</li>
-  <li>Config button: Download router config from PC.</li>
-  <li>LEDs: Blink as Midi traffic received and sent.</li>
-  <li>Screen: Display config and realtime midi activity.</li>
+  <li>Provide a short description of the router config. </li>
+  <li>Provide a long description of the router config.</li>
+  <li>Label the Midi port conections (Label Ports) button.</li>
+  <li>Specify Midi Routings by clicking on LEDs to toggle.</li>
+  <li>Optional: Press button to specify Midi Translations.</li>
+  <li>Optional: Press button to specify Channel Locks.</li>
+  <li>Remember to save your router config to PC desktop!.</li>
+  <li>(multiple configurations are supported)</li>
 </ul> 
 </div>
 
 <div id="divImageYText5" style="visibility: hidden;"> 
-    divImageYText5
+ <b>Midi Translations</b><br>
+Midi Translations are used to change a Midi message<br>
+from one format to another. For Example: assume you<br>
+want to press a buttton (controller) on you keyboard<br>
+to send a 'patch change' command to your tone generator.<br>
+Use the translation screen to identify and capture the<br>
+midi CC (continuous control) command and translate it <br>
+to a Midi PC (program change) cmd.<br> 
+
+<br>
+ <b>Translation Screen</b>
+ <ul style="padding-left:10px">
+  <li>Provide a short description for the translation. </li>
+  <li>Specify the incoming midi to capture.</li>
+  <li>Specify the outgoing translated midi to send.</li></li>
+  <li>256 midi translations are permitted.</li>
+  <li>Copy, paste, and delete functions are provided.</li>
+  <li>Bulk copy, paste, and delete functions are provided.</li>
+</ul> 
 </div>
 
 <div id="divImageYText6" style="visibility: hidden;"> 
-    divImageYText6
+ <b>Midi Channel Locks</b><br>
+Midi Channel Locks are used to lock specific Midi data<br>
+to a specific midi channel (by Midi port and Midi command).<br>
+For example, assume you have a Reaper MIDI DAW track that <br>
+contains a drum patch data routed to your Yamaha MU15 drum<br>
+machine. Some rougue drum tracks do not encode drum notes <br>
+to Midi channel 10. Use the channel lock screen to guarantee<br>
+all Reaper Midi drum data sent to your Yamaha Mu15 is locked <br>
+to Midi channel 10. <br>
+
+<br>
+ <b>Channel Lock Screen</b>
+ <ul style="padding-left:10px">
+  <li>Specify the input and output ports. </li>
+  <li>Specify the channel to lock outbound midi data.</li>
+  <li>Specify if the lock is CC,PC,NT,or all midi data.</li></li>
+  <li>96 midi locks are permitted.</li>
+  <li>Copy, paste, and delete functions are provided.</li>
+  <li>Bulk copy, paste, and delete functions are provided.</li>
+</ul> 
 </div>
 
 <div id="divImageYText7" style="visibility: hidden;"> 
@@ -880,18 +973,20 @@ function winOpen(pic) {
     divImageYText8
 </div>
 
-<div id="divImageYText9" style="visibility: hidden;"> 
-    divImageYText9
-</div>
 
 <div id="divImageZText1" style="visibility: hidden;"> 
-    <a href='./downloads/MidiControl.zip'><img src=./images/Midi2.png></a>
+    <table border=0>
+    <td>	
+    <a href='./downloads/setupMidiOrganize-V1.1.exe'><img src=./images/Midi2.png></a>
     &nbsp;&nbsp;
-    <a href='./downloads/MidiControl.zip'>Download MidiOrganize V1.1 Installer</a> 
+    <a href='./downloads/setupMidiOrganize-V1.1.exe'>Download MidiOrganize V1.1 Installer</a> 
     <br><br> 
     <a href="mailto:larry@scottae.com?subject=ScottAE MidiOrganize Inquiry"><img src=./images/email.png></a>
     &nbsp;&nbsp;
-    <a href="mailto:larry@scottae.com?subject=ScottAE MidiOrganize Inquiry">Enhancement request & bug notifications</a> 
+    <a href="mailto:larry@scottae.com?subject=ScottAE MidiOrganize Inquiry">Enhancement request & bug notifications</a>
+    </td>
+	</table>
+
 </div>
 
 <div id="divImageZText2" style="visibility: hidden;"> 
