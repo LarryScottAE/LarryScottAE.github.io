@@ -567,7 +567,7 @@ function winOpen(pic) {
     <br>
 
     <!-- table6 begin -->
-    <table width=1120 border=1>
+    <table width=1120 border=0>
 	<tr>
 	<td width=40 align=left valign=top>
 	&nbsp;
@@ -582,12 +582,12 @@ function winOpen(pic) {
 		<b>Links</b> <br>
 	   
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiXLate.docx','popup','width=1400'); return false;">
-       <b><u>MidiControl Version X.X Installer (exe)</u></b>
+       <b><u>MidiControl version x.x installer (exe)</u></b>
        </a>
 	 
 	   <br>
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/setupMidiXlate-V1.3.exe','popup','width=1280'); return false;">
-       <b><u>MidiControl DAW Setup Example (pdf)</u></b> 
+       <b><u>MidiControl DAW setup example (pdf)</u></b> 
        </a> 
 
     </td> 
@@ -604,7 +604,7 @@ function winOpen(pic) {
 		 <tr>
          <td align=center valign=center cellspacing=1 cellpadding=1 colspan=16>
          <!-- all of the following pictures have been set to width=600, height=variable (to keep aspect ratio) -->
-		 <font size=1>Click on pictures and thumbnails and pictures for more information.</font> 
+		 <font size=1>Click on pictures and thumbnails for more information.</font> 
          <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('control1L.png')"/>
          <img src="./images/control2M.png"   id="pic2Ximg" onclick="winOpen('control2L.png')"/>
          <img src="./images/control3M.png"   id="pic3Ximg" onclick="winOpen('control3L.png')"/>
@@ -731,13 +731,13 @@ function winOpen(pic) {
 		<br><br>
 		<b>Links</b> <br>
 	   
-	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiXLate.docx','popup','width=1400'); return false;">
-       <b><u>MidiOrganize Version X.X Installer (exe)</u></b>
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/setupMidiOrganize-V1.1.exe','popup','width=1400'); return false;">
+       <b><u>MidiOrganize June 2024 version 1.1 installer (exe)</u></b>
        </a>
 	 
 	   <br>
-	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/setupMidiXlate-V1.3.exe','popup','width=1280'); return false;">
-       <b><u>MidiOrganize DAW Setup Example (pdf)</u></b> 
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiOrganizeDAW.pdf','popup','width=1280'); return false;">
+       <b><u>MidiOrganize June 2024 DAW usage example (pdf)</u></b> 
        </a> 
 
     </td> 
@@ -754,7 +754,7 @@ function winOpen(pic) {
 		 <tr>
          <td align=center valign=top cellspacing=1 cellpadding=1 colspan=16>
          <!-- all of the following pictures have been set to width=600, height=variable (to keep aspect ratio) -->
-		 <font size=1>Click on pictures and thumbnails and pictures for more information.</font>
+		 <font size=1>Click on pictures and thumbnails for more information.</font>
          <img src="./images/organize1M.png" width=600  id="pic1Zimg" onclick="winOpen('organize1L.png')"/>
          <img src="./images/organize2M.png" width=600  id="pic2Zimg" onclick="winOpen('organize2L.png')"/>
          <img src="./images/organize3M.png" width=600  id="pic3Zimg" onclick="winOpen('organize3L.png')"/>
@@ -1004,24 +1004,46 @@ to Midi channel 10. <br>
     <br>
 	<b>The 'Manage Midi Groups and Bookmarks' screen</b>. <br>
 	<ul style="padding-left:10px">
-    <li>Press the 'Manage Midi Groups and Bookmarks' button to open MidiGroup window. </li>
-    <li>In the MidiGroup window, Give your bookmark a name . </li>
-    <li>In the MidiGroup window, use the folder browser to select a midi root folder. </li>
-    <li>In the example, I named defined four bookmarks pointing to four roots.</li>
+    <li>Press the 'Manage Midi Groups' button to open MidiGroup window.</li>
+    <li>In the MidiGroup window, give your bookmark a name.</li>
+    <li>Use the folder browser to select a midi root folder.</li>
+    <li>In the example, I defined four bookmarks pointing to four roots.</li>
     <li>On the home screen, no you can navigate directly to folder root.</li>
-	<li>As you brose Midi files, drag and drop your drum loops into your DAW tracks.</li>
+	<li>Close the MidiGroup window to navigate your midi files.</li>
+	<li>Drag & drop midi files from the four panes in your DAW midi track.</li>
     </ul> 	
 </div>
 
 <div id="divImageZText4" style="visibility: hidden;"> 
     <br>
-    divImageZText4
+	<b>Search the Midi groups by genre</b>. <br>
+	<ul style="padding-left:10px">
+    <li>Search for Midi files by file name / genre.</li>
+    <li>Key the search phrase in the combobox or select from drop down.</li>
+    <li>Press Search Midi Groups button to search your midi bookmarks.</li>
+    <li>Results of the search are displayed in the first pane.</li>
+    <li>Drill down into the panes to view files matching your search.</li>
+    <li>New genres can be added to the MidiOrganize config file. </li>
+	<li>MidiOrganize config file found in Manage Midi Groups and Bookmarks.</li>
+    </ul> 	
 </div>
 
-<div id="divImageZText5" style="visibility: hidden;">
-    <br> 
-    divImageZText5
+<div id="divImageZText5" style="visibility: hidden;"> 
+    <br>
+	<b>Windows Midi file player</b>. <br>
+	<ul style="padding-left:10px">
+    <li>Use Windows Media Player Sto preview your midi files.</li>
+    <li>Drag and drop midi files from any of the 4 panes onto player.</li>
+	<li>Midi drums require midi file set to midi channel 10.</li>
+	<li>Some midi files are not set to midi channel 10.</li>
+    <li>Check 'Change Channel 10' to fix midi file to channel 10.</li>
+    <li>Fix does not change the original midi file.</li>
+    <li>Fix creates a new file shown in media player.</li>
+    <li>Show Conversion button displays midi channel 10 updates. </li>
+
+    </ul> 	
 </div>
+
 
 <div id="divImageZText6" style="visibility: hidden;"> 
     <br>
