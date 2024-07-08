@@ -404,12 +404,12 @@ function winOpen(pic) {
 	  Routing Midi data greatly reduces Midi network traffic, eliminating a flood of extraneous midi network data.  
 	  The sending and receiving midi devices are now much simpler to configure because the midi data received at a midi device is guaranteed 
 	  to be intended solely for that midi device. For the average home user with only a few Midi devices, a Midi hub is the right option. 
-	  For a performing group with a large number of midi devices and complicated midi network, the MidiXLate router can be a life saver; 
+	  For a performing group (or sophisticated home studio) with a large number of midi devices and complicated midi network, the MidiXLate router can be a life saver; 
 	  not only due to MidiXLate's routing capability, but also MidiXlate's 'translation' and 'channel locking' capabilities (discussed below)
 	  Setting up the MidiXLate router is obviously more complicated than setting up a dumb Midi hub, but MidiXLate's benefits can be huge. 
-	  With MidiXLate, you have complete control of Midi routing and port filter (note, controller, patch change, and sys ex) capabilities.
+	  With MidiXLate, you have complete control of Midi routing and port filtering (note, controller, patch change, and sys ex) capabilities.
 	  As for MidiXLate's performance, the engine of the router is a blinding fast Atmel SAM3X8E ARM Cortex-M3 processor running at 84 MHz, 
-	  providing  extremely low latency.  
+	  providing extremely low latency.  
 	  
 	 
       <details>
@@ -418,7 +418,7 @@ function winOpen(pic) {
       <br>	  
       In addition to Midi routing, the MidiXLate router provides a sudo Network Address <b>Translation</b> (NAT) features called 'Translation' where 
 	  midi data can be 'translated from one Midi format (such as note data) to another Midi format (such as continuous controller). This is extremely 
-      helpful because it allows you to extract maximum usability out of you music gear (by providing useful access to previously inaccessible controllers). 	  
+      helpful because it allows you to extract maximum usability out of your music gear (by providing useful access to previously inaccessible controllers). 	  
 	  Next, MidiXLate has a <b>Channel Locking</b> feature providing flexible rules to lock midi data (sent out an output port) to a particular 
 	  midi channel. For example, assume you have a drum machine assigned to output port 6.  All drum patches are required to be encoded to Midi channel 10, 
       yet some drum patch providers fail to encode their drum patches to midi channel 10. With MidiXLate, you can force all data to your drum machine to 
@@ -453,51 +453,57 @@ function winOpen(pic) {
 	   <b>Links</b> <br>
 	   
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiXLate.docx','popup','width=1400'); return false;">
-       <b><u>MidiXLate MS Word Manual</u></b>
+       <b><u>MidiXLate MS Word manual</u></b>
        </a>
 	 
 	   <br>
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/setupMidiXlate-V1.3.exe','popup','width=1280'); return false;">
-       <b><u>MidiXLate Version 1.3 Windows exe Installer</u></b> 
+       <b><u>MidiXLate Version 1.3 Windows exe installer</u></b> 
        </a> 
 
        <br>
 	   <a href="./index.html"  target="popup" onclick="window.open('https://dotnet.microsoft.com/en-us/download/dotnet-framework','popup','width=1280'); return false;">
-       <b><u>Microsoft .NetFramework Verison 4.6.1 (or newer)</u></b>
+       <b><u>Microsoft .Net Framework verison 4.6.1 (or newer)</u></b>
        </a>  
 
        <br>
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/sdaRegistrationForm.pdf','popup','width=1280'); return false;">
-       <b><u>MidiXLate Warranty Registration Form.</u></b>
+       <b><u>MidiXLate registration form.</u></b>
        </a>  
+
+	   <br>
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiXLate-Install.mp4','popup','width=1280'); return false;">
+       <b><u>Video tutorial 1:  &nbsp;MidiXLate PC software installation.</u></b>
+       </a>
 
        <br>
-	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 1: &nbsp;MidiXLate Router Overview</u></b>
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiXlate-Routing.mp4','popup','width=1280'); return false;">
+       <b><u>Video tutorial 2: &nbsp;MidiXLate routing basics.</u></b>
+       </a>
+	 
+	   <br>
+	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiXLate-ConfigDownload.mp4','popup','width=1280'); return false;">
+       <b><u>Video tutorial 3:  &nbsp;Download PC config to router.</u></b>
        </a>
 	 
 	   <br>
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 2:  &nbsp;MidiXLate Software Installation</u></b>
-       </a>
-	 
-	   <br>
-	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 3:  &nbsp;MidiXLate Routing</u></b>
-       </a>
-	 
-	   <br>
-	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 4:  &nbsp;MidiXLate Translation</u></b>
+       <b><u>Video tutorial 4:  &nbsp;MidiXLate Translation.</u></b>
        </a>
 
 	   <br>
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/configDownload.mp4','popup','width=1280'); return false;">
-       <b><u>Video Tutorial 5:  &nbsp;MidiXLate Chanel Locking</u></b>
-       </a>  
+       <b><u>Video tutorial 5:  &nbsp;MidiXLate Chnl Locking.</u></b>
+       </a> 
+
+	   <br>
+	   <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
+       <b><u>Midi diagnostic tool MidiOX</u></b>
+       </a> 	   
 	   </td>
 	 	 
 	   <td align=center nowrap>
+	    <font size=1>Click on thumbnaild for more info. Click on picture to view larger image in new window.</font> <br>
 	   <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="pic1Yimg" onclick="winOpen('RouterFace.jpg')"/>
 	   <img src="./images/RouterRear.jpg"        alt="RouterRear.jpg"       width="700" id="pic2Yimg" onclick="winOpen('RouterRear.jpg')"/>
 	   <img src="./images/RouterScreen0.jpg"     alt="RouterScreen0.jpg"    width="700" id="pic3Yimg" onclick="winOpen('RouterScreen0.jpg')"/>
@@ -562,15 +568,17 @@ function winOpen(pic) {
     Have you every wanted to catalog and control all of your midi devices from your Windows PC?&nbsp;&nbsp;
 	MidiControl provides a <b>FREE</b> Windows PC program to control all of your midi devices from your PC desktop,
 	using Midi 'program change','continuous control', and 'system exclusive' commands.    
-	MidiControl is not designed to play midi files, rather to control midi devices from your desktop. <br><br>
-   
+	MidiControl is not designed to play midi files, rather to control midi devices from your desktop. 
+	MidiControl provides ten bookmarks covering 2000 midi commands. 
+    <br><br>
     You, a typical musician, likely have many midi devices such as keyboards, guitar effects, drum machines, voice processors, and more.  
-	You may find it helpful to send the same midi command from the PC desktop as is sent by a midi device. 	
+	You may find it helpful to catalog all of your midi commands and send those commands from the PC desktop, just as they are sent from your midi device. 	
 	For example, assume you have a performance where every song requires a different keyboad patch, drum pathch, guitar patch, guitar volume, ....
     With MidiControl, you can define groups (tabs) by song and list all the midi commands for each midi device to setup the song. 
-	Using your PC desktop, you can send commands to all your midi devices to setup the next song (patch changes, controllers, ...)
-	Alternatively, as shown in the example screens, each tab can represent a musical device and the midi commands to control the device. 
-    To start, connect all of your midi devices to your computer via a Midi hub (which you likely already have done).
+	Using your PC desktop, you can send commands to all your midi devices to setup for the next song (patch changes, controllers, ...) 
+	Alternatively, as shown in the example screens, each tab can represent a musical device and the midi commands to control the device.
+    <br><br>
+    To start, connect all of your midi devices to your computer via a Midi hub (which you have likely already have done).
     Next, download, install, and configure MidiControl (FREE!).
 	When configuring midi control, define groups ('tabs') for each midi device and/or song and then setup the same midi commands used by 
 	your midi gear (keyboards, pedal boards, effects processors,...)
@@ -606,22 +614,22 @@ function winOpen(pic) {
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/setupMidiXlate-V1.3.exe','popup','width=1280'); return false;">
        <b><u>MidiControl DAW setup example (pdf)</u></b> 
        </a> 
+	   
+	   <br>
+	   <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
+       <b><u>Midi Diagnostic Tool MidiOX</u></b>
+       </a> 
 
     </td> 
 
     <td width=620 valign=top  align=center border=0>
-
-	   <!-- table6 begin -->
-       <table width=610 id=t0> 
-       <tr>
-       <td valign=top align=center>
-	   
+   
 	     <!-- table7 begin -->
          <table id=t0 width=610> 
 		 <tr>
          <td align=center valign=center cellspacing=1 cellpadding=1 colspan=16>
          <!-- all of the following pictures have been set to width=600, height=variable (to keep aspect ratio) -->
-		 <font size=1>Click on pictures and thumbnails for more information.</font> 
+		 <font size=1>Click on thumbnaild for more info. Click on picture to view larger image in new window.</font><br>
          <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('control1L.png')"/>
          <img src="./images/control2M.png"   id="pic2Ximg" onclick="winOpen('control2L.png')"/>
          <img src="./images/control3M.png"   id="pic3Ximg" onclick="winOpen('control3L.png')"/>
@@ -648,10 +656,6 @@ function winOpen(pic) {
          </tr>
          </table>
 		 <!-- table7 end -->
-       </td>
-       </tr>
-       </table>
-	   <!-- table6 end -->
 
     </td>
 	</tr>
@@ -755,23 +759,23 @@ function winOpen(pic) {
 	   <br>
 	   <a href="./index.html"  target="popup" onclick="window.open('./downloads/MidiOrganizeDAW.pdf','popup','width=1280'); return false;">
        <b><u>MidiOrganize June 2024 DAW usage example (pdf)</u></b> 
+       </a>
+	   
+	   <br>
+	   <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
+       <b><u>Midi Diagnostic Tool MidiOX</u></b>
        </a> 
 
     </td> 
 
     <td width=620 valign=top  align=center border=0>
-
-	   <!-- table11 begin -->
-       <table width=610 id=t0> 
-       <tr>
-       <td valign=top align=center>
-	   
+   
 	     <!-- table12 begin -->
          <table id=t0 width=610> 
 		 <tr>
          <td align=center valign=top cellspacing=1 cellpadding=1 colspan=16>
          <!-- all of the following pictures have been set to width=600, height=variable (to keep aspect ratio) -->
-		 <font size=1>Click on pictures and thumbnails for more information.</font>
+         <font size=1>Click on thumbnaild for more info. Click on picture to view larger image in new window.</font><br> 
          <img src="./images/organize1M.png" width=600  id="pic1Zimg" onclick="winOpen('organize1L.png')"/>
          <img src="./images/organize2M.png" width=600  id="pic2Zimg" onclick="winOpen('organize2L.png')"/>
          <img src="./images/organize3M.png" width=600  id="pic3Zimg" onclick="winOpen('organize3L.png')"/>
@@ -795,13 +799,10 @@ function winOpen(pic) {
          <td width=4>&nbsp;</td>
          <td width=62><img src=./images/organize6S.png   alt="image6Z" height=56 width=85 border=1 style="border-color:#000088" class="pic6Z" /></td>
 
-         </tr>
-         </table>
-		 <!-- table12 end -->
        </td>
        </tr>
        </table>
-	   <!-- table11 end -->
+	   <!-- table12 end -->
 
     </td>
 	</tr>
@@ -815,7 +816,7 @@ function winOpen(pic) {
 	<td width=40 align=left valign=top>&nbsp;</td>
 	<td width=1080 align=left valign=top>
     New features will be added as Scott MidiOrganize evolves.  If you have a particular feature you would like added, please
-	<a href="mailto:larry@scottae.com?subject=ScottAE MidiControl Inquiry">email us</a>. 
+	<a href="mailto:larry@scottae.com?subject=ScottAE MidiOrganize Inquiry">email us</a>. 
 	</td>
 	</table>
 	<!-- table13 end -->
@@ -853,27 +854,126 @@ function winOpen(pic) {
 <!-- SUBROUTINES -->
 
 <div id="divImageXText1" style="visibility: hidden;">
-    This is the MidiControl opening screen.  
+  <b>This is the MidiControl opening screen. </b><br>
+  Click on thumbnails (below screen) for further details.  
+  <br><br>
+
+  <b>MidiControl Speed buttons (top left)</b>  
+  <ul style="padding-left:10px">
+  <li>Down Arrow: Go to next page.</li>
+  <li>Up Arrow: Go to prior page.</li>
+  <li>Bookmarks: Open the bookmarks dialog window.</li>
+  <li>Midi Relay: Open the Midi relay / listener screen.</li>
+  <li>Midi Utilities: Open the Midi utilities screen.</li>
+  <li>Save Configuration: Saves the current configuration.</li>
+  <li>Help Text: Opens Notepad help text.</li>
+  <li>Information: Displays MidiControl version info.</li>
+  <li>Buy Me A Coffee: Contributions are appreciated!</li>
+  <li>Page Number: Jump to a specific page </li>
+  </ul> 
+  <br>
+  <b>MidiControl Screen Body</b>  
+  <ul style="padding-left:10px">
+  <li>Status message (red): shows status of latest operation.</li>
+  <li>Bookmarks: Notice seven bookmarks (starting with DAW).</li>
+  <li>Midi Commands: First 20 commands are shown for DAW</li>
+  <li>Numbered Buttons: Press button to edit Midi command.</li>
+  <li>Midi Labels: Show cmd desc, cmd detail, and out device.</li>
+  <li>List Midi Devices: Midi devices current connected to PC.</li>
+  </ul> 
 </div>
 
 <div id="divImageXText2" style="visibility: hidden;"> 
-    divImageXText2
+  <b>This is the MidiControl Bookmark Management screen. </b><br>
+  Use this screen to build Midi commands for buttons (1-200). <br>
+  A bookmark is a page number (from 1-200) assigned by you.<br>
+  Bookmarks appear across the top of the screen body.<br>
+  Click on the bookmark to jump to a specific page. <br>
+
+  <br>
+
+  <b>Bookmark properties</b>  
+  <ul style="padding-left:10px">
+  <li>Bookmark name: Give your bookmark a name.</li>
+  <li>Bookmark page: Page where Midi commands are found.</li>
+  <li>Delete button: Deletes the bookmark (not commands).</li>
+  </ul> 
 </div>
 
 <div id="divImageXText3" style="visibility: hidden;"> 
-    divImageXText3
+
+  <b>This is the MidiControl Midi Command definition screen. </b><br>
+  Use this screen to define up to 2000 midi commands. <br>
+  You can also use this screen to 'learn' a midi command.<br>
+
+  <br>
+  <b>Build Midi Command</b>  
+  <ul style="padding-left:10px">
+  <li>Type of Midi command: Current allowed values are PC,CC,NT.</li>
+  <li>(SysEx commands will be in a future release).</li>
+  <li>Description: Provide a description of this command.</li>
+  <li>SysEx: Provide the SysEx command.</li>
+  <li>Channel (1-16), Controller (1-256), and Value (1-128).</li>
+  <li>Select the Midi device to receive the Midi command.</li>  
+  </ul> 
+  
+  <br>
+  <b>Learn Midi Command</b><br>
+  Learning a midi command 'listens' for midi activity and displays <br>
+  the Midi activity in the learn box.<br>
+  The Midi input device needs to be started (put in listening mode)<br>
+  on the Midi Listener (next) screen.<br>  
+  When MidiControl is active and a learned command is received,<br>
+  the midi command (above) is sent to the output midi device.<br>
+  <br>
+  <b>Learn Midi Command Usage</b>
+  <ul style="padding-left:10px">
+  <li>Select the Midi input device to start learning.</li>
+  <li>Press the 'Start Learning' button.</li>
+  <li>Engage a note or controller on your remote Midi controller.</li>
+  <li>The remote midi is recognized and values below are populated.</li>
+  <li>Change Midi values to suit your needs.</li> 
+  <li>Press save button to save this midi action.</li>    
+  </ul> 
 </div>
 
 <div id="divImageXText4" style="visibility: hidden;"> 
-    divImageXText4
+  <b>Midi Listener Screen</b><br>
+  Use this screen to start a 'listener' for a Midi device connected to your PC.<br>
+  The listener must be started before MidiControl can learn a Midi command.<br>
+  Multiple listeners can be started.<br>
+  Some Midi devices may be locked to another running application.<br>  
+  <br>
+  <b>Learned Midi Command Example</b>
+  <ul style="padding-left:10px">
+  <li>Midi2x2 started listening by clicking on the red led (to turn green).</li>
+  <li>Stop listening by clicking on the green led (will turn red).</li>
+  <li>The dialog box (right) shows listener started and detected activity.</li>
+  <li>Midi2x2 was started and receive a keyboard note 54, channel 0, velocity 100</li>  
+  </ul> 
 </div>
 
 <div id="divImageXText5" style="visibility: hidden;"> 
-    divImageXText5
+  <b>Midi Utilities: Midi Global Update</b><br>
+  The Midi Device Global Update dialog box is used to change all<br>
+  MidiControl references from one Midi device to another Midi device.<br>
+  For Example, assume you configured many Midi commands connected to<br>
+  a Midi USB cable that is connected to your keyboard. You then change<br>
+  the Midi USB cable to a USB hub.  Rather than changing all your midi<br>
+  commands from the USB cable to the USB hub, come to this screen and<br>
+  globally change all references from the USB cable to the USB hub<br>  
+  <br>
+  <b>Midi Utilities: Send Note On / Off to a Midi Device</b><br>
+  This is a simple Midi test tool to test Midi connectivity by sending<br>
+  a Note On/Off command to a Midi device to see if the Midi device is<br>
+  connected and operating correctly<br>
 </div>
 
 <div id="divImageXText6" style="visibility: hidden;"> 
-    divImageXText6
+  <b>Midi Control Release Notes and Help Text</b><br>
+  Pressing the yellow question mark on the MidiControl home screen<br>
+  displays (currently minimal) release notes and help text.<br>
+  Improved help text and release notes are a priority fo a future relase. <br>
 </div>
 
 <div id="divImageXText7" style="visibility: hidden;"> 
