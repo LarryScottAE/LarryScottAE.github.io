@@ -385,29 +385,31 @@ function winOpen(pic) {
 	  <a href="https://en.wikipedia.org/wiki/MIDI"  target="popup" onclick="window.open('https://en.wikipedia.org/wiki/MIDI','popup'); return false;">
 	  <b><u><font color=#000000>MIDI</font></u></b> 
 	  </a>
-	  (Musical Instrument Digital Interface) is a technical standard (communication protocol) that allows musical devices (instruments, computers, 
-	  recording software, pedalboards, effects processors, and more) to communicate with each other. Midi is used to communicate music data, 
-	  music commands, and vendor specific (system exclusive) commands: 
+	  MIDI (Musical Instrument Digital Interface) is a technical standard and communication protocol that allows musical devices 
+	  (instruments, computers, recording software, pedalboards, effects processors, and more) to communicate with each other. 
+	  Midi is used to communicate music note data, music commands, and vendor specific (system exclusive) commands. 
 	  <br><br>
-	  <b>Music Data:</b>, Midi is used to record and play musical <b>note information</b>. For example, when you press a note on a digital 
-	  piano keyboard, the note number (ie: note pressed) and the note velocity (how hard the note was played) is encoded to digital Midi 
-	  data which is sent to your computer's recording (DAW) software. Software such as Pro Tools, Reaper, Cubase, can read, record, and 
-	  play back midi data.  Playback of a midi recorded keyboard performance will sound identical to the original performance.
-      Midi music data implementation is standardized across all music gear manufacturers.	  
+	  <b>Music Note Data:</b>, Midi can be used to record and play musical notes. For example, when you press a note on a Midi 
+	  keyboard, the note number (ie: the note pressed), the note velocity (how hard the note was played) and the keyboard 'channel' 
+	  are encoded into digital Midi data which is sent to your computer's recording (DAW) software. 
+	  Software such as Pro Tools, Reaper, Cubase, can read, record, and play back midi data.  
+	  Playback of a midi recorded data will sound identical to the original performance.
+      Midi music data encoding is standardized across all music gear manufacturers.	  
       <br><br>	  
-	  <b>Music Commands:</b>Your digital piano keyboard likely has button, sliders, foot pedals, and wheels. In Midi jargon, 
-	  these are called <b>''continuous controllers', or more commonly, 'controllers'.</b>.  
+	  <b>Music Commands:</b>Your digital piano keyboard likely has button, sliders, foot pedals, and wheels to adjust volume, pitch bend a note,..... 
+	  In Midi jargon, these are called <b>''continuous controllers', or more commonly, 'controllers'.</b>.  
 	  Controllers do not change the note being played but rather transmit information to the listening device.  
 	  For example, your keyboard may have a slider that is use to control the volume of your keyboard.  
-	  This slider does not affect the note being played, but 'controls' (the volume) of the note being played by sending a Midi 'continuous 
-	  controller 7' information to your PC, amplifier, or PA system. The target device recognizes the volume controller and adjusts the 
-	  keyboard volume accordingly. Midi Continuous Controller implementation is standardized across all music gear manufacturers.
+	  This slider does not affect the note being played, but 'controls' the volume of the note being played (by sending a Midi 'continuous 
+	  controller 7' information to your PC, amplifier, or PA system). The target device recognizes the volume controller and adjusts the 
+	  keyboard volume accordingly. Midi Continuous Controller implementation is mostly standardized across all music gear manufacturers.
       <br><br>	  
 	  <b>Vendor Specific Commands</b>, Midi provides a free form Midi format called <b>'System Exclusive'</b> which provides musical equipment 
 	  vendors with options to implement manufacturer specific functions in their musical equipment. For example, you may own a Roland guitar 
-	  effects processor that has hundreds of 'patches'. Each patch has many possible settings (reverb, chorus, delay,...). 
-	  Roland guitar effects processors have unique internal circuitry, so Roland implements unique SysEx commands to save and restore 
-	  a backup to your PC.  Midi System Exclusive command are vendor specific, therefore, NOT standardized across all music gear manufacturers.	  
+	  effects processor that has hundreds of 'patches'. Each patch has many possible settings, such as reverb, chorus, delay,... 
+	  Since Roland's guitar effects processors have unique internal circuitry that does not apply across all Midi device manufacturers, 
+	  Roland implements unique SysEx commands to control their devices.
+      The most common SysEx commands are backup and restore commands; to backup and restore your Midi device configuration to your PC.	  
       </p>
       </details>
 
@@ -415,51 +417,61 @@ function winOpen(pic) {
   	  <b><font color=#000000>MidiXLate Midi Router</font></b> <br>
 	 
 	  Midi Routing is the process of transmitting and receiving midi packets (digitally encoded music notes and control messages) from 
-	  one musical device to another. Typically, Midi Routing is accomplished by connecting all Midi devices to a midi 'hub' (or 'switch') and 
+	  one musical device to another. Typically, Midi Routing is accomplished by connecting all Midi devices to a Midi 'hub' (or 'switch') and 
 	  'broadcasting' all midi data to all midi devices connected to the midi hub (or switch). 
-	  This is technically not routing because midi commands are 'broadcast', not 'routed' to their intended destination.
-	  There is no intelligence involved (ie: looking at every midi packet and making a rules based decision on where to send the midi packet)
+	  This is technically not routing because midi commands are 'broadcast', not 'routed', to all devices connected to the Mdi hub.
+	  With a Midi hub, there is no intelligence involved.  Every midi packet is sent to every device connected to the Midi hub.
+	  A strict definition of 'routing' implies there is logic defined in the router (not hub) to route Midi data to a Midi device 
+	  based on user defined Midi routing rules.
+	  This is the difference between a router and a hub. In a router, you specify rules how to route midi data. 
+	  In a Midi hub, all midi data is broadcast to all Midi devices connected to the hub.
 	  Sending all Midi data to all midi devices is obviously not optimal because it generates excessive midi network traffic and makes each 
-	  Midi device configuration overly complicated ('filtering' the midi data intended for each midi device). 
+	  Midi device configuration overly complicated, requiring 'filtering' of the midi data intended for each midi device. 
       <br><br>
-      The MidiXLate router is a true router, meaning every midi packet is inspected and 'routed' to it's intended destinations. 
-	  Routing Midi data greatly reduces Midi network traffic, eliminating a flood of extraneous midi network data.  
-	  The sending and receiving midi devices are now much simpler to configure because the midi data received at a midi device is guaranteed 
-	  to be intended solely for that midi device. For the average home user with only a few Midi devices, a Midi hub is the right option. 
-	  For a performing group (or sophisticated home studio) with a large number of midi devices and complicated midi network, the MidiXLate router can be a life saver; 
-	  not only due to MidiXLate's routing capability, but also MidiXlate's 'translation' and 'channel locking' capabilities (discussed below)
-	  Setting up the MidiXLate router is obviously more complicated than setting up a dumb Midi hub, but MidiXLate's benefits can be huge. 
-	  With MidiXLate, you have complete control of Midi routing and port filtering (note, controller, patch change, and sys ex) capabilities.
+      The MidiXLate router is a true router, meaning every midi packet is inspected and 'routed' to it's intended destination(s). 
+	  Routing Midi data greatly reduces Midi network traffic, eliminating a flood of extraneous midi network data.
+      Excessive Midi note data and Midi 'active sensing' commands can easily increase Midi network latency, killing a Midi network's efficiency.   
+	  With Midi routing, the sending and receiving midi devices are now much simpler to configure because the midi data received at a midi device 
+	  is guaranteed to be intended solely for that midi device. 
+	  For the average home user with only a few Midi devices, a Midi router may not add much value. A Midi hub is the right option. 
+	  For a performing group (or sophisticated home studio) with a large number of midi devices and complicated midi network, 
+	  the MidiXLate router can be a life saver. 
+	  With MidiXLate, you have complete control of Midi 'port filtering', 'translation', and 'channel locking' capabilities.
 	  As for MidiXLate's performance, the engine of the router is a blinding fast Atmel SAM3X8E ARM Cortex-M3 processor running at 84 MHz, 
 	  providing extremely low latency.  
 	  
 	 
       <details>
-      <summary>Click on this arrow for MidiXLate 'translation' and 'channel locking' overview</summary>
+      <summary>Click on this arrow for MidiXLate 'port filtering', 'translation', and 'channel locking' overview</summary>
       <p>
       <br>	  
-      In addition to Midi routing, the MidiXLate router provides a sudo Network Address <b>Translation</b> (NAT) features called 'Translation' where 
-	  midi data can be 'translated from one Midi format (such as note data) to another Midi format (such as continuous controller). This is extremely 
-      helpful because it allows you to extract maximum usability out of your music gear (by providing useful access to previously inaccessible controllers). 	  
-	  Next, MidiXLate has a <b>Channel Locking</b> feature providing flexible rules to lock midi data (sent out an output port) to a particular 
-	  midi channel. For example, assume you have a drum machine assigned to output port 6.  All drum patches are required to be encoded to Midi channel 10, 
-      yet some drum patch providers fail to encode their drum patches to midi channel 10. With MidiXLate, you can force all data to your drum machine to 
-      midi port 10.  Channel Locking has many other useful features. 	  
+      In addition to Midi routing, the MidiXLate router provides 'port filtering' capabilities.  
+	  For each of the six input ports and six output ports, you can specify, by port, to process or ignore, 
+	  note on/off, continuous control, progam change, and/or system exclusive commands.<br>    
+	  The router also provides a sudo Network Address <b>Translation</b> (NAT) features called 'Translation' where 
+	  midi data can be 'translated from one Midi format (such as note data) to another Midi format (such as continuous controller). 
+	  This is extremely helpful when there is no direct path for one piece of midi gear to control another piece of Midi gear. <br>
+      Next, the router has a <b>Channel Locking</b> feature providing flexible rules to lock midi data (sent to an output port) to a particular 
+	  midi channel. For example, assume you have a drum machine attached to output port 6. All drum notes are required (by Midi standard) to be 
+	  encoded to Midi channel 10,yet some drum patch providers fail to encode their drum patches to midi channel 10. 
+	  With MidiXLate, you can force all data to your drum machine to midi port 10.  
+	  Channel Locking has many other useful features. 	  
 	  </p>
       </details>
 	 
 	  <br>
-      The MidiXLate router was the created in response to many of my home studio music production issues. 
-	  I found I could not adequately simultaneously configure or control my many midi devices without the routing, translation, and channel locking features 
+      The MidiXLate router was the created in response to many of my home studio music production frustrations. 
+	  Midi networks can become very complicated VERY quickly!  For my moderatly complicated Midi network configuration, 
+	  I found I could not adequately simultaneously configure or control many midi devices without the routing, translation, and channel locking features 
 	  provided by the MidiXLate midi router. 
 	  MidiXLate routers are custom builds. I typically build a handful of routers each year. 
 	  If you would like to 'try before you buy' a MidiXLate router, send an email to 
 	  <a href="mailto:lscott@gmail.com?subject=MidiXLate Inquiry">LScottAE@gmail.com</a>. 
 	  I rent a demo router for $150 month (in 2024) and the customer pays for shipping (both ways).  
-	  I you want to purchase a new router, the purchase price is generally around $850 (in 2024). 
-	  I hand build and test these routers in the mountains of northern California. 
-	  Unfortunately, the cost of materials and time required to build a router is not very profitable, but it is a passion of mine.  
-	  My customers receive excellent phone support and priority for customizations.   	  
+	  I you want to purchase a new router, the purchase price is $850 (in 2024). 
+	  I hand build and test these routers in the mountains of northern California, so unfortunately, 
+	  the cost of materials and time required to build a router is not very profitable, but it is a passion of mine.  
+	  My customers receive excellent phone support, steep discounts for newly released routers, and priority for customizations.   	  
 	 
       <br><br>
 	  
@@ -593,22 +605,22 @@ function winOpen(pic) {
   
 	<font color=#000000 style="font-size:12px">
     Have you every wanted to catalog and control all of your midi devices from your Windows PC?&nbsp;&nbsp;
-	MidiControl provides a <b>FREE</b> Windows PC program to control all of your midi devices from your PC desktop,
-	using Midi 'program change','continuous control', and 'system exclusive' commands.    
+	MidiControl provides a <b>FREE</b> Windows PC program to catalog and control your midi devices from your PC desktop,  
 	MidiControl is not designed to play midi files, rather to control midi devices from your desktop. 
-	MidiControl provides ten bookmarks covering 2000 midi commands. 
+	MidiControl provides ten bookmarks (sections) covering up to 2000 midi commands. 
     <br><br>
     You, a typical musician, likely have many midi devices such as keyboards, guitar effects, drum machines, voice processors, and more.  
-	You may find it helpful to catalog all of your midi commands and send those commands from the PC desktop, just as they are sent from your midi device. 	
+	You may find it helpful to catalog all of your Midi commands and send those commands from your PC desktop, 
+	the same as they are sent from your Midi device. 	
 	For example, assume you have a performance where every song requires a different keyboad patch, drum pathch, guitar patch, guitar volume, ....
-    With MidiControl, you can define groups (tabs) by song and list all the midi commands for each midi device to setup the song. 
-	Using your PC desktop, you can send commands to all your midi devices to setup for the next song (patch changes, controllers, ...) 
-	Alternatively, as shown in the example screens, each tab can represent a musical device and the midi commands to control the device.
+    With MidiControl, you can define groups (bookmarks) by song and list all the midi commands for each midi device to setup the song. 
+	Using your PC desktop, you can send the Midi commands to all your midi devices to setup for the next song (patch changes, controllers, ...) 
+	Alternatively, as shown in the example screens, each bookmark can represent a musical device and the midi commands used to control the device.
     <br><br>
     To start, connect all of your midi devices to your computer via a Midi hub (which you have likely already have done).
     Next, download, install, and configure MidiControl (FREE!).
-	When configuring midi control, define groups ('tabs') for each midi device and/or song and then setup the same midi commands used by 
-	your midi gear (keyboards, pedal boards, effects processors,...)
+	When configuring midi control, define groups (tabs/bookmarks) for each midi device and/or song.
+    Next, setup the midi commands used by your midi gear (keyboards, pedal boards, effects processors,...)
     You now have a simple means to control all of your Midi devices from your PC!
     </font>
     </td>
@@ -733,27 +745,32 @@ function winOpen(pic) {
   
 	<font color=#000000 style="font-size:12px">
 	MidiOrganize provides a FREE and simple means to organize your midi drum loops and optimize the performance and flexibility of your DAW mixes! 	
-    MidiOrganize is a PC midi file organizer (not a VST) designed to catalog midi drum loops and midi (guitar, bass, horn,...) patches. 
-    There are many license based drum loop VSTs available for ProTools, Reaper, Cubase,...
-	Most drum VSTs typically are very expensive, must be licensed and require your PC to be connected to the internet,
+    MidiOrganize is a PC midi file organizer designed to catalog midi drum loops and midi (guitar, bass, horn,...) patches. 
+	MidiOrganize is purposly not a VST. It is intended for use outside your DAW (ProTools, Reaper, Cubase,...). 
+	Typically, MidiOrganize is used to organize drum loop libraries. 
+	Most drum VSTs typically are very expensive, must be licensed, require your PC to be connected to the internet,
 	and (in my case, the most irritating issue) these licensed VSTs place a heavy burden on the CPU introducing 
-	latency and popping in my final mix.  MidiOrganize is a FREE standalone PC application.  You may choose to download Groove Monkee's excellent 
+	latency and popping in my final mix.  
+    MidiOrganize keeps your PC and DAW processing power requirements to a minimum by the eliminating the heavy weight of the VST from the DAW. 	
+	MidiOrganize is a FREE standalone PC application.  
+	You may choose to download Groove Monkee's excellent 
     <a href="https://groovemonkee.com/pages/free-midi-loops"  target="popup" onclick="window.open('https://groovemonkee.com/pages/free-midi-loops','popup'); return false;">
     <b><u><font color=#000000>FREE drumloops</font></u></b> 
     </a>
 	and easily configure for use with MidiOrganize. Additionally, you can use MidiOrganize with any of your purchased drum loops.  
 		
     <br><br>
-    My PC rack computer is a  music optimized PC (32 gig memory, 1TB HD, Intel 7 CPU, Reaper).
+    My Windows 10 music PC is music optimized with 32 gig memory, 3 x 1TB M.2 gumstick drives, Intel 7 CPU, and Reaper.
 	I typically start to see performance degradation after only loading a few drum VSTs. 
-    VSTs do have benefits and conveniences, but I prefer to limit my VST usage to optimize my 
-	performance and maximize patch selection flexibilty during playback.
+    VSTs do have benefits and conveniences, but I prefer to limit my VST usage to optimize my Reaper performance. 
+	I can easily drag and drop drum patches from MidiOrganize into Reaper tracks. 
+	Additionally, MidiOrganize has a patch preview feature allowing me to hear thee track before importing to Reaper. 
     Midi Organize is a stand alone PC application.  During setup, you specify the directories of all your drum loops. 
 	When working with your DAW (ProTools, Reaper, CuBase,...) you drag and drop MidiOrganize drum tracks into your DAW drum tack. 
 	Unlike the VST which will play the drum track, set your drum track to route the drum midi to your external drum machine. 
-	In my case, I have a Yamaha MU15 and a Roland Integra7. 
-	The MU15 (or Integra7) audio output is an input on my mixer which is in turn recorded by my DAW. 
-	Not only is this a <b>FREE</b> solution, but the PC CPU performance hit on your DAW is significantly reduced. 
+	In my case, I have a Yamaha MU15 drum machine and a Roland Integra7 drum processor. 
+	The MU15 (or Integra7) audio output is an input on my mixer which is a recorded track in my Reaper DAW. 
+	Not only is this a <b>FREE</b> solution, but the PC CPU performance hit on your DAW will be significantly reduced. 
     In my case, with Reaper, the final mix rendered audio is free of chop, pops, and dropouts due to heavy VST memory usage. 
     MidiOrganize follows the format of EZ Drummer. If you understand the drilldown structure of EZ Drummer, MidiOrganize will feel very natural.  	
 	</font>
@@ -1018,8 +1035,8 @@ function winOpen(pic) {
   <li>Power button: Power on and off the router.</li>
   <li>Logger button: Dump midi activity to screen or TTY port.</li>
   <li>Config button: Download router config from PC.</li>
-  <li>LEDs: Blink as Midi traffic received and sent.</li>
-  <li>Screen: Display config and realtime midi activity.</li>
+  <li>LEDs: Blink as Midi traffic is sent and received.</li>
+  <li>Screen: Shows config and realtime midi activity.</li>
 </ul> 
 </div>
 
