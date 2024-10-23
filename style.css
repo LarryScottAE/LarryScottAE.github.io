@@ -18,7 +18,16 @@ body {
  color: #000000;   /* body text color */
 }
  
- 
+body#body2 {
+ margin: 0;
+ padding: 0;
+ background: #FFFFFF;
+ line-height: 16px;
+ text-align: justify;
+ font-family: Helvetica, Arial,  sans-serif;
+ font-size: 11px;
+ color: #000000;   /* body text color */
+} 
  
 #header {
  width: 1200px;
@@ -27,6 +36,18 @@ body {
  padding: 0;
 }
 
+#divXComment {
+ font-size: 11px;
+}
+ 
+#divYComment {
+ font-size: 11px;
+}
+
+#divZComment {
+ font-size: 11px;
+} 
+ 
  
 #menu {
  width: 1160px;
@@ -36,34 +57,7 @@ body {
  background: url(images2/image01.jpg) no-repeat left top;
 }
 
- 
-#menu ul {
- margin: 0;
- list-style: none;
- padding-top: 10px;
-}
-
- 
-#menu li {
- display: inline;
-}
- 
-#menu a {
- padding: 0 20px;
- background: url(images2/image06.gif) no-repeat right 50%;
- text-decoration: none;
- color: #FFFFFF;
-}
- 
-#menu a:hover {
-}
-
- 
-#menu .first a  {
- padding-left: 0;
-}
-
- 
+  
 #page {
  width: 1200px;
  margin: 0 auto;
@@ -100,6 +94,7 @@ body {
 a {
 color:#008800;
 text-decoration:none;
+font-size: 11px;
 }
  
 
@@ -132,7 +127,7 @@ table#t1 {
         font-size: 12px;
 }
 
-  #lired     {font-size: 12px; color: #880000; }      
+  #lired   {font-size: 12px; color: #880000; }      
  
   #indented
    {
