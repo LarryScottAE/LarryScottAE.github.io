@@ -215,10 +215,14 @@ function winOpen(pic) {
  <!-- table 3-->
  <table id=t0 width=1150 bgcolor=#FFFFFF border=0>
  <td>
+      <br>
+	  <b>MidiXLate Router Information</b><br>
+ 
 	  <details>
       <summary>Click here for a basic Midi overview.</summary>
       <p>
 	  <br>
+	  <b>Midi Overview</b><br>
       <a href="https://en.wikipedia.org/wiki/MIDI"  target="popup" onclick="window.open('https://en.wikipedia.org/wiki/MIDI','popup'); return false;">
       <b><u><font color=#000000>MIDI (Musical Instrument Digital Interface) </font></u></b> 
       </a>
@@ -252,9 +256,10 @@ function winOpen(pic) {
       </details>
 	
 	  <details>
-      <summary>Click here for more router details.</summary>
+      <summary>Click here for more MidiXLate router details.</summary>
       <p>
 	  <br>
+	  <b>MidiXLate router details.</b><br>
       The MidiXLate router is a true router, meaning every midi packet is inspected and 'routed' to it's intended destination(s). 
 	  Routing Midi data greatly reduces Midi network traffic, eliminating a flood of extraneous midi network data.
       Excessive Midi note data and Midi 'active sensing' commands can easily increase Midi network latency, killing a Midi network's efficiency.   
@@ -282,10 +287,34 @@ function winOpen(pic) {
 	  </p>	  
 	  </details>
 	 
+	   <details>
+      <summary>Click here for a simple MidiXLate router use case.</summary>
+      <p>
+	  <br>
+	  <b>MidiXLate router use case.</b><br>
+      Assume you have a keyboard (with keys, sliders, knowbs, switches, and drum pad) connected to the MidiXLate router on input Port 1.<br>
+	  Further assume you have a Yamaha MU15 drum machine connected to  MidiXLate router on output Port 2.<br>
+	  Further assume you have a Roland Integra Synth module connected to MidiXLate router on output Port 3.<br>
+	  Further assume you have a Reaper Digital Analog Workstation (DAW) connected to MidiXLate router input port 4 and output port 4.<br>
+	  Lastly assume you have MidiOX running on a development PC connected to MidiXLate router output port 4.<br>
+      Configure the MidiXLate software to send Keyboard drum pad data to Yamamha MU15 drum synth.<br>
+      Next, configure the MidiXLate software to send keyboard keys to Roland Integra synth.<br> 
+	  Next, configure the MidiXLate software to send keyboard knobs, sliders, and switches to select Roland synth patches, volume, tempo,...<br>
+	  Next, configure the MidiXLate software to send keyboard transport controls (start,stop, play, record) to Reaper synth.<br> 
+	  Next, configure the MidiXLate software to send keyboard knobs, sliders, and switches to select Reaper channels, volume, tempo,...<br>
+	  Optionally, split your keyboard keybed into 'zones' using the MidiXLate 'Translation' feature<br>  
+	  Optionally, configure your Reaper DAW to send recorded Midi performance data to the Yamaha drum synth and Roland Integra synth.<br>  
+	  Lastly, start MidiOx on your development PC and monitor ALL the Midi traffic on your Midi network!<br>
+	  This configuration would be VERY DIFFICULT to accomplish with a Midi HUB, but moderately easy with MidiXLate!<br>
+      <br> 	  
+	  </p>	  
+	  </details>
+	 
 	  <details>
-      <summary>Click here for pricing and availibility.</summary>
+      <summary>Click here for MidiXLate router pricing and availibility.</summary>
       <p>
       <br>
+	  <b>MidiXLate pricing and availability.</b><br>
 	  MidiXLate routers are custom builds. I typically build a handful of routers each year. 
 	  If you would like to 'try before you buy', send an email to 
 	  <a href="mailto:SierraDigitalAudio@gmail.com?subject=MidiXLate Inquiry">SierraDigitalAudio@gmail.com</a>. 
