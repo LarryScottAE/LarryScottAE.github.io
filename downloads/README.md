@@ -8,11 +8,11 @@ EMail: SierraDigitalAudio@GMail.com<br>
 
 <b>For MidiControl Software Version 1.3 installer (Windows 10+): &nbsp;&nbsp;&nbsp;  /downloads/setupMidiControl-V1.3.exe</b><br>
 
-<b>For MidiOrganize Software Version 1.3 installer (Windows 10+): &nbsp; /downloads/setupMidiOrganize-V1.3.exe</b><br><br>
+<b>For MidiOrganize Software Version 1.3 installer (Windows 10+): &nbsp; /downloads/setupMidiOrganize-V1.3.exe</b><br>
 
-Download instructions: <br>
-Click on the link above which will take you to another page. <br>  
-Press "view raw" to start download. <br>  
+<b>Download instructions:</b><br>
+Click on the setup installer which may take you to another page.  
+Press "view raw" to start download.  (see screenshot 2 below)
 
 ![RouterFace](https://github.com/user-attachments/assets/43c228e0-ff50-4296-8cb7-263a691db000) <br><br>
 
