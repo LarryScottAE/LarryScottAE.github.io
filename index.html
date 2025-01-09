@@ -105,6 +105,7 @@
   var divImageYText7 = document.getElementById('divImageYText7');
   var divImageYText8 = document.getElementById('divImageYText8');
   var divImageYText9 = document.getElementById('divImageYText9');
+  var divImageYText10 = document.getElementById('divImageYText10');
 
   if (i==1) document.getElementById("divYComment").innerHTML = divImageYText1.innerHTML;
   if (i==2) document.getElementById("divYComment").innerHTML = divImageYText2.innerHTML;
@@ -115,6 +116,7 @@
   if (i==7) document.getElementById("divYComment").innerHTML = divImageYText7.innerHTML;
   if (i==8) document.getElementById("divYComment").innerHTML = divImageYText8.innerHTML;
   if (i==9) document.getElementById("divYComment").innerHTML = divImageYText9.innerHTML;
+  if (i==10) document.getElementById("divYComment").innerHTML = divImageYText10.innerHTML;
   }
   
   function chgTextZ(i) {
@@ -177,6 +179,7 @@
   $(".pic7Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic7Yimg").fadeIn("slow"); }); chgTextY(7); imageLastY="pic7Yimg"; });
   $(".pic8Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic8Yimg").fadeIn("slow"); }); chgTextY(8); imageLastY="pic8Yimg"; });
   $(".pic9Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic9Yimg").fadeIn("slow"); }); chgTextY(9); imageLastY="pic9Yimg"; });
+  $(".pic10Y").click(function()   { $("#" + imageLastY).fadeOut("slow", function() { $("#pic10Yimg").fadeIn("slow"); }); chgTextY(10); imageLastY="pic10Yimg"; });
   
   $(".pic1Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic1Zimg").fadeIn("slow"); }); chgTextZ(1); imageLastZ="pic1Zimg"; });
   $(".pic2Z").click(function()   { $("#" + imageLastZ).fadeOut("slow", function() { $("#pic2Zimg").fadeIn("slow"); }); chgTextZ(2); imageLastZ="pic2Zimg"; });
@@ -259,7 +262,7 @@ function winOpen(pic) {
 
 <style>
 #pic1Ximg, #pic2Ximg, #pic3Ximg, #pic4Ximg, #pic5Ximg, #pic6Ximg, #pic7Ximg, #pic8Ximg { display: none; }
-#pic1Yimg, #pic2Yimg, #pic3Yimg, #pic4Yimg, #pic5Yimg, #pic6Yimg, #pic7Yimg, #pic8Yimg, #pic9Yimg  { display: none; }
+#pic1Yimg, #pic2Yimg, #pic3Yimg, #pic4Yimg, #pic5Yimg, #pic6Yimg, #pic7Yimg, #pic8Yimg, #pic9Yimg, #pic10Yimg  { display: none; }
 #pic1Zimg, #pic2Zimg, #pic3Zimg, #pic4Zimg, #pic5Zimg, #pic6Zimg, #pic7Zimg, #pic8Zimg { display: none; }
 </style>
 </head>
@@ -413,20 +416,22 @@ function winOpen(pic) {
 	   </td>
 	 	 
 	   <td align=center nowrap>
-	    <font size=1>Click on thumbnaild for more info. Click on picture to view larger image in new window.</font> <br>
+	   <font size=1>Click on thumbnaild for more info. Click on picture to view larger image in new window.</font> <br>
 	   <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="pic1Yimg" onclick="winOpen('RouterFace.jpg')"/>
 	   <img src="./images/RouterRear.jpg"        alt="RouterRear.jpg"       width="700" id="pic2Yimg" onclick="winOpen('RouterRear.jpg')"/>
-	   <img src="./images/RouterScreen0.jpg"     alt="RouterScreen0.jpg"    width="700" id="pic3Yimg" onclick="winOpen('RouterScreen0.jpg')"/>
 	   <img src="./images/RouterConfig1.jpg"     alt="RouterConfig1.jpg"    width="700" id="pic4Yimg" onclick="winOpen('RouterConfig1.jpg')"/>
 	   <img src="./images/RouterConfig2.jpg"     alt="RouterConfig2.jpg"    width="700" id="pic5Yimg" onclick="winOpen('RouterConfig2.jpg')"/>
 	   <img src="./images/RouterConfig3.jpg"     alt="RouterConfig3.jpg"    width="700" id="pic6Yimg" onclick="winOpen('RouterConfig3.jpg')"/>
+	   <img src="./images/RouterTFT0.jpg"        alt="RouterTFT0.jpg"       width="400" id="pic3Yimg" onclick="winOpen('RouterTFT0.jpg')"/>
+	   <img src="./images/RouterTFT2.jpg"        alt="RouterTFT2.jpg"       width="400" id="pic7Yimg" onclick="winOpen('RouterTFT2.jpg')"/>
+   	   <img src="./images/RouterTFT1.jpg"        alt="RouterTFT1.jpg"       width="400" id="pic8Yimg" onclick="winOpen('RouterTFT1.jpg')"/>
+  	   <img src="./images/RouterTFT3.jpg"        alt="RouterTFT3.jpg"       width="400" id="pic9Yimg" onclick="winOpen('RouterTFT3.jpg')"/>
+  	   <img src="./images/RouterTFT4.jpg"        alt="RouterTFT4.jpg"       width="400" id="pic10Yimg" onclick="winOpen('RouterTFT4.jpg')"/>
 
 	   <br><br>
-	   <img src=./images/RouterFace.jpg          alt="RouterFace.jpg"       height=50 width=100 border=1 style="border-color:#000088" class="pic1Y" />
+	   <img src=./images/RouterFace.jpg          alt="RouterFace.jpg"       height=50 width=150 border=1 style="border-color:#000088" class="pic1Y" />
 	   &nbsp;&nbsp;&nbsp;
-	   <img src=./images/RouterRear.jpg          alt="RouterRear.jpg"       height=50 width=100 border=1 style="border-color:#000088" class="pic2Y" />
-	   &nbsp;&nbsp;&nbsp;
-	   <img src=./images/RouterScreen1.jpg       alt="RouterScreen1.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic3Y" />
+	   <img src=./images/RouterRear.jpg          alt="RouterRear.jpg"       height=50 width=150 border=1 style="border-color:#000088" class="pic2Y" />
 	   &nbsp;&nbsp;&nbsp;
 	   <img src=./images/RouterConfig1.jpg       alt="RouterConfig1.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic4Y" />
 	   &nbsp;&nbsp;&nbsp;
@@ -434,7 +439,19 @@ function winOpen(pic) {
 	   &nbsp;&nbsp;&nbsp;
 	   <img src=./images/RouterConfig3.jpg       alt="RouterConfig3.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic6Y" />
 	   &nbsp;&nbsp;&nbsp;
-		 		 
+		
+       <br><br>
+	   <img src=./images/RouterTFT0.jpg       alt="RouterTFT0.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic3Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterTFT2.jpg       alt="RouterTFT2.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic7Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterTFT1.jpg       alt="RouterTFT1.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic8Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterTFT3.jpg       alt="RouterTFT3.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic9Y" />
+	   &nbsp;&nbsp;&nbsp;
+	   <img src=./images/RouterTFT4.jpg       alt="RouterTFT4.jpg"    height=50 width=100 border=1 style="border-color:#000088" class="pic10Y" />
+	   &nbsp;&nbsp;&nbsp;
+
  	   </td>
 	   </table>
 	   <!-- table4 end -->
@@ -972,12 +989,14 @@ function winOpen(pic) {
 </div>
 
 <div id="divImageYText3" style="visibility: hidden;"> 
- <b>Router Screens</b>  
- <ul style="padding-left:10px">
-  <li>Splash Page: Displayed for two seconds at router powered on.</li>
-  <li>Router Services: Summary of services configured for router. </li>
-  <li>Port Routings: Summary of how router ports are connected.</li>
-  <li>Port Filtering: Shows the midi commands allowed by midi port.</li>
+ <b>Router Screen: Splash Page</b><br>  
+ The splash page is displayed for two seconds when the<br>
+ router is powered on, then the router services screen<br>
+ is displayed.  
+ <br><br>
+ The splash page / screen provides router firmware<br>
+ version information, version date information and<br>
+ a support email address.<br>
 </ul> 
 </div>
 
@@ -1046,13 +1065,98 @@ to Midi channel 10. <br>
 </div>
 
 <div id="divImageYText7" style="visibility: hidden;"> 
-    divImageYText7
+<b>Router Screen: Router Services</b><br>  
+  Press the Configure button twice (to latch and unlatch)<br>
+  within two seconds to cycle through the router<br>
+  configuration screens.
+  <br><br>
+  The fisrt paramter is the active configuration<br> 
+  downloaded from your PC<br><br>
+  
+  The left column shows:<br> 
+  <ul style="padding-left:10px">
+  <li>The number of input devices configured. </li>
+  <li>The number of output devices configured.</li>
+  <li>The number of routings defined (see next screens).</li>
+  <li>The number of translation mappings defined.</li>
+  <li>The number of channel locks defined.</li>
+  <li>The number of config errors found at download.</li>
+</ul> 
+
+<br>
+ The right column shows services enabled.<br>
+  <ul style="padding-left:10px">
+  <li>If router routing service is enabled. </li>
+  <li>If router translation service is enabled. </li>
+  <li>If router channel locking is enabled. </li>
+  <li>If router queuing is enabled. </li>
+  <li>If router SysEx processing is enabled. </li>
+  <li>If port 5 or port 6 is 'wrapped'. </li>
+</ul> 
 </div>
 
 <div id="divImageYText8" style="visibility: hidden;"> 
-    divImageYText8
+<b>Router Screen: Device Names</b><br>  
+  Press the Configure button twice (to latch and unlatch)<br>
+  within two seconds to cycle through the router<br>
+  configuration screens.
+  <br><br>
+  The Device Names screen displays the names of the devices<br>
+  (configured on the PC and downloaded to the router) attached<br>
+  to the input ports and output ports. (n/u means not used).
 </div>
 
+<div id="divImageYText9" style="visibility: hidden;"> 
+<b>Router Screen: Port Routings</b><br>  
+  Press the Configure button twice (to latch and unlatch)<br>
+  within two seconds to cycle through the router<br>
+  configuration screens.
+  <br><br>
+  The Port Routing screen displays the names of the input<br>
+  devices vertically and output devices horizontally. <br>
+  This visual graphic shows which input devices are<br>
+  connected to which output devices.<br><br>
+
+  In the simple port routing screen shown, I am sending all<br> 
+  midi data back to their origin (useful for my router testing)<br>
+  but not a very meaningful configurration.<br> 
+   
+  <br>
+  Any input device can be 'routed' to any output device.<br>
+  <ul style="padding-left:10px">
+  <li>Green: input device is connected to output device.</li>
+  <li>Yellow: port is connedted but not routed (informational).</li>
+  <li>Red: &nbsp;&nbsp;input device is connected to output device.</li>
+  <li>Magenta: port is 'wrapped' (input connected to output). </li>
+  </ul> 
+
+  <br>
+  <b>Wrapped Ports</b><br>
+  Wrapped ports are only available on port 5 or port 6<br>
+  (a router internal switch ties port 5 input to port 5 output). <br>  
+  For example, wrap keyboard input port 5 to tone generator<br>
+  on output port 5 to remove an possibility of latency.<br>
+  
+</div>
+
+<div id="divImageYText10" style="visibility: hidden;"> 
+<b>Router Screen: Port Filtering</b><br>  
+  Press the Configure button twice (to latch and unlatch)<br>
+  within two seconds to cycle through the router<br>
+  configuration screens.
+  <br><br>
+  The Port Filtering screen shows which Midi commands<br>
+  are processed on which Midi input ports and output ports.<br>
+
+  <br>
+  The input/output port, device, and commands processd:<br>
+  <ul style="padding-left:10px">
+  <li>N: note on / note off commands are processed (yes/no).</li>
+  <li>P: program change commands are processed (yes/no).</li>
+  <li>C: control change commands are processed (yes/no).</li>
+  <li>S: sys ex commands are processed (yes/no). </li> 
+  </ul> 
+</div>
 
 <div id="divImageZText1" style="visibility: hidden;"> 
     <br>
