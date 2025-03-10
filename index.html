@@ -1,5 +1,5 @@
 <html>
-  <head>
+  <head> 
     <meta name="Author" content="Larry Scott">
     <meta name="description" content="Midi Tools, Midi Router, Midi Software, Embedded Systems, CAD, and 3D Printing">
     <meta name="robots" content="nofollow">
@@ -11,8 +11,14 @@
     <title>Sierra Digital Audio: Free Midi Utilities and Midi Router</title>
     <link rel="icon" type="image/png" href="./images/GoldStar.png">
     <link rel="shortcut icon" type="image/icon" href="./images/GoldStar.ico">
+
     <!-- scottae style sheet -->
     <link href="./style.css" rel="stylesheet" type="text/css" />
+	
+	<!-- scottae java script -->
+	<script src="script.js"></script>
+	
+	
     <!-- Schema.org PRODUCT structured data -->
     <script type="application/ld+json">
       {
@@ -33,43 +39,15 @@
           }
       }
     </script>
-    <script type="text/javascript">
-      function browserCheck() { 
-          let userAgent = navigator.userAgent;
-          let browser = "Unknown";
-          
-          // Detect Chrome
-          if (/Chrome/.test(userAgent) && !/Chromium/.test(userAgent)) {
-              browser = "Google Chrome";
-          }
-          // Detect Chromium-based Edge
-          else if (/Edg/.test(userAgent)) {
-              browser = "Microsoft Edge";
-          }
-          // Detect Firefox
-          else if (/Firefox/.test(userAgent)) {
-              browser = "Mozilla Firefox";
-          }
-          // Detect Safari
-          else if (/Safari/.test(userAgent)) {
-              browser = "Apple Safari";
-          }
-          // Detect Internet Explorer
-          else if (/Trident/.test(userAgent)) {
-              browser = "Internet Explorer";
-          }
-          
-      //	document.write(browser);
-          document.getElementById('browserID').innerHTML=browser;
-          return browser;
-      }
-    </script>
+	
+
+	
+  
   </head>
   <!-- ========================================================================================================================================================= -->
   <!-- BODY (HEADING)-->
-  <BODY link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  class='default' style='background: #40,40,40' onload="browserCheck()">
-    <!-- class=default is a jqxMenu parameter -->
-    <!-- onload looks for failed login attempt / request parameter --> 
+  <BODY link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  class='default' style='background: #40,40,40' onload="browserCheck(); routerReset(); midiOrganizeReset();  midiControlReset(); ">
+	
     <div id="header" align=right>
       <!-- This is style.css top black spacing -->
     </div>
@@ -84,20 +62,20 @@
     </div>
     <div id="page">
 
-        <!-- table 1--> 
-        <table id=t0 width=1096 bgcolor=#FFFFFF >
+        <!-- table page begin--> 
+        <table id=t0 width=1200 bgcolor=#FFFFFF >
           <tr>
             <td align=center>
-              <!-- table 2--> 
-              <table id=t0 width=1084 bgcolor=#FFFFFF >
-                <tr>
-                  <td colspan=3 align=center>
+			
+              <!-- table head1 begin--> 
+              <table id=t0 width=1160 bgcolor=#FFFFFF >
+                  <td align=center>
 				  
-                    <!-- table head1 begin -->
-                    <table id=t0 width=1076 bgcolor=#FFFFFF >
-                      <td align=left valign=top nowrap width=460>
+                    <!-- table head2 begin -->
+                    <table id=t0 bgcolor=#FFFFFF width=100%>
+                      <td align=left valign=top nowrap >
                         <br> 
-                        <!-- table head2 begin -->
+                        <!-- table head3 begin -->
                         <table id=t0 width=460>
                           <tr>
                             <td colspan=2>
@@ -119,7 +97,7 @@
                             </td>
                           </tr>
                         </table>
-                        <!-- table head2 end -->
+                        <!-- table head3 end -->
                       </td>
                       <td align=right valign=bottom nowrap width=100 >
                         <a href="https://buymeacoffee.com/sierradigitalaudio">
@@ -151,33 +129,35 @@
                         </ul>
                       </td>
                     </table>
-                    <!-- table head1 end -->
-                    <br>
-                    <HR width=1078 size=4 align=center valign=top color=#000066>
-                    <!--This is for the google web crawler-->
-                    <font size=1 color=#ffffff>
-                      <!-- Sierra Digital Audio, 13155 Falcon Point Place, Truckee, CA. 96161  925-765-2883 SierraDigitalAudio@gmail.com, Midi Router, Embedded Systems, CAD, 3D Printing-->
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan=2>
-                    <h2 id="MidiXLate"></h2>
-                  </td>
-                </tr>
-                <!-- ========================================================================================================================================================= -->
-                <!-- MIDIXLATE -->
+                    <!-- table head2 end -->					  
+					
+				  </td> 
+              </table>		
+			  <!-- table head1 end -->			
+					
+			  <br>		
+              <HR width=1160 size=4 align=center valign=top color=#000066>
+              <!--This is for the google web crawler-->
+              <font size=1 color=#000000>
+              <!-- Sierra Digital Audio, 13155 Falcon Point Place, Truckee, CA. 96161  925-765-2883 SierraDigitalAudio@gmail.com, Midi Router, Embedded Systems, CAD, 3D Printing-->
+              </font>
+               	
+              <!-- ========================================================================================================================================================= -->
+              <!-- MIDIXLATE -->
+				
+				<!-- table MidiXLate begin -->
+				<table id=t0 width=1160 bgcolor=#FFFFFF >
                 <tr>
                   <td colspan=2 valign=center>
                     <div id="padding">
                       <a name="MidiXLate"></a>
                       <center>
                         <!-- table3 begin-->
-                        <table id=t0 width=1078 bgcolor=#FFFFFF >
+                        <table id=t0 width=1160 bgcolor=#FFFFFF >
                           <tr>
                             <td>
                               <br>
-                              <b><font color=#000000>MidiXLate Midi Router</font></b> <br>
+                             <font color=#000066 style="font-size:14px"><b>MidiXLate Midi Router</b></font><br><br>
                               Midi routing is the process of transmitting and receiving music data (digitally encoded music notes and control messages) 
                               from one musical device (ex: your keyboard) to another musical device (ex: your PC recording software). 
                               Typically, Midi communication is accomplished by connecting all Midi enabled music devices to a Midi 'hub' which 'broadcasts' ALL Midi music 
@@ -187,38 +167,28 @@
                               received at the router will be routed (and optionally enhanced) to one or more Midi devices, not ALL midi devices (like a hub)!  
                               This approach simplifies the midi network setup and optimizes Midi network performance by minimizing network Midi traffic, 
                               resulting in minimized midi network latency. 
-                              <br><br>  
-                              <!-- table docs BEGIN -->
-                              <center>
-                                <table width=1078 id=t0>
-                                  <td valign=top>
-                                    <div id="divImageYText1" style="visibility: visible;">
-                                      <b>Router Face</b> <br>
-                                      The router face provides a number of realtime visual aids to<br>
-                                      monitor, decode, and debug Midi traffic as it is being<br> processed by the router.<br> 
-                                      <ul style="padding-left:10px">
-                                        <li>Power button: Power on and off the router.</li>
-                                        <li>Logger button: Dump midi data to TFT screen or TTY port.</li>
-                                        <li>Config button: Load router config and view config on TFT.</li>
-                                        <li>LEDs: Blink as Midi traffic is sent and received.</li>
-                                        <li>Screen: Shows config and realtime Midi activity.</li>
-                                      </ul>
-                                    </div>
-                                    <br>
-                                    <div id="divImageYText2" style="visibility: visible;">
-                                      <b>Router Rear</b>  
-                                      <ul style="padding-left:10px">
-                                        <li>Midi Ports: Six midi 5 pin din input ports and six output ports.</li>
-                                        <li>Log Port: USB port to dump router activity to terminal emulator.</li>
-                                        <li>CFG Port: USB port used to receive router config from PC.</li>
-                                        <li>USB (not used):  USB port for future use.</li>
-                                        <li>PGM (not used):  USB port to update firmware.</li>
-                                        <li>PWR jack: 9V center positive power barrel connector.</li>
-                                        <li>SD Card: Micro SD card( MS FAT32 format) router configuration.</li>
-                                      </ul>
-                                    </div>
-                                    <br>
-                                    <!-- links -->
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                              <br> 
+<button id="router0"  class="buttonStyle1" onclick="routerReset()">Reset</button>&nbsp;
+<button id="router1"  class="buttonStyle1" onclick="router(1)">Show Router Face</button>&nbsp;
+<button id="router2"  class="buttonStyle1" onclick="router(2)">Show Router Rear</button>&nbsp;
+<button id="router3"  class="buttonStyle1" onclick="router(3)">Show PC Config 1</button>&nbsp;
+<button id="router4"  class="buttonStyle1" onclick="router(4)">Show PC Config 2</button>&nbsp;
+<button id="router5"  class="buttonStyle1" onclick="router(5)">Show PC Config 3</button>&nbsp;
+<button id="router6"  class="buttonStyle1" onclick="router(6)">Show Router Config 1</button>&nbsp;
+<button id="router7"  class="buttonStyle1" onclick="router(7)">Show Router Config 2</button>&nbsp;
+<button id="router8"  class="buttonStyle1" onclick="router(8)">Show Router Config 3</button>&nbsp;
+<button id="router9"  class="buttonStyle1" onclick="router(9)">Show Router Config 4</button>&nbsp;
+<button id="router10" class="buttonStyle1" onclick="router(10)">Show Router Config 5</button>
+
+<br><br>		
+
+ <div id="routerDiv0" hidden>
+ <table width=1078 id=t0>
+ <td valign=top>
                                     <b>MidiXLate Router Downloads</b> <br>
                                     <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate.docx','popup','width=1400'); return false;">
                                     <b><u>MidiXLate MS Word manual</u></b>
@@ -259,260 +229,272 @@
                                     <a href="./indexMoreInfo"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
                                     <b><u>Midi diagnostic tool MidiOX</u></b>
                                     </a> 
-                                  </td>
-                                  <td valign=top align=right>
-                                    <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="pic1Yimg" onclick="winOpen('RouterFace.jpg')"/><br><br>
-                                    <img src="./images/RouterRear.jpg"        alt="RouterRear.jpg"       width="700" id="pic2Yimg" onclick="winOpen('RouterRear.jpg')"/><br>
-                                  </td>
-                                </table>
-                              </center>
-                              <!-- table docs END -->
-                              <br>
-                              <b>MidiXLate Router Additional Information</b><br>
-                              <details>
-                                <summary>Click here for PC Configuration Screens</summary>
-                                <p>
-                                <table width=1078 id=t0>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageYText4" style="visibility: visible;">
-                                        <b>PC Router Configuration</b><br>
-                                        The router configuration is created on the PC and<br>
-                                        downloaded to the router via the router download<br>
-                                        screen (not shown) and USB cable. <br>
-                                        <br>
-                                        <ul style="padding-left:10px">
-                                          <li>Provide a short description of the router config. </li>
-                                          <li>Provide a long description of the router config.</li>
-                                          <li>Label the Midi port conections (Label Ports) button.</li>
-                                          <li>Specify Midi Routings by clicking on LEDs to toggle.</li>
-                                          <li>Optional: Press button to specify Midi Translations.</li>
-                                          <li>Optional: Press button to specify Channel Locks.</li>
-                                          <li>Remember to save your router config to PC desktop!.</li>
-                                          <li>(multiple configurations are supported)</li>
-                                        </ul>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/RouterConfig1.jpg"     alt="RouterConfig1.jpg"    width="700" id="pic4Yimg" onclick="winOpen('RouterConfig1.jpg')"/><br>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageYText5" style="visibility: visible;">
-                                        <b>Midi Translations</b><br>
-                                        Midi Translations are used to change a Midi message<br>
-                                        from one format to another. For Example: assume you<br>
-                                        want to press a buttton (controller) on you keyboard<br>
-                                        to send a 'patch change' command to your tone generator.<br>
-                                        Use the translation screen to identify and capture the<br>
-                                        midi CC (continuous control) command and translate it <br>
-                                        to a Midi PC (program change) cmd.<br> 
-                                        <br>
-                                        <b>Translation Screen</b>
-                                        <ul style="padding-left:10px">
-                                          <li>Provide a short description for the translation. </li>
-                                          <li>Specify the incoming midi to capture.</li>
-                                          <li>Specify the outgoing translated midi to send.</li>
-                                          <li>256 midi translations are permitted.</li>
-                                          <li>Copy, paste, and delete functions are provided.</li>
-                                          <li>Bulk copy, paste, and delete functions are provided.</li>
-                                        </ul>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/RouterConfig2.jpg"     alt="RouterConfig2.jpg"    width="700" id="pic5Yimg" onclick="winOpen('RouterConfig2.jpg')"/><br>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageYText6" style="visibility: visible;">
-                                        <b>Midi Channel Locks</b><br>
-                                        Midi Channel Locks are used to lock specific Midi data<br>
-                                        to a specific midi channel (by Midi port and Midi command).<br>
-                                        For example, assume you have a Reaper MIDI DAW track that <br>
-                                        contains a drum patch data routed to your Yamaha MU15 drum<br>
-                                        machine. Some rougue drum tracks do not encode drum notes <br>
-                                        to Midi channel 10. Use the channel lock screen to guarantee<br>
-                                        all Reaper Midi drum data sent to your Yamaha Mu15 is locked <br>
-                                        to Midi channel 10. <br>
-                                        <br>
-                                        <b>Channel Lock Screen</b>
-                                        <ul style="padding-left:10px">
-                                          <li>Specify the input and output ports. </li>
-                                          <li>Specify the channel to lock outbound midi data.</li>
-                                          <li>Specify if the lock is CC,PC,NT,or all midi data.</li>
-                                          <li>96 midi locks are permitted.</li>
-                                          <li>Copy, paste, and delete functions are provided.</li>
-                                          <li>Bulk copy, paste, and delete functions are provided.</li>
-                                        </ul>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/RouterConfig3.jpg"     alt="RouterConfig3.jpg"    width="700" id="pic6Yimg" onclick="winOpen('RouterConfig3.jpg')"/><br>
-                                    </td>
-                                  </tr>
-                                </table>
-                                <br><br>  	  
-                                </p>	  
-                              </details>
-                              <details>
-                                <summary>Click here for Router Configuration Screens</summary>
-                                <p>
-                                <center>
-                                  <table width=1078 id=t0>
-                                    <tr>
-                                      <td valign=top>
-                                        <div id="divImageYText3" style="visibility: visible;"> 
-                                          <b>Router Screen: Splash Page</b><br>  
-                                          The splash page is displayed for two seconds when the<br>
-                                          router is powered on, then the router services screen<br>
-                                          is displayed.  
-                                          <br><br>
-                                          The splash page screen provides router firmware<br>
-                                          version information, version date information and<br>
-                                          a support email address.<br> 
-                                        </div>
-                                      </td>
-                                      <td valign=top align=right>
-                                        <img src="./images/RouterTFT0.jpg"        alt="RouterTFT0.jpg"       width="400" id="pic3Yimg" onclick="winOpen('RouterTFT0.jpg')"/><br>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign=top>
-                                        <div id="divImageYText7" style="visibility: visible;">
-                                          <b>Router Screen: Router Services</b><br>  
-                                          Press the Configure button twice (to latch and unlatch)<br>
-                                          within two seconds to cycle through the router<br>
-                                          configuration screens.
-                                          <br><br>
-                                          The fisrt paramter is the active configuration<br> 
-                                          downloaded from your PC<br><br>
-                                          The left column shows:<br> 
-                                          <ul style="padding-left:10px">
-                                            <li>The number of input devices configured. </li>
-                                            <li>The number of output devices configured.</li>
-                                            <li>The number of routings defined (see next screens).</li>
-                                            <li>The number of translation mappings defined.</li>
-                                            <li>The number of channel locks defined.</li>
-                                            <li>The number of config errors found at download.</li>
-                                          </ul>
-                                          <br>
-                                          The right column shows services enabled.<br>
-                                          <ul style="padding-left:10px">
-                                            <li>If router routing service is enabled. </li>
-                                            <li>If router translation service is enabled. </li>
-                                            <li>If router channel locking is enabled. </li>
-                                            <li>If router queuing is enabled. </li>
-                                            <li>If router SysEx processing is enabled. </li>
-                                            <li>If port 5 or port 6 is 'wrapped'. </li>
-                                          </ul>
-                                        </div>
-                                      </td>
-                                      <td valign=top align=right>
-                                        <img src="./images/RouterTFT2.jpg"        alt="RouterTFT2.jpg"       width="400" id="pic7Yimg" onclick="winOpen('RouterTFT2.jpg')"/><br>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign=top>
-                                        <div id="divImageYText8" style="visibility: visible;"> 
-                                          <b>Router Screen: Device Names</b><br>  
-                                          Press the Configure button twice (to latch and unlatch)<br>
-                                          within two seconds to cycle through the router<br>
-                                          configuration screens.
-                                          <br><br>
-                                          The Device Names screen displays the names of the devices<br>
-                                          (configured on the PC and downloaded to the router) attached<br>
-                                          to the input ports and output ports. (n/u means not used).
-                                        </div>
-                                      </td>
-                                      <td valign=top align=right>
-                                        <img src="./images/RouterTFT1.jpg"        alt="RouterTFT1.jpg"       width="400" id="pic8Yimg" onclick="winOpen('RouterTFT1.jpg')"/><br>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign=top>
-                                        <div id="divImageYText9" style="visibility: visible;">
-                                          <b>Router Screen: Port Routings</b><br>  
-                                          Press the Configure button twice (to latch and unlatch)<br>
-                                          within two seconds to cycle through the router<br>
-                                          configuration screens.
-                                          <br><br>
-                                          The Port Routing screen displays the names of the input<br>
-                                          devices vertically and output devices horizontally. <br>
-                                          This visual graphic shows which input devices are<br>
-                                          connected to which output devices.<br><br>
-                                          In the simple port routing screen shown, I am sending all<br> 
-                                          midi data back to their origin (useful for my router testing)<br>
-                                          but not a very meaningful configurration.<br> 
-                                          <br>
-                                          Any input device can be 'routed' to any output device.<br>
-                                          <ul style="padding-left:10px">
-                                            <li>Green: input device is connected to output device.</li>
-                                            <li>Yellow: port is connedted but not routed (informational).</li>
-                                            <li>Red: &nbsp;&nbsp;input device is connected to output device.</li>
-                                            <li>Magenta: port is 'wrapped' (input connected to output). </li>
-                                          </ul>
-                                          <br>
-                                          <b>Wrapped Ports</b><br>
-                                          Wrapped ports are only available on port 5 or port 6<br>
-                                          (a router internal switch ties port 5 input to port 5 output). <br>  
-                                          For example, wrap keyboard input port 5 to tone generator<br>
-                                          on output port 5 to remove an possibility of latency.<br>
-                                        </div>
-                                      </td>
-                                      <td valign=top align=right>
-                                        <img src="./images/RouterTFT3.jpg"        alt="RouterTFT3.jpg"       width="400" id="pic9Yimg" onclick="winOpen('RouterTFT3.jpg')"/><br>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td valign=top>
-                                        <div id="divImageYText10" style="visibility: visible;">
-                                          <b>Router Screen: Port Filtering</b><br>  
-                                          Press the Configure button twice (to latch and unlatch)<br>
-                                          within two seconds to cycle through the router<br>
-                                          configuration screens.
-                                          <br><br>
-                                          The Port Filtering screen shows which Midi commands<br>
-                                          are processed on which Midi input ports and output ports.<br>
-                                          <br>
-                                          The input/output port, device, and commands processd:<br>
-                                          <ul style="padding-left:10px">
-                                            <li>N: note on / note off commands are processed (yes/no).</li>
-                                            <li>P: program change commands are processed (yes/no).</li>
-                                            <li>C: control change commands are processed (yes/no).</li>
-                                            <li>S: sys ex commands are processed (yes/no). </li>
-                                          </ul>
-                                        </div>
-                                      </td>
-                                      <td valign=top align=right>
-                                        <img src="./images/RouterTFT4.jpg"        alt="RouterTFT4.jpg"       width="400" id="pic10Yimg" onclick="winOpen('RouterTFT4.jpg')"/><br>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </center>
-                                <br><br>  	  
-                                </p>	  
-                              </details>
-                              <details>
+									     </td>
+ <td align=right>
+ <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="picR1img" onclick="winOpen('./images/RouterFace.jpg')"/> 
+ </td>
+ </table> 
+ </div>
+ 
+ <div id="routerDiv1" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+     <b>Router Face</b> <br>
+     The router face provides a number of realtime visual aids to<br>
+     monitor, decode, and debug Midi traffic as it is being<br> processed by the router.<br> 
+     <ul style="padding-left:10px">
+     <li>Power button: Power on and off the router.</li>
+     <li>Logger button: Dump midi data to TFT screen or TTY port.</li>
+     <li>Config button: Load router config and view config on TFT.</li>
+     <li>LEDs: Blink as Midi traffic is sent and received.</li>
+     <li>Screen: Shows config and realtime Midi activity.</li>
+     </ul>
+     </td>
+	 <td align=right>
+	 <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="picR1img" onclick="winOpen('./images/RouterFace.jpg')"/> 
+	 </td>
+	</table> 
+ </div>
+
+ <div id="routerDiv2" hidden>
+     <table width=1078 id=t0>
+     <td valign=top>
+     <b>Router Rear</b>  
+     <ul style="padding-left:10px">
+     <li>Midi Ports: Six midi 5 pin din input ports and six output ports.</li>
+     <li>Log Port: USB port to dump router activity to terminal emulator.</li>
+     <li>CFG Port: USB port used to receive router config from PC.</li>
+     <li>USB (not used):  USB port for future use.</li>
+     <li>PGM (not used):  USB port to update firmware.</li>
+     <li>PWR jack: 9V center positive power barrel connector.</li>
+     <li>SD Card: Micro SD card( MS FAT32 format) router configuration.</li>
+     </ul>
+     </td>
+	 <td align=right>
+     <img src="./images/RouterRear.jpg"        alt="RouterRear.jpg"       width="700" id="picR2img" onclick="winOpen('./images/RouterRear.jpg')"/>
+	 </td>
+ 	 </table> 
+ </div>			
+
+ <div id="routerDiv3" hidden>
+     <table width=1078 id=t0>
+     <td valign=top>
+     <b>PC Config Screen 1: Midi Routing</b><br> 
+     The router configuration is created on the PC and<br>
+     downloaded to the router via the router download<br>
+     screen (not shown) and USB cable. <br>
+     <br>
+     <ul style="padding-left:10px">
+     <li>Provide a short description of the router config. </li>
+     <li>Provide a long description of the router config.</li>
+     <li>Label the Midi port conections (Label Ports) button.</li>
+     <li>Specify Midi Routings by clicking on LEDs to toggle.</li>
+     <li>Optional: Press button to specify Midi Translations.</li>
+     <li>Optional: Press button to specify Channel Locks.</li>
+     <li>Remember to save your router config to PC desktop!.</li>
+     <li>(multiple configurations are supported)</li>
+     </ul>
+     </td>
+	 <td align=right>
+     <img src="./images/RouterConfig1.jpg"     alt="RouterConfig1.jpg"    width="700" id="picR3img" onclick="winOpen('./images/RouterConfig1.jpg')"/>
+	 </td>
+ 	 </table> 
+ </div>
+
+ <div id="routerDiv4" hidden>
+     <table width=1078 id=t0>
+     <td valign=top>
+     <b>PC Config Screen 2: Midi Translations</b> <br>
+     Midi Translations are used to change a Midi message<br>
+     from one format to another. For Example: assume you<br>
+     want to press a buttton (controller) on you keyboard<br>
+     to send a 'patch change' command to your tone generator.<br>
+     Use the translation screen to identify and capture the<br>
+     midi CC (continuous control) command and translate it <br>
+     to a Midi PC (program change) cmd.<br> 
+     <br>
+     <b>Translation Screen</b>
+     <ul style="padding-left:10px">
+     <li>Provide a short description for the translation. </li>
+     <li>Specify the incoming midi to capture.</li>
+     <li>Specify the outgoing translated midi to send.</li>
+     <li>256 midi translations are permitted.</li>
+     <li>Copy, paste, and delete functions are provided.</li>
+     <li>Bulk copy, paste, and delete functions are provided.</li>
+     </ul>	 
+     </td>
+	 <td align=right>
+     <img src="./images/RouterConfig2.jpg"     alt="RouterConfig2.jpg"    width="700" id="picR4img" onclick="winOpen('./images/RouterConfig2.jpg')"/>
+	 </td>
+ 	 </table> 
+ </div>
+
+ <div id="routerDiv5" hidden>
+     <table width=1078 id=t0>
+     <td valign=top>
+     <b>PC Config Screen 3: Midi Channel Locks</b><br>
+     Midi Channel Locks are used to lock specific Midi data<br>
+     to a specific midi channel (by Midi port and Midi command).<br>
+     For example, assume you have a Reaper MIDI DAW track that <br>
+     contains a drum patch data routed to your Yamaha MU15 drum<br>
+     machine. Some rougue drum tracks do not encode drum notes <br>
+     to Midi channel 10. Use the channel lock screen to guarantee<br>
+     all Reaper Midi drum data sent to your Yamaha Mu15 is locked <br>
+     to Midi channel 10. <br>
+     <br>
+     <b>Channel Lock Screen</b>
+     <ul style="padding-left:10px">
+     <li>Specify the input and output ports. </li>
+     <li>Specify the channel to lock outbound midi data.</li>
+     <li>Specify if the lock is CC,PC,NT,or all midi data.</li>
+     <li>96 midi locks are permitted.</li>
+     <li>Copy, paste, and delete functions are provided.</li>
+     <li>Bulk copy, paste, and delete functions are provided.</li>
+     </ul>	 
+     </td>
+	 <td align=right>
+     <img src="./images/RouterConfig3.jpg"     alt="RouterConfig3.jpg"    width="700" id="picR5img" onclick="winOpen('./images/RouterConfig3.jpg')"/>
+	 </td>
+ 	 </table> 
+ </div>
+
+ <div id="routerDiv6" hidden>
+     <table width=1078 id=t0>
+     <td valign=top>
+     <b>Router Config Display Screen 1: Splash Page</b><br> 
+     The splash page is displayed for two seconds when the<br>
+     router is powered on, then the router services screen<br>
+     is displayed.  
+     <br><br>
+     The splash page screen provides router firmware<br>
+     version information, version date information and<br>
+     a support email address.<br> 	 
+     </td>
+	 <td align=center>
+     <img src="./images/RouterTFT0.jpg"        alt="RouterTFT0.jpg"       width="400" id="picR6img" onclick="winOpen('./images/RouterTFT0.jpg')"/>
+	 </td>
+ 	 </table> 
+ </div>			
+
+ <div id="routerDiv7" hidden> 
+     <table width=1078 id=t0> 
+	 <td>
+     <b>Router Config Display Screen 2: Router Services</b><br> 
+     Press the Configure button twice (to latch and unlatch)<br>
+     within two seconds to cycle through the router<br>
+     configuration screens.
+     <br><br>
+     The fisrt paramter is the active configuration<br> 
+     downloaded from your PC<br><br>
+     The left column shows:<br> 
+     <ul style="padding-left:10px">
+     <li>The number of input devices configured. </li>
+     <li>The number of output devices configured.</li>
+     <li>The number of routings defined (see next screens).</li>
+     <li>The number of translation mappings defined.</li>
+     <li>The number of channel locks defined.</li>
+     <li>The number of config errors found at download.</li>
+     </ul>
+     <br>
+     The right column shows services enabled.<br>
+     <ul style="padding-left:10px">
+     <li>If router routing service is enabled. </li>
+     <li>If router translation service is enabled. </li>
+     <li>If router channel locking is enabled. </li>
+     <li>If router queuing is enabled. </li>
+     <li>If router SysEx processing is enabled. </li>
+     <li>If port 5 or port 6 is 'wrapped'. </li>
+     </ul>	 
+     </td>
+	 <td align=center>
+     <img src="./images/RouterTFT2.jpg"        alt="RouterTFT2.jpg"       width="400" id="picR7img" onclick="winOpen('./images/RouterTFT2.jpg')"/>
+	 </td>
+ 	 </table>    
+ </div>
+
+ <div id="routerDiv8" hidden>
+     <table width=1078 id=t0>
+     <td valign=top>
+     <b>Router Config Display Screen 3: Device Names</b><br>  
+     Press the Configure button twice (to latch and unlatch)<br>
+     within two seconds to cycle through the router<br>
+     configuration screens.
+     <br><br>
+     The Device Names screen displays the names of the devices<br>
+     (configured on the PC and downloaded to the router) attached<br>
+     to the input ports and output ports. (n/u means not used).
+     </td>
+	 <td align=center>
+     <img src="./images/RouterTFT1.jpg"        alt="RouterTFT0.jpg"       width="400" id="picR8img" onclick="winOpen('./images/RouterTFT1.jpg')"/>
+	 </td>
+ 	 </table>    
+ </div>			
+
+ <div id="routerDiv9" hidden>
+     <table width=1078 id=t0>
+     <td valign=top>
+     <b>Router Config Display Screen 4: Port Routings</b><br>  
+     Press the Configure button twice (to latch and unlatch)<br>
+     within two seconds to cycle through the router<br>
+     configuration screens.
+     <br><br>
+     The Port Routing screen displays the names of the input<br>
+     devices vertically and output devices horizontally. <br>
+     This visual graphic shows which input devices are<br>
+     connected to which output devices.<br><br>
+     In the simple port routing screen shown, I am sending all<br> 
+     midi data back to their origin (useful for my router testing)<br>
+     but not a very meaningful configuration.<br> 
+     <br>
+     Any input device can be 'routed' to any output device.<br>
+     <ul style="padding-left:10px">
+     <li>Green: input device is connected to output device.</li>
+     <li>Yellow: port is connedted but not routed (informational).</li>
+     <li>Red: &nbsp;&nbsp;input device is connected to output device.</li>
+     <li>Magenta: port is 'wrapped' (input connected to output). </li>
+     </ul>
+     <br>
+     <b>Wrapped Ports</b><br>
+     Wrapped ports are only available on port 5 or port 6<br>
+     (a router internal switch ties port 5 input to port 5 output). <br>  
+     For example, wrap keyboard input port 5 to tone generator<br>
+     on output port 5 to remove an possibility of latency.<br>	 
+     </td>
+	 <td align=center>
+     <img src="./images/RouterTFT3.jpg"        alt="RouterTFT3.jpg"       width="400" id="picR9img" onclick="winOpen('./images/RouterTFT3.jpg')"/>
+	 </td>
+ 	 </table>    
+ </div>
+
+ <div id="routerDiv10" hidden>
+    <table width=1078 id=t0>
+     <td valign=top>
+     <b>Router Config Display Screen 5: Port Filtering</b><br>  
+     Press the Configure button twice (to latch and unlatch)<br>
+     within two seconds to cycle through the router<br>
+     configuration screens.
+     <br><br>
+     The Port Filtering screen shows which Midi commands<br>
+     are processed on which Midi input ports and output ports.<br>
+     <br>
+     The input/output port, device, and commands processd:<br>
+     <ul style="padding-left:10px">
+     <li>N: note on / note off commands are processed (yes/no).</li>
+     <li>P: program change commands are processed (yes/no).</li>
+     <li>C: control change commands are processed (yes/no).</li>
+     <li>S: sys ex commands are processed (yes/no). </li>
+     </ul>	 
+     </td>
+	 <td align=center>
+     <img src="./images/RouterTFT4.jpg"        alt="RouterTFT5.jpg"       width="400" id="picR10img" onclick="winOpen('./images/RouterTFT4.jpg')"/>
+	 </td>
+ 	 </table>    
+ </div>		
+						  
+
+                                <br>
+                                <b>MidiXLate Additional Information</b> <br>								
+                                <details>
                                 <summary>Click here for a basic Midi overview.</summary>
                                 <p>
                                   <br>
@@ -628,11 +610,17 @@
                     <!-- padding -->
                   </td>
                 </tr>
+				</table>
+				<!-- table MidiXLate end -->
+				
                 <!-- ========================================================================================================================================================= -->
                 <!-- MIDICONTROL -->
+				
+				<!-- table MidiControl begin -->
+				<table id=t0 width=1160 bgcolor=#FFFFFF >
                 <tr>
                   <td colspan=2 valign=center>
-                    <hr width="1078" align="center" size=4 color=#000066>
+                    <HR width="1160" align="center" size=4 color=#000066>
                     <br>  
                     <h2 id="MidiControl"></h2>
                     <div id="padding">
@@ -640,7 +628,7 @@
                       <center>
 					  
                         <!-- table5 begin -->
-                        <table width=1078 id=t0>
+                      <table width=1160 id=t0>
 						  <tr>
                           <td colspan=2 align=left valign=top>
                             <font color=#000066 style="font-size:14px">
@@ -651,7 +639,7 @@
                             </font>
                             <br><br>
 							
-                            <font color=#000000 style="font-size:12px">
+                              <font color=#000000 style="font-size:12px">
                               Have you every wanted to control all of your Midi devices from your PC desktop?<br>
                               For example, assume you have a <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 Sound Module</a> and 
                               you currently use the scroll wheel on the face of the Integra 7 to tediously navigate to your favorite 50 sounds. 
@@ -661,18 +649,14 @@
                               Windows PC desktop utility used to organize the Midi commands you use in your music production. MidiControl is not designed 
                               to play Midi files, rather to catalog your Midi commands for use from your desktop. MidiControl provides ten bookmarks 
                               (sections) for up to 2000 Midi commands.  Bookmarks can be arranged by Midi device, song, setlist,... giving you simple control
-                              of all your Midi devices from your PC desktop.
+                              of all your Midi devices from your PC desktop.</font>
                            
-						   	</td>
-                            </tr>
-                            <tr>
-                            <td>		
-							  
-                                <br>
-								
-								    <details>
+						      <br><br> 
+						   
+						   	  <details>
                               <summary>MidiControl additional information  <font color=#000066>(click here)</font></summary>
                               <p>
+							    <font color=#000000 style="font-size:12px">
                                 As a typical musician, you likely have many midi devices such as keyboards, guitar effects, drum machines, voice processors, and more.  
                                 You will find it helpful to catalog all of your Midi commands and optionally send those midi commands from your PC desktop to your midi devices 
                                 (the same Midi commands that are sent from your Midi device.) 	
@@ -688,19 +672,25 @@
                                 As needed, press the 'Send' button next to each Midi command to control your midi hardware.
                                 A script of midi commands is being considered for the next release. 
                                 You now have a simple means to control all of your Midi devices from your PC!
+								</font>
                                 <br><br>  	  
                               </p>
                             </details>
-								
-								<details>
-                                <summary>MidiControl Screens  <font color=#000066>(click here)</font></summary>
-                                <center>
-                                 <table width=1078 id=t0>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageXText1" style="visibility: visible;">
-									  
-									    <br>
+						   
+						      <br> 
+<button id="midiControl0"  class="buttonStyle1" onclick="midiControlReset()">Reset</button>&nbsp;
+<button id="midiControl1"  class="buttonStyle1" onclick="midiControl(1)">Control 1</button>&nbsp;
+<button id="midiControl2"  class="buttonStyle1" onclick="midiControl(2)">Control 2</button>&nbsp;
+<button id="midiControl3"  class="buttonStyle1" onclick="midiControl(3)">Control 3</button>&nbsp;
+<button id="midiControl4"  class="buttonStyle1" onclick="midiControl(4)">Control 4</button>&nbsp;
+<button id="midiControl5"  class="buttonStyle1" onclick="midiControl(5)">Control 5</button>&nbsp;
+<button id="midiControl6"  class="buttonStyle1" onclick="midiControl(6)">Control 6</button>&nbsp;
+
+                            <br><br>
+				
+<div id="midiControlDiv0" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
                                         <b>This is the MidiControl opening screen. </b><br>
                                         (Screen options 11-17 removed to fit display)<br>
                                         When MidiControl is started, the last configuration <br>
@@ -729,19 +719,72 @@
                                           <li>Midi Labels: Show cmd desc, cmd detail, and out device.</li>
                                           <li>List Midi Devices: Midi devices current connected to PC.</li>
                                         </ul>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('control1L.png')"/>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageXText2" style="visibility: visible;">
-                                        <b>This is the MidiControl Bookmark Management screen. </b><br>
+
+          <br><br>
+          <b>Links</b> <br>
+                                  <a href="./index.html"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1400'); return false;">
+                                  <b><u>MidiControl version 1.4 November 2024 installer (exe)</u></b>
+                                  </a>
+                                  <br>
+                                  <b><u><font style="font-size:11;">MidiControl manual (in development)</font></u></b>
+                                  <!--	 	  
+                                    <a href="./index.html"  target="popup" onclick="window.open('./tutorials/setupMidiXlate-V1.3.exe','popup','width=1280'); return false;">
+                                       <b><u>MidiControl DAW setup example (pdf)</u></b> 
+                                       </a> 
+                                    -->	   
+                                  <br>
+                                  <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
+                                  <b><u>Midi Diagnostic Tool MidiOX</u></b>
+                                  </a>                                
+     </td>
+	 <td align=right>
+	  <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('./images/control1L.png')"/>
+	 </td>
+	</table> 
+ </div>			
+				
+<div id="midiControlDiv1" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+                                        <b>This is the MidiControl opening screen. </b><br>
+                                        (Screen options 11-17 removed to fit display)<br>
+                                        When MidiControl is started, the last configuration <br>
+                                        is loaded and shown is red
+                                        <br><br>
+                                        <b>MidiControl Speed buttons (top left)</b>  
+                                        <ul style="padding-left:10px">
+                                          <li>Down Arrow: Go to next page.</li>
+                                          <li>Up Arrow: Go to prior page.</li>
+                                          <li>Bookmarks: Open the bookmarks dialog window.</li>
+                                          <li>Midi Relay: Open the Midi relay / listener screen.</li>
+                                          <li>Midi Utilities: Open the Midi utilities screen.</li>
+                                          <li>Save Configuration: Saves the current configuration.</li>
+                                          <li>Help Text: Opens Notepad help text.</li>
+                                          <li>Information: Displays MidiControl version info.</li>
+                                          <li>Buy Me A Coffee: Contributions are appreciated!</li>
+                                          <li>Page Number: Jump to a specific page </li>
+                                        </ul>
+                                        <br>
+                                        <b>MidiControl Screen Body</b>  
+                                        <ul style="padding-left:10px">
+                                          <li>Status message (red): shows status of latest operation.</li>
+                                          <li>Bookmarks: Notice seven bookmarks (starting with DAW).</li>
+                                          <li>Midi Commands: First 20 commands are shown for DAW</li>
+                                          <li>Numbered Buttons: Press button to edit Midi command.</li>
+                                          <li>Midi Labels: Show cmd desc, cmd detail, and out device.</li>
+                                          <li>List Midi Devices: Midi devices current connected to PC.</li>
+                                        </ul>
+     </td>
+	 <td align=right>
+	  <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('./images/control1L.png')"/>
+	 </td>
+	</table> 
+ </div>			
+
+<div id="midiControlDiv2" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+    <b>This is the MidiControl Bookmark Management screen. </b><br>
                                         Use this screen to build Midi commands for buttons (1-200). <br>
                                         A bookmark is a page number (from 1-200) assigned by you.<br>
                                         Bookmarks appear across the top of the screen body.<br>
@@ -753,18 +796,16 @@
                                           <li>Bookmark page: Page where Midi commands are found.</li>
                                           <li>Delete button: Deletes the bookmark (not commands).</li>
                                         </ul>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/control2M.png"   id="pic2Ximg" onclick="winOpen('control2L.png')"/>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageXText3" style="visibility: visible;">
+     </td>
+	 <td align=right>
+	  <img src="./images/control2M.png"   id="pic2Ximg" onclick="winOpen('./images/control2L.png')"/> 
+	 </td>
+	</table> 
+ </div>			
+
+<div id="midiControlDiv3" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
                                         <b>This is the MidiControl Midi Command definition screen. </b><br>
                                         Use this screen to define up to 2000 midi commands. <br>
                                         You can also use this screen to 'learn' a midi command.<br>
@@ -796,18 +837,18 @@
                                           <li>Change Midi values to suit your needs.</li>
                                           <li>Press save button to save this midi action.</li>
                                         </ul>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/control3M.png"   id="pic3Ximg" onclick="winOpen('control3L.png')"/>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageXText4" style="visibility: visible;">
+                              
+     </td>
+	 <td align=right>
+	  <img src="./images/control3M.png"   id="pic3Ximg" onclick="winOpen('./images/control3L.png')"/> 
+	 </td>
+	</table> 
+ </div>	
+
+<div id="midiControlDiv4" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+
                                         <b>Midi Listener Screen</b><br>
                                         Use this screen to start a 'listener' for a Midi device connected to your PC.<br>
                                         The listener must be started before MidiControl can learn a Midi command.<br>
@@ -821,18 +862,19 @@
                                           <li>The dialog box (right) shows listener started and detected activity.</li>
                                           <li>Midi2x2 was started and receive a keyboard note 54, channel 0, velocity 100</li>
                                         </ul>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/control4M.png"   id="pic4Ximg" onclick="winOpen('control4L.png')"/>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageXText5" style="visibility: visible;"> 
+
+                                  
+                                      
+     </td>
+	 <td align=right>
+	 <img src="./images/control4M.png"   id="pic4Ximg" onclick="winOpen('./images/control4L.png')"/> 
+	 </td>
+	</table> 
+ </div>	
+
+<div id="midiControlDiv5" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
                                         <b>Midi Utilities: Midi Global Update</b><br>
                                         The Midi Device Global Update dialog box is used to change all<br>
                                         MidiControl references from one Midi device to another Midi device.<br>
@@ -846,79 +888,33 @@
                                         This is a simple Midi test tool to test Midi connectivity by sending<br>
                                         a Note On/Off command to a Midi device to see if the Midi device is<br>
                                         connected and operating correctly<br>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/control5M.png"   id="pic5Ximg" onclick="winOpen('control5L.png')"/>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td valign=top>
-                                      <div id="divImageXText6" style="visibility: visible;"> 
-                                        <b>Midi Control Release Notes and Help Text</b><br>
+
+                                      
+     </td>
+	 <td align=right>
+	 <img src="./images/control5M.png"   id="pic5Ximg" onclick="winOpen('./images/control5L.png')"/> 
+	 </td>
+	</table> 
+ </div>			 
+
+<div id="midiControlDiv6" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+     <b>Midi Control Release Notes and Help Text</b><br>
                                         Pressing the yellow question mark on the MidiControl home screen<br>
                                         displays (currently minimal) release notes and help text.<br>
-                                        Improved help text and release notes are a priority fo a future relase. <br>
-                                      </div>
-                                    </td>
-                                    <td valign=top align=right>
-                                      <img src="./images/control6M.png"   id="pic6Ximg" onclick="winOpen('control6L.png')"/>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </center>
-                            </details>
-							
-							</td>
+                                        Improved help text and release notes are a priority fo a future relase. <br>                            
+     </td>
+	 <td align=right>
+	  <img src="./images/control6M.png"   id="pic6Ximg" onclick="winOpen('./images/control6L.png')"/> 
+	 </td>
+	</table> 
+ </div>	
+						   	</td>
                             </tr>
 							</table>
-							 <!-- table5 end -->
-							
-							 <!-- table6 begin -->
-							 <table width=1078 id=t0>
-							
-                            <tr>
-                            <td valign=top>
-							<br>
-                                  <b>Links</b> <br>
-                                  <a href="./index.html"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1400'); return false;">
-                                  <b><u>MidiControl version 1.4 November 2024 installer (exe)</u></b>
-                                  </a>
-                                  <br>
-                                  <b><u><font style="font-size:11;">MidiControl manual (in development)</font></u></b>
-                                  <!--	 	  
-                                    <a href="./index.html"  target="popup" onclick="window.open('./tutorials/setupMidiXlate-V1.3.exe','popup','width=1280'); return false;">
-                                       <b><u>MidiControl DAW setup example (pdf)</u></b> 
-                                       </a> 
-                                    -->	   
-                                  <br>
-                                  <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
-                                  <b><u>Midi Diagnostic Tool MidiOX</u></b>
-                                  </a> 
-                                </td>
-								
-								 <td width=620 valign=top  align=center border=0>
-                          <!-- table12 begin -->
-                          <table id=t0 width=610>
-                            <tr>
-                              <td align=center valign=top>
-                              <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('control1L.png')"/>
-                              </td>
-                            </tr>
-                          </table>
-                          <!-- table12 end -->
- 
-                            </font>
-                            <br>
-                           
- 
-                          </td>
-						  </tr>
-                        </table>
-                        <!-- table6 end -->
+					  <!-- table5 end -->
+
                       </center>
                       <br>
                       <!-- table7 begin -->
@@ -936,12 +932,17 @@
                     <!-- padding -->
                   </td>
                 </tr>
-                <!-- table2 -->
-                <!-- ========================================================================================================================================================= -->
+			    </table>
+                <!-- table MidiControl end -->
+               
+			   <!-- ========================================================================================================================================================= -->
                 <!-- MIDIORGANIZE -->
+				
+                <!-- table MidiOrganize begin -->
+                <table id=t0 width=1160 bgcolor=#FFFFFF >
                 <tr>
                   <td colspan=2 valign=center>
-                    <hr width="1078" align="center" size=4 color=#000066>
+                    <HR width="1160" align="center" size=4 color=#000066>
                     <br>
                     <h2 id="MidiOrganize"></h2>
                     <div id="padding">
@@ -949,7 +950,7 @@
                       <center>
 					  
                         <!-- table8 begin -->
-                        <table width=1076 border=0>
+                        <table width=1160 border=0>
                           <td width=1076 align=left valign=top>
                             <font color=#000066 style="font-size:14px">
                             <b>MidiOrganize Software (for Windows 10 and above)</b>
@@ -965,151 +966,8 @@
                             Think of MidiOrganize as a PC based Midi librarian, used to catalog your Midi loops by instrument, by song, by set list, or any other
                             method you require. To use Midi loops inside your DAW, simply drag and drop the Midi loop from MidiOrganize into your DAW Midi track. 
                             Optionally, there is a 'preview' feature that allows you to play the Midi loop inside MidiOrganize via an embedded Windows Media Player plugin.
-                            </font>
-                            <font color=#000000 style="font-size:12px">
-							
-							  <br><br>
-							  <details>
-                                  <summary>MidiOrganize Screens  <font color=#000066>(click here)</font></summary>
-                                  <center>
-                                    <table width=1078 id=t0>
-                                      <tr>
-                                        <td valign=top>
-                                          <div id="divImageZText1" style="visibility: visible;">
-                                            <br>
-                                            <b>The opening MidiOrganize screen</b> (example). <br>
-                                            <ul style="padding-left:10px">
-                                              <li>Bookmarks to Midi files (drum loops) are shown in upper left corner. </li>
-                                              <li>Drill down into Midi directories (drum loops) in panes 2,3,4.</li>
-                                              <li>The four panes display Midi files (drum loops)  in a tree type structure.</li>
-                                              <li>Press button 'Manage Midi Groups' to setup your directories.</li>
-                                              <li>When MidiOrganize is started, bookmark 1 is always displayed.</li>
-                                              <li>Midi files (as shown in pane 4) are drag-dropped into your DAW track.</li>
-                                            </ul>
-                                          </div>
-                                        </td>
-                                        <td valign=top align=right>
-                                          <img src="./images/organize1M.png" width=600  id="pic1Zimg" onclick="winOpen('organize1L.png')"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td valign=top>
-                                          <div id="divImageZText2" style="visibility: visible;">
-                                            <br>
-                                            <b>The opening MidiOrganize screen</b>. <br>
-                                            <ul style="padding-left:10px">
-                                              <li>Screen shows how a bookmark 'GrooveMonkee' is displayed at startup. </li>
-                                              <li>In this example, GrooveMonkee points to a GrooveMonkee root folder. </li>
-                                              <li>As shown in the first pane, the GrooveMonkee root folder has 7 subfolders.</li>
-                                              <li>Drill down into the subfolders to populate panes 2,3,4.</li>
-                                              <li>Pane 4 is infinitely deep. You are not limited to four directory deep.</li>
-                                              <li>The next screen demonstrates how to setup your directories.</li>
-                                            </ul>
-                                          </div>
-                                        </td>
-                                        <td valign=top align=right>
-                                          <img src="./images/organize2M.png" width=600  id="pic2Zimg" onclick="winOpen('organize2L.png')"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td valign=top>
-                                          <div id="divImageZText3" style="visibility: visible;">
-                                            <br>
-                                            <b>The 'Manage Midi Groups and Bookmarks' screen</b>. <br>
-                                            <ul style="padding-left:10px">
-                                              <li>Press the 'Manage Midi Groups' button to open MidiGroup window.</li>
-                                              <li>In the MidiGroup window, give your bookmark a name.</li>
-                                              <li>Use the folder browser to select a midi root folder.</li>
-                                              <li>In the example, I defined four bookmarks pointing to four roots.</li>
-                                              <li>On the home screen, no you can navigate directly to folder root.</li>
-                                              <li>Close the MidiGroup window to navigate your midi files.</li>
-                                              <li>Drag & drop midi files from the four panes in your DAW midi track.</li>
-                                            </ul>
-                                          </div>
-                                        </td>
-                                        <td valign=top align=right>
-                                          <img src="./images/organize3M.png" width=600  id="pic3Zimg" onclick="winOpen('organize3L.png')"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td valign=top>
-                                          <div id="divImageZText4" style="visibility: visible;">
-                                            <br>
-                                            <b>Search the Midi groups by genre</b>. <br>
-                                            <ul style="padding-left:10px">
-                                              <li>Search for Midi files by file name / genre.</li>
-                                              <li>Key the search phrase in the combobox or select from drop down.</li>
-                                              <li>Press Search Midi Groups button to search your midi bookmarks.</li>
-                                              <li>Results of the search are displayed in the first pane.</li>
-                                              <li>Drill down into the panes to view files matching your search.</li>
-                                              <li>New genres can be added to the MidiOrganize config file. </li>
-                                              <li>MidiOrganize config file found in Manage Midi Groups and Bookmarks.</li>
-                                            </ul>
-                                          </div>
-                                        </td>
-                                        <td valign=top align=right>
-                                          <img src="./images/organize4M.png" width=600  id="pic4Zimg" onclick="winOpen('organize4L.png')"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td valign=top>
-                                          <div id="divImageZText5" style="visibility: visible;">
-                                            <br>
-                                            <b>Windows Midi file player</b>. <br>
-                                            <ul style="padding-left:10px">
-                                              <li>Use Windows Media Player Sto preview your midi files.</li>
-                                              <li>Drag and drop midi files from any of the 4 panes onto player.</li>
-                                              <li>Midi drums require midi file set to midi channel 10.</li>
-                                              <li>Some midi files are not set to midi channel 10.</li>
-                                              <li>Check 'Change Channel 10' to fix midi file to channel 10.</li>
-                                              <li>Fix does not change the original midi file.</li>
-                                              <li>Fix creates a new file shown in media player.</li>
-                                              <li>Show Conversion button displays midi channel 10 updates. </li>
-                                            </ul>
-                                          </div>
-                                        </td>
-                                        <td valign=top align=right>
-                                          <img src="./images/organize5M.png" width=600  id="pic5Zimg" onclick="winOpen('organize5L.png')"/>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <div id="divImageZText6" style="visibility: visible;">
-                                            <br>
-                                            <b>DAW track setup</b>. <br>
-                                            <ul style="padding-left:10px">
-                                              <li>Send midi loop to drum machine and listen to drum machine audio.</li>
-                                              <li>In your DAW, set your track to send midi to your midi drum machine. </li>
-                                              <li>Connect your DAW to your drum machine using a PC USB to midi cable.</li>
-                                              <li>Connect your drum machine audio output to your audio input interface. </li>
-                                              <li>In your DAW, create a drum audio track next to your drum midi track.</li>
-                                              <li>In the drum audio track, record from your audio interface / drum machine.</li>
-                                              <li>See the link below that describes this process for reaper.</li>
-                                            </ul>
-                                          </div>
-                                        </td>
-                                        <td valign=top align=right>
-                                          <img src="./images/organize6M.png" width=600  id="pic6Zimg" onclick="winOpen('organize6L.png')"/>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </center>
-                                </details>						
+                            <br><br>
+														
                               <details>
                                 <summary>A Cost and Performance Alternative to VSTs  <font color=#000066>(click here)</font></summary>
                                 <p>	
@@ -1138,6 +996,7 @@
                                 </p>
                               </details>
                               <details>
+							  
                                 <summary>My Personal Use Case <font color=#000066>(click here)</font></summary>
                                 <p>
                                   My Windows 10 music PC is optimized with 32 gig memory, 3 x 1TB M.2 gumstick drives, Intel 7 CPU, and Reaper DAW software. &nbsp; 
@@ -1155,16 +1014,31 @@
                                   <br> 	  
                                 </p>
                               </details>
-                            </font>
-                          </td>
-                        </table>
-                        <!-- table8 end -->
-                      </center>
-                      <!-- table9 begin -->
-					   <font color=#000000 style="font-size:12px">
-                      <table id=t0 width=1076 border=0>
-                        <td width=456 align=left valign=top>
-                          <br>
+
+							 <br>
+<button id="midiOrganize0"  class="buttonStyle1" onclick="midiOrganizeReset()">Reset</button>&nbsp;
+<button id="midiOrganize1"  class="buttonStyle1" onclick="midiOrganize(1)">Organize 1</button>&nbsp;
+<button id="midiOrganize2"  class="buttonStyle1" onclick="midiOrganize(2)">Organize 2</button>&nbsp;
+<button id="midiOrganize3"  class="buttonStyle1" onclick="midiOrganize(3)">Organize 3</button>&nbsp;
+<button id="midiOrganize4"  class="buttonStyle1" onclick="midiOrganize(4)">Organize 4</button>&nbsp;
+<button id="midiOrganize5"  class="buttonStyle1" onclick="midiOrganize(5)">Organize 5</button>&nbsp;
+<button id="midiOrganize6"  class="buttonStyle1" onclick="midiOrganize(6)">Organize 6</button>&nbsp;
+
+                            <br><br>		
+
+<div id="midiOrganizeDiv0" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+	   <b>The opening MidiOrganize screen</b> (example). <br>
+                                            <ul style="padding-left:10px">
+                                              <li>Bookmarks to Midi files (drum loops) are shown in upper left corner. </li>
+                                              <li>Drill down into Midi directories (drum loops) in panes 2,3,4.</li>
+                                              <li>The four panes display Midi files (drum loops)  in a tree type structure.</li>
+                                              <li>Press button 'Manage Midi Groups' to setup your directories.</li>
+                                              <li>When MidiOrganize is started, bookmark 1 is always displayed.</li>
+                                              <li>Midi files (as shown in pane 4) are drag-dropped into your DAW track.</li>
+                                            </ul>
+<br><br>
                           <b>Links</b> <br>
                           <a href="./index.html"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1400'); return false;">
                           <b><u>MidiOrganize June 2024 version 1.3 installer (exe)</u></b>
@@ -1181,21 +1055,146 @@
                           <a href="./index.html"  target="popup" onclick="window.open('https://groovemonkee.com','popup','width=1280'); return false;">
                           <b><u>Groove Monkee FREE Drum Loops</u></b>
                           </a> 
-                        </td>
-                        <td width=620 valign=top  align=center border=0>
-                          <!-- table12 begin -->
-                          <table id=t0 width=610>
-                            <tr>
-                              <td align=center valign=top>
-                              <img src="./images/organize1M.png" width=600  id="pic1Zimg" onclick="winOpen('organize1L.png')"/>
-                              </td>
-                            </tr>
-                          </table>
-                          <!-- table12 end -->
-                        </td>
-                      </table>
-                      <!-- table9 end -->
-					  </font>
+     </td>
+	 <td align=right>
+	  <img src="./images/organize1M.png" width=600  id="pic1Zimg" onclick="winOpen('./images/organize1L.png')"/>
+	 </td>
+	</table> 
+ </div>							
+	
+<div id="midiOrganizeDiv1" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+       <b>The opening MidiOrganize screen</b> (example). <br>
+                                            <ul style="padding-left:10px">
+                                              <li>Bookmarks to Midi files (drum loops) are shown in upper left corner. </li>
+                                              <li>Drill down into Midi directories (drum loops) in panes 2,3,4.</li>
+                                              <li>The four panes display Midi files (drum loops)  in a tree type structure.</li>
+                                              <li>Press button 'Manage Midi Groups' to setup your directories.</li>
+                                              <li>When MidiOrganize is started, bookmark 1 is always displayed.</li>
+                                              <li>Midi files (as shown in pane 4) are drag-dropped into your DAW track.</li>
+                                            </ul>
+     </td>
+	 <td align=right>
+	  <img src="./images/organize1M.png" width=600  id="pic1Zimg" onclick="winOpen('./images/organize1L.png')"/> 
+	 </td>
+	</table> 
+ </div>			
+
+<div id="midiOrganizeDiv2" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+  <br>
+                                            <b>The opening MidiOrganize screen</b>. <br>
+                                            <ul style="padding-left:10px">
+                                              <li>Screen shows how a bookmark 'GrooveMonkee' is displayed at startup. </li>
+                                              <li>In this example, GrooveMonkee points to a GrooveMonkee root folder. </li>
+                                              <li>As shown in the first pane, the GrooveMonkee root folder has 7 subfolders.</li>
+                                              <li>Drill down into the subfolders to populate panes 2,3,4.</li>
+                                              <li>Pane 4 is infinitely deep. You are not limited to four directory deep.</li>
+                                              <li>The next screen demonstrates how to setup your directories.</li>
+                                            </ul>
+                                    
+                                          
+     </td>
+	 <td align=right>
+	 <img src="./images/organize2M.png" width=600  id="pic2Zimg" onclick="winOpen('./images/organize2L.png')"/> 
+	 </td>
+	</table> 
+ </div>			
+
+<div id="midiOrganizeDiv3" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+      <b>The 'Manage Midi Groups and Bookmarks' screen</b>. <br>
+                                            <ul style="padding-left:10px">
+                                              <li>Press the 'Manage Midi Groups' button to open MidiGroup window.</li>
+                                              <li>In the MidiGroup window, give your bookmark a name.</li>
+                                              <li>Use the folder browser to select a midi root folder.</li>
+                                              <li>In the example, I defined four bookmarks pointing to four roots.</li>
+                                              <li>On the home screen, no you can navigate directly to folder root.</li>
+                                              <li>Close the MidiGroup window to navigate your midi files.</li>
+                                              <li>Drag & drop midi files from the four panes in your DAW midi track.</li>
+                                            </ul>
+                                      
+                                          
+     </td>
+	 <td align=right>
+	 <img src="./images/organize3M.png" width=600  id="pic3Zimg" onclick="winOpen('./images/organize3L.png')"/> 
+	 </td>
+	</table> 
+ </div>	
+
+<div id="midiOrganizeDiv4" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+<b>Search the Midi groups by genre</b>. <br>
+                                            <ul style="padding-left:10px">
+                                              <li>Search for Midi files by file name / genre.</li>
+                                              <li>Key the search phrase in the combobox or select from drop down.</li>
+                                              <li>Press Search Midi Groups button to search your midi bookmarks.</li>
+                                              <li>Results of the search are displayed in the first pane.</li>
+                                              <li>Drill down into the panes to view files matching your search.</li>
+                                              <li>New genres can be added to the MidiOrganize config file. </li>
+                                              <li>MidiOrganize config file found in Manage Midi Groups and Bookmarks.</li>
+                                            </ul>                                        
+     </td>
+	 <td align=right>
+	 <img src="./images/organize4M.png" width=600  id="pic4Zimg" onclick="winOpen('./images/organize4L.png')"/> 
+	 </td>
+	</table> 
+ </div>			 
+
+<div id="midiOrganizeDiv5" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+     <b>Windows Midi file player</b>. <br>
+                                            <ul style="padding-left:10px">
+                                              <li>Use Windows Media Player Sto preview your midi files.</li>
+                                              <li>Drag and drop midi files from any of the 4 panes onto player.</li>
+                                              <li>Midi drums require midi file set to midi channel 10.</li>
+                                              <li>Some midi files are not set to midi channel 10.</li>
+                                              <li>Check 'Change Channel 10' to fix midi file to channel 10.</li>
+                                              <li>Fix does not change the original midi file.</li>
+                                              <li>Fix creates a new file shown in media player.</li>
+                                              <li>Show Conversion button displays midi channel 10 updates. </li>
+                                            </ul>
+                                      
+                                          
+     </td>
+	 <td align=right>
+	 <img src="./images/organize5M.png" width=600  id="pic5Zimg" onclick="winOpen('./images/organize5L.png')"/> 
+	 </td>
+	</table> 
+ </div>
+
+<div id="midiOrganizeDiv6" hidden>
+	 <table width=1078 id=t0>
+     <td valign=top>
+     <b>DAW track setup</b>. <br>
+                                            <ul style="padding-left:10px">
+                                              <li>Send midi loop to drum machine and listen to drum machine audio.</li>
+                                              <li>In your DAW, set your track to send midi to your midi drum machine. </li>
+                                              <li>Connect your DAW to your drum machine using a PC USB to midi cable.</li>
+                                              <li>Connect your drum machine audio output to your audio input interface. </li>
+                                              <li>In your DAW, create a drum audio track next to your drum midi track.</li>
+                                              <li>In the drum audio track, record from your audio interface / drum machine.</li>
+                                              <li>See the link below that describes this process for reaper.</li>
+                                            </ul>
+                                       
+     </td>
+	 <td align=right>
+	 <img src="./images/organize6M.png" width=600  id="pic6Zimg" onclick="winOpen('./images/organize6L.png')"/> 
+	 </td>
+	</table> 
+ </div>		 
+	
+                            </font>
+                          </td>
+                        </table>
+                        <!-- table8 end -->
+                      </center>
+                      
                       <br>
                       <!-- table13 begin -->
                       <table width=1076 border=0>
@@ -1213,11 +1212,13 @@
                   </td>
                 </tr>
               </table>
-              <!-- table2 -->
+              <!-- table MidiOrganize end -->
+			  
+			  
             </td>
           </tr>
         </table>
-        <!-- table1 -->
+        <!-- table page end -->
       </div>
       <!-- page -->
     <div id="footer">

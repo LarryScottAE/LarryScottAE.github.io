@@ -36,18 +36,6 @@ body#body2 {
  padding: 0;
 }
 
-#divXComment {
- font-size: 11px;
-}
- 
-#divYComment {
- font-size: 11px;
-}
-
-#divZComment {
- font-size: 11px;
-} 
- 
  
 #menu {
  width: 1160px;
@@ -127,6 +115,11 @@ table#t1 {
         font-size: 12px;
 }
 
+ .buttonStyle1 
+   {
+   font-size: 11px;
+   }
+
   #lired   {font-size: 12px; color: #880000; }      
  
   #indented
@@ -155,5 +148,7 @@ table#t1 {
 
   #tab { display:inline-block; 
        margin-left: 16px; }	
+	   
+
 
 
