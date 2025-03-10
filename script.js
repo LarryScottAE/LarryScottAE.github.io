@@ -126,12 +126,12 @@ function midiControl(screen) {
 //alert("midiControlDiv=" + midiControlDiv);
 
  let buttonName = "";
- if (screen == 1)  buttonName= "Control 1"; else 
- if (screen == 2)  buttonName= "Control 2"; else 
- if (screen == 3)  buttonName= "Control 3"; else 
- if (screen == 4)  buttonName= "Control 4"; else 
- if (screen == 5)  buttonName= "Control 5"; else 
- if (screen == 6)  buttonName= "Control 6"; 
+ if (screen == 1)  buttonName= "Opening Screen"; else 
+ if (screen == 2)  buttonName= "Bookmark Management"; else 
+ if (screen == 3)  buttonName= "Build Midi Commands"; else 
+ if (screen == 4)  buttonName= "Learn Midi Commands"; else 
+ if (screen == 5)  buttonName= "Midi Utilities"; else 
+ if (screen == 6)  buttonName= "MidiControl Help Text"; 
 
 //alert("buttonName=" + buttonName);
   let buttonHide = "Hide " + buttonName;
@@ -192,12 +192,12 @@ function midiOrganize(screen) {
 //alert("midiOrganizeDiv=" + midiOrganizeDiv);
 
  let buttonName = "";
- if (screen == 1)  buttonName= "Organize 1"; else 
- if (screen == 2)  buttonName= "Organize 2"; else 
- if (screen == 3)  buttonName= "Organize 3"; else 
- if (screen == 4)  buttonName= "Organize 4"; else 
- if (screen == 5)  buttonName= "Organize 5"; else 
- if (screen == 6)  buttonName= "Organize 6"; 
+ if (screen == 1)  buttonName= "Opening Screen"; else 
+ if (screen == 2)  buttonName= "Bookmark Introduction"; else 
+ if (screen == 3)  buttonName= "Bookmark Management"; else 
+ if (screen == 4)  buttonName= "Search Midi Files"; else 
+ if (screen == 5)  buttonName= "Preview Midi File"; else 
+ if (screen == 6)  buttonName= "Drag Midi to DAW"; 
 
 //alert("buttonName=" + buttonName);
   let buttonHide = "Hide " + buttonName;
