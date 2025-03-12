@@ -80,7 +80,7 @@ body#body2 {
 }
  
 a {
-color:#008800;
+color:#006600;
 text-decoration:none;
 font-size: 11px;
 }
@@ -115,6 +115,7 @@ table#t1 {
         font-size: 12px;
 }
 
+
  .buttonStyle1 
    {
    font-size: 11px;
@@ -139,7 +140,7 @@ table#t1 {
   #inputI1   {color: #660000; font-size: 10px;  font-family: Helvetica;}
   #inputB1   {color: #660000; font-size: 11px;  font-family: Helvetica;}
   #submit    {color: black;   font-size: 10px;  font-family: Helvetica;}
-  #submitG0  {color: #FFFFFF; font-size: 10px;  font-family: Helvetica; font-weight:bold; background-color:#FFCC66; border:1px #AAAAAA solid; width: 80px; height: 18px;}
+  #submitG0  {color: #FFFFFF; font-size: 10px;  font-family: Helvetica; font-weight:bold; background-color:#FFCC66; border:1px #AAAAAA solid; width:  80px; height: 18px;}
   #submitG1  {color: white;   font-size: 9px;   font-family: Helvetica; font-weight:bold; background-color:#D19D00; border:1px #AAAAAA solid; width:  80px; height: 16px;}
   #submitG2  {color: white;   font-size: 11px;  font-family: Helvetica; font-weight:bold; background-color:#D19D00; border:1px #AAAAAA solid; width: 120px; height: 22px;}
   #submitG3  {color: white;   font-size: 11px;  font-family: Helvetica; font-weight:bold; background-color:#006600; border:1px #AAAAAA solid; width: 160px; height: 22px;}
