@@ -149,8 +149,9 @@
                             A more strict definition of 'routing' is to define 'routing rules' that are downloaded to the router defining how Midi data
                             received at the router will be routed (and optionally enhanced) to one or more Midi devices, not ALL midi devices (like a hub)!  
                             This approach simplifies the midi network setup and optimizes Midi network performance by minimizing network Midi traffic, 
-                            resulting in minimized midi network latency. As for router throughput, Midi is a slow protocol that operating at 31,250 bits per second,  
-							where the Midi router (ARM 84 MHz processor) can parse, process, and route the Midi data in micro seconds.  
+                            resulting in minimized midi network latency. As for the router's performance, the router has an ARM 84 MHz processor can that can parse, process, 
+							and route Midi data in tens of micro seconds, where as the Midi protocol is relatively slow operating at 31,250 bits per second. The router's 
+                            throughput is hundreds of times faster than Midi data speed. Performance (ie: latency) will not be a problem.      							
                           </td>
                         </tr>
                         <tr>
