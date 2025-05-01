@@ -143,15 +143,13 @@
                             <font color=#000066 style="font-size:14px"><b>MidiXLate Midi Router</b></font><br><br>
                             Midi routing is the process of transmitting and receiving music data (digitally encoded music notes and control messages) 
                             from one musical device (ex: your keyboard) to another musical device (ex: your PC recording software). 
-                            Typically, Midi communication is accomplished by connecting all Midi enabled music devices to a Midi 'hub' which 'broadcasts' ALL Midi music 
-                            data received at the hub to ALL Midi devices connected to the hub. This hub approach generates excessive Midi network traffic and complicates  
-                            the configuration of each Midi device. 
-                            A more strict definition of 'routing' is to define 'routing rules' that are downloaded to the router defining how Midi data
-                            received at the router will be routed (and optionally enhanced) to one or more Midi devices, not ALL midi devices (like a hub)!  
-                            This approach simplifies the midi network setup and optimizes Midi network performance by minimizing network Midi traffic, 
-                            resulting in minimized midi network latency. As for the router's performance, the router has an ARM 84 MHz processor can that can parse, process, 
-							and route Midi data in tens of micro seconds, where as the Midi protocol is relatively slow operating at 31,250 bits per second. The router's 
-                            throughput is hundreds of times faster than Midi data speed. Performance (ie: latency) will not be a problem.      							
+                            Typically, Midi communication is accomplished by connecting all Midi devices to a Midi 'hub' which 'broadcasts' ALL Midi  
+                            data received at the hub to ALL Midi devices connected to the hub. This hub approach generates excessive Midi network traffic and complicates the configuration of each Midi device. 
+                            A more strict definition of 'routing' is defining 'routing rules' that are downloaded to the router defining how Midi data
+                            received at the router will be routed (and optionally enhanced) to one or more Midi devices. 
+                            This routing approach simplifies Midi network setup and optimizes Midi network performance by reducing Midi network traffic. 
+                            This router has an extremely fast ARM 84 MHz processor that can parse, process, and route Midi data in micro seconds. 
+							Decernable Midi latency is detected in tens of milliseconds. Router latency is not a concern.       							
                           </td>
                         </tr>
                         <tr>
@@ -168,50 +166,74 @@
                             <button id="router8"  class="buttonStyle1" onclick="router(8)">Show Router Config 3</button>&nbsp;
                             <button id="router9"  class="buttonStyle1" onclick="router(9)">Show Router Config 4</button>&nbsp;
                             <button id="router10" class="buttonStyle1" onclick="router(10)">Show Router Config 5</button>
-                            <br><br>		
+                            
+							<br><br><br>		
                             <div id="routerDiv0" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>MidiXLate Router Downloads</b> <br>
+								  
+								  <ul style="padding-left:10px">
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate.docx','popup','width=1400'); return false;">
-                                  <b><u>MidiXLate MS Word manual</u></b>
+                                  <b><u>MidiXLate MS Word manual (outdated)</u></b>
                                   </a>
-                                  <br>
+								  </li>
+                                 
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1280'); return false;">
                                   <b><u>MidiXLate Version 1.3 Windows exe installer</u></b> 
-                                  </a> 
-                                  <br>
+                                  </a>
+                                  </li>								  
+                                  
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('https://dotnet.microsoft.com/en-us/download/dotnet-framework','popup','width=1280'); return false;">
                                   <b><u>Microsoft .Net Framework version 4.6.1 (or newer)</u></b>
-                                  </a>  
-                                  <br>
+                                  </a>
+                                  </li>								  
+                                  
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-Install.mp4','popup','width=1280'); return false;">
                                   <b><u>Video tutorial 1:  &nbsp;MidiXLate PC software installation.</u></b>
                                   </a>
-                                  <br>
+								  </li>
+                                  
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXlate-Routing.mp4','popup','width=1280'); return false;">
                                   <b><u>Video tutorial 2: &nbsp;MidiXLate routing basics.</u></b>
                                   </a>
-                                  <br>
+								  </li>
+                                  
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-ConfigDownload.mp4','popup','width=1280'); return false;">
                                   <b><u>Video tutorial 3:  &nbsp;Download PC config to router.</u></b>
                                   </a>
-                                  <br>
+								  </li>
+                                  
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-Translate.mp4','popup','width=1280'); return false;">
                                   <b><u>Video tutorial 4:  &nbsp;MidiXLate Translation.</u></b>
                                   </a>
-                                  <br>
+								  </li>
+                                  
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-ChnlLock.mp4','popup','width=1280'); return false;">
                                   <b><u>Video tutorial 5:  &nbsp;MidiXLate Chnl Locking.</u></b>
-                                  </a> 
-                                  <br>
+                                  </a>
+                                  </li>								  
+                                  
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-LogDump.mp4','popup','width=1280'); return false;">
                                   <b><u>Video tutorial 6:  &nbsp;MidiXLate Logging (dump config).</u></b>
-                                  </a> 
-                                  <br>
+                                  </a>
+                                  </li>								  
+                                  
+								  <li>
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
                                   <b><u>Midi diagnostic tool MidiOX</u></b>
                                   </a> 
+								  </li>
+								</ul>  
                                 </td>
                                 <td align=right>
                                   <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="picR1img" onclick="winOpen('./images/RouterFace.jpg')"/> 
@@ -600,7 +622,7 @@
                         <tr>
                           <td colspan=2 align=left valign=top>
                             <font color=#000066 style="font-size:14px">
-                            <b>MidiControl Software (for Windows 10 and above)</b>
+                            <b>MidiControl Software with Roland Integra-7 Support (for Windows 10 and above)</b>
                             </font>
                             <font color=#AA0000 style="font-size:16px">
                             <b>&nbsp;&nbsp;&nbsp;&nbsp;FREE!</b>
@@ -609,15 +631,17 @@
                             <font color=#000000 style="font-size:12px">
                             Have you every wanted to control all of your Midi devices from your PC desktop?<br>
                             For example, assume you have a <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 Sound Module</a> and 
-                            you currently use the scroll wheel on the face of the Integra 7 to tediously navigate to your favorite 50 sounds. 
-                            Rather than using the Integra 7 scroll wheel, you can create a list of your favorite 50 sounds in MidiControl and 
-                            easily switch between the Integra 7 sounds with a simple press of a mouse button on your PC.  Much easier!<br> 
+                            you currently use the scroll wheel on the face of the Integra 7 to tediously navigate to your favorite tones. 
+                            Rather than using the Integra 7 scroll wheel, you can create a list of your favorite tones in MidiControl and 
+                            easily switch between the Integra 7 tones with a simple press of a mouse button on your PC.  Much easier!  
                             MidiControl is a <b>FREE</b> 
-                            Windows PC desktop utility used to organize the Midi commands you use in your music production. MidiControl is not designed 
-                            to play Midi files, rather it is used to catalog and organize your Midi commands for use from your desktop. MidiControl provides 
-							24 bookmarks for up to 2000 Midi commands.  Bookmarks can be arranged by Midi device, song, setlist,... giving you simple control
+                            Windows PC program used to catalog and organize your Midi commands for use from your desktop. MidiControl allows you to  
+							bookmark up to 2000 Midi commands.  Bookmarks can be arranged by Midi device, song, setlist,... giving you simple control
                             of all your Midi devices from your PC desktop.</font>
                             <br><br> 
+							
+							
+							<!--
                             <details>
                               <summary>MidiControl additional information  <font color=#000066>(click here)</font></summary>
                               <p style="margin-left:20; margin-right:40;">
@@ -642,31 +666,33 @@
                                 <br><br>  	  
                               </p>
                             </details>
-                            <br> 
+							-->
+
                             <button id="midiControl0"  class="buttonStyle1" onclick="midiControlReset()">Reset</button>&nbsp;
                             <button id="midiControl1"  class="buttonStyle1" onclick="midiControl(1)">Show Opening Screen</button>&nbsp;
                             <button id="midiControl2"  class="buttonStyle1" onclick="midiControl(2)">Show Bookmark Management</button>&nbsp;
                             <button id="midiControl3"  class="buttonStyle1" onclick="midiControl(3)">Show Build Midi Commands</button>&nbsp;
                             <button id="midiControl4"  class="buttonStyle1" onclick="midiControl(4)">Show Learn Midi Commands</button>&nbsp;
                             <button id="midiControl5"  class="buttonStyle1" onclick="midiControl(5)">Show Midi Utilities</button>&nbsp;
-                            <button id="midiControl6"  class="buttonStyle1" onclick="midiControl(6)">Show MidiControl Help Text</button>&nbsp;
+                            <button id="midiControl6"  class="buttonStyle1" onclick="midiControl(6)">Show MidiControl Help Text</button>&nbsp;					
+							<button id="midiControl7"  class="buttonStyle1" onclick="midiControl(7)">Show Integra-7 Support</button>&nbsp;
                             <font size=1>
-                            &nbsp;&nbsp;&nbsp;&nbsp;(click on image to enlarge image)
+                            
                             </font>
-                            <br><br>
+                            <br><br><br>
                             <div id="midiControlDiv0" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
-                                  <b>This is the MidiControl opening screen. </b><br>
-                                  (Screen options 11-17 removed to fit display)<br>
-                                  When MidiControl is started, the last configuration
-                                  is loaded and shown is red
+                                  <b>The MidiControl Opening Screen. </b><br>
+                                  (some screen options removed to fit display)<br>
+                                  When started, the last config is loaded (shown is red)
                                   <br><br>
-                                  <b>MidiControl Speed buttons (top left)</b>  
+                                  <b>MidiControl Speed Buttons (top left)</b>  
                                   <ul style="padding-left:10px">
                                     <li>Down Arrow: Go to next page.</li>
                                     <li>Up Arrow: Go to prior page.</li>
-                                    <li>Bookmarks: Open the bookmarks dialog window.</li>
+                                    <li>Bookmarks: Open the bookmarks window.</li>
+									<li>Roland Integra7: Tone preview utility.</li>
                                     <li>Midi Relay: Open the Midi relay / listener screen.</li>
                                     <li>Midi Utilities: Open the Midi utilities screen.</li>
                                     <li>Save Configuration: Saves the current configuration.</li>
@@ -679,54 +705,82 @@
                                   <b>MidiControl Screen Body</b>  
                                   <ul style="padding-left:10px">
                                     <li>Status message (red): shows status of latest operation.</li>
-                                    <li>Bookmarks: Notice seven bookmarks (starting with DAW).</li>
-                                    <li>Midi Commands: First 20 commands are shown for DAW</li>
-                                    <li>Numbered Buttons: Press button to edit Midi command.</li>
-                                    <li>Midi Labels: Show cmd desc, cmd detail, and out device.</li>
+                                    <li>Bookmarks: Notice five bookmarks shown (DAW-Integra7).</li>
+                                    <li>Midi Commands: 20 bookmarked Midi commands per page</li>
+                                    <li>Numbered Buttons: Press button to edit the Midi command.</li>
+									<li>Send Button: Send the bookmarked command to Midi device.</li>
+                                    <li>Hover Labels: Show cmd desc, cmd detail, and out device.</li>
                                     <li>List Midi Devices: Midi devices current connected to PC.</li>
                                   </ul>
-                                  <br><br>
-                                  <b>Links</b> <br>
-                                  <a href="./index.html"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1400'); return false;">
-                                  <b><u>MidiControl version 1.4 May 2025 installer (exe)</u></b>
-                                  </a>
 								  
                                   <br>
+
+								  <b>Links</b> <br>
+                                  <ul style="padding-left:10px">
+								  <li>
+								  <a href="./index.html"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1400'); return false;">
+                                  <b><u>MidiControl Version 1.4 May 2025 installer (exe)</u></b>
+                                  </a>
+								  </li>
+								  
+                                  <li>
 								  <a href="./index.html"  target="popup" onclick="window.open('./tutorials/MidiControl-Tutorial.mp4','popup','width=1600'); return false;">
-                                  <b><u>MidiControl Video Tutorial (V1.4, 11 min, 80 meg)</u></b>
+                                  <b><u>MidiControl Video Tutorial (11 min, 80 meg)</u></b>
                                   </a>
+								  </li>
 								  
-								  <br>
+								  <li>
 								  <a href="./index.html"  target="popup" onclick="window.open('./tutorials/MidiControl-Integra7-Tutorial.mp4','popup','width=1600'); return false;"> 
-                                  <b><u>MidiControl Roland Integra-7 Tutorial (V1.4, 6 min, 70 meg)</u></b>
+                                  <b><u>MidiControl Roland Integra-7 Tutorial (6 min, 70 meg)</u></b>
                                   </a>
+								  </li>
+
+ 								  <li>
+								  <a href="./index.html"  target="popup" onclick="window.open('./downloads/INTEGRA-7_SoundList.pdf','popup','width=1600'); return false;"> 
+                                  <b><u>Roland Integra-7 Sound List (pdf)</u></b>
+                                  </a>
+								  </li>
+
+ 								  <li>
+								  <a href="./index.html"  target="popup" onclick="window.open('./downloads/INTEGRA-7_MidiImplementation.pdf','popup','width=1600'); return false;"> 
+                                  <b><u>Roland Integra-7 Midi Implementation (pdf)</u></b>
+                                  </a>
+								  </li>
 								  
-								  
-								  
-								  
-                                  <br>
+								  <li>
                                   <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
                                   <b><u>Midi Diagnostic Tool MidiOX</u></b>
-                                  </a>                                
+                                  </a>
+								  </li>	
+								  
+								  </ul>
+                                  <br>
+                                  ** Click on image to enlarge the image.								  
+								
                                 </td>
                                 <td align=right>
                                   <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('./images/control1L.png')"/>
                                 </td>
                               </table>
+							  <br>
+							  
+							  
+							  
                             </div>
                             <div id="midiControlDiv1" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
-                                  <b>This is the MidiControl opening screen. </b><br>
-                                  (Screen options 11-17 removed to fit display)<br>
+                                  <b>This is the MidiControl opening screenxx. </b><br>
+                                  (Some screen options removed to fit display)<br>
                                   When MidiControl is started, the last configuration <br>
                                   is loaded and shown is red
                                   <br><br>
-                                  <b>MidiControl Speed buttons (top left)</b>  
+                                  <b>MidiControl Speed Buttons (top left)</b>  
                                   <ul style="padding-left:10px">
                                     <li>Down Arrow: Go to next page.</li>
                                     <li>Up Arrow: Go to prior page.</li>
                                     <li>Bookmarks: Open the bookmarks dialog window.</li>
+									<li>Roland Integra-7:  Utility to preview tone banks.</li>
                                     <li>Midi Relay: Open the Midi relay / listener screen.</li>
                                     <li>Midi Utilities: Open the Midi utilities screen.</li>
                                     <li>Save Configuration: Saves the current configuration.</li>
@@ -869,6 +923,41 @@
                                 </td>
                               </table>
                             </div>
+							 <div id="midiControlDiv7" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>Midi Control Roland Integra-7 Support</b><br>
+                                  The Roland Integra-7 is a tone generator with 6000+ high end tones.<br>
+								  Finding and previewing the Integra's 80+ tone banks can be challenging!<br>
+								  The Integra's 80 tone banks are shown in the grid.<br>
+								  Click on a row in the grid to preview all of the tones in a tone bank. <br>
+	                              You can optionally stop the preview and bookmark a tone for future use.<br>
+								  See the video tutorial below for further details<br>
+								  
+								  <br><br>
+                                  <a href="./index.html"  target="popup" onclick="window.open('./tutorials/MidiControl-Integra7-Tutorial.mp4','popup','width=1600'); return false;"> 
+                                  <b><u>MidiControl Roland Integra-7 Tutorial (6 min, 70 meg)</u></b>
+                                  </a>
+
+								  <br>
+								  <a href="./index.html"  target="popup" onclick="window.open('./downloads/INTEGRA-7_SoundList.pdf','popup','width=1600'); return false;"> 
+                                  <b><u>Roland Integra-7 Sound List (pdf)</u></b>
+                                  </a>
+
+ 								  <br>
+								  <a href="./index.html"  target="popup" onclick="window.open('./downloads/INTEGRA-7_MidiImplementation.pdf','popup','width=1600'); return false;"> 
+                                  <b><u>Roland Integra-7 Midi Implementation (pdf)</u></b>
+                                  </a>
+
+
+
+                           
+                                </td>
+                                <td align=right>
+                                  <img src="./images/control7M.png"   id="pic7Ximg" onclick="winOpen('./images/control7L.png')"/> 
+                                </td>
+                              </table>
+                            </div>
                           </td>
                         </tr>
                       </table>
@@ -915,56 +1004,14 @@
                           </font>
                           <br><br>
                           <font color=#000000 style="font-size:12px">
-                            MidiOrganize provides a FREE and simple means to organize your Midi instrument loops (drum, bass, piano,...) and 
-                            optimize the flexibility and performance of your DAW (Digital Analog Workstation, such as ProTools, Reaper, Cubase) mixes! &nbsp;
+                            MidiOrganize provides a FREE and simple means to organize and navigate your Midi instrument loops (drum, bass, piano,...) for  
+                            use with your DAW (Digital Analog Workstation, such as ProTools, Reaper, Cubase) mixes! &nbsp;
                             Think of MidiOrganize as a PC Midi librarian, used to catalog Midi loops by instrument, by song, by set list, or any other
                             criteria you require. MidiOrganize is a stand alone PC program. Once setup, simply drag and drop Midi loops from MidiOrganize 
                             into your DAW Midi tracks. Additionally, there is a 'preview' feature in MidiOrganize to preview Midi loops inside 
                             MidiOrganize (via Microsoft's embedded Windows Media Player plugin) before adding the Midi loop to your DAW project. 
-                            <br><br>
-                            <details>
-                              <summary>MidiOrganize as a Cost and Performance Alternative to VSTs  <font color=#000066>(click here)</font></summary>
-                              <p style="margin-left:20; margin-right:40;">
-                                <br>
-                                MidiOrganize can be used to organize Midi loops for use with VSTs and/or external tone generators.<br>
-                                VST's are Midi 'virtual instruments' that run inside your DAW. The sound of the instrument is generated by the VST.
-                                VST's are typically expensive, require a license, and require an internet connection at start up (to validate your VST).
-                                The processing burden of a VST on your computer's CPU can be (and is often) severe. Many VSTs in your mix can add pops, dropouts,
-								and delays to your final mix.  MidiOrganize is purposely not a VST. 
-                                It is a stand alone program that runs outside your DAW and can optionally be used to reduce the performance impact of various VSTs.
-                                <br><br>		
-                                Consider the use case where Midi Organize is supporting high end sound modules, such as a 
-                                <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 SuperNatual Sound Module</a> or the more affordable 
-                                <a href=https://www.yamaha.com/en/about/experience/innovation-road/collection/detail/2086>Yamaha MU15 Tone Generator.</a>
-                                When your DAW plays a Midi track, dont route the Midi data to a VST, send it an external tone generator connected to your mixer.
-                                This approach provides superior sound quality, eliminates costly VSTs, reduces the heavy VST load on your PC's CPU.
-                                MidiOrganize follows the 'drill down' look and feel of most popular drum VSTs. 
-                                If you understand the drilldown structure of the most common drum VSTs, MidiOrganize will feel very natural.  
-                                <br><br>								  
-                                For maximum flexibility, you can continue to build your DAW project using VSTs, but when performing or building a final mix, 
-                                you may opt to route your Midi tracks to a superior external Midi sound module such as the Roland Integra 7 SuperNatual Sound Module. 
-                                The sound quality of the Roland Integra 7 SuperNatual Sound Module is simply amazing! &nbsp;
-                                <br><br>
-                                To conclude, if you currently use one of the many popular Drum VSTs (which I dare not mention here), consider the expense of the  	
-                                VST, the licensing of your VST, the VST internet connection required at startup, and most important, the heavy burden of the VST on your CPU 
-                                (introducing latency and popping in your final mix), you can easily see the many advantages of MidiOrganize!. 	
-                                <br><br>
-                              </p>
-                            </details>
-                            <details>
-                              <summary>My Personal Use Case <font color=#000066>(click here)</font></summary>
-                              <p style="margin-left:20; margin-right:40;">
-							    <br>
-                                My Windows 10 music PC is optimized with 32 gig memory, 3 x 1TB M.2 gumstick drives, Intel 7 CPU, and Reaper DAW software. &nbsp; 
-                                I typically start to see Reaper performance degradation after loading a bass VST, a piano VST, and (the biggest culprit) a drum VST. 
-                                VSTs have benefits and conveniences, but I prefer to limit my VST usage to optimize my Reaper performance with the added benefit 
-                                of superior instument sounds. I choose to route my Midi piano and Midi bass to a 
-                                <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 SuperNatual Sound Module</a> and my Midi drums to a 
-                                <a href=https://www.yamaha.com/en/about/experience/innovation-road/collection/detail/2086>Yamaha MU15 Tone Generator</a>.
-                                For live performances, I can use this configuration reliably on a minimally configured laptop without a licensing required internet connection!
-                                <br> 	  
-                              </p>
-                            </details>
+                            <br>
+                           
                             <br>
                             <button id="midiOrganize0"  class="buttonStyle1" onclick="midiOrganizeReset()">Reset</button>&nbsp;
                             <button id="midiOrganize1"  class="buttonStyle1" onclick="midiOrganize(1)">Show Opening Screen</button>&nbsp;
@@ -976,7 +1023,7 @@
                             <font size=1>
                             &nbsp;&nbsp;&nbsp;&nbsp;(click on image to enlarge image)
                             </font>
-                            <br><br>		
+                            <br><br><br>		
                             <div id="midiOrganizeDiv0" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
@@ -991,21 +1038,31 @@
                                   </ul>
                                   <br><br>
                                   <b>Links</b> <br>
+								  
+								  <ul style="padding-left:10px">
+								  <li>
                                   <a href="./index.html"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1400'); return false;">
                                   <b><u>MidiOrganize June 2024 version 1.4 installer  May 2025</u></b>
                                   </a>
-                                  <br>
+								  </li>
+								  
+                                  <li>
                                   <a href="./index.html"  target="popup" onclick="window.open('./tutorials/MidiOrganizeDAW.pdf','popup','width=1280'); return false;">
                                   <b><u>MidiOrganize June 2024 DAW usage example (pdf)</u></b> 
                                   </a>
-                                  <br>
+								  </li>	
+								  
+                                  <li>
                                   <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
                                   <b><u>Midi Diagnostic Tool MidiOX</u></b>
-                                  </a> 
-                                  <br>
+                                  </a>
+                                  </li>									  
+								  
+                                  <li>
                                   <a href="./index.html"  target="popup" onclick="window.open('https://groovemonkee.com','popup','width=1280'); return false;">
                                   <b><u>Groove Monkee FREE Drum Loops</u></b>
-                                  </a> 
+                                  </a>
+                                  </li>								  
                                 </td>
                                 <td align=right>
                                   <img src="./images/organize1M.png" width=600  id="pic1Zimg" onclick="winOpen('./images/organize1L.png')"/>
@@ -1132,6 +1189,53 @@
                       <!-- table8 end -->
                     </center>
                     <br>
+					
+					 <details>
+                              <summary>MidiOrganize as a Cost and Performance Alternative to VSTs  <font color=#000066>(click here)</font></summary>
+                              <p style="margin-left:20; margin-right:40;">
+                                <br>
+                                MidiOrganize can be used to organize Midi loops for use with VSTs and/or external tone generators.<br>
+                                VST's are Midi 'virtual instruments' that run inside your DAW. The sound of the instrument is generated by the VST.
+                                VST's are typically expensive, require a license, and require an internet connection at start up (to validate your VST).
+                                The processing burden of a VST on your computer's CPU can be (and is often) severe. Many VSTs in your mix can add pops, dropouts,
+								and delays to your final mix.  MidiOrganize is purposely not a VST. 
+                                It is a stand alone program that runs outside your DAW and can optionally be used to reduce the performance impact of various VSTs.
+                                <br><br>		
+                                Consider the use case where Midi Organize is supporting high end sound modules, such as a 
+                                <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 SuperNatual Sound Module</a> or the more affordable 
+                                <a href=https://www.yamaha.com/en/about/experience/innovation-road/collection/detail/2086>Yamaha MU15 Tone Generator.</a>
+                                When your DAW plays a Midi track, dont route the Midi data to a VST, send it an external tone generator connected to your mixer.
+                                This approach provides superior sound quality, eliminates costly VSTs, reduces the heavy VST load on your PC's CPU.
+                                MidiOrganize follows the 'drill down' look and feel of most popular drum VSTs. 
+                                If you understand the drilldown structure of the most common drum VSTs, MidiOrganize will feel very natural.  
+                                <br><br>								  
+                                For maximum flexibility, you can continue to build your DAW project using VSTs, but when performing or building a final mix, 
+                                you may opt to route your Midi tracks to a superior external Midi sound module such as the Roland Integra 7 SuperNatual Sound Module. 
+                                The sound quality of the Roland Integra 7 SuperNatual Sound Module is simply amazing! &nbsp;
+                                <br><br>
+                                To conclude, if you currently use one of the many popular Drum VSTs (which I dare not mention here), consider the expense of the  	
+                                VST, the licensing of your VST, the VST internet connection required at startup, and most important, the heavy burden of the VST on your CPU 
+                                (introducing latency and popping in your final mix), you can easily see the many advantages of MidiOrganize!. 	
+                                <br><br>
+                              </p>
+                            </details>
+                            <details>
+                              <summary>My Personal Use Case <font color=#000066>(click here)</font></summary>
+                              <p style="margin-left:20; margin-right:40;">
+							    <br>
+                                My Windows 10 music PC is optimized with 32 gig memory, 3 x 1TB M.2 gumstick drives, Intel 7 CPU, and Reaper DAW software. &nbsp; 
+                                I typically start to see Reaper performance degradation after loading a bass VST, a piano VST, and (the biggest culprit) a drum VST. 
+                                VSTs have benefits and conveniences, but I prefer to limit my VST usage to optimize my Reaper performance with the added benefit 
+                                of superior instument sounds. I choose to route my Midi piano and Midi bass to a 
+                                <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 SuperNatual Sound Module</a> and my Midi drums to a 
+                                <a href=https://www.yamaha.com/en/about/experience/innovation-road/collection/detail/2086>Yamaha MU15 Tone Generator</a>.
+                                For live performances, I can use this configuration reliably on a minimally configured laptop without a licensing required internet connection!
+                                <br> 	  
+                              </p>
+                            </details>
+					<br>
+					
+					
                     <!-- table13 begin -->
                     <table width=1076 border=0>
                       <td width=1076 align=left valign=top>
@@ -1142,6 +1246,7 @@
                       </td>
                     </table>
                     <!-- table13 end -->
+					
                     <br>
                   </div>
                   <!-- padding -->

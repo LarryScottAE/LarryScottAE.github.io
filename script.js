@@ -116,6 +116,7 @@ function midiControlReset() {
   document.getElementById("midiControlDiv4").hidden = true;
   document.getElementById("midiControlDiv5").hidden = true;
   document.getElementById("midiControlDiv6").hidden = true;
+  document.getElementById("midiControlDiv7").hidden = true;
  }
  
  
@@ -132,6 +133,7 @@ function midiControl(screen) {
  if (screen == 4)  buttonName= "Learn Midi Commands"; else 
  if (screen == 5)  buttonName= "Midi Utilities"; else 
  if (screen == 6)  buttonName= "MidiControl Help Text"; 
+ if (screen == 7)  buttonName= "Roland Integra-7 Support";
 
 //alert("buttonName=" + buttonName);
   let buttonHide = "Hide " + buttonName;
@@ -151,7 +153,7 @@ function midiControl(screen) {
 
    // if no divs visible, show default div 0
    let foundVisibleDiv = false;
-   for (let i = 1; i <= 6; i++) {
+   for (let i = 1; i <= 7; i++) {
       let midiControlDivTest = "midiControlDiv" + i.toString();
    // alert("midiControlDivTest=" + midiControlDivTest);
 
