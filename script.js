@@ -48,6 +48,29 @@
    document.getElementById("routerDiv8").hidden = true;
    document.getElementById("routerDiv9").hidden = true;
    document.getElementById("routerDiv10").hidden = true;
+   
+   const button1 = document.getElementById("router1");
+   button1.textContent = "Show Router Face"; 
+   const button2 = document.getElementById("router2");
+   button2.textContent = "Show Router Rear"; 
+   const button3 = document.getElementById("router3");
+   button3.textContent = "Show PC Config 1"; 
+   const button4 = document.getElementById("router4");
+   button4.textContent = "Show PC Config 2"; 
+   const button5 = document.getElementById("router5");
+   button5.textContent = "Show PC Config 3"; 
+   const button6 = document.getElementById("router6");
+   button6.textContent = "Show Router Config 1"; 
+   const button7 = document.getElementById("router7");
+   button7.textContent = "Show Router Config 2"; 
+   const button8 = document.getElementById("router8");
+   button8.textContent = "Show Router Config 3"; 
+   const button9 = document.getElementById("router9");
+   button9.textContent = "Show Router Config 4"; 
+   const button10 = document.getElementById("router10");
+   button10.textContent = "Show Router Config 5"; 
+
+ 
   }
  
  
@@ -117,6 +140,22 @@ function midiControlReset() {
   document.getElementById("midiControlDiv5").hidden = true;
   document.getElementById("midiControlDiv6").hidden = true;
   document.getElementById("midiControlDiv7").hidden = true;
+  
+  const button1 = document.getElementById("midiControl1");
+  button1.textContent = "Show Opening Screen"; 
+  const button2 = document.getElementById("midiControl2");
+  button2.textContent = "Show Bookmark Management"; 
+  const button3 = document.getElementById("midiControl3");
+  button3.textContent = "Show Build Midi Commands"; 
+  const button4 = document.getElementById("midiControl4");
+  button4.textContent = "Show Learn Midi Commands"; 
+  const button5 = document.getElementById("midiControl5");
+  button5.textContent = "Show Midi Utilities"; 
+  const button6 = document.getElementById("midiControl6");
+  button6.textContent = "Show MidiControl Help Text"; 
+  const button7 = document.getElementById("midiControl7");
+  button7.textContent = "Show Roland Integra-7 Support"; 
+
  }
  
  
@@ -183,6 +222,20 @@ function midiOrganizeReset() {
   document.getElementById("midiOrganizeDiv4").hidden = true;
   document.getElementById("midiOrganizeDiv5").hidden = true;
   document.getElementById("midiOrganizeDiv6").hidden = true;
+  
+  const button1 = document.getElementById("midiOrganize1");
+  button1.textContent = "Show Opening Screen"; 
+  const button2 = document.getElementById("midiOrganize2");
+  button2.textContent = "Show Bookmark Introduction"; 
+  const button3 = document.getElementById("midiOrganize3");
+  button3.textContent = "Show Bookmark Management"; 
+  const button4 = document.getElementById("midiOrganize4");
+  button4.textContent = "Show Search Midi Files"; 
+  const button5 = document.getElementById("midiOrganize5");
+  button5.textContent = "Show Preview Midi File"; 
+  const button6 = document.getElementById("midiOrganize6");
+  button6.textContent = "Show Drag Midi / Drop DAW"; 
+  
  }
 
 
@@ -199,7 +252,7 @@ function midiOrganize(screen) {
  if (screen == 3)  buttonName= "Bookmark Management"; else 
  if (screen == 4)  buttonName= "Search Midi Files"; else 
  if (screen == 5)  buttonName= "Preview Midi File"; else 
- if (screen == 6)  buttonName= "Drag Midi to DAW"; 
+ if (screen == 6)  buttonName= "Drag Midi / Drop DAW"; 
 
 //alert("buttonName=" + buttonName);
   let buttonHide = "Hide " + buttonName;
