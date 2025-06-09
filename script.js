@@ -69,12 +69,11 @@
    button9.textContent = "Show Router Config 4"; 
    const button10 = document.getElementById("router10");
    button10.textContent = "Show Router Config 5"; 
-
- 
   }
  
  
   function router(screen) {
+//routerReset();
   const button = document.getElementById("router" + screen);
   let routerDiv = "routerDiv" + screen;
 //alert("routerDiv=" + screen.toString());

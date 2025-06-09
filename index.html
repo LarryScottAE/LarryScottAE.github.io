@@ -171,7 +171,7 @@
                             <div id="routerDiv0" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
-                                  <b>MidiXLate Downloads (Obsolete. Revisions in progress)</b> <br>
+                                  <b>MidiXLate Downloads (revisions in progress)</b> <br>
 								  
 								  <ul style="padding-left:10px">
 								  <li>
@@ -384,7 +384,6 @@
                                     <li>The number of output devices configured.</li>
                                     <li>The number of routings defined (see next screens).</li>
                                     <li>The number of translation mappings defined.</li>
-                                    <li>The number of channel locks defined.</li>
                                     <li>The number of config errors found at download.</li>
                                   </ul>
                                   <br>
@@ -392,7 +391,6 @@
                                   <ul style="padding-left:10px">
                                     <li>If router routing service is enabled. </li>
                                     <li>If router translation service is enabled. </li>
-                                    <li>If router channel locking is enabled. </li>
                                     <li>If router queuing is enabled. </li>
                                     <li>If router SysEx processing is enabled. </li>
                                     <li>If port 5 or port 6 is 'wrapped'. </li>
@@ -530,21 +528,16 @@
                                 For the average home user with only a few Midi devices, a Midi router may not add much value. A Midi hub is the right option. 
                                 For a performing group (or sophisticated home studio) with a large number of midi devices and complicated midi network, 
                                 the MidiXLate router can be a life saver. 
-                                With MidiXLate, you have complete control of Midi 'port filtering', 'translation', and 'channel locking' capabilities.
+                                With MidiXLate, you have complete control of Midi port 'filtering' and command 'translation' actions.
                                 As for MidiXLate's performance, the engine of the router is a blinding fast Atmel SAM3X8E ARM Cortex-M3 processor running at 84 MHz, 
                                 providing extremely low latency.
                                 <br><br>		  
                                 In addition to Midi routing, the MidiXLate router provides 'port filtering' capabilities.  
                                 For each of the six input ports and six output ports, you can specify, by port, to process or ignore, 
-                                note on/off, continuous control, progam change, and/or system exclusive commands.<br>    
+                                note on/off, continuous control, progam change, and/or system exclusive commands.   
                                 The router also provides a pseudo Network Address <b>Translation</b> (NAT) features called 'Translation' where 
                                 midi data can be 'translated from one Midi format (such as note data) to another Midi format (such as continuous controller). 
-                                This is extremely helpful when there is no direct path for one piece of midi gear to control another piece of Midi gear. <br>
-                                Next, the router has a <b>Channel Locking</b> feature providing flexible rules to lock midi data (sent to an output port) to a particular 
-                                midi channel. For example, assume you have a drum machine attached to output port 6. All drum notes are required (by Midi standard) to be 
-                                encoded to Midi channel 10,yet some drum patch providers fail to encode their drum patches to midi channel 10. 
-                                With MidiXLate, you can force all data to your drum machine to midi port 10.  
-                                Channel Locking has many other useful features.
+                                This is extremely helpful when there is no direct path for one piece of midi gear to control another piece of Midi gear. 
                                 <br><br> 	  
                               </p>
                             </details>
