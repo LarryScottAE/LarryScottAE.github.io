@@ -126,479 +126,13 @@
             <font size=1 color=#000000>
               <!-- Sierra Digital Audio, 13155 Falcon Point Place, Truckee, CA. 96161  925-765-2883 SierraDigitalAudio@gmail.com, Midi Router, Embedded Systems, CAD, 3D Printing-->
             </font>
-            <!-- ========================================================================================================================================================= -->
-            <!-- MIDIXLATE -->
-            <!-- table MidiXLate begin -->
-            <table id=t0 width=1160 bgcolor=#FFFFFF >
-              <tr>
-                <td colspan=2 valign=center>
-                  <div id="padding">
-                    <a name="MidiXLate"></a>
-                    <center>
-                      <!-- table3 begin-->
-                      <table id=t0 width=1160 bgcolor=#FFFFFF >
-                        <tr>
-                          <td>
-                            <br>
-                            <font color=#000066 style="font-size:14px"><b>MidiXLate Midi Router</b></font><br><br>
-                            Midi routing is the process of transmitting and receiving music data (digitally encoded music notes and control messages) 
-                            from one musical device (ex: your keyboard) to another musical device (ex: your PC recording software). 
-                            Typically, Midi communication is accomplished by connecting all Midi devices to a Midi 'hub' which 'broadcasts' ALL Midi  
-                            data received at the hub to ALL Midi devices connected to the hub. This hub approach generates excessive Midi network traffic and complicates the configuration of each Midi device. 
-                            A more strict definition of 'routing' is defining 'routing rules' that are downloaded to the router defining how Midi data
-                            received at the router will be routed (and optionally enhanced) to one or more Midi devices. 
-                            This routing approach simplifies Midi network setup and optimizes Midi network performance by reducing Midi network traffic. 
-                            This router has an extremely fast ARM 84 MHz processor that can parse, process, and route Midi data in micro seconds. 
-							Decernable Midi latency is detected in tens of milliseconds. Router latency is not a concern.       							
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <br> 
-                            <button id="router0"  class="buttonStyle1" onclick="routerReset()">Reset</button>&nbsp;
-                            <button id="router1"  class="buttonStyle1" onclick="router(1)">Show Router Face</button>&nbsp;
-                            <button id="router2"  class="buttonStyle1" onclick="router(2)">Show Router Rear</button>&nbsp;
-                            <button id="router3"  class="buttonStyle1" onclick="router(3)">Show PC Config 1</button>&nbsp;
-                            <button id="router4"  class="buttonStyle1" onclick="router(4)">Show PC Config 2</button>&nbsp;
-                            <button id="router5"  class="buttonStyle1" onclick="router(5)">Show PC Config 3</button>&nbsp;
-                            <button id="router6"  class="buttonStyle1" onclick="router(6)">Show Router Config 1</button>&nbsp;
-                            <button id="router7"  class="buttonStyle1" onclick="router(7)">Show Router Config 2</button>&nbsp;
-                            <button id="router8"  class="buttonStyle1" onclick="router(8)">Show Router Config 3</button>&nbsp;
-                            <button id="router9"  class="buttonStyle1" onclick="router(9)">Show Router Config 4</button>&nbsp;
-                            <button id="router10" class="buttonStyle1" onclick="router(10)">Show Router Config 5</button>
-                            
-							<br><br><br>		
-                            <div id="routerDiv0" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>MidiXLate Downloads (revisions in progress)</b> <br>
-								  
-								  <ul style="padding-left:10px">
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate.docx','popup','width=1400'); return false;">
-                                  <b><u>MidiXLate MS Word manual</u></b>
-                                  </a>
-								  </li>
-                                 
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1280'); return false;">
-                                  <b><u>MidiXLate Version 1.3 Windows exe installer</u></b> 
-                                  </a>
-                                  </li>								  
-                                  
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('https://dotnet.microsoft.com/en-us/download/dotnet-framework','popup','width=1280'); return false;">
-                                  <b><u>Microsoft .Net Framework version 4.6.1 (or newer)</u></b>
-                                  </a>
-                                  </li>								  
-                                  
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-Install.mp4','popup','width=1280'); return false;">
-                                  <b><u>Video tutorial 1:  &nbsp;MidiXLate PC software installation.</u></b>
-                                  </a>
-								  </li>
-                                  
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXlate-Routing.mp4','popup','width=1280'); return false;">
-                                  <b><u>Video tutorial 2: &nbsp;MidiXLate routing basics.</u></b>
-                                  </a>
-								  </li>
-                                  
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-ConfigDownload.mp4','popup','width=1280'); return false;">
-                                  <b><u>Video tutorial 3:  &nbsp;Download PC config to router.</u></b>
-                                  </a>
-								  </li>
-                                  
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-Translate.mp4','popup','width=1280'); return false;">
-                                  <b><u>Video tutorial 4:  &nbsp;MidiXLate Translation.</u></b>
-                                  </a>
-								  </li>							  
-                                  
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-LogDump.mp4','popup','width=1280'); return false;">
-                                  <b><u>Video tutorial 5:  &nbsp;MidiXLate Logging (dump config).</u></b>
-                                  </a>
-                                  </li>								  
-                                  
-								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
-                                  <b><u>Midi diagnostic tool MidiOX</u></b>
-                                  </a> 
-								  </li>
-								</ul>  
-                                </td>
-                                <td align=right valign=top>
-                                  <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="picR1img" onclick="winOpen('./images/RouterFace.jpg')"/> 
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv1" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>Router Face</b> <br>
-                                  The router face provides a number of realtime visual aids to<br>
-                                  monitor, decode, and debug Midi traffic as it is being<br> processed by the router.<br> 
-                                  <ul style="padding-left:10px">
-                                    <li>Power button: Power on and off the router.</li>
-                                    <li>Logger button: Dump midi data to TFT screen or TTY port.</li>
-                                    <li>Config button: Load router config and view config on TFT.</li>
-                                    <li>LEDs: Blink as Midi traffic is sent and received.</li>
-                                    <li>Screen: Shows config and realtime Midi activity.</li>
-                                  </ul>
-                                </td>
-                                <td align=right>
-                                  <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="picR1img" onclick="winOpen('./images/RouterFace.jpg')"/> 
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv2" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>Router Rear</b>  
-                                  <ul style="padding-left:10px">
-                                    <li>Midi Ports: Six midi 5 pin din input ports and six output ports.</li>
-                                    <li>Log Port: USB port to dump router activity to terminal emulator.</li>
-                                    <li>CFG Port: USB port used to receive router config from PC.</li>
-                                    <li>USB (not used):  USB port for future use.</li>
-                                    <li>PGM (not used):  USB port to update firmware.</li>
-                                    <li>PWR jack: 9V center positive power barrel connector.</li>
-                                    <li>SD Card: Micro SD card( MS FAT32 format) router configuration.</li>
-                                  </ul>
-                                </td>
-                                <td align=right>
-                                  <img src="./images/RouterRear.jpg"        alt="RouterRear.jpg"       width="700" id="picR2img" onclick="winOpen('./images/RouterRear.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv3" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>PC Config Screen 1: Midi Routing</b><br> 
-                                  The router configuration is created on the PC and<br>
-                                  downloaded to the router via the router download<br>
-                                  screen (not shown) and USB cable. <br>
-                                  <br>
-                                  <ul style="padding-left:10px">
-                                    <li>Provide a short description of the router config. </li>
-                                    <li>Provide a long description of the router config.</li>
-                                    <li>Label the Midi port conections (Label Ports) button.</li>
-                                    <li>Specify Midi Routings by clicking on LEDs to toggle.</li>
-                                    <li>Optional: Press button to specify Midi Translations.</li>
-                                    <li>Optional: Press button to specify Channel Locks.</li>
-                                    <li>Remember to save your router config to PC desktop!.</li>
-                                    <li>(multiple configurations are supported)</li>
-                                  </ul>
-                                </td>
-                                <td align=right>
-                                  <img src="./images/RouterConfig1.jpg"     alt="RouterConfig1.jpg"    width="700" id="picR3img" onclick="winOpen('./images/RouterConfig1.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv4" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>PC Config Screen 2: Midi Translations</b> <br>
-                                  Midi Translations are used to change a Midi message<br>
-                                  from one format to another. For Example: assume you<br>
-                                  want to press a buttton (controller) on you keyboard<br>
-                                  to send a 'patch change' command to your tone generator.<br>
-                                  Use the translation screen to identify and capture the<br>
-                                  midi CC (continuous control) command and translate it <br>
-                                  to a Midi PC (program change) cmd.<br> 
-                                  <br>
-                                  <b>Translation Screen</b>
-                                  <ul style="padding-left:10px">
-                                    <li>Provide a short description for the translation. </li>
-                                    <li>Specify the incoming midi to capture.</li>
-                                    <li>Specify the outgoing translated midi to send.</li>
-                                    <li>256 midi translations are permitted.</li>
-                                    <li>Copy, paste, and delete functions are provided.</li>
-                                    <li>Bulk copy, paste, and delete functions are provided.</li>
-                                  </ul>
-                                </td>
-                                <td align=right>
-                                  <img src="./images/RouterConfig2.jpg"     alt="RouterConfig2.jpg"    width="700" id="picR4img" onclick="winOpen('./images/RouterConfig2.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv5" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>PC Config Screen 3: Midi Channel Locks</b><br>
-                                  Midi Channel Locks are used to lock specific Midi data<br>
-                                  to a specific midi channel (by Midi port and Midi command).<br>
-                                  For example, assume you have a Reaper MIDI DAW track that <br>
-                                  contains a drum patch data routed to your Yamaha MU15 drum<br>
-                                  machine. Some rougue drum tracks do not encode drum notes <br>
-                                  to Midi channel 10. Use the channel lock screen to guarantee<br>
-                                  all Reaper Midi drum data sent to your Yamaha Mu15 is locked <br>
-                                  to Midi channel 10. <br>
-                                  <br>
-                                  <b>Channel Lock Screen</b>
-                                  <ul style="padding-left:10px">
-                                    <li>Specify the input and output ports. </li>
-                                    <li>Specify the channel to lock outbound midi data.</li>
-                                    <li>Specify if the lock is CC,PC,NT,or all midi data.</li>
-                                    <li>96 midi locks are permitted.</li>
-                                    <li>Copy, paste, and delete functions are provided.</li>
-                                    <li>Bulk copy, paste, and delete functions are provided.</li>
-                                  </ul>
-                                </td>
-                                <td align=right>
-                                  <img src="./images/RouterConfig3.jpg"     alt="RouterConfig3.jpg"    width="700" id="picR5img" onclick="winOpen('./images/RouterConfig3.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv6" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>Router Config Display Screen 1: Splash Page</b><br> 
-                                  The splash page is displayed for two seconds when the<br>
-                                  router is powered on, then the router services screen<br>
-                                  is displayed.  
-                                  <br><br>
-                                  The splash page screen provides router firmware<br>
-                                  version information, version date information and<br>
-                                  a support email address.<br> 	 
-                                </td>
-                                <td align=center>
-                                  <img src="./images/RouterTFT0.jpg"        alt="RouterTFT0.jpg"       width="400" id="picR6img" onclick="winOpen('./images/RouterTFT0.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv7" hidden>
-                              <table width=1078 id=t0>
-                                <td>
-                                  <b>Router Config Display Screen 2: Router Services</b><br> 
-                                  Press the Configure button twice (to latch and unlatch)<br>
-                                  within two seconds to cycle through the router<br>
-                                  configuration screens.
-                                  <br><br>
-                                  The fisrt parameter is the active configuration<br> 
-                                  downloaded from your PC<br><br>
-                                  The left column shows:<br> 
-                                  <ul style="padding-left:10px">
-                                    <li>The number of input devices configured. </li>
-                                    <li>The number of output devices configured.</li>
-                                    <li>The number of routings defined (see next screens).</li>
-                                    <li>The number of translation mappings defined.</li>
-                                    <li>The number of config errors found at download.</li>
-                                  </ul>
-                                  <br>
-                                  The right column shows services enabled.<br>
-                                  <ul style="padding-left:10px">
-                                    <li>If router routing service is enabled. </li>
-                                    <li>If router translation service is enabled. </li>
-                                    <li>If router queuing is enabled. </li>
-                                    <li>If router SysEx processing is enabled. </li>
-                                    <li>If port 5 or port 6 is 'wrapped'. </li>
-                                  </ul>
-                                </td>
-                                <td align=center>
-                                  <img src="./images/RouterTFT2.jpg"        alt="RouterTFT2.jpg"       width="400" id="picR7img" onclick="winOpen('./images/RouterTFT2.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv8" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>Router Config Display Screen 3: Device Names</b><br>  
-                                  Press the Configure button twice (to latch and unlatch)<br>
-                                  within two seconds to cycle through the router<br>
-                                  configuration screens.
-                                  <br><br>
-                                  The Device Names screen displays the names of the devices<br>
-                                  (configured on the PC and downloaded to the router) attached<br>
-                                  to the input ports and output ports. (n/u means not used).
-                                </td>
-                                <td align=center>
-                                  <img src="./images/RouterTFT1.jpg"        alt="RouterTFT0.jpg"       width="400" id="picR8img" onclick="winOpen('./images/RouterTFT1.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv9" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>Router Config Display Screen 4: Port Routings</b><br>  
-                                  Press the Configure button twice (to latch and unlatch)<br>
-                                  within two seconds to cycle through the router<br>
-                                  configuration screens.
-                                  <br><br>
-                                  The Port Routing screen displays the names of the input<br>
-                                  devices vertically and output devices horizontally. <br>
-                                  This visual graphic shows which input devices are<br>
-                                  connected to which output devices.<br><br>
-                                  In the simple port routing screen shown, I am sending all<br> 
-                                  midi data back to their origin (useful for my router testing)<br>
-                                  but not a very meaningful configuration.<br> 
-                                  <br>
-                                  Any input device can be 'routed' to any output device.<br>
-                                  <ul style="padding-left:10px">
-                                    <li>Green: input device is connected to output device.</li>
-                                    <li>Yellow: port is connected but not routed (informational).</li>
-                                    <li>Red: &nbsp;&nbsp;input device is connected to output device.</li>
-                                    <li>Magenta: port is 'wrapped' (input connected to output). </li>
-                                  </ul>
-                                  <br>
-                                  <b>Wrapped Ports</b><br>
-                                  Wrapped ports are only available on port 5 or port 6<br>
-                                  (a router internal switch ties port 5 input to port 5 output). <br>  
-                                  For example, wrap keyboard input port 5 to tone generator<br>
-                                  on output port 5 to remove a possibility of latency.<br>	 
-                                </td>
-                                <td align=center>
-                                  <img src="./images/RouterTFT3.jpg"        alt="RouterTFT3.jpg"       width="400" id="picR9img" onclick="winOpen('./images/RouterTFT3.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <div id="routerDiv10" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>Router Config Display Screen 5: Port Filtering</b><br>  
-                                  Press the Configure button twice (to latch and unlatch)<br>
-                                  within two seconds to cycle through the router<br>
-                                  configuration screens.
-                                  <br><br>
-                                  The Port Filtering screen shows which Midi commands<br>
-                                  are processed on which Midi input ports and output ports.<br>
-                                  <br>
-                                  The input/output port, device, and commands processed:<br>
-                                  <ul style="padding-left:10px">
-                                    <li>N: note on / note off commands are processed (yes/no).</li>
-                                    <li>P: program change commands are processed (yes/no).</li>
-                                    <li>C: control change commands are processed (yes/no).</li>
-                                    <li>S: sys ex commands are processed (yes/no). </li>
-                                  </ul>
-                                </td>
-                                <td align=center>
-                                  <img src="./images/RouterTFT4.jpg"        alt="RouterTFT5.jpg"       width="400" id="picR10img" onclick="winOpen('./images/RouterTFT4.jpg')"/>
-                                </td>
-                              </table>
-                            </div>
-                            <br>
-                            <b>MidiXLate Additional Information</b> <br>								
-                            <details>
-                              <summary>Click here for a basic Midi overview.</summary>
-                              <p style="margin-left:20; margin-right:40;">
-                                <br>
-                                <b>Midi Overview</b><br>
-                                <a href="https://en.wikipedia.org/wiki/MIDI"  target="popup" onclick="window.open('https://en.wikipedia.org/wiki/MIDI','popup'); return false;">
-                                <b><u><font color=#000000>MIDI (Musical Instrument Digital Interface) </font></u></b> 
-                                </a>
-                                is a technical standard and communication protocol that allows musical devices 
-                                (instruments, computers, recording software, pedalboards, effects processors, and more) to communicate with each other. 
-                                Midi is used to communicate music note data, music commands, and vendor specific (system exclusive) commands. 
-                                <br><br>
-                                <b>Music Note Data:</b>, Midi can be used to record and play musical notes. For example, when you press a note on a Midi 
-                                keyboard, the note number (ie: the note pressed), the note velocity (how hard the note was played) and the keyboard 'channel' 
-                                are encoded into digital Midi data which is sent to your computer's recording (DAW) software. 
-                                Software such as Pro Tools, Reaper, Cubase, can read, record, and play back midi data.  
-                                Playback of midi recorded data will sound identical to the original performance.
-                                Midi music data encoding is standardized across all music gear manufacturers.	  
-                                <br><br>	  
-                                <b>Music Commands:</b>Your digital piano keyboard likely has buttons, sliders, foot pedals, and wheels to adjust volume, pitch bend a note,..... 
-                                In Midi jargon, these are called <b>'continuous controllers', or more commonly, 'controllers'.</b>.  
-                                Controllers do not change the note being played but rather transmit information to the listening device.  
-                                For example, your keyboard may have a slider that is used to control the volume of your keyboard.  
-                                This slider does not affect the note being played, but 'controls' the volume of the note being played (by sending a Midi 'continuous 
-                                controller 7' information to your PC, amplifier, or PA system). The target device recognizes the volume controller and adjusts the 
-                                keyboard volume accordingly. Midi Continuous Controller implementation is mostly standardized across all music gear manufacturers.
-                                <br><br>	  
-                                <b>Vendor Specific Commands:</b>, Midi provides a free form Midi format called <b>'System Exclusive'</b> which provides musical equipment 
-                                vendors with options to implement manufacturer specific functions in their musical equipment. For example, you may own a Roland guitar 
-                                effects processor that has hundreds of 'patches'. Each patch has many possible settings, such as reverb, chorus, delay,... 
-                                Since Roland's guitar effects processors have unique internal circuitry that does not apply across all Midi device manufacturers, 
-                                Roland implements unique SysEx commands to control their devices.
-                                The most common SysEx commands are backup and restore commands; to backup and restore your Midi device configuration to your PC.
-                                <br><br>
-                              </p>
-                            </details>
-                            <details>
-                              <summary>Click here for more MidiXLate router details.</summary>
-                              <p style="margin-left:20; margin-right:40;">
-                                <br>
-                                <b>MidiXLate router details.</b><br>
-                                The MidiXLate router is a true router, meaning every midi packet is inspected and 'routed' to it's intended destination(s). 
-                                Routing Midi data greatly reduces Midi network traffic, eliminating a flood of extraneous midi network data.
-                                Excessive Midi note data and Midi 'active sensing' commands can easily increase Midi network latency, killing a Midi network's efficiency.   
-                                With Midi routing, the sending and receiving midi devices are now much simpler to configure because the midi data received at a midi device 
-                                is guaranteed to be intended solely for that midi device. 
-                                For the average home user with only a few Midi devices, a Midi router may not add much value. A Midi hub is the right option. 
-                                For a performing group (or sophisticated home studio) with a large number of midi devices and complicated midi network, 
-                                the MidiXLate router can be a life saver. 
-                                With MidiXLate, you have complete control of Midi port 'filtering' and command 'translation' actions.
-                                As for MidiXLate's performance, the engine of the router is a blinding fast Atmel SAM3X8E ARM Cortex-M3 processor running at 84 MHz, 
-                                providing extremely low latency.
-                                <br><br>		  
-                                In addition to Midi routing, the MidiXLate router provides 'port filtering' capabilities.  
-                                For each of the six input ports and six output ports, you can specify, by port, to process or ignore, 
-                                note on/off, continuous control, progam change, and/or system exclusive commands.   
-                                The router also provides a pseudo Network Address <b>Translation</b> (NAT) features called 'Translation' where 
-                                midi data can be 'translated from one Midi format (such as note data) to another Midi format (such as continuous controller). 
-                                This is extremely helpful when there is no direct path for one piece of midi gear to control another piece of Midi gear. 
-                                <br><br> 	  
-                              </p>
-                            </details>
-                            <details>
-                              <summary>Click here for a simple MidiXLate router use case.</summary>
-                              <p style="margin-left:20; margin-right:40;">
-                                <br>
-                                <b>MidiXLate router use case.</b><br>
-                                Assume you have a keyboard (with keys, sliders, knobs, switches, and drum pad) connected to the MidiXLate router on input Port 1.<br>
-                                Further assume you have a Yamaha MU15 drum machine connected to  MidiXLate router on output Port 2.<br>
-                                Further assume you have a Roland Integra Synth module connected to MidiXLate router on output Port 3.<br>
-                                Further assume you have a Reaper Digital Analog Workstation (DAW) connected to MidiXLate router input port 4 and output port 4.<br>
-                                Lastly assume you have MidiOX running on a development PC connected to MidiXLate router output port 4.<br>
-                                Configure the MidiXLate software to send Keyboard drum pad data to Yamamha MU15 drum synth.<br>
-                                Next, configure the MidiXLate software to send keyboard keys to Roland Integra synth.<br> 
-                                Next, configure the MidiXLate software to send keyboard knobs, sliders, and switches to select Roland synth patches, volume, tempo,...<br>
-                                Next, configure the MidiXLate software to send keyboard transport controls (start,stop, play, record) to Reaper synth.<br> 
-                                Next, configure the MidiXLate software to send keyboard knobs, sliders, and switches to select Reaper channels, volume, tempo,...<br>
-                                Optionally, split your keyboard keybed into 'zones' using the MidiXLate 'Translation' feature<br>  
-                                Optionally, configure your Reaper DAW to send recorded Midi performance data to the Yamaha drum synth and Roland Integra synth.<br>  
-                                Lastly, start MidiOx on your development PC and monitor ALL the Midi traffic on your Midi network!<br>
-                                This configuration would be VERY DIFFICULT to accomplish with a Midi HUB, but moderately easy with MidiXLate!<br>
-                                <br> 	  
-                              </p>
-                            </details>
-                            <details>
-                              <summary>Click here for MidiXLate router pricing and availibility.</summary>
-                              <p style="margin-left:20; margin-right:40;">
-                                <br>
-                                <b>MidiXLate pricing and availability.</b><br>
-                                MidiXLate routers are custom builds. I typically build a handful of routers each year. 
-                                If you would like to 'try before you buy', send an email to 
-                                <a href="mailto:SierraDigitalAudio@gmail.com?subject=MidiXLate_Inquiry">SierraDigitalAudio@gmail.com</a>. 
-                                I rent demo routers for $150 month (in 2024) and the customer pays for shipping (both ways).
-                                The price of renting a router is applied to the purchase price. 	  
-                                If you want to purchase a new router, the purchase price is $850 (in 2024). 
-                                I hand build these routers in the mountains of northern California and the profit margin on each router is slim. 
-                                As a customer, you will receive excellent support (limited phone and unlimited email), discounts for router upgrades & accessories, 
-                                and priority for router (hardware and software) customizations.
-                                <br><br>
-                              </p>
-                            </details>
-                          </td>
-                        </tr>
-                      </table>
-                      <!-- table3 end -->
-                      <br>
-                    </center>
-                  </div>
-                  <!-- padding -->
-                </td>
-              </tr>
-            </table>
-            <!-- table MidiXLate end -->
+  
             <!-- ========================================================================================================================================================= -->
             <!-- MIDICONTROL -->
             <!-- table MidiControl begin -->
             <table id=t0 width=1160 bgcolor=#FFFFFF >
               <tr>
                 <td colspan=2 valign=center>
-                  <HR width="1160" align="center" size=4 color=#000066>
                   <br>  
                   <h2 id="MidiControl"></h2>
                   <div id="padding">
@@ -1237,6 +771,489 @@
               </tr>
             </table>
             <!-- table MidiOrganize end -->
+			
+			<!-- ========================================================================================================================================================= -->
+            <!-- MIDIXLATE -->
+            <!-- table MidiXLate begin -->
+            <table id=t0 width=1160 bgcolor=#FFFFFF >
+              <tr>
+                <td colspan=2 valign=center>
+				<HR width="1160" align="center" size=4 color=#000066>
+				
+                  <div id="padding">
+                    <a name="MidiXLate"></a>
+                    <center>
+                      <!-- table3 begin-->
+                      <table id=t0 width=1160 bgcolor=#FFFFFF >
+                        <tr>
+                          <td>
+                            <br>
+                            <font color=#000066 style="font-size:14px"><b>MidiXLate Midi Router</b></font><br><br>
+                            Midi routing is the process of transmitting and receiving music data (digitally encoded music notes and control messages) 
+                            from one musical device (ex: your keyboard) to another musical device (ex: your PC recording software). 
+                            Typically, Midi communication is accomplished by connecting all Midi devices to a Midi 'hub' which 'broadcasts' ALL Midi  
+                            data received at the hub to ALL Midi devices connected to the hub. This hub approach generates excessive Midi network traffic and complicates the configuration of each Midi device. 
+                            A more strict definition of 'routing' is defining 'routing rules' that are downloaded to the router defining how Midi data
+                            received at the router will be routed (and optionally enhanced) to one or more Midi devices. 
+                            This routing approach simplifies Midi network setup and optimizes Midi network performance by reducing Midi network traffic. 
+                            This router has an extremely fast ARM 84 MHz processor that can parse, process, and route Midi data in micro seconds. 
+							Decernable Midi latency is detected in tens of milliseconds. Router latency is not a concern.       							
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <br> 
+                            <button id="router0"  class="buttonStyle1" onclick="routerReset()">Reset</button>&nbsp;
+                            <button id="router1"  class="buttonStyle1" onclick="router(1)">Show Router Face</button>&nbsp;
+                            <button id="router2"  class="buttonStyle1" onclick="router(2)">Show Router Rear</button>&nbsp;
+                            <button id="router3"  class="buttonStyle1" onclick="router(3)">Show PC Config 1</button>&nbsp;
+                            <button id="router4"  class="buttonStyle1" onclick="router(4)">Show PC Config 2</button>&nbsp;
+                            <button id="router5"  class="buttonStyle1" onclick="router(5)">Show PC Config 3</button>&nbsp;
+                            <button id="router6"  class="buttonStyle1" onclick="router(6)">Show Router Config 1</button>&nbsp;
+                            <button id="router7"  class="buttonStyle1" onclick="router(7)">Show Router Config 2</button>&nbsp;
+                            <button id="router8"  class="buttonStyle1" onclick="router(8)">Show Router Config 3</button>&nbsp;
+                            <button id="router9"  class="buttonStyle1" onclick="router(9)">Show Router Config 4</button>&nbsp;
+                            <button id="router10" class="buttonStyle1" onclick="router(10)">Show Router Config 5</button>
+                            
+							<br><br><br>		
+                            <div id="routerDiv0" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>MidiXLate Downloads (revisions in progress)</b> <br>
+								  
+								  <ul style="padding-left:10px">
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate.docx','popup','width=1400'); return false;">
+                                  <b><u>MidiXLate MS Word manual</u></b>
+                                  </a>
+								  </li>
+                                 
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1280'); return false;">
+                                  <b><u>MidiXLate Version 1.3 Windows exe installer</u></b> 
+                                  </a>
+                                  </li>								  
+                                  
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('https://dotnet.microsoft.com/en-us/download/dotnet-framework','popup','width=1280'); return false;">
+                                  <b><u>Microsoft .Net Framework version 4.6.1 (or newer)</u></b>
+                                  </a>
+                                  </li>								  
+                                  
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-Install.mp4','popup','width=1280'); return false;">
+                                  <b><u>Video tutorial 1:  &nbsp;MidiXLate PC software installation.</u></b>
+                                  </a>
+								  </li>
+                                  
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXlate-Routing.mp4','popup','width=1280'); return false;">
+                                  <b><u>Video tutorial 2: &nbsp;MidiXLate routing basics.</u></b>
+                                  </a>
+								  </li>
+                                  
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-ConfigDownload.mp4','popup','width=1280'); return false;">
+                                  <b><u>Video tutorial 3:  &nbsp;Download PC config to router.</u></b>
+                                  </a>
+								  </li>
+                                  
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-Translate.mp4','popup','width=1280'); return false;">
+                                  <b><u>Video tutorial 4:  &nbsp;MidiXLate Translation.</u></b>
+                                  </a>
+								  </li>							  
+                                  
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('./tutorials/MidiXLate-LogDump.mp4','popup','width=1280'); return false;">
+                                  <b><u>Video tutorial 5:  &nbsp;MidiXLate Logging (dump config).</u></b>
+                                  </a>
+                                  </li>								  
+                                  
+								  <li>
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
+                                  <b><u>Midi diagnostic tool MidiOX</u></b>
+                                  </a> 
+								  </li>
+								</ul>  
+                                </td>
+                                <td align=right valign=top>
+                                  <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="picR1img" onclick="winOpen('./images/RouterFace.jpg')"/> 
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv1" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>Router Face</b> <br>
+                                  The router face provides a number of realtime visual aids to<br>
+                                  monitor, decode, and debug Midi traffic as it is being<br> processed by the router.<br> 
+                                  <ul style="padding-left:10px">
+                                    <li>Power button: Power on and off the router.</li>
+                                    <li>Logger button: Dump midi data to TFT screen or TTY port.</li>
+                                    <li>Config button: Load router config and view config on TFT.</li>
+                                    <li>LEDs: Blink as Midi traffic is sent and received.</li>
+                                    <li>Screen: Shows config and realtime Midi activity.</li>
+                                  </ul>
+                                </td>
+                                <td align=right>
+                                  <img src="./images/RouterFace.jpg"        alt="RouterFace.jpg"       width="700" id="picR1img" onclick="winOpen('./images/RouterFace.jpg')"/> 
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv2" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>Router Rear</b>  
+                                  <ul style="padding-left:10px">
+                                    <li>Midi Ports: Six midi 5 pin din input ports and six output ports.</li>
+                                    <li>Log Port: USB port to dump router activity to terminal emulator.</li>
+                                    <li>CFG Port: USB port used to receive router config from PC.</li>
+                                    <li>USB (not used):  USB port for future use.</li>
+                                    <li>PGM (not used):  USB port to update firmware.</li>
+                                    <li>PWR jack: 9V center positive power barrel connector.</li>
+                                    <li>SD Card: Micro SD card( MS FAT32 format) router configuration.</li>
+                                  </ul>
+                                </td>
+                                <td align=right>
+                                  <img src="./images/RouterRear.jpg"        alt="RouterRear.jpg"       width="700" id="picR2img" onclick="winOpen('./images/RouterRear.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv3" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>PC Config Screen 1: Midi Routing</b><br> 
+                                  The router configuration is created on the PC and<br>
+                                  downloaded to the router via the router download<br>
+                                  screen (not shown) and USB cable. <br>
+                                  <br>
+                                  <ul style="padding-left:10px">
+                                    <li>Provide a short description of the router config. </li>
+                                    <li>Provide a long description of the router config.</li>
+                                    <li>Label the Midi port conections (Label Ports) button.</li>
+                                    <li>Specify Midi Routings by clicking on LEDs to toggle.</li>
+                                    <li>Optional: Press button to specify Midi Translations.</li>
+                                    <li>Optional: Press button to specify Channel Locks.</li>
+                                    <li>Remember to save your router config to PC desktop!.</li>
+                                    <li>(multiple configurations are supported)</li>
+                                  </ul>
+                                </td>
+                                <td align=right>
+                                  <img src="./images/RouterConfig1.jpg"     alt="RouterConfig1.jpg"    width="700" id="picR3img" onclick="winOpen('./images/RouterConfig1.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv4" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>PC Config Screen 2: Midi Translations</b> <br>
+                                  Midi Translations are used to change a Midi message<br>
+                                  from one format to another. For Example: assume you<br>
+                                  want to press a buttton (controller) on you keyboard<br>
+                                  to send a 'patch change' command to your tone generator.<br>
+                                  Use the translation screen to identify and capture the<br>
+                                  midi CC (continuous control) command and translate it <br>
+                                  to a Midi PC (program change) cmd.<br> 
+                                  <br>
+                                  <b>Translation Screen</b>
+                                  <ul style="padding-left:10px">
+                                    <li>Provide a short description for the translation. </li>
+                                    <li>Specify the incoming midi to capture.</li>
+                                    <li>Specify the outgoing translated midi to send.</li>
+                                    <li>256 midi translations are permitted.</li>
+                                    <li>Copy, paste, and delete functions are provided.</li>
+                                    <li>Bulk copy, paste, and delete functions are provided.</li>
+                                  </ul>
+                                </td>
+                                <td align=right>
+                                  <img src="./images/RouterConfig2.jpg"     alt="RouterConfig2.jpg"    width="700" id="picR4img" onclick="winOpen('./images/RouterConfig2.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv5" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>PC Config Screen 3: Midi Channel Locks</b><br>
+                                  Midi Channel Locks are used to lock specific Midi data<br>
+                                  to a specific midi channel (by Midi port and Midi command).<br>
+                                  For example, assume you have a Reaper MIDI DAW track that <br>
+                                  contains a drum patch data routed to your Yamaha MU15 drum<br>
+                                  machine. Some rougue drum tracks do not encode drum notes <br>
+                                  to Midi channel 10. Use the channel lock screen to guarantee<br>
+                                  all Reaper Midi drum data sent to your Yamaha Mu15 is locked <br>
+                                  to Midi channel 10. <br>
+                                  <br>
+                                  <b>Channel Lock Screen</b>
+                                  <ul style="padding-left:10px">
+                                    <li>Specify the input and output ports. </li>
+                                    <li>Specify the channel to lock outbound midi data.</li>
+                                    <li>Specify if the lock is CC,PC,NT,or all midi data.</li>
+                                    <li>96 midi locks are permitted.</li>
+                                    <li>Copy, paste, and delete functions are provided.</li>
+                                    <li>Bulk copy, paste, and delete functions are provided.</li>
+                                  </ul>
+                                </td>
+                                <td align=right>
+                                  <img src="./images/RouterConfig3.jpg"     alt="RouterConfig3.jpg"    width="700" id="picR5img" onclick="winOpen('./images/RouterConfig3.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv6" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>Router Config Display Screen 1: Splash Page</b><br> 
+                                  The splash page is displayed for two seconds when the<br>
+                                  router is powered on, then the router services screen<br>
+                                  is displayed.  
+                                  <br><br>
+                                  The splash page screen provides router firmware<br>
+                                  version information, version date information and<br>
+                                  a support email address.<br> 	 
+                                </td>
+                                <td align=center>
+                                  <img src="./images/RouterTFT0.jpg"        alt="RouterTFT0.jpg"       width="400" id="picR6img" onclick="winOpen('./images/RouterTFT0.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv7" hidden>
+                              <table width=1078 id=t0>
+                                <td>
+                                  <b>Router Config Display Screen 2: Router Services</b><br> 
+                                  Press the Configure button twice (to latch and unlatch)<br>
+                                  within two seconds to cycle through the router<br>
+                                  configuration screens.
+                                  <br><br>
+                                  The fisrt parameter is the active configuration<br> 
+                                  downloaded from your PC<br><br>
+                                  The left column shows:<br> 
+                                  <ul style="padding-left:10px">
+                                    <li>The number of input devices configured. </li>
+                                    <li>The number of output devices configured.</li>
+                                    <li>The number of routings defined (see next screens).</li>
+                                    <li>The number of translation mappings defined.</li>
+                                    <li>The number of config errors found at download.</li>
+                                  </ul>
+                                  <br>
+                                  The right column shows services enabled.<br>
+                                  <ul style="padding-left:10px">
+                                    <li>If router routing service is enabled. </li>
+                                    <li>If router translation service is enabled. </li>
+                                    <li>If router queuing is enabled. </li>
+                                    <li>If router SysEx processing is enabled. </li>
+                                    <li>If port 5 or port 6 is 'wrapped'. </li>
+                                  </ul>
+                                </td>
+                                <td align=center>
+                                  <img src="./images/RouterTFT2.jpg"        alt="RouterTFT2.jpg"       width="400" id="picR7img" onclick="winOpen('./images/RouterTFT2.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv8" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>Router Config Display Screen 3: Device Names</b><br>  
+                                  Press the Configure button twice (to latch and unlatch)<br>
+                                  within two seconds to cycle through the router<br>
+                                  configuration screens.
+                                  <br><br>
+                                  The Device Names screen displays the names of the devices<br>
+                                  (configured on the PC and downloaded to the router) attached<br>
+                                  to the input ports and output ports. (n/u means not used).
+                                </td>
+                                <td align=center>
+                                  <img src="./images/RouterTFT1.jpg"        alt="RouterTFT0.jpg"       width="400" id="picR8img" onclick="winOpen('./images/RouterTFT1.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv9" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>Router Config Display Screen 4: Port Routings</b><br>  
+                                  Press the Configure button twice (to latch and unlatch)<br>
+                                  within two seconds to cycle through the router<br>
+                                  configuration screens.
+                                  <br><br>
+                                  The Port Routing screen displays the names of the input<br>
+                                  devices vertically and output devices horizontally. <br>
+                                  This visual graphic shows which input devices are<br>
+                                  connected to which output devices.<br><br>
+                                  In the simple port routing screen shown, I am sending all<br> 
+                                  midi data back to their origin (useful for my router testing)<br>
+                                  but not a very meaningful configuration.<br> 
+                                  <br>
+                                  Any input device can be 'routed' to any output device.<br>
+                                  <ul style="padding-left:10px">
+                                    <li>Green: input device is connected to output device.</li>
+                                    <li>Yellow: port is connected but not routed (informational).</li>
+                                    <li>Red: &nbsp;&nbsp;input device is connected to output device.</li>
+                                    <li>Magenta: port is 'wrapped' (input connected to output). </li>
+                                  </ul>
+                                  <br>
+                                  <b>Wrapped Ports</b><br>
+                                  Wrapped ports are only available on port 5 or port 6<br>
+                                  (a router internal switch ties port 5 input to port 5 output). <br>  
+                                  For example, wrap keyboard input port 5 to tone generator<br>
+                                  on output port 5 to remove a possibility of latency.<br>	 
+                                </td>
+                                <td align=center>
+                                  <img src="./images/RouterTFT3.jpg"        alt="RouterTFT3.jpg"       width="400" id="picR9img" onclick="winOpen('./images/RouterTFT3.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <div id="routerDiv10" hidden>
+                              <table width=1078 id=t0>
+                                <td valign=top>
+                                  <b>Router Config Display Screen 5: Port Filtering</b><br>  
+                                  Press the Configure button twice (to latch and unlatch)<br>
+                                  within two seconds to cycle through the router<br>
+                                  configuration screens.
+                                  <br><br>
+                                  The Port Filtering screen shows which Midi commands<br>
+                                  are processed on which Midi input ports and output ports.<br>
+                                  <br>
+                                  The input/output port, device, and commands processed:<br>
+                                  <ul style="padding-left:10px">
+                                    <li>N: note on / note off commands are processed (yes/no).</li>
+                                    <li>P: program change commands are processed (yes/no).</li>
+                                    <li>C: control change commands are processed (yes/no).</li>
+                                    <li>S: sys ex commands are processed (yes/no). </li>
+                                  </ul>
+                                </td>
+                                <td align=center>
+                                  <img src="./images/RouterTFT4.jpg"        alt="RouterTFT5.jpg"       width="400" id="picR10img" onclick="winOpen('./images/RouterTFT4.jpg')"/>
+                                </td>
+                              </table>
+                            </div>
+                            <br>
+                            <b>MidiXLate Additional Information</b> <br>								
+                            <details>
+                              <summary>Click here for a basic Midi overview.</summary>
+                              <p style="margin-left:20; margin-right:40;">
+                                <br>
+                                <b>Midi Overview</b><br>
+                                <a href="https://en.wikipedia.org/wiki/MIDI"  target="popup" onclick="window.open('https://en.wikipedia.org/wiki/MIDI','popup'); return false;">
+                                <b><u><font color=#000000>MIDI (Musical Instrument Digital Interface) </font></u></b> 
+                                </a>
+                                is a technical standard and communication protocol that allows musical devices 
+                                (instruments, computers, recording software, pedalboards, effects processors, and more) to communicate with each other. 
+                                Midi is used to communicate music note data, music commands, and vendor specific (system exclusive) commands. 
+                                <br><br>
+                                <b>Music Note Data:</b>, Midi can be used to record and play musical notes. For example, when you press a note on a Midi 
+                                keyboard, the note number (ie: the note pressed), the note velocity (how hard the note was played) and the keyboard 'channel' 
+                                are encoded into digital Midi data which is sent to your computer's recording (DAW) software. 
+                                Software such as Pro Tools, Reaper, Cubase, can read, record, and play back midi data.  
+                                Playback of midi recorded data will sound identical to the original performance.
+                                Midi music data encoding is standardized across all music gear manufacturers.	  
+                                <br><br>	  
+                                <b>Music Commands:</b>Your digital piano keyboard likely has buttons, sliders, foot pedals, and wheels to adjust volume, pitch bend a note,..... 
+                                In Midi jargon, these are called <b>'continuous controllers', or more commonly, 'controllers'.</b>.  
+                                Controllers do not change the note being played but rather transmit information to the listening device.  
+                                For example, your keyboard may have a slider that is used to control the volume of your keyboard.  
+                                This slider does not affect the note being played, but 'controls' the volume of the note being played (by sending a Midi 'continuous 
+                                controller 7' information to your PC, amplifier, or PA system). The target device recognizes the volume controller and adjusts the 
+                                keyboard volume accordingly. Midi Continuous Controller implementation is mostly standardized across all music gear manufacturers.
+                                <br><br>	  
+                                <b>Vendor Specific Commands:</b>, Midi provides a free form Midi format called <b>'System Exclusive'</b> which provides musical equipment 
+                                vendors with options to implement manufacturer specific functions in their musical equipment. For example, you may own a Roland guitar 
+                                effects processor that has hundreds of 'patches'. Each patch has many possible settings, such as reverb, chorus, delay,... 
+                                Since Roland's guitar effects processors have unique internal circuitry that does not apply across all Midi device manufacturers, 
+                                Roland implements unique SysEx commands to control their devices.
+                                The most common SysEx commands are backup and restore commands; to backup and restore your Midi device configuration to your PC.
+                                <br><br>
+                              </p>
+                            </details>
+                            <details>
+                              <summary>Click here for more MidiXLate router details.</summary>
+                              <p style="margin-left:20; margin-right:40;">
+                                <br>
+                                <b>MidiXLate router details.</b><br>
+                                The MidiXLate router is a true router, meaning every midi packet is inspected and 'routed' to it's intended destination(s). 
+                                Routing Midi data greatly reduces Midi network traffic, eliminating a flood of extraneous midi network data.
+                                Excessive Midi note data and Midi 'active sensing' commands can easily increase Midi network latency, killing a Midi network's efficiency.   
+                                With Midi routing, the sending and receiving midi devices are now much simpler to configure because the midi data received at a midi device 
+                                is guaranteed to be intended solely for that midi device. 
+                                For the average home user with only a few Midi devices, a Midi router may not add much value. A Midi hub is the right option. 
+                                For a performing group (or sophisticated home studio) with a large number of midi devices and complicated midi network, 
+                                the MidiXLate router can be a life saver. 
+                                With MidiXLate, you have complete control of Midi port 'filtering' and command 'translation' actions.
+                                As for MidiXLate's performance, the engine of the router is a blinding fast Atmel SAM3X8E ARM Cortex-M3 processor running at 84 MHz, 
+                                providing extremely low latency.
+                                <br><br>		  
+                                In addition to Midi routing, the MidiXLate router provides 'port filtering' capabilities.  
+                                For each of the six input ports and six output ports, you can specify, by port, to process or ignore, 
+                                note on/off, continuous control, progam change, and/or system exclusive commands.   
+                                The router also provides a pseudo Network Address <b>Translation</b> (NAT) features called 'Translation' where 
+                                midi data can be 'translated from one Midi format (such as note data) to another Midi format (such as continuous controller). 
+                                This is extremely helpful when there is no direct path for one piece of midi gear to control another piece of Midi gear. 
+                                <br><br> 	  
+                              </p>
+                            </details>
+                            <details>
+                              <summary>Click here for a simple MidiXLate router use case.</summary>
+                              <p style="margin-left:20; margin-right:40;">
+                                <br>
+                                <b>MidiXLate router use case.</b><br>
+                                Assume you have a keyboard (with keys, sliders, knobs, switches, and drum pad) connected to the MidiXLate router on input Port 1.<br>
+                                Further assume you have a Yamaha MU15 drum machine connected to  MidiXLate router on output Port 2.<br>
+                                Further assume you have a Roland Integra Synth module connected to MidiXLate router on output Port 3.<br>
+                                Further assume you have a Reaper Digital Analog Workstation (DAW) connected to MidiXLate router input port 4 and output port 4.<br>
+                                Lastly assume you have MidiOX running on a development PC connected to MidiXLate router output port 4.<br>
+                                Configure the MidiXLate software to send Keyboard drum pad data to Yamamha MU15 drum synth.<br>
+                                Next, configure the MidiXLate software to send keyboard keys to Roland Integra synth.<br> 
+                                Next, configure the MidiXLate software to send keyboard knobs, sliders, and switches to select Roland synth patches, volume, tempo,...<br>
+                                Next, configure the MidiXLate software to send keyboard transport controls (start,stop, play, record) to Reaper synth.<br> 
+                                Next, configure the MidiXLate software to send keyboard knobs, sliders, and switches to select Reaper channels, volume, tempo,...<br>
+                                Optionally, split your keyboard keybed into 'zones' using the MidiXLate 'Translation' feature<br>  
+                                Optionally, configure your Reaper DAW to send recorded Midi performance data to the Yamaha drum synth and Roland Integra synth.<br>  
+                                Lastly, start MidiOx on your development PC and monitor ALL the Midi traffic on your Midi network!<br>
+                                This configuration would be VERY DIFFICULT to accomplish with a Midi HUB, but moderately easy with MidiXLate!<br>
+                                <br> 	  
+                              </p>
+                            </details>
+                            <details>
+                              <summary>Click here for MidiXLate router pricing and availibility.</summary>
+                              <p style="margin-left:20; margin-right:40;">
+                                <br>
+                                <b>MidiXLate pricing and availability.</b><br>
+                                MidiXLate routers are custom builds. I typically build a handful of routers each year. 
+                                If you would like to 'try before you buy', send an email to 
+                                <a href="mailto:SierraDigitalAudio@gmail.com?subject=MidiXLate_Inquiry">SierraDigitalAudio@gmail.com</a>. 
+                                I rent demo routers for $150 month (in 2024) and the customer pays for shipping (both ways).
+                                The price of renting a router is applied to the purchase price. 	  
+                                If you want to purchase a new router, the purchase price is $850 (in 2024). 
+                                I hand build these routers in the mountains of northern California and the profit margin on each router is slim. 
+                                As a customer, you will receive excellent support (limited phone and unlimited email), discounts for router upgrades & accessories, 
+                                and priority for router (hardware and software) customizations.
+                                <br><br>
+                              </p>
+                            </details>
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- table3 end -->
+                      <br>
+                    </center>
+                  </div>
+                  <!-- padding -->
+                </td>
+              </tr>
+            </table>
+            <!-- table MidiXLate end -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
           </td>
         </tr>
       </table>
