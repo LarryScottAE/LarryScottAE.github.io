@@ -150,7 +150,9 @@
                             </font>
                             <br><br>
                             <font color=#000000 style="font-size:12px">
-                            Have you every wanted to control all of your Midi devices from your PC desktop?<br>
+                            Have you every wanted to control all of your Midi devices from your PC desktop?
+							&nbsp;&nbsp;&nbsp;&nbsp; Or, maybe you have a Roland Integra-7 and need a simplified control panel?
+							<br>
                             For example, assume you have a <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 Sound Module</a> and 
                             you currently use the scroll wheel on the face of the Integra 7 to tediously navigate to your favorite tones. 
                             Rather than using the Integra 7 scroll wheel, you can create a list of your favorite tones in MidiControl and 
@@ -189,7 +191,6 @@
                             </details>
 							-->
 
-                            <button id="midiControl0"  class="buttonStyle1" onclick="midiControlReset()">Reset</button>&nbsp;
                             <button id="midiControl1"  class="buttonStyle1" onclick="midiControl(1)">Show Opening Screen</button>&nbsp;
                             <button id="midiControl2"  class="buttonStyle1" onclick="midiControl(2)">Show Bookmark Management</button>&nbsp;
                             <button id="midiControl3"  class="buttonStyle1" onclick="midiControl(3)">Show Build Midi Commands</button>&nbsp;
@@ -201,7 +202,7 @@
                             
                             </font>
                             <br><br><br>
-                            <div id="midiControlDiv0" hidden>
+                            <div id="midiControlDiv1" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>The MidiControl Opening Screen. </b><br>
@@ -280,52 +281,12 @@
 								
                                 </td>
                                 <td align=right valign=top>
-                                  <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('./images/control1L.png')"/>
+                                  <img src="./images/control1L.png"  width=700 id="pic1Ximg" onclick="winOpen('./images/control1L.png')"/>
                                 </td>
                               </table>
 							  <br>
-							  
-							  
-							  
                             </div>
-                            <div id="midiControlDiv1" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>This is the MidiControl opening screenxx. </b><br>
-                                  (Some screen options removed to fit display)<br>
-                                  When MidiControl is started, the last configuration <br>
-                                  is loaded and shown is red
-                                  <br><br>
-                                  <b>MidiControl Speed Buttons (top left)</b>  
-                                  <ul style="padding-left:10px">
-                                    <li>Down Arrow: Go to next page.</li>
-                                    <li>Up Arrow: Go to prior page.</li>
-                                    <li>Bookmarks: Open the bookmarks dialog window.</li>
-									<li>Roland Integra-7:  Utility to preview tone banks.</li>
-                                    <li>Midi Relay: Open the Midi relay / listener screen.</li>
-                                    <li>Midi Utilities: Open the Midi utilities screen.</li>
-                                    <li>Save Configuration: Saves the current configuration.</li>
-                                    <li>Help Text: Opens Notepad help text.</li>
-                                    <li>Information: Displays MidiControl version info.</li>
-                                    <li>Buy Me A Coffee: Contributions are appreciated!</li>
-                                    <li>Page Number: Jump to a specific page </li>
-                                  </ul>
-                                  <br>
-                                  <b>MidiControl Screen Body</b>  
-                                  <ul style="padding-left:10px">
-                                    <li>Status message (red): shows status of latest operation.</li>
-                                    <li>Bookmarks: Notice seven bookmarks (starting with DAW).</li>
-                                    <li>Midi Commands: First 20 commands are shown for DAW</li>
-                                    <li>Numbered Buttons: Press button to edit Midi command.</li>
-                                    <li>Midi Labels: Show cmd desc, cmd detail, and out device.</li>
-                                    <li>List Midi Devices: Midi devices current connected to PC.</li>
-                                  </ul>
-                                </td>
-                                <td align=right>
-                                  <img src="./images/control1M.png"   id="pic1Ximg" onclick="winOpen('./images/control1L.png')"/>
-                                </td>
-                              </table>
-                            </div>
+          
                             <div id="midiControlDiv2" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
@@ -342,8 +303,8 @@
                                     <li>Delete button: Deletes the bookmark (not commands).</li>
                                   </ul>
                                 </td>
-                                <td align=right>
-                                  <img src="./images/control2M.png"   id="pic2Ximg" onclick="winOpen('./images/control2L.png')"/> 
+                                <td align=center>
+                                  <img src="./images/control2L.png" width=400  id="pic2Ximg" onclick="winOpen('./images/control2L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -382,8 +343,8 @@
                                     <li>Press save button to save this midi action.</li>
                                   </ul>
                                 </td>
-                                <td align=right>
-                                  <img src="./images/control3M.png"   id="pic3Ximg" onclick="winOpen('./images/control3L.png')"/> 
+                                <td align=center>
+                                  <img src="./images/control3L.png" width=600  id="pic3Ximg" onclick="winOpen('./images/control3L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -404,8 +365,8 @@
                                     <li>Midi2x2 was started and receive a keyboard note 54, channel 0, velocity 100</li>
                                   </ul>
                                 </td>
-                                <td align=right>
-                                  <img src="./images/control4M.png"   id="pic4Ximg" onclick="winOpen('./images/control4L.png')"/> 
+                                <td align=center>
+                                  <img src="./images/control4L.png" width=600  id="pic4Ximg" onclick="winOpen('./images/control4L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -426,8 +387,8 @@
                                   a Note On/Off command to a Midi device to see if the Midi device is<br>
                                   connected and operating correctly<br>
                                 </td>
-                                <td align=right>
-                                  <img src="./images/control5M.png"   id="pic5Ximg" onclick="winOpen('./images/control5L.png')"/> 
+                                <td align=center>
+                                  <img src="./images/control5L.png" width=500  id="pic5Ximg" onclick="winOpen('./images/control5L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -436,11 +397,11 @@
                                 <td valign=top>
                                   <b>Midi Control Release Notes and Help Text</b><br>
                                   Pressing the yellow question mark on the MidiControl home screen<br>
-                                  displays (currently minimal) release notes and help text.<br>
+                                  displays release notes and help text.<br>
                                   Improved help text and release notes are a priority fo a future relase. <br>                            
                                 </td>
-                                <td align=right>
-                                  <img src="./images/control6M.png"   id="pic6Ximg" onclick="winOpen('./images/control6L.png')"/> 
+                                <td align=center>
+                                  <img src="./images/control6L.png"  width=600 id="pic6Ximg" onclick="winOpen('./images/control6L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -448,13 +409,22 @@
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>Midi Control Roland Integra-7 Support</b><br>
-                                  The Roland Integra-7 is a tone generator with 6000+ high quality tones.<br>
-								  Finding and previewing the Integra's 80+ tone banks can be challenging!<br>
-								  The Integra's 80 tone banks are shown in the grid.<br>
-								  Click on a row in the grid to preview all of the tones in a tone bank. <br>
-	                              Opionally, you can stop the automated preview and step through the tones<br>
-                                  individually. Bookmark tones to keep them handy for fast access.<br>
-								  See the video tutorial below for further details<br>
+                                  The Roland Integra-7 is a tone generator with<br>
+								  6000+ high quality tones.Finding and previewing<br>
+								  the Integra's 80 tone banks can be challenging!<br><br>
+								  The Integra's tone banks are shown in the left<br>
+								  grid. The patches (sounds) contained in the<br>
+								  tone bank are shown in the right grid.<br> <br>
+								  Click on the 'Play Sound Bank' button to step<br>
+								  through and preview ALL tones in the tone bank.<br>
+								  Optionally, you can press 'Play Patch' to<br>
+								  preview an individual tone.<br><br>
+								  
+								  Press the 'Save Patch' button if you like to<br>
+								  bookmark the tone to your list of 'quick access'<br>
+								  tones (see screen 1). <br><br>
+
+								  Watch the video tutorial below a video demeo.<br>
 								  
 								  <br><br>
                                   <a href="./index.html"  target="popup" onclick="window.open('./tutorials/MidiControl-Integra7-Tutorial.mp4','popup','width=1600'); return false;"> 
@@ -473,7 +443,7 @@
 
                                 </td>
                                 <td align=right>
-                                  <img src="./images/control7M.png"   id="pic7Ximg" onclick="winOpen('./images/control7L.png')"/> 
+                                  <img src="./images/control7L.png"  width=800 id="pic7Ximg" onclick="winOpen('./images/control7L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -532,15 +502,15 @@
                             <br>
                            
                             <br>
-                            <button id="midiOrganize0"  class="buttonStyle1" onclick="midiOrganizeReset()">Reset</button>&nbsp;
                             <button id="midiOrganize1"  class="buttonStyle1" onclick="midiOrganize(1)">Show Opening Screen</button>&nbsp;
                             <button id="midiOrganize2"  class="buttonStyle1" onclick="midiOrganize(2)">Show Bookmark Introduction</button>&nbsp;
                             <button id="midiOrganize3"  class="buttonStyle1" onclick="midiOrganize(3)">Show Bookmark Management</button>&nbsp;
                             <button id="midiOrganize4"  class="buttonStyle1" onclick="midiOrganize(4)">Show Search Midi Files</button>&nbsp;
                             <button id="midiOrganize5"  class="buttonStyle1" onclick="midiOrganize(5)">Show Preview Midi File</button>&nbsp;
                             <button id="midiOrganize6"  class="buttonStyle1" onclick="midiOrganize(6)">Show Drag Midi to DAW</button>&nbsp;
-                            <br><br><br>		
-                            <div id="midiOrganizeDiv0" hidden>
+                            <br><br><br>	
+							
+                            <div id="midiOrganizeDiv1" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>The opening MidiOrganize screen</b> (example). <br>
@@ -588,24 +558,7 @@
                               </table>
 						     	
                             </div>
-                            <div id="midiOrganizeDiv1" hidden>
-                              <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>The opening MidiOrganize screen</b> (example). <br>
-                                  <ul style="padding-left:10px">
-                                    <li>Bookmarks to Midi files (drum loops) are shown in upper left corner. </li>
-                                    <li>Drill down into Midi directories (drum loops) in panes 2,3,4.</li>
-                                    <li>The four panes display Midi files (drum loops)  in a tree type structure.</li>
-                                    <li>Press button 'Manage Midi Groups' to setup your directories.</li>
-                                    <li>When MidiOrganize is started, bookmark 1 is always displayed.</li>
-                                    <li>Midi files (as shown in pane 4) are drag-dropped into your DAW track.</li>
-                                  </ul>
-                                </td>
-                                <td align=right>
-                                  <img src="./images/organize1L.png" width=600  id="pic1Zimg" onclick="winOpen('./images/organize1L.png')"/> 
-                                </td>
-                              </table>
-                            </div>
+
                             <div id="midiOrganizeDiv2" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
@@ -659,7 +612,7 @@
                                   </ul>
                                 </td>
                                 <td align=right>
-                                  <img src="./images/organize4M.png" width=600  id="pic4Zimg" onclick="winOpen('./images/organize4L.png')"/> 
+                                  <img src="./images/organize4L.png" width=600  id="pic4Zimg" onclick="winOpen('./images/organize4L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -679,7 +632,7 @@
                                   </ul>
                                 </td>
                                 <td align=right>
-                                  <img src="./images/organize5M.png" width=600  id="pic5Zimg" onclick="winOpen('./images/organize5L.png')"/> 
+                                  <img src="./images/organize5L.png" width=600  id="pic5Zimg" onclick="winOpen('./images/organize5L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -698,7 +651,7 @@
                                   </ul>
                                 </td>
                                 <td align=right valign=top>
-                                  <img src="./images/organize6M.png" width=600  id="pic6Zimg" onclick="winOpen('./images/organize6L.png')"/> 
+                                  <img src="./images/organize6L.png" width=600  id="pic6Zimg" onclick="winOpen('./images/organize6L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -803,7 +756,6 @@
                         <tr>
                           <td>
                             <br> 
-                            <button id="router0"  class="buttonStyle1" onclick="routerReset()">Reset</button>&nbsp;
                             <button id="router1"  class="buttonStyle1" onclick="router(1)">Show Router Face</button>&nbsp;
                             <button id="router2"  class="buttonStyle1" onclick="router(2)">Show Router Rear</button>&nbsp;
                             <button id="router3"  class="buttonStyle1" onclick="router(3)">Show PC Config 1</button>&nbsp;
