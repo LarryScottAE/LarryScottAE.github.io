@@ -41,7 +41,7 @@
   
   
 function routerAllOff() {
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 9; i++) {
     let div = "routerDiv" + i.toString();
     document.getElementById(div).hidden = true;
     const button1 = document.getElementById("router" + i.toString());
