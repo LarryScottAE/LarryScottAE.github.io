@@ -72,30 +72,30 @@ function router(screen) {
 //==============================================================================================================================
 
   
-function midiControlAllOff() {
+function MidiControlAllOff() {
   for (let i = 1; i <= 7; i++) {
-    let div = "midiControlDiv" + i.toString();
+    let div = "MidiControlDiv" + i.toString();
     document.getElementById(div).hidden = true;
-    const button1 = document.getElementById("midiControl" + i.toString());
+    const button1 = document.getElementById("MidiControl" + i.toString());
     button1.style.color = "black";
    }
  }  
   
   
-function midiControlReset() {
-  midiControlAllOff();
-  document.getElementById("midiControlDiv1").hidden = false;  // default
-  const button1 = document.getElementById("midiControl1");
+function MidiControlReset() {
+  MidiControlAllOff();
+  document.getElementById("MidiControlDiv1").hidden = false;  // default
+  const button1 = document.getElementById("MidiControl1");
   button1.style.color = "blue";
  }
  
  
-function midiControl(screen) {
-   midiControlAllOff();
-   let div = "midiControlDiv" + screen.toString();
+function MidiControl(screen) {
+   MidiControlAllOff();
+   let div = "MidiControlDiv" + screen.toString();
 // alert("div=" + screen.toString());
    document.getElementById(div).hidden = false;
-   const btn = document.getElementById("midiControl" + screen);
+   const btn = document.getElementById("MidiControl" + screen);
    btn.style.color = "blue";
  } 
    
@@ -104,30 +104,30 @@ function midiControl(screen) {
 //==============================================================================================================================
    
 
-function midiOrganizeAllOff() {
+function MidiOrganizeAllOff() {
   for (let i = 1; i <= 6; i++) {
-    let div = "midiOrganizeDiv" + i.toString();
+    let div = "MidiOrganizeDiv" + i.toString();
     document.getElementById(div).hidden = true;
-    const button1 = document.getElementById("midiOrganize" + i.toString());
+    const button1 = document.getElementById("MidiOrganize" + i.toString());
     button1.style.color = "black";
    }
  }  
   
   
-function midiOrganizeReset() {
-    midiOrganizeAllOff();
-    document.getElementById("midiOrganizeDiv1").hidden = false;  // default
-    const button1 = document.getElementById("midiOrganize1");
+function MidiOrganizeReset() {
+    MidiOrganizeAllOff();
+    document.getElementById("MidiOrganizeDiv1").hidden = false;  // default
+    const button1 = document.getElementById("MidiOrganize1");
     button1.style.color = "blue";
  }
  
  
-function midiOrganize(screen) {
-   midiOrganizeAllOff();
-   let div = "midiOrganizeDiv" + screen.toString();
+function MidiOrganize(screen) {
+   MidiOrganizeAllOff();
+   let div = "MidiOrganizeDiv" + screen.toString();
 // alert("div=" + screen.toString());
    document.getElementById(div).hidden = false;
-   const btn = document.getElementById("midiOrganize" + screen);
+   const btn = document.getElementById("MidiOrganize" + screen);
    btn.style.color = "blue";
  } 
    

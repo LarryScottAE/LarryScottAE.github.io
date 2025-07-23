@@ -26,7 +26,7 @@
             "https://sierradigitalaudio.com/images/SchemaProductRear.jpg",
             "https://sierradigitalaudio.com/images/SchemaProductConfig.jpg"
            ],
-        "description": "A true 6 port, software configurable, Midi Router for complex midi networks.",
+        "description": "A true 6 port, software configurable, Midi Router for complex Midi networks.",
         "offers": {
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
@@ -38,7 +38,7 @@
   </head>
   <!-- ========================================================================================================================================================= -->
   <!-- BODY (HEADING)-->
-  <BODY link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  onload="browserCheck(); routerReset(); midiOrganizeReset();  midiControlReset(); ">
+  <BODY link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"  onload="browserCheck(); routerReset(); MidiOrganizeReset();  MidiControlReset(); ">
     <div id="header" align=right>
     </div>
     <div id="menu" align=right>
@@ -170,39 +170,39 @@
                               <p style="margin-left:20; margin-right:40;">
 							    <br>
                                 <font color=#000000 style="font-size:12px">
-                                As a typical musician, you likely have many midi devices such as keyboards, guitar effects, drum machines, voice processors, and more.  
-                                You will find it helpful to catalog all of your Midi commands and optionally send those midi commands from your PC desktop to your midi devices 
+                                As a typical musician, you likely have many Midi devices such as keyboards, guitar effects, drum machines, voice processors, and more.  
+                                You will find it helpful to catalog all of your Midi commands and optionally send those Midi commands from your PC desktop to your Midi devices 
                                 (the same Midi commands that are sent from your Midi device.) 	
                                 For example, assume you have a performance where every song requires a different keyboard patch, drum pathch, guitar patch, guitar volume, ....
-                                With MidiControl, you can define groups (bookmarks) by song and list all the midi commands to setup each song. 
-                                Using your PC desktop, you can send the Midi commands to all your midi devices to setup for the next song (patch changes, controllers, ...) 
+                                With MidiControl, you can define groups (bookmarks) by song and list all the Midi commands to setup each song. 
+                                Using your PC desktop, you can send the Midi commands to all your Midi devices to setup for the next song (patch changes, controllers, ...) 
                                 Alternatively, as shown in the example screens, each bookmark can represent a Midi device and the Midi commands used to control the device.
                                 <br><br>
-                                To start, connect all of your midi devices to your computer via a Midi hub (which you have likely already have done).
+                                To start, connect all of your Midi devices to your computer via a Midi hub (which you have likely already have done).
                                 Next, download, install, and configure MidiControl (FREE!).
-                                When configuring midi control, define bookmarks (groups) for each midi device and/or song.
-                                Next, setup the midi commands used by your midi gear (keyboards, pedal boards, effects processors,...)
-								Once your setup is complete, simply press the 'Send' button next to each Midi command to control your midi devices.
+                                When configuring Midi control, define bookmarks (groups) for each Midi device and/or song.
+                                Next, setup the Midi commands used by your Midi gear (keyboards, pedal boards, effects processors,...)
+								Once your setup is complete, simply press the 'Send' button next to each Midi command to control your Midi devices.
                                 You now have a simple means to control all of your Midi devices from your PC!
-                                Scripting of midi commands is being considered for the next release. 
+                                Scripting of Midi commands is being considered for the next release. 
                                 </font>
                                 <br><br>  	  
                               </p>
                             </details>
 							-->
 
-                            <button id="midiControl1"  class="buttonStyle1" onclick="midiControl(1)">Show Opening Screen</button>&nbsp;
-                            <button id="midiControl2"  class="buttonStyle1" onclick="midiControl(2)">Show Bookmark Management</button>&nbsp;
-                            <button id="midiControl3"  class="buttonStyle1" onclick="midiControl(3)">Show Build Midi Commands</button>&nbsp;
-                            <button id="midiControl4"  class="buttonStyle1" onclick="midiControl(4)">Show Learn Midi Commands</button>&nbsp;
-                            <button id="midiControl5"  class="buttonStyle1" onclick="midiControl(5)">Show Midi Utilities</button>&nbsp;
-                            <button id="midiControl6"  class="buttonStyle1" onclick="midiControl(6)">Show MidiControl Help Text</button>&nbsp;					
-							<button id="midiControl7"  class="buttonStyle1" onclick="midiControl(7)">Show Integra-7 Support</button>&nbsp;
+                            <button id="MidiControl1"  class="buttonStyle1" onclick="MidiControl(1)">Show Opening Screen</button>&nbsp;
+                            <button id="MidiControl2"  class="buttonStyle1" onclick="MidiControl(2)">Show Bookmark Management</button>&nbsp;
+                            <button id="MidiControl3"  class="buttonStyle1" onclick="MidiControl(3)">Show Build Midi Commands</button>&nbsp;
+                            <button id="MidiControl4"  class="buttonStyle1" onclick="MidiControl(4)">Show Learn Midi Commands</button>&nbsp;
+                            <button id="MidiControl5"  class="buttonStyle1" onclick="MidiControl(5)">Show Midi Utilities</button>&nbsp;
+                            <button id="MidiControl6"  class="buttonStyle1" onclick="MidiControl(6)">Show MidiControl Help Text</button>&nbsp;					
+							<button id="MidiControl7"  class="buttonStyle1" onclick="MidiControl(7)">Show Integra-7 Support</button>&nbsp;
                             <font size=1>
                             
                             </font>
                             <br><br><br>
-                            <div id="midiControlDiv1" hidden>
+                            <div id="MidiControlDiv1" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>The MidiControl Opening Screen. </b><br>
@@ -273,7 +273,7 @@
 								  </li>
 								  
 								  <li>
-                                  <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
+                                  <a href="./index.html"  target="popup" onclick="window.open('http://www.Midiox.com/','popup','width=1280'); return false;">
                                   <b><u>Midi Diagnostic Tool MidiOX</u></b>
                                   </a>
 								  </li>	
@@ -292,7 +292,7 @@
 							  <br>
                             </div>
           
-                            <div id="midiControlDiv2" hidden>
+                            <div id="MidiControlDiv2" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>This is the MidiControl Bookmark Management screen. </b><br>
@@ -313,12 +313,12 @@
                                 </td>
                               </table>
                             </div>
-                            <div id="midiControlDiv3" hidden>
+                            <div id="MidiControlDiv3" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>This is the MidiControl Midi Command definition screen. </b><br>
-                                  Use this screen to define up to 2000 midi commands. <br>
-                                  You can also use this screen to 'learn' a midi command.<br>
+                                  Use this screen to define up to 2000 Midi commands. <br>
+                                  You can also use this screen to 'learn' a Midi command.<br>
                                   <br>
                                   <b>Build Midi Command</b>  
                                   <ul style="padding-left:10px">
@@ -331,21 +331,21 @@
                                   </ul>
                                   <br>
                                   <b>Learn Midi Command</b><br>
-                                  Learning a midi command 'listens' for midi activity and displays <br>
+                                  Learning a Midi command 'listens' for Midi activity and displays <br>
                                   the Midi activity in the learn box.<br>
                                   The Midi input device needs to be started (put in listening mode)<br>
                                   on the Midi Listener (next) screen.<br>  
                                   When MidiControl is active and a learned command is received,<br>
-                                  the midi command (above) is sent to the output midi device.<br>
+                                  the Midi command (above) is sent to the output Midi device.<br>
                                   <br>
                                   <b>Learn Midi Command Usage</b>
                                   <ul style="padding-left:10px">
                                     <li>Select the Midi input device to start learning.</li>
                                     <li>Press the 'Start Learning' button.</li>
                                     <li>Engage a note or controller on your remote Midi controller.</li>
-                                    <li>The remote midi is recognized and values below are populated.</li>
+                                    <li>The remote Midi is recognized and values below are populated.</li>
                                     <li>Change Midi values to suit your needs.</li>
-                                    <li>Press save button to save this midi action.</li>
+                                    <li>Press save button to save this Midi action.</li>
                                   </ul>
                                 </td>
                                 <td align=center>
@@ -353,7 +353,7 @@
                                 </td>
                               </table>
                             </div>
-                            <div id="midiControlDiv4" hidden>
+                            <div id="MidiControlDiv4" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>Midi Listener Screen</b><br>
@@ -375,7 +375,7 @@
                                 </td>
                               </table>
                             </div>
-                            <div id="midiControlDiv5" hidden>
+                            <div id="MidiControlDiv5" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>Midi Utilities: Midi Global Update</b><br>
@@ -383,7 +383,7 @@
                                   MidiControl references from one Midi device to another Midi device.<br>
                                   For Example, assume you configured many Midi commands connected to<br>
                                   a Midi USB cable that is connected to your keyboard. You then change<br>
-                                  the Midi USB cable to a USB hub.  Rather than changing all your midi<br>
+                                  the Midi USB cable to a USB hub.  Rather than changing all your Midi<br>
                                   commands from the USB cable to the USB hub, come to this screen and<br>
                                   globally change all references from the USB cable to the USB hub<br>  
                                   <br>
@@ -397,10 +397,10 @@
                                 </td>
                               </table>
                             </div>
-                            <div id="midiControlDiv6" hidden>
+                            <div id="MidiControlDiv6" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
-                                  <b>Midi Control Release Notes and Help Text</b><br>
+                                  <b>MidiControl Release Notes and Help Text</b><br>
                                   Pressing the yellow question mark on the MidiControl home screen<br>
                                   displays release notes and help text.<br>
                                   Improved help text and release notes are a priority fo a future relase. <br>                            
@@ -410,14 +410,15 @@
                                 </td>
                               </table>
                             </div>
-							 <div id="midiControlDiv7" hidden>
+							 <div id="MidiControlDiv7" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
-                                  <b>Midi Control Roland Integra-7 Support</b><br>
+                                  <b>MidiControl Roland Integra-7 Support</b><br>
                                   The Roland Integra-7 is a tone generator with<br>
 								  6000+ high quality tones.Finding and previewing<br>
-								  the Integra's 80 tone banks can be challenging!<br><br>
-								  The Integra's tone banks are shown in the left<br>
+								  the Integra-7 patches in 80 tone banks can be<br>
+								  challenging! MidiControl simplifies this process.<br><br>
+								  The Integra-7 tone banks are shown in the left<br>
 								  grid. The patches (sounds) contained in the<br>
 								  tone bank are shown in the right grid.<br> <br>
 								  Click on the 'Play Sound Bank' button to step<br>
@@ -429,7 +430,7 @@
 								  bookmark the tone to your list of 'quick access'<br>
 								  tones (see screen 1). <br><br>
 
-								  Watch the video tutorial below a video demeo.<br>
+								  See the video tutorial below for a demonstration.<br>
 								  
 								  <br><br>
                                   <a href="./index.html"  target="popup" onclick="window.open('./tutorials/MidiControl-Integra7-Tutorial.mp4','popup','width=1600'); return false;"> 
@@ -496,15 +497,15 @@
                             <br>
                            
                             <br>
-                            <button id="midiOrganize1"  class="buttonStyle1" onclick="midiOrganize(1)">Show Opening Screen</button>&nbsp;
-                            <button id="midiOrganize2"  class="buttonStyle1" onclick="midiOrganize(2)">Show Bookmark Introduction</button>&nbsp;
-                            <button id="midiOrganize3"  class="buttonStyle1" onclick="midiOrganize(3)">Show Bookmark Management</button>&nbsp;
-                            <button id="midiOrganize4"  class="buttonStyle1" onclick="midiOrganize(4)">Show Search Midi Files</button>&nbsp;
-                            <button id="midiOrganize5"  class="buttonStyle1" onclick="midiOrganize(5)">Show Preview Midi File</button>&nbsp;
-                            <button id="midiOrganize6"  class="buttonStyle1" onclick="midiOrganize(6)">Show Drag Midi to DAW</button>&nbsp;
+                            <button id="MidiOrganize1"  class="buttonStyle1" onclick="MidiOrganize(1)">Show Opening Screen</button>&nbsp;
+                            <button id="MidiOrganize2"  class="buttonStyle1" onclick="MidiOrganize(2)">Show Bookmark Introduction</button>&nbsp;
+                            <button id="MidiOrganize3"  class="buttonStyle1" onclick="MidiOrganize(3)">Show Bookmark Management</button>&nbsp;
+                            <button id="MidiOrganize4"  class="buttonStyle1" onclick="MidiOrganize(4)">Show Search Midi Files</button>&nbsp;
+                            <button id="MidiOrganize5"  class="buttonStyle1" onclick="MidiOrganize(5)">Show Preview Midi File</button>&nbsp;
+                            <button id="MidiOrganize6"  class="buttonStyle1" onclick="MidiOrganize(6)">Show DAW setup</button>&nbsp;
                             <br><br><br>	
 							
-                            <div id="midiOrganizeDiv1" hidden>
+                            <div id="MidiOrganizeDiv1" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>The opening MidiOrganize screen</b> (example). <br>
@@ -537,7 +538,7 @@
 								  </li>	
 								  
                                   <li>
-                                  <a href="./index.html"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
+                                  <a href="./index.html"  target="popup" onclick="window.open('http://www.Midiox.com/','popup','width=1280'); return false;">
                                   <b><u>Midi Diagnostic Tool MidiOX</u></b>
                                   </a>
                                   </li>									  
@@ -554,13 +555,13 @@
 								  </font>								  								  
                                 </td>
                                 <td align=right valign=top>
-                                  <img src="./images/organize1L.png" width=600  id="pic1Zimg" onclick="winOpen('./images/organize1L.png')"/>
+                                  <img src="./images/organize1L.png" width=700  id="pic1Zimg" onclick="winOpen('./images/organize1L.png')"/>
                                 </td>
                               </table>
 						     	
                             </div>
 
-                            <div id="midiOrganizeDiv2" hidden>
+                            <div id="MidiOrganizeDiv2" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <br>
@@ -579,33 +580,33 @@
                                 </td>
                               </table>
                             </div>
-                            <div id="midiOrganizeDiv3" hidden>
+                            <div id="MidiOrganizeDiv3" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>The 'Manage Midi Groups and Bookmarks' screen</b>. <br>
                                   <ul style="padding-left:10px">
                                     <li>Press the 'Manage Midi Groups' button to open MidiGroup window.</li>
                                     <li>In the MidiGroup window, give your bookmark a name.</li>
-                                    <li>Use the folder browser to select a midi root folder.</li>
+                                    <li>Use the folder browser to select a Midi root folder.</li>
                                     <li>In the example, I defined four bookmarks pointing to four roots.</li>
                                     <li>On the home screen, no you can navigate directly to folder root.</li>
-                                    <li>Close the MidiGroup window to navigate your midi files.</li>
-                                    <li>Drag & drop midi files from the four panes in your DAW midi track.</li>
+                                    <li>Close the MidiGroup window to navigate your Midi files.</li>
+                                    <li>Drag & drop Midi files from the four panes in your DAW Midi track.</li>
                                   </ul>
                                 </td>
                                 <td align=right>
-                                  <img src="./images/organize3L.png" width=600  id="pic3Zimg" onclick="winOpen('./images/organize3L.png')"/> 
+                                  <img src="./images/organize3L.png" width=700  id="pic3Zimg" onclick="winOpen('./images/organize3L.png')"/> 
                                 </td>
                               </table>
                             </div>
-                            <div id="midiOrganizeDiv4" hidden>
+                            <div id="MidiOrganizeDiv4" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>Search the Midi groups by genre</b>. <br>
                                   <ul style="padding-left:10px">
                                     <li>Search for Midi files by file name / genre.</li>
                                     <li>Key the search phrase in the combobox or select from drop down.</li>
-                                    <li>Press Search Midi Groups button to search your midi bookmarks.</li>
+                                    <li>Press Search Midi Groups button to search your Midi bookmarks.</li>
                                     <li>Results of the search are displayed in the first pane.</li>
                                     <li>Drill down into the panes to view files matching your search.</li>
                                     <li>New genres can be added to the MidiOrganize config file. </li>
@@ -613,23 +614,23 @@
                                   </ul>
                                 </td>
                                 <td align=right>
-                                  <img src="./images/organize4L.png" width=600  id="pic4Zimg" onclick="winOpen('./images/organize4L.png')"/> 
+                                  <img src="./images/organize4L.png" width=700  id="pic4Zimg" onclick="winOpen('./images/organize4L.png')"/> 
                                 </td>
                               </table>
                             </div>
-                            <div id="midiOrganizeDiv5" hidden>
+                            <div id="MidiOrganizeDiv5" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
-                                  <b>Windows Midi file player</b>. <br>
+                                  <b>MidiOrganize Embedded Midi File Player</b>. <br>
                                   <ul style="padding-left:10px">
-                                    <li>Use Windows Media Player to preview your midi files.</li>
-                                    <li>Drag and drop midi files from any of the 4 panes onto player.</li>
-                                    <li>Midi drums require midi file set to midi channel 10.</li>
-                                    <li>Some midi files are not set to midi channel 10.</li>
-                                    <li>Check 'Change Channel 10' to fix midi file to channel 10.</li>
-                                    <li>Fix does not change the original midi file.</li>
+                                    <li>Use Microsoft GS Wavetable Synth to preview your Midi files.</li>
+                                    <li>Double Click any Midi file from any of the 4 panes to launch.</li>
+                                    <li>Midi drums require Midi file set to Midi channel 10.</li>
+                                    <li>Some Midi files are not set to Midi channel 10.</li>
+                                    <li>Check 'Change Channel 10' to fix Midi file to channel 10.</li>
+                                    <li>Fix does not change the original Midi file.</li>
                                     <li>Fix creates a new file shown in media player.</li>
-                                    <li>Show Conversion button displays midi channel 10 updates. </li>
+                                    <li>Show Conversion button displays Midi channel 7 updates. </li>
                                   </ul>
                                 </td>
                                 <td align=right>
@@ -637,22 +638,21 @@
                                 </td>
                               </table>
                             </div>
-                            <div id="midiOrganizeDiv6" hidden>
+                            <div id="MidiOrganizeDiv6" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
-                                  <b>DAW track setup</b>. <br>
+                                  <b>Reaper DAW track setup for MU-15 drums</b>. <br>
                                   <ul style="padding-left:10px">
-                                    <li>Send midi loop to drum machine and listen to drum machine audio.</li>
-                                    <li>In your DAW, set your track to send midi to your midi drum machine. </li>
-                                    <li>Connect your DAW to your drum machine using a PC USB to midi cable.</li>
-                                    <li>Connect your drum machine audio output to your audio input interface. </li>
-                                    <li>In your DAW, create a drum audio track next to your drum midi track.</li>
-                                    <li>In the drum audio track, record from your audio interface / drum machine.</li>
-                                    <li>See the link below that describes this process for reaper.</li>
+                                    <li>Send Midi loop to MU-15 to play drum loop.</li>
+                                    <li>Set your DAW track to send Midi to the MU-15. </li>
+                                    <li>Connect your DAW to MU-15 using a PC USB to Midi cable.</li>
+                                    <li>Connect your MU-15 audio output to your audio input. </li>
+                                    <li>Create a drum audio track in your DAW next to the drum Midi track.</li>
+                                    <li>In the drum audio track, record from your audio interface.</li>
                                   </ul>
                                 </td>
                                 <td align=right valign=top>
-                                  <img src="./images/organize6L.png" width=600  id="pic6Zimg" onclick="winOpen('./images/organize6L.png')"/> 
+                                  <img src="./images/organize6L.png" width=700  id="pic6Zimg" onclick="winOpen('./images/organize6L.png')"/> 
                                 </td>
                               </table>
                             </div>
@@ -746,14 +746,14 @@
                           <td>
                             <br> 
                             <button id="router1"  class="buttonStyle1" onclick="router(1)">Show Router Face and Rear</button>&nbsp;
-                            <button id="router2"  class="buttonStyle1" onclick="router(3)">Show PC Config 1</button>&nbsp;
-                            <button id="router3"  class="buttonStyle1" onclick="router(4)">Show PC Config 2</button>&nbsp;
-                            <button id="router4"  class="buttonStyle1" onclick="router(5)">Show PC Config 3</button>&nbsp;
-                            <button id="router5"  class="buttonStyle1" onclick="router(6)">Show Router Config 1</button>&nbsp;
-                            <button id="router6"  class="buttonStyle1" onclick="router(7)">Show Router Config 2</button>&nbsp;
-                            <button id="router7"  class="buttonStyle1" onclick="router(8)">Show Router Config 3</button>&nbsp;
-                            <button id="router8"  class="buttonStyle1" onclick="router(9)">Show Router Config 4</button>&nbsp;
-                            <button id="router9"  class="buttonStyle1" onclick="router(10)">Show Router Config 5</button>
+                            <button id="router2"  class="buttonStyle1" onclick="router(2)">Show PC Config 1</button>&nbsp;
+                            <button id="router3"  class="buttonStyle1" onclick="router(3)">Show PC Config 2</button>&nbsp;
+                            <button id="router4"  class="buttonStyle1" onclick="router(4)">Show PC Config 3</button>&nbsp;
+                            <button id="router5"  class="buttonStyle1" onclick="router(5)">Show Router Config 1</button>&nbsp;
+                            <button id="router6"  class="buttonStyle1" onclick="router(6)">Show Router Config 2</button>&nbsp;
+                            <button id="router7"  class="buttonStyle1" onclick="router(7)">Show Router Config 3</button>&nbsp;
+                            <button id="router8"  class="buttonStyle1" onclick="router(8)">Show Router Config 4</button>&nbsp;
+                            <button id="router9"  class="buttonStyle1" onclick="router(9)">Show Router Config 5</button>
                             
 							<br><br><br>		
                             <div id="routerDiv1" hidden>
@@ -764,7 +764,7 @@
                                   monitor, decode, and debug Midi traffic as it is being<br> processed by the router.<br> 
                                   <ul style="padding-left:10px">
                                     <li>Power button: Power on and off the router.</li>
-                                    <li>Logger button: Dump midi data to TFT screen or TTY port.</li>
+                                    <li>Logger button: Dump Midi data to TFT screen or TTY port.</li>
                                     <li>Config button: Load router config and view config on TFT.</li>
                                     <li>LEDs: Blink as Midi traffic is sent and received.</li>
                                     <li>Screen: Shows config and realtime Midi activity.</li>
@@ -779,7 +779,7 @@
                                 <td valign=top>
                                   <b>Router Rear</b>  
                                   <ul style="padding-left:10px">
-                                    <li>Midi Ports: Six midi 5 pin din input ports and six output ports.</li>
+                                    <li>Midi Ports: Six Midi 5 pin din input ports and six output ports.</li>
                                     <li>Log Port: USB port to dump router activity to terminal emulator.</li>
                                     <li>CFG Port: USB port used to receive router config from PC.</li>
                                     <li>USB (not used):  USB port for future use.</li>
@@ -851,7 +851,7 @@
                                   </li>								  
                                   
 								  <li>
-                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('http://www.midiox.com/','popup','width=1280'); return false;">
+                                  <a href="./indexMoreInfo"  target="popup" onclick="window.open('http://www.Midiox.com/','popup','width=1280'); return false;">
                                   <b><u>Midi diagnostic tool MidiOX</u></b>
                                   </a> 
 								  </li>
@@ -889,21 +889,21 @@
                             <div id="routerDiv3" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
-                                  <b>PC Config Screen 2: Midi Translations</b> <br>
+                                  <b>PC Config Screen 2: Midi Translation Summary</b> <br>
                                   Midi Translations are used to change a Midi message<br>
                                   from one format to another. For Example: assume you<br>
                                   want to press a buttton (controller) on you keyboard<br>
                                   to send a 'patch change' command to your tone generator.<br>
                                   Use the translation screen to identify and capture the<br>
-                                  midi CC (continuous control) command and translate it <br>
+                                  Midi CC (continuous control) command and translate it <br>
                                   to a Midi PC (program change) cmd.<br> 
                                   <br>
                                   <b>Translation Screen</b>
                                   <ul style="padding-left:10px">
                                     <li>Provide a short description for the translation. </li>
-                                    <li>Specify the incoming midi to capture.</li>
-                                    <li>Specify the outgoing translated midi to send.</li>
-                                    <li>256 midi translations are permitted.</li>
+                                    <li>Specify the incoming Midi to capture.</li>
+                                    <li>Specify the outgoing translated Midi to send.</li>
+                                    <li>256 Midi translations are permitted.</li>
                                     <li>Copy, paste, and delete functions are provided.</li>
                                     <li>Bulk copy, paste, and delete functions are provided.</li>
                                   </ul>
@@ -916,23 +916,25 @@
 							
                             <div id="routerDiv4" hidden>
                               <table width=1078 id=t0>
-                                <td valign=top>
-                                  <b>PC Config Screen 3: Midi Channel Locks</b><br>
-                                  Midi Channel Locks are used to lock specific Midi data<br>
-                                  to a specific midi channel (by Midi port and Midi command).<br>
-                                  For example, assume you have a Reaper MIDI DAW track that <br>
-                                  contains a drum patch data routed to your Yamaha MU15 drum<br>
-                                  machine. Some rougue drum tracks do not encode drum notes <br>
-                                  to Midi channel 10. Use the channel lock screen to guarantee<br>
-                                  all Reaper Midi drum data sent to your Yamaha Mu15 is locked <br>
-                                  to Midi channel 10. <br>
+                                 <td valign=top>
+                                  <b>PC Config Screen 3: Midi Translation Detail</b> <br>
+								  <font color=#AA0000>
+								  <b>This needs updating</b><br>
+								  </font>
+                                  Midi Translations are used to change a Midi message<br>
+                                  from one format to another. For Example: assume you<br>
+                                  want to press a buttton (controller) on you keyboard<br>
+                                  to send a 'patch change' command to your tone generator.<br>
+                                  Use the translation screen to identify and capture the<br>
+                                  Midi CC (continuous control) command and translate it <br>
+                                  to a Midi PC (program change) cmd.<br> 
                                   <br>
-                                  <b>Channel Lock Screen</b>
+                                  <b>Translation Screen</b>
                                   <ul style="padding-left:10px">
-                                    <li>Specify the input and output ports. </li>
-                                    <li>Specify the channel to lock outbound midi data.</li>
-                                    <li>Specify if the lock is CC,PC,NT,or all midi data.</li>
-                                    <li>96 midi locks are permitted.</li>
+                                    <li>Provide a short description for the translation. </li>
+                                    <li>Specify the incoming Midi to capture.</li>
+                                    <li>Specify the outgoing translated Midi to send.</li>
+                                    <li>256 Midi translations are permitted.</li>
                                     <li>Copy, paste, and delete functions are provided.</li>
                                     <li>Bulk copy, paste, and delete functions are provided.</li>
                                   </ul>
@@ -1026,7 +1028,7 @@
                                   This visual graphic shows which input devices are<br>
                                   connected to which output devices.<br><br>
                                   In the simple port routing screen shown, I am sending all<br> 
-                                  midi data back to their origin (useful for my router testing)<br>
+                                  Midi data back to their origin (useful for my router testing)<br>
                                   but not a very meaningful configuration.<br> 
                                   <br>
                                   Any input device can be 'routed' to any output device.<br>
@@ -1090,8 +1092,8 @@
                                 <b>Music Note Data:</b>, Midi can be used to record and play musical notes. For example, when you press a note on a Midi 
                                 keyboard, the note number (ie: the note pressed), the note velocity (how hard the note was played) and the keyboard 'channel' 
                                 are encoded into digital Midi data which is sent to your computer's recording (DAW) software. 
-                                Software such as Pro Tools, Reaper, Cubase, can read, record, and play back midi data.  
-                                Playback of midi recorded data will sound identical to the original performance.
+                                Software such as Pro Tools, Reaper, Cubase, can read, record, and play back Midi data.  
+                                Playback of Midi recorded data will sound identical to the original performance.
                                 Midi music data encoding is standardized across all music gear manufacturers.	  
                                 <br><br>	  
                                 <b>Music Commands:</b>Your digital piano keyboard likely has buttons, sliders, foot pedals, and wheels to adjust volume, pitch bend a note,..... 
@@ -1116,13 +1118,13 @@
                               <p style="margin-left:20; margin-right:40;">
                                 <br>
                                 <b>MidiXLate router details.</b><br>
-                                The MidiXLate router is a true router, meaning every midi packet is inspected and 'routed' to it's intended destination(s). 
-                                Routing Midi data greatly reduces Midi network traffic, eliminating a flood of extraneous midi network data.
+                                The MidiXLate router is a true router, meaning every Midi packet is inspected and 'routed' to it's intended destination(s). 
+                                Routing Midi data greatly reduces Midi network traffic, eliminating a flood of extraneous Midi network data.
                                 Excessive Midi note data and Midi 'active sensing' commands can easily increase Midi network latency, killing a Midi network's efficiency.   
-                                With Midi routing, the sending and receiving midi devices are now much simpler to configure because the midi data received at a midi device 
-                                is guaranteed to be intended solely for that midi device. 
+                                With Midi routing, the sending and receiving Midi devices are now much simpler to configure because the Midi data received at a Midi device 
+                                is guaranteed to be intended solely for that Midi device. 
                                 For the average home user with only a few Midi devices, a Midi router may not add much value. A Midi hub is the right option. 
-                                For a performing group (or sophisticated home studio) with a large number of midi devices and complicated midi network, 
+                                For a performing group (or sophisticated home studio) with a large number of Midi devices and complicated Midi network, 
                                 the MidiXLate router can be a life saver. 
                                 With MidiXLate, you have complete control of Midi port 'filtering' and command 'translation' actions.
                                 As for MidiXLate's performance, the engine of the router is a blinding fast Atmel SAM3X8E ARM Cortex-M3 processor running at 84 MHz, 
@@ -1132,8 +1134,8 @@
                                 For each of the six input ports and six output ports, you can specify, by port, to process or ignore, 
                                 note on/off, continuous control, progam change, and/or system exclusive commands.   
                                 The router also provides a pseudo Network Address <b>Translation</b> (NAT) features called 'Translation' where 
-                                midi data can be 'translated from one Midi format (such as note data) to another Midi format (such as continuous controller). 
-                                This is extremely helpful when there is no direct path for one piece of midi gear to control another piece of Midi gear. 
+                                Midi data can be 'translated from one Midi format (such as note data) to another Midi format (such as continuous controller). 
+                                This is extremely helpful when there is no direct path for one piece of Midi gear to control another piece of Midi gear. 
                                 <br><br> 	  
                               </p>
                             </details>
