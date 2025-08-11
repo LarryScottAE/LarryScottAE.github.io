@@ -16,10 +16,10 @@ EMail: SierraDigitalAudio@GMail.com<br>
 3: Notice the download notification may appear in the original SierraDigitalAudio page, not the popup download page <br> 
 &nbsp;&nbsp;&nbsp;(see second screenshot below for download process)<br>
 4: When launching the installer, you will likely receive a message that the install file is not regognized.<br>
-&nbsp;&nbsp;&nbsp;Click on "More Options" and select "Run Anyway".
+&nbsp;&nbsp;&nbsp;Click on "More Options" and select "Run Anyway".<br>
 5: Notice the SHA Hash is provided for the installer.  You can regenerate the SHA Hash in Windows PowerShell<br>
 &nbsp;&nbsp;&nbsp;prior to install to verify the authenticity of the installer file (to verify the installer <br>
-&nbsp;&nbsp;&nbsp;file has not been tampered with). 
+&nbsp;&nbsp;&nbsp;file has not been tampered with).<br> 
 
 ![RouterFace](https://github.com/user-attachments/assets/43c228e0-ff50-4296-8cb7-263a691db000) <br><br>
 
