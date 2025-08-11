@@ -11,10 +11,10 @@ EMail: SierraDigitalAudio@GMail.com<br>
 <b>For MidiOrganize Software Version 1.5 installer (Windows 10+): &nbsp; /downloads/setupMidiOrganize-V1.5.exe</b><br>
 
 <b>Download instructions:</b><br>
-1: Click on the setup installer which will open a GIT download page.  
-2: Press "view raw" to start download.  (see screenshot 2 below)
-3: Select the latest installer by clicking on setup link
-4: Notice the download will appear in the original window, not the popup window (see screenshots below)
+1: Click on the setup installer which will open a GIT download page. <br> 
+2: Press "view raw" to start download.  (see screenshot 2 below)<br>
+3: Select the latest installer by clicking on setup link<br>
+4: Notice the download will appear in the original SierraDigitalAudio page, not the popup download page (see screenshots below)<br>
 
 ![RouterFace](https://github.com/user-attachments/assets/43c228e0-ff50-4296-8cb7-263a691db000) <br><br>
 
