@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="Author" content="Larry Scott">
-	<meta name="description" content="Sierra Digital Audio (SDA) provides FREE MIDI software to help novice and professional musicians organize their music studio. SDA MidiControl is a particularly useful patch preview tool and librarian for Roland Integra-7 users. SDA MidiOrganize is particularly useful tool for organizing drum loops, eliminating the need for costly drum VST subscriptions.  For complex MIDI implementations, we offer a hardware MIDI Router to greatly simplify and improve the efficiency of your MIDI network.">
+	<meta name="description" content="Sierra Digital Audio (SDA) provides FREE MIDI software to help novice and professional musicians organize their music studio. SDA MidiControl is a particularly useful patch preview tool and MIDI command librarian for Roland Integra-7 users. SDA MidiOrganize is particularly useful tool for organizing drum loops, eliminating the need for costly drum VST subscriptions amd internet connections (required to use your VSTs).  For complex MIDI implementations, we offer a hardware MIDI Router to greatly simplify and improve the efficiency of your MIDI network.">
 	
     <meta name="robots" content="index,nofollow">
     <!-- index this page, but do not follow links and index linked pages -->
@@ -152,7 +152,7 @@
                             <br><br>
                             <font color=#000000 style="font-size:12px">
                             Have you every wanted to control all of your Midi devices from your PC desktop?
-							&nbsp;&nbsp;&nbsp;&nbsp; Or, maybe you have a Roland Integra-7 and need a simplified control panel?
+							&nbsp;&nbsp; or, maybe you have a Roland Integra-7 and need a simplified control panel?
 							<br>
                             For example, assume you have a <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 Sound Module</a> and 
                             you currently use the scroll wheel on the face of the Integra 7 to tediously navigate to your favorite tones. 
@@ -192,13 +192,13 @@
                             </details>
 							-->
 
-                            <button id="MidiControl1"  class="buttonStyle1" onclick="MidiControl(1)">Show Opening Screen</button>&nbsp;
-                            <button id="MidiControl2"  class="buttonStyle1" onclick="MidiControl(2)">Show Bookmark Management</button>&nbsp;
-                            <button id="MidiControl3"  class="buttonStyle1" onclick="MidiControl(3)">Show Build Midi Commands</button>&nbsp;
-                            <button id="MidiControl4"  class="buttonStyle1" onclick="MidiControl(4)">Show Learn Midi Commands</button>&nbsp;
-                            <button id="MidiControl5"  class="buttonStyle1" onclick="MidiControl(5)">Show Midi Utilities</button>&nbsp;
-                            <button id="MidiControl6"  class="buttonStyle1" onclick="MidiControl(6)">Show MidiControl Help Text</button>&nbsp;					
-							<button id="MidiControl7"  class="buttonStyle1" onclick="MidiControl(7)">Show Integra-7 Support</button>&nbsp;
+                            <button id="MidiControl1"  class="buttonStyle1" onclick="MidiControl(1)">&nbsp;Show Opening Screen&nbsp;</button>&nbsp;
+                            <button id="MidiControl2"  class="buttonStyle1" onclick="MidiControl(2)">&nbsp;Show Bookmark Management&nbsp;</button>&nbsp;
+                            <button id="MidiControl3"  class="buttonStyle1" onclick="MidiControl(3)">&nbsp;Show Build Midi Commands&nbsp;</button>&nbsp;
+                            <button id="MidiControl4"  class="buttonStyle1" onclick="MidiControl(4)">&nbsp;Show Learn Midi Commands&nbsp;</button>&nbsp;
+                            <button id="MidiControl5"  class="buttonStyle1" onclick="MidiControl(5)">&nbsp;Show Midi Utilities&nbsp;</button>&nbsp;
+                            <button id="MidiControl6"  class="buttonStyle1" onclick="MidiControl(6)">&nbsp;Show MidiControl Help Text&nbsp;</button>&nbsp;					
+							<button id="MidiControl7"  class="buttonStyle1" onclick="MidiControl(7)">&nbsp;Show Roland Integra-7 Module&nbsp;</button>&nbsp;
                             <font size=1>
                             
                             </font>
@@ -248,7 +248,6 @@
 								  SHA 256: F1CCC0864D5BFB03F8E4FFC956B81A679F07BA03A1084360E3DCF33E5A173F57
 								  </font>
 								  </li>
-								  
                                   <li>
 								  <a href="./index.html"  target="popup" onclick="window.open('./tutorials/MidiControl-Tutorial.mp4','popup','width=1600'); return false;">
                                   <b><u>MidiControl Video Tutorial (11 min, 80 meg)</u></b>
@@ -283,8 +282,8 @@
                                   <br>
 								  <font style="font-family:Helvetica; font-size:10;">
                                   ** Click on image to view a larger the image.	
-								  </font>								  
-								
+								  </font>	
+								  								
                                 </td>
                                 <td align=right valign=top>
                                   <img src="./images/control1L.png"  width=700 id="pic1Ximg" onclick="winOpen('./images/control1L.png')"/>
@@ -459,9 +458,33 @@
                       </table>
                       <!-- table5 end -->
                     </center>
-                    <br>
                   </div>
                   <!-- padding -->
+				  
+				  <details>
+                  <summary>
+				    <font style="font-family:Helvetica; font-size:11;">
+					SHA-256 Explanation:
+					</font>
+				  </summary>
+                  <p style="margin-left:18; margin-right:40;">
+				  <font style="font-family:Helvetica; font-size:11;">
+                  SHA-256 is a widely used, secure cryptographic function that takes any input data and produces 
+				  a fixed-size 256-bit (32-byte) "fingerprint" called a hash value. <br> 
+                  Windows Powershell "Get-FileHash" command was used to create a SHA-256 fingerprint for the 
+                  MidiControl.exe installer. If needed, 
+				  <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry">email me </a>
+				  for the powershell command. <br>
+				  After download, to verify the MidiControl.exe file has not been 
+                  nefariously altered, rerun the Windows Powershell command to calculate the digital fingerprint
+                  for the MidiControl.exe installer.<br>
+				  Compare your SHA-256 value to the SHA-256 value above. Matching values guaranteees	
+                  your installer has not been nefariously altered by a third party.
+                  </font>				  
+                  </p>
+                  </details>
+                  <br>
+				  
                 </td>
               </tr>
             </table>
@@ -498,12 +521,12 @@
                             <br>
                            
                             <br>
-                            <button id="MidiOrganize1"  class="buttonStyle1" onclick="MidiOrganize(1)">Show Opening Screen</button>&nbsp;
-                            <button id="MidiOrganize2"  class="buttonStyle1" onclick="MidiOrganize(2)">Show Bookmark Introduction</button>&nbsp;
-                            <button id="MidiOrganize3"  class="buttonStyle1" onclick="MidiOrganize(3)">Show Bookmark Management</button>&nbsp;
-                            <button id="MidiOrganize4"  class="buttonStyle1" onclick="MidiOrganize(4)">Show Search Midi Files</button>&nbsp;
-                            <button id="MidiOrganize5"  class="buttonStyle1" onclick="MidiOrganize(5)">Show Preview Midi File</button>&nbsp;
-                            <button id="MidiOrganize6"  class="buttonStyle1" onclick="MidiOrganize(6)">Show DAW setup</button>&nbsp;
+                            <button id="MidiOrganize1"  class="buttonStyle1" onclick="MidiOrganize(1)">&nbsp;Show Opening Screen&nbsp;</button>&nbsp;
+                            <button id="MidiOrganize2"  class="buttonStyle1" onclick="MidiOrganize(2)">&nbsp;Show Bookmark Introduction&nbsp;</button>&nbsp;
+                            <button id="MidiOrganize3"  class="buttonStyle1" onclick="MidiOrganize(3)">&nbsp;Show Bookmark Management&nbsp;</button>&nbsp;
+                            <button id="MidiOrganize4"  class="buttonStyle1" onclick="MidiOrganize(4)">&nbsp;Show Search Midi Files&nbsp;</button>&nbsp;
+                            <button id="MidiOrganize5"  class="buttonStyle1" onclick="MidiOrganize(5)">&nbsp;Show Preview Midi File&nbsp;</button>&nbsp;
+                            <button id="MidiOrganize6"  class="buttonStyle1" onclick="MidiOrganize(6)">&nbsp;Show DAW Setup&nbsp;</button>&nbsp;
                             <br><br><br>	
 							
                             <div id="MidiOrganizeDiv1" hidden>
@@ -663,7 +686,7 @@
                       <!-- table8 end -->
                     </center>
 					
-					 <details>
+					          <details>
                               <summary>MidiOrganize as a Cost and Performance Alternative to VSTs  <font color=#000066>(click here)</font></summary>
                               <p style="margin-left:20; margin-right:40;">
                                 <br>
@@ -710,6 +733,31 @@
                     <br>
                   </div>
                   <!-- padding -->
+				  
+				  <details>
+                  <summary>
+				    <font style="font-family:Helvetica; font-size:11;">
+					SHA-256 Explanation:
+					</font>
+				  </summary>
+                  <p style="margin-left:18; margin-right:40;">
+				  <font style="font-family:Helvetica; font-size:11;">
+                  SHA-256 is a widely used, secure cryptographic function that takes any input data and produces 
+				  a fixed-size 256-bit (32-byte) "fingerprint" called a hash value. <br> 
+                  Windows Powershell "Get-FileHash" command was used to create a SHA-256 fingerprint for the 
+                  MidiOrganize.exe installer. If needed, 
+				  <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry">email me </a>
+				  for the powershell command. <br>
+				  After download, to verify the MidiOrganize.exe file has not been 
+                  nefariously altered, rerun the Windows Powershell command to calculate the digital fingerprint
+                  for the MidiOrganize.exe installer.<br>
+				  Compare your SHA-256 value to the SHA-256 value above. Matching values guaranteees	
+                  your installer has not been nefariously altered by a third party.
+                  </font>				  
+                  </p>
+                  </details>
+                  <br>
+				  
                 </td>
               </tr>
             </table>
@@ -746,15 +794,15 @@
                         <tr>
                           <td>
                             <br> 
-                            <button id="router1"  class="buttonStyle1" onclick="router(1)">Show Router Face and Rear</button>&nbsp;
-                            <button id="router2"  class="buttonStyle1" onclick="router(2)">Show PC Config 1</button>&nbsp;
-                            <button id="router3"  class="buttonStyle1" onclick="router(3)">Show PC Config 2</button>&nbsp;
-                            <button id="router4"  class="buttonStyle1" onclick="router(4)">Show PC Config 3</button>&nbsp;
-                            <button id="router5"  class="buttonStyle1" onclick="router(5)">Show Router Config 1</button>&nbsp;
-                            <button id="router6"  class="buttonStyle1" onclick="router(6)">Show Router Config 2</button>&nbsp;
-                            <button id="router7"  class="buttonStyle1" onclick="router(7)">Show Router Config 3</button>&nbsp;
-                            <button id="router8"  class="buttonStyle1" onclick="router(8)">Show Router Config 4</button>&nbsp;
-                            <button id="router9"  class="buttonStyle1" onclick="router(9)">Show Router Config 5</button>
+                            <button id="router1"  class="buttonStyle1" onclick="router(1)">&nbsp;Show Router Face and Rear&nbsp;</button>&nbsp;
+                            <button id="router2"  class="buttonStyle1" onclick="router(2)">&nbsp;Show PC Config 1&nbsp;</button>&nbsp;
+                            <button id="router3"  class="buttonStyle1" onclick="router(3)">&nbsp;Show PC Config 2&nbsp;</button>&nbsp;
+                            <button id="router4"  class="buttonStyle1" onclick="router(4)">&nbsp;Show PC Config 3&nbsp;</button>&nbsp;
+                            <button id="router5"  class="buttonStyle1" onclick="router(5)">&nbsp;Show Router Config 1&nbsp;</button>&nbsp;
+                            <button id="router6"  class="buttonStyle1" onclick="router(6)">&nbsp;Show Router Config 2&nbsp;</button>&nbsp;
+                            <button id="router7"  class="buttonStyle1" onclick="router(7)">&nbsp;Show Router Config 3&nbsp;</button>&nbsp;
+                            <button id="router8"  class="buttonStyle1" onclick="router(8)">&nbsp;Show Router Config 4&nbsp;</button>&nbsp;
+                            <button id="router9"  class="buttonStyle1" onclick="router(9)">&nbsp;Show Router Config 5&nbsp;</button>
                             
 							<br><br><br>		
                             <div id="routerDiv1" hidden>
@@ -1187,6 +1235,31 @@
                     </center>
                   </div>
                   <!-- padding -->
+				  
+				  				  <details>
+                  <summary>
+				    <font style="font-family:Helvetica; font-size:11;">
+					SHA-256 Explanation:
+					</font>
+				  </summary>
+                  <p style="margin-left:18; margin-right:40;">
+				  <font style="font-family:Helvetica; font-size:11;">
+                  SHA-256 is a widely used, secure cryptographic function that takes any input data and produces 
+				  a fixed-size 256-bit (32-byte) "fingerprint" called a hash value. <br> 
+                  Windows Powershell "Get-FileHash" command was used to create a SHA-256 fingerprint for the 
+                  MidiXLate.exe installer. If needed, 
+				  <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry">email me </a>
+				  for the powershell command. <br>
+				  After download, to verify the MidiXLate.exe file has not been 
+                  nefariously altered, rerun the Windows Powershell command to calculate the digital fingerprint
+                  for the MidiXLate.exe installer.<br>
+				  Compare your SHA-256 value to the SHA-256 value above. Matching values guaranteees	
+                  your installer has not been nefariously altered by a third party.
+                  </font>				  
+                  </p>
+                  </details>
+                  <br>
+				  
                 </td>
               </tr>
             </table>
