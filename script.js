@@ -73,7 +73,7 @@ function router(screen) {
 
   
 function MidiControlAllOff() {
-  for (let i = 1; i <= 7; i++) {
+  for (let i = 1; i <= 6; i++) {
     let div = "MidiControlDiv" + i.toString();
     document.getElementById(div).hidden = true;
     const button1 = document.getElementById("MidiControl" + i.toString());

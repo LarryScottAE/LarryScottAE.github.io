@@ -151,17 +151,19 @@
                             </font>
                             <br><br>
                             <font color=#000000 style="font-size:12px">
-                            Have you every wanted to control all of your Midi devices from your PC desktop?
-							&nbsp;&nbsp; or, maybe you have a Roland Integra-7 and need a simplified control panel?
+                            Have you every wanted to control your Midi devices from your PC desktop?
+							&nbsp; or, maybe you have a Roland Integra-7 and need a simplified control panel?
 							<br>
-                            For example, assume you have a <a href=https://www.roland.com/us/products/integra-7/>Roland Integra 7 Sound Module</a> and 
-                            you currently use the scroll wheel on the face of the Integra 7 to tediously navigate to your favorite tones. 
-                            Rather than using the Integra 7 scroll wheel, you can create a list of your favorite tones in MidiControl and 
-                            easily switch between the Integra 7 tones with a simple press of a mouse button on your PC.  Much easier!  
-                            MidiControl is a <b>FREE</b> 
-                            Windows PC program used to catalog and organize your Midi commands for use from your desktop. MidiControl allows you to  
-							bookmark up to 2000 Midi commands.  Bookmarks can be arranged by Midi device, song, setlist,... giving you simple control
-                            of all your Midi devices from your PC desktop.</font>
+							MidiControl is a <b>FREE</b> Midi librarian used to catalog and organize Midi 'patch change' and 'control change' messages for quick access from your PC desktop, laptop, or
+                            <a href="./index.html"  target="popup" onclick="window.open('https://en.wikipedia.org/wiki/Digital_audio_workstation','popup','width=1400'); return false;">
+							DAW (Digital Analog Workstation)</a>.<br>
+							MidiControl allows you to define bookmarks to define lists of Midi commands by Midi device, song, setlist,... giving you simple control of your Midi devices from your PC desktop.</font> Midi control allows you to catalog up to 2000 Midi commands. &nbsp;&nbsp;&nbsp;
+                            For 
+							<a href="./index.html"  target="popup" onclick="window.open('https://www.roland.com/us/products/integra-7/','popup','width=1400'); return false;">
+							Roland Integra 7 Sound Module</a>
+							users, we have a particularly useful 'patch preview' feature (see button below) that allows you to easily  
+                            scroll through and preview the 6000+ Integra 7 tones.  Optionally, bookmark your favorite tones in the Integra-7 list for easy access to your favorite tones. 
+                           
                             <br><br> 
 							
 							
@@ -196,9 +198,9 @@
                             <button id="MidiControl2"  class="buttonStyle1" onclick="MidiControl(2)">&nbsp;Show Bookmark Management&nbsp;</button>&nbsp;
                             <button id="MidiControl3"  class="buttonStyle1" onclick="MidiControl(3)">&nbsp;Show Build Midi Commands&nbsp;</button>&nbsp;
                             <button id="MidiControl4"  class="buttonStyle1" onclick="MidiControl(4)">&nbsp;Show Learn Midi Commands&nbsp;</button>&nbsp;
-                            <button id="MidiControl5"  class="buttonStyle1" onclick="MidiControl(5)">&nbsp;Show Midi Utilities&nbsp;</button>&nbsp;
-                            <button id="MidiControl6"  class="buttonStyle1" onclick="MidiControl(6)">&nbsp;Show MidiControl Help Text&nbsp;</button>&nbsp;					
-							<button id="MidiControl7"  class="buttonStyle1" onclick="MidiControl(7)">&nbsp;Show Roland Integra-7 Module&nbsp;</button>&nbsp;
+                            <button id="MidiControl5"  class="buttonStyle1" onclick="MidiControl(5)">&nbsp;Show Midi Utilities&nbsp;</button>&nbsp;			
+							<button id="MidiControl6"  class="buttonStyle1" onclick="MidiControl(6)">&nbsp;Show Roland Integra-7 Module&nbsp;</button>&nbsp;
+					  <!--  <button id="MidiControl6"  class="buttonStyle1" onclick="MidiControl(7)">&nbsp;Show MidiControl Help Text&nbsp;</button>&nbsp;	-->	
                             <font size=1>
                             
                             </font>
@@ -245,7 +247,9 @@
                                   <b><u>MidiControl Version 1.5 July 2025 installer (exe)</u></b>
                                   </a><br>
 								  <font style="font-family:Helvetica; font-size:8;">
-								  SHA 256: F1CCC0864D5BFB03F8E4FFC956B81A679F07BA03A1084360E3DCF33E5A173F57
+								  <div title="SHA-256 is a widely used, secure cryptographic function that takes any input data and produces a fixed-size 256-bit (32-byte) fingerprint called a hash value. Windows Powershell 'Get-FileHash' command was used to create a SHA-256 fingerprint for the MidiControl.exe installer. After download, to verify the MidiControl.exe file has not been altered/corrupted, rerun the Windows Powershell command to calculate the digital fingerprint for the MidiControl.exe installer. Compare your SHA-256 value to this SHA-256. Matching values guaranteees your installer has not been altered or corrupted by a third party.">
+								  SHA-256: F1CCC0864D5BFB03F8E4FFC956B81A679F07BA03A1084360E3DCF33E5A173F57
+								  </div>
 								  </font>
 								  </li>
                                   <li>
@@ -397,7 +401,7 @@
                                 </td>
                               </table>
                             </div>
-                            <div id="MidiControlDiv6" hidden>
+                            <div id="MidiControlDiv7" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>MidiControl Release Notes and Help Text</b><br>
@@ -410,7 +414,7 @@
                                 </td>
                               </table>
                             </div>
-							 <div id="MidiControlDiv7" hidden>
+							 <div id="MidiControlDiv6" hidden>
                               <table width=1078 id=t0>
                                 <td valign=top>
                                   <b>MidiControl Roland Integra-7 Support</b><br>
@@ -460,31 +464,7 @@
                     </center>
                   </div>
                   <!-- padding -->
-				  
-				  <details>
-                  <summary>
-				    <font style="font-family:Helvetica; font-size:11;">
-					SHA-256 Explanation:
-					</font>
-				  </summary>
-                  <p style="margin-left:18; margin-right:40;">
-				  <font style="font-family:Helvetica; font-size:11;">
-                  SHA-256 is a widely used, secure cryptographic function that takes any input data and produces 
-				  a fixed-size 256-bit (32-byte) "fingerprint" called a hash value. <br> 
-                  Windows Powershell "Get-FileHash" command was used to create a SHA-256 fingerprint for the 
-                  MidiControl.exe installer. If needed, 
-				  <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry">email me </a>
-				  for the powershell command. <br>
-				  After download, to verify the MidiControl.exe file has not been 
-                  nefariously altered, rerun the Windows Powershell command to calculate the digital fingerprint
-                  for the MidiControl.exe installer.<br>
-				  Compare your SHA-256 value to the SHA-256 value above. Matching values guaranteees	
-                  your installer has not been nefariously altered by a third party.
-                  </font>				  
-                  </p>
-                  </details>
-                  <br>
-				  
+                  <br>				  
                 </td>
               </tr>
             </table>
@@ -551,7 +531,9 @@
                                   </a>
 								  <br>
 								  <font style="font-family:Helvetica; font-size:8;">
-								  SHA 256: 9F9ED1A1BBF9A4EAFE56B948E8FC710802129E159B6870C530BCFEB41782DFE6
+								  <div title="SHA-256 is a widely used, secure cryptographic function that takes any input data and produces a fixed-size 256-bit (32-byte) fingerprint called a hash value. Windows Powershell 'Get-FileHash' command was used to create a SHA-256 fingerprint for the MidiOrgainze.exe installer. After download, to verify the MidiOrgaanize.exe file has not been altered/corrupted, rerun the Windows Powershell command to calculate the digital fingerprint for the MidiOrganize.exe installer. Compare your SHA-256 value to this SHA-256. Matching values guaranteees your installer has not been altered or corrupted by a third party.">
+								  SHA-256: 9F9ED1A1BBF9A4EAFE56B948E8FC710802129E159B6870C530BCFEB41782DFE6
+								  </div>
 								  </font>
 								  </li>
 								  
@@ -733,29 +715,6 @@
                     <br>
                   </div>
                   <!-- padding -->
-				  
-				  <details>
-                  <summary>
-				    <font style="font-family:Helvetica; font-size:11;">
-					SHA-256 Explanation:
-					</font>
-				  </summary>
-                  <p style="margin-left:18; margin-right:40;">
-				  <font style="font-family:Helvetica; font-size:11;">
-                  SHA-256 is a widely used, secure cryptographic function that takes any input data and produces 
-				  a fixed-size 256-bit (32-byte) "fingerprint" called a hash value. <br> 
-                  Windows Powershell "Get-FileHash" command was used to create a SHA-256 fingerprint for the 
-                  MidiOrganize.exe installer. If needed, 
-				  <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry">email me </a>
-				  for the powershell command. <br>
-				  After download, to verify the MidiOrganize.exe file has not been 
-                  nefariously altered, rerun the Windows Powershell command to calculate the digital fingerprint
-                  for the MidiOrganize.exe installer.<br>
-				  Compare your SHA-256 value to the SHA-256 value above. Matching values guaranteees	
-                  your installer has not been nefariously altered by a third party.
-                  </font>				  
-                  </p>
-                  </details>
                   <br>
 				  
                 </td>
@@ -857,9 +816,11 @@
                                   <a href="./indexMoreInfo"  target="popup" onclick="window.open('https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads','popup','width=1280'); return false;">
                                   <b><u>MidiXLate Version 1.3 Windows exe installer</u></b> 
                                   </a>
-								   <br>
+								  <br>
 								  <font style="font-family:Helvetica; font-size:8;">
-								  SHA 256: 71858A41F503DA6F3EDFE6630327789F8F583968C7BF6DF11E56F8F79CA6FDCB
+								  <div title="SHA-256 is a widely used, secure cryptographic function that takes any input data and produces a fixed-size 256-bit (32-byte) fingerprint called a hash value. Windows Powershell 'Get-FileHash' command was used to create a SHA-256 fingerprint for the MidiXLate.exe installer. After download, to verify the MidiXLate.exe file has not been altered/corrupted, rerun the Windows Powershell command to calculate the digital fingerprint for the MidiXLaate.exe installer. Compare your SHA-256 value to this SHA-256. Matching values guaranteees your installer has not been altered or corrupted by a third party.">
+								  SHA-256: 71858A41F503DA6F3EDFE6630327789F8F583968C7BF6DF11E56F8F79CA6FDCB
+								  </div>
 								  </font>
                                   </li>								  
                                   
@@ -1235,29 +1196,6 @@
                     </center>
                   </div>
                   <!-- padding -->
-				  
-				  				  <details>
-                  <summary>
-				    <font style="font-family:Helvetica; font-size:11;">
-					SHA-256 Explanation:
-					</font>
-				  </summary>
-                  <p style="margin-left:18; margin-right:40;">
-				  <font style="font-family:Helvetica; font-size:11;">
-                  SHA-256 is a widely used, secure cryptographic function that takes any input data and produces 
-				  a fixed-size 256-bit (32-byte) "fingerprint" called a hash value. <br> 
-                  Windows Powershell "Get-FileHash" command was used to create a SHA-256 fingerprint for the 
-                  MidiXLate.exe installer. If needed, 
-				  <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry">email me </a>
-				  for the powershell command. <br>
-				  After download, to verify the MidiXLate.exe file has not been 
-                  nefariously altered, rerun the Windows Powershell command to calculate the digital fingerprint
-                  for the MidiXLate.exe installer.<br>
-				  Compare your SHA-256 value to the SHA-256 value above. Matching values guaranteees	
-                  your installer has not been nefariously altered by a third party.
-                  </font>				  
-                  </p>
-                  </details>
                   <br>
 				  
                 </td>
