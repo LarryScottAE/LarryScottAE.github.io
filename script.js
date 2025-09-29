@@ -1,7 +1,7 @@
 	
 	function winOpen(win)
 	{
-	 window.open(win,'_blank',"toolbar=no,scrollbars=yes,resizable=yes,top=100,left=100,width=1000,height=800"); 
+	 window.open(win,'_blank',"toolbar=no,scrollbars=yes,resizable=yes,top=100,left=100,width=1200,height=1000"); 
 	}
 
 //==============================================================================================================================	
