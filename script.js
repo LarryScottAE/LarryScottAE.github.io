@@ -73,7 +73,7 @@ function router(screen) {
 
   
 function MidiControlAllOff() {
-  for (let i = 1; i <= 6; i++) {
+  for (let i = 1; i <= 5; i++) {
     let div = "MidiControlDiv" + i.toString();
     document.getElementById(div).hidden = true;
     const button1 = document.getElementById("MidiControl" + i.toString());
@@ -132,84 +132,3 @@ function MidiOrganize(screen) {
  } 
    
 
-//==============================================================================================================================
-
-   
-function midiOrganizeResetOLD() {
-  document.getElementById("midiOrganizeDiv0").hidden = false;
-  document.getElementById("midiOrganizeDiv1").hidden = true;
-  document.getElementById("midiOrganizeDiv2").hidden = true;
-  document.getElementById("midiOrganizeDiv3").hidden = true;
-  document.getElementById("midiOrganizeDiv4").hidden = true;
-  document.getElementById("midiOrganizeDiv5").hidden = true;
-  document.getElementById("midiOrganizeDiv6").hidden = true;
-  
-  const button1 = document.getElementById("midiOrganize1");
-  button1.textContent = "Show Opening Screen"; 
-  const button2 = document.getElementById("midiOrganize2");
-  button2.textContent = "Show Bookmark Introduction"; 
-  const button3 = document.getElementById("midiOrganize3");
-  button3.textContent = "Show Bookmark Management"; 
-  const button4 = document.getElementById("midiOrganize4");
-  button4.textContent = "Show Search Midi Files"; 
-  const button5 = document.getElementById("midiOrganize5");
-  button5.textContent = "Show Preview Midi File"; 
-  const button6 = document.getElementById("midiOrganize6");
-  button6.textContent = "Show Drag Midi / Drop DAW"; 
- }
-
-
-
-function midiOrganizeOLD(screen) {
- midiOrganizeReset();
- const button = document.getElementById("midiOrganize" + screen);
- let midiOrganizeDiv = "midiOrganizeDiv" + screen;
-//alert("midiOrganizeDiv=" + screen.toString());
-//alert("midiOrganizeDiv=" + midiOrganizeDiv);
-
- let buttonName = "";
- if (screen == 1)  buttonName= "Opening Screen"; else 
- if (screen == 2)  buttonName= "Bookmark Introduction"; else 
- if (screen == 3)  buttonName= "Bookmark Management"; else 
- if (screen == 4)  buttonName= "Search Midi Files"; else 
- if (screen == 5)  buttonName= "Preview Midi File"; else 
- if (screen == 6)  buttonName= "Drag Midi / Drop DAW"; 
-
-//alert("buttonName=" + buttonName);
-  let buttonHide = "Hide " + buttonName;
-  let buttonShow = "Show " + buttonName;
-
-  document.getElementById("midiOrganizeDiv0").hidden = true;
-  if (button.textContent == buttonHide) 
-   {
-    button.textContent = buttonShow;
-	document.getElementById(midiOrganizeDiv).hidden = true;
-  } 
-   else 
-   {
-    button.textContent = buttonHide;
-	document.getElementById(midiOrganizeDiv).hidden = false;
-   }  
-
-   // if no divs visible, show default div 0
-   let foundVisibleDiv = false;
-   for (let i = 1; i <= 6; i++) {
-      let midiOrganizeDivTest = "midiOrganizeDiv" + i.toString();
-   // alert("midiOrganizeDivTest=" + midiOrganizeDivTest);
-
-      const div = document.getElementById(midiOrganizeDivTest);
-      const isHidden = window.getComputedStyle(div).display === 'none';
-
-   // alert("midiOrganizeDivTest=" + midiOrganizeDivTest + " hidden=" + isHidden);
-
-      if (!(isHidden)) 
-	    {
-	    foundVisibleDiv=true;
-        break; 
-	    }
-  	}
-
-   if (foundVisibleDiv===false) 
-      midiOrganizeReset();   
- }  
-   
