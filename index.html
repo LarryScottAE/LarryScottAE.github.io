@@ -148,10 +148,19 @@
       height: 68px;
     }
     .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .nav-logo-text {
+      background: linear-gradient(90deg, #1a5f8a 0%, #2d9cdb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 1.1rem;
+    }
     .nav-links { display: flex; gap: 12px; list-style: none; }
-    .nav-links a { color: #ffffff; font-size: 0.88rem; font-weight: 600; transition: background .2s; padding: 7px 18px; border-radius: 20px; background: var(--highlight); }
+    .nav-links a { color: #ffffff; font-size: 0.88rem; font-weight: 600; transition: background .2s; padding: 7px 18px; border-radius: 20px; background: var(--highlight); display: inline-flex; align-items: center; line-height: 1.4; }
     .nav-links a:hover { background: var(--navy-rim); color: #ffffff; }
-    .nav-cta { background: var(--highlight); color: #ffffff; padding: 7px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; transition: background .2s; }
+    .nav-cta { background: var(--highlight); color: #ffffff; padding: 7px 18px; border-radius: 20px; font-size: 0.88rem; font-weight: 600; transition: background .2s; line-height: 1.4; display: inline-flex; align-items: center; }
     .nav-cta:hover { background: var(--navy-rim); color: #ffffff; }
     .nav-coffee {
       display: inline-flex; align-items: center;
@@ -200,7 +209,7 @@
 
     /* ── Badges & chips ── */
     .product-badge { display: inline-block; padding: 3px 12px; border-radius: 20px; font-size: .75rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; margin-bottom: .8rem; }
-    .badge-free { background: rgba(26,95,138,.10); color: var(--highlight); border: 1px solid rgba(26,95,138,.30); }
+    .badge-free { background: rgba(26,95,138,.10); color: var(--highlight); border: 1px solid rgba(26,95,138,.30); font-weight: 700; }
     .badge-hw   { background: rgba(196,82,0,.10);  color: var(--warm);      border: 1px solid rgba(196,82,0,.30); }
     .product-title { font-size: 1.9rem; margin-bottom: .4rem; }
     .product-desc  { color: var(--muted); margin-bottom: 1rem; font-size: .97rem; }
@@ -500,6 +509,53 @@
     .contact-band h2 { font-size: 1.4rem; margin-bottom: .5rem; }
     .contact-band p  { color: var(--muted); margin-bottom: 1.5rem; }
     .contact-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Contact form ── */
+    .contact-form {
+      max-width: 540px; margin: 1.5rem auto 0; text-align: left;
+      display: flex; flex-direction: column; gap: .85rem;
+    }
+    .contact-form label {
+      font-size: .82rem; font-weight: 600; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .05em;
+      display: block; margin-bottom: .25rem;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%; padding: 10px 14px;
+      border: 1px solid var(--border); border-radius: 6px;
+      background: #ffffff; color: var(--text);
+      font-family: 'Inter', sans-serif; font-size: .95rem;
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: var(--highlight);
+      box-shadow: 0 0 0 3px rgba(26,95,138,.12);
+    }
+    .contact-form textarea { resize: vertical; min-height: 120px; }
+    .contact-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
+    @media (max-width: 520px) { .contact-form-row { grid-template-columns: 1fr; } }
+    .contact-form-submit { text-align: center; margin-top: .5rem; }
+    .contact-form-submit button {
+      background: var(--highlight); color: #ffffff;
+      padding: 12px 36px; border-radius: 6px;
+      font-weight: 600; font-size: .95rem; border: none;
+      cursor: pointer; transition: background .2s, transform .15s;
+      font-family: 'Inter', sans-serif;
+    }
+    .contact-form-submit button:hover { background: #145078; transform: translateY(-1px); }
+    .contact-form-submit button:disabled { opacity: .6; cursor: default; transform: none; }
+    .form-status {
+      margin-top: .75rem; font-size: .88rem; font-weight: 500;
+      min-height: 1.4em;
+    }
+    .form-status.success { color: #1a7a3a; }
+    .form-status.error   { color: #c0392b; }
+
     footer { text-align: center; padding: 2rem; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--border); }
     footer a { color: var(--muted); }
     footer a:hover { color: var(--highlight); }
@@ -538,14 +594,14 @@
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     /* ── Hero improvements ── */
-    .hero { min-height: 34vh; padding: 2.4rem 2rem 2rem; }
+    .hero { min-height: 34vh; padding: 2.4rem 2rem 0.75rem; }
     .hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); }
 
     /* ── Softer section dividers ── */
     .divider-dark { border-top: 2px solid rgba(26,95,138,0.6); opacity: 1; margin: 0; }
 
     /* ── Thumb grid improvements ── */
-    .thumb-item img { height: 110px; }
+    .thumb-item img { height: 110px; border: 2px solid rgba(0,0,0,0.70); }
     .thumb-caption { font-size: .75rem; padding: 6px 8px 8px; }
 
     /* ── MIDI Basics background band ── */
@@ -606,7 +662,7 @@
       <polygon points="72,68 60,40 66,55 76,68" fill="white" opacity="0.55"/>
       <polyline points="8,58 16,58 20,50 24,66 28,46 32,72 36,54 40,58 44,58 48,58 52,50 56,64 60,52 64,58 72,58 80,58" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
     </svg>
-    Sierra Digital Audio
+    <span class="nav-logo-text">Sierra Digital Audio</span>
   </a>
   <ul class="nav-links" role="list" style="justify-content:center;">
     <li><a href="#midicontrol" title="Free MIDI librarian with Roland Integra-7 support">MidiControl</a></li>
@@ -615,7 +671,10 @@
     <li><a href="#midi-overview" title="Comprehensive MIDI concepts guide — notes, CC, SysEx, channels and more">MIDI Basics</a></li>
   </ul>
   <div style="display:flex; align-items:center; gap:1rem; justify-content:flex-end;">
-    <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry" class="nav-cta" title="Send Larry an email">Contact</a>
+    <a href="#contact" class="nav-cta" title="Jump to contact form">Contact</a>
+    <a href="https://buymeacoffee.com/sierradigitalaudio" class="nav-coffee" target="_blank" rel="noopener" title="Buy Larry a coffee!">
+      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:34px; width:auto; border-radius:6px;" />
+    </a>
     <button class="nav-hamburger" aria-label="Toggle navigation menu" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open');">
       <span></span><span></span><span></span>
     </button>
@@ -635,11 +694,11 @@
   </div>
 </header>
 
-<hr class="divider-dark" />
+<hr class="divider-dark" style="margin-top:0;" />
 
 
 <!-- ── MIDICONTROL ── -->
-<section id="midicontrol" aria-labelledby="mc-heading">
+<section id="midicontrol" aria-labelledby="mc-heading" style="padding-top:1.25rem;">
   <h2 class="section-title" id="mc-heading">🎹 MidiControl</h2>
   <p class="section-sub" style="max-width:100%;">A MIDI command librarian and patch preview tool with first-class Roland Integra-7 MIDI tone generator support.</p>
 
@@ -1016,7 +1075,7 @@
         <li>Test drive by renting before purchase. Rent applied to purchase.</li>
       </ul>
       <div class="product-links">
-        <a href="mailto:SierraDigitalAudio@gmail.com?subject=MidiXLate_Inquiry" class="link-chip" title="Email Larry to ask about renting or buying a MidiXLate router"
+        <a href="#contact" id="btnInquireRental" class="link-chip" title="Jump to contact form to ask about renting or buying a MidiXLate router"
 		   >✉ Inquire about rental / purchase</a>
 
         <a href="./index.html" class="link-chip" target="popup" 
@@ -1252,13 +1311,13 @@
       <div style="margin-top:.9rem;font-size:.88rem;color:var(--muted)">
         <strong style="color:var(--text)">Rent before you buy:</strong> $150/month (customer pays shipping both ways). Rental cost applies toward purchase price.
       </div>
-      <a href="mailto:SierraDigitalAudio@gmail.com?subject=MidiXLate_Inquiry" class="btn-primary" style="display:inline-block;margin-top:.9rem">Inquire about a router</a>
+      <a href="#contact" id="btnInquireRouter" class="btn-primary" style="display:inline-block;margin-top:.9rem">Inquire about your custom built router!</a>
     </div>
     <div>
       <div style="font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem">Specifications</div>
       <table class="spec-table">
         <tr><td>Processor</td><td>Atmel SAM3X8E ARM Cortex-M3</td></tr>
-        <tr><td>Clock speed</td><td>84 MHz</td></tr>
+        <tr><td>Clock speed</td><td>84 MHz (1000+ MIDI cmds / sec)</td></tr>
         <tr><td>MIDI ports</td><td>6 MIDI DIN in/out, 1 USB-C in/out</td></tr>
         <tr><td>Latency</td><td>&lt;1 ms (microsecond processing)</td></tr>
         <tr><td>Configuration</td><td>via USB-C Port 2 from PC app</td></tr>
@@ -1506,14 +1565,89 @@
 <div class="contact-band" id="contact">
   <h2>Ready to upgrade your MIDI workflow?</h2>
   <p>Questions about any product, router availability, or custom engineering work — Larry responds personally.</p>
-  <div class="contact-row">
-    <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry" class="btn-primary" title="Send an email to Larry Scott at Sierra Digital Audio">Email SierraDigitalAudio@gmail.com</a>
-    <a href="https://buymeacoffee.com/sierradigitalaudio" class="btn-outline" target="_blank" rel="noopener" title="Support Sierra Digital Audio — every coffee is appreciated!">☕ Buy Larry a coffee</a>
+
+  <form class="contact-form" id="contactForm">
+    <div class="contact-form-row">
+      <div>
+        <label for="cf-name">Your name</label>
+        <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required />
+      </div>
+      <div>
+        <label for="cf-email">Email address</label>
+        <input type="email" id="cf-email" name="email" placeholder="jane@example.com" required />
+      </div>
+    </div>
+    <div>
+      <label for="cf-subject">Subject</label>
+      <select id="cf-subject" name="subject">
+        <option value="MidiControl question">MidiControl question</option>
+        <option value="MidiOrganize question">MidiOrganize question</option>
+        <option value="MidiXLate router inquiry">MidiXLate router inquiry</option>
+        <option value="Custom engineering">Custom engineering</option>
+        <option value="General inquiry" selected>General inquiry</option>
+        <option value="Creative feedback">Creative feedback</option>
+      </select>
+    </div>
+    <div>
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" name="message" placeholder="Tell Larry what you're working on…" required></textarea>
+    </div>
+    <div class="contact-form-submit">
+      <button type="submit" id="cfSubmit">Send Message</button>
+      <div class="form-status" id="cfStatus" aria-live="polite"></div>
+    </div>
+  </form>
+
+  <div class="contact-row" style="margin-top:1.5rem;">
+    <a href="https://buymeacoffee.com/sierradigitalaudio" class="nav-coffee" target="_blank" rel="noopener" title="Support Sierra Digital Audio — every coffee is appreciated!">
+      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:44px; width:auto; border-radius:8px;" />
+    </a>
   </div>
   <p style="margin-top:.9rem;font-size:.85rem;color:var(--muted)">
     📍 13155 Falcon Point Place, Truckee, CA 96161 USA &nbsp;·&nbsp; 📞 925-765-2883
   </p>
 </div>
+
+<script>
+  // Set subject dropdown when router inquiry buttons are clicked
+  ['btnInquireRouter', 'btnInquireRental'].forEach(function(id) {
+    var btn = document.getElementById(id);
+    if (btn) btn.addEventListener('click', function() {
+      document.getElementById('cf-subject').value = 'MidiXLate router inquiry';
+    });
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn    = document.getElementById('cfSubmit');
+    const status = document.getElementById('cfStatus');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.className = 'form-status';
+    status.textContent = '';
+    try {
+      const res = await fetch('https://formspree.io/f/xnjkqkjp', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(this)
+      });
+      if (res.ok) {
+        status.className = 'form-status success';
+        status.textContent = '✓ Message sent! Larry will be in touch soon.';
+        this.reset();
+      } else {
+        const data = await res.json();
+        throw new Error((data.errors || []).map(x => x.message).join(', ') || 'Submission failed');
+      }
+    } catch (err) {
+      status.className = 'form-status error';
+      status.textContent = '✗ ' + (err.message || 'Something went wrong — please try again.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    }
+  });
+</script>
 
 
 <!-- ── COPYRIGHT NOTICE ── -->
