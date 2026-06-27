@@ -1008,7 +1008,7 @@
             <strong style="display:block; margin-bottom:4px; font-size:.78rem;">What is a SHA-256 hash?</strong>
             A unique 64-character digital fingerprint calculated from the installer file. If even one byte is altered — by corruption or tampering — the hash changes completely. Comparing it to this value confirms you have a safe, unmodified copy.
             <strong style="display:block; margin-top:8px; margin-bottom:4px; font-size:.78rem;">How to verify (Windows PowerShell):</strong>
-            <span style="display:block; background:rgba(255,255,255,.15); border-radius:4px; padding:4px 8px; font-family:monospace; font-size:.72rem;">Get-FileHash setupMidiOrganize-V1.7.exe -Algorithm SHA256</span>
+            <span style="display:block; background:rgba(255,255,255,.15); border-radius:4px; padding:4px 8px; font-family:monospace; font-size:.72rem;">Get-FileHash setupMidiOrganize-V1.5.exe -Algorithm SHA256</span>
             <span style="display:block; margin-top:6px;">Compare the <em>Hash</em> value in the output to the fingerprint above — they should match exactly.</span>
             <div style="position:absolute; bottom:-6px; left:20px; width:12px; height:12px; background:#1a5f8a; transform:rotate(45deg); border-radius:1px;"></div>
           </div>
@@ -1088,6 +1088,19 @@
         <a href="https://sierradigitalaudio.com/tutorials/Tutorial_MidiXLate_Hardware.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 11-minute MidiControl video tutorial" style="width:220px; justify-content:center;"
 		   >▶ MidiXLate Software Tutorial (8 min, 65 meg)</a>
 
+        <div style="width:100%; font-size:.72rem; color:var(--muted); font-family:monospace; padding:4px 2px; letter-spacing:.02em; position:relative; cursor:help; display:inline-block;"
+             onmouseenter="this.querySelector('.sha-tooltip').style.opacity='1'; this.querySelector('.sha-tooltip').style.pointerEvents='auto';"
+             onmouseleave="this.querySelector('.sha-tooltip').style.opacity='0'; this.querySelector('.sha-tooltip').style.pointerEvents='none';">
+          MidXLate installer's digital fingerprint / SHA-256 hash value: 9AEF4049D9AE4EC97B2D623A9954B063BCF85A1099C9F3F51F0B143F911BA7BB
+          <div class="sha-tooltip" style="opacity:0; pointer-events:none; transition:opacity .2s ease; position:absolute; bottom:calc(100% + 8px); left:0; width:340px; background:#1a5f8a; color:#ffffff; font-family:'Inter',sans-serif; font-size:.75rem; font-weight:400; line-height:1.6; padding:10px 13px; border-radius:8px; box-shadow:0 4px 16px rgba(26,95,138,.25); z-index:50; letter-spacing:0;">
+            <strong style="display:block; margin-bottom:4px; font-size:.78rem;">What is a SHA-256 hash?</strong>
+            A unique 64-character digital fingerprint calculated from the installer file. If even one byte is altered — by corruption or tampering — the hash changes completely. Comparing it to this value confirms you have a safe, unmodified copy.
+            <strong style="display:block; margin-top:8px; margin-bottom:4px; font-size:.78rem;">How to verify (Windows PowerShell):</strong>
+            <span style="display:block; background:rgba(255,255,255,.15); border-radius:4px; padding:4px 8px; font-family:monospace; font-size:.72rem;">Get-FileHash setupMidiXlate-V1.5.exe -Algorithm SHA256</span>
+            <span style="display:block; margin-top:6px;">Compare the <em>Hash</em> value in the output to the fingerprint above — they should match exactly.</span>
+            <div style="position:absolute; bottom:-6px; left:20px; width:12px; height:12px; background:#1a5f8a; transform:rotate(45deg); border-radius:1px;"></div>
+          </div>
+        </div>
       </div>
     </div>
 
