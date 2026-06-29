@@ -148,6 +148,7 @@
       height: 68px;
     }
     .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .nav-mobile-label { display: none; }
     .nav-logo-text {
       background: linear-gradient(90deg, #1a5f8a 0%, #2d9cdb 100%);
       -webkit-background-clip: text;
@@ -581,7 +582,8 @@
       /* ── Nav ── */
       nav { padding: 0 .9rem; height: 54px; grid-template-columns: auto auto auto; }
       .nav-logo { gap: 7px; }
-      .nav-logo-text { font-size: .78rem; letter-spacing: .02em; white-space: nowrap; }
+      .nav-logo-text { font-size: .78rem; letter-spacing: .02em; white-space: nowrap; display: flex; flex-direction: column; line-height: 1.3; }
+      .nav-mobile-label { display: block; font-size: .50rem; color: #0d1f2d; font-weight: 400; letter-spacing: 0; -webkit-text-fill-color: #0d1f2d; background: none; }
       .nav-cta { font-size: .7rem; padding: 4px 10px; border-radius: 14px; }
       .nav-logo svg { width: 28px; height: 28px; }
       .nav-midi-basics { display: none !important; }
@@ -695,6 +697,9 @@
       /* ── Flow diagram — scale to fit on mobile ── */
       .diagram-wrap { padding: .6rem; overflow-x: hidden; }
       .flow-svg { min-width: 0; width: 100%; height: auto; }
+
+      /* ── Hide MIDI Basics section on mobile ── */
+      #midi-overview { display: none; }
 
       /* ── Screenshot panels ── */
       .screenshot-main { min-height: 160px; }
@@ -842,7 +847,7 @@
       <polygon points="72,68 60,40 66,55 76,68" fill="white" opacity="0.55"/>
       <polyline points="8,58 16,58 20,50 24,66 28,46 32,72 36,54 40,58 44,58 48,58 52,50 56,64 60,52 64,58 72,58 80,58" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
     </svg>
-    <span class="nav-logo-text">Sierra Digital Audio</span>
+    <span class="nav-logo-text">Sierra Digital Audio<span class="nav-mobile-label">(mobile phone summarized layout)</span></span>
   </a>
   <ul class="nav-links" role="list" style="justify-content:center;">
     <li><a href="#midicontrol" title="Free MIDI librarian with Roland Integra-7 support">MidiControl</a></li>
@@ -2140,7 +2145,7 @@
     <span><a href="#">Back to top ↑</a></span>
   </div>
   <div style="text-align:center; padding:.5rem 2rem 1rem; font-size:.72rem; color:rgba(255,255,255,0.3); font-family:monospace; letter-spacing:.05em;">
-    Build 20260629 2006
+    Build 20260629 2024
   </div>
 </footer>
 
