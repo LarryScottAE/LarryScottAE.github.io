@@ -701,6 +701,42 @@
       .ui-sidebar { width: 100px; }
       .ui-sidebar-item { font-size: .7rem; }
       .ui-row { font-size: .7rem; }
+
+      /* ── Fix inline-width link chips overflowing on mobile ── */
+      .product-links .link-chip,
+      .product-links a.link-chip { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+
+      /* ── SHA hash — wrap long hex string ── */
+      [style*="cursor:help"] { word-break: break-all; white-space: normal !important; width: 100% !important; display: block !important; }
+
+      /* ── Section gaps — consistent breathing room between sections ── */
+      section + section { margin-top: 0; }
+      .divider, .divider-dark { margin: .5rem 0; }
+
+      /* ── Product block — tighter gap between stacked columns ── */
+      .product-block { gap: 1.25rem; }
+
+      /* ── Right column flex wrappers — reduce gap ── */
+      [style*="flex-direction:column"][style*="gap:1.5rem"] { gap: 1rem !important; }
+      [style*="flex-direction:column"][style*="gap:4rem"] { gap: 1.5rem !important; }
+
+      /* ── Section inline padding-top overrides ── */
+      section[style*="padding-top"] { padding-top: 1.2rem !important; }
+
+      /* ── Hero p max-width — let it fill on mobile ── */
+      .hero p[style*="max-width"] { max-width: 100% !important; }
+
+      /* ── Prevent any element from overflowing viewport ── */
+      section, .product-block, .product-links, .contact-form { max-width: 100%; overflow-x: hidden; }
+
+      /* ── Thumb group legend spacing ── */
+      .thumb-legend { font-size: .72rem; }
+
+      /* ── Price card inner spacing ── */
+      .price-card { padding: 1rem; gap: 1rem; }
+
+      /* ── Screenshot bar title — prevent overflow ── */
+      .screenshot-bar-title { font-size: .85rem !important; white-space: normal; text-align: center; }
     }
 
     /* Extra-small phones (≤ 390px — iPhone SE, 13 mini) */
@@ -2104,7 +2140,7 @@
     <span><a href="#">Back to top ↑</a></span>
   </div>
   <div style="text-align:center; padding:.5rem 2rem 1rem; font-size:.72rem; color:rgba(255,255,255,0.3); font-family:monospace; letter-spacing:.05em;">
-    Build 20260629 1955
+    Build 20260629 2006
   </div>
 </footer>
 
