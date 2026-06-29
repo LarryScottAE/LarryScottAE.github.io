@@ -576,56 +576,54 @@
     @media (max-width: 760px) {
 
       /* ── Base typography ── */
-      body { font-size: 17px; line-height: 1.75; }
+      body { font-size: 15px; line-height: 1.65; }
 
       /* ── Nav ── */
-      nav { padding: 0 1.1rem; height: 60px; }
-
-      .nav-logo-text { font-size: .82rem; letter-spacing: .03em; white-space: nowrap; }
-      .nav-cta { font-size: .72rem; padding: 5px 11px; }
-      .nav-logo svg { width: 32px; height: 32px; }
+      nav { padding: 0 .9rem; height: 54px; grid-template-columns: auto auto auto; }
+      .nav-logo { gap: 7px; }
+      .nav-logo-text { font-size: .78rem; letter-spacing: .02em; white-space: nowrap; }
+      .nav-cta { font-size: .7rem; padding: 4px 10px; border-radius: 14px; }
+      .nav-logo svg { width: 28px; height: 28px; }
       .nav-midi-basics { display: none !important; }
+      .nav-links a { font-size: .95rem; padding: 11px 16px; }
+      .nav-links.open { top: 54px; }
 
-      /* ── Router photo — constrain size on mobile ── */
-      .router-photo-item img { max-height: none; object-fit: cover; width: 100%; height: auto; }
-      .nav-links a { font-size: 1rem; padding: 12px 18px; }
-
-      /* ── Hero ── */
-      .hero { min-height: auto; padding: 2rem 1.25rem 1.25rem; }
-      .hero h1 { font-size: clamp(1.7rem, 7vw, 2.4rem); }
-      .hero p { font-size: 1.05rem; }
-      .hero-eyebrow { font-size: .75rem; }
+      /* ── Hero — compact on mobile ── */
+      .hero { min-height: auto; padding: 1.25rem 1rem .9rem; }
+      .hero h1 { font-size: clamp(1.3rem, 5.5vw, 1.8rem); margin-bottom: .5rem; }
+      .hero p { font-size: .88rem; margin-bottom: 1rem; }
+      .hero-eyebrow { font-size: .68rem; padding: 4px 10px; margin-bottom: 1rem; }
       .btn-primary,
-      .btn-outline { padding: 14px 24px; font-size: 1rem; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
-      .hero-buttons { gap: .75rem; }
-      .hero-stat .num { font-size: 1.65rem; }
+      .btn-outline { padding: 11px 20px; font-size: .9rem; min-height: 44px; }
+      .hero-buttons { gap: .6rem; }
+      .hero-stat .num { font-size: 1.4rem; }
+      .hero-stat .label { font-size: .72rem; }
+      .hero-stats { gap: 1rem; margin-top: 1rem; }
 
       /* ── Sections ── */
-      section { padding: 2rem 1.25rem; }
-      .section-title { font-size: clamp(1.25rem, 5vw, 1.7rem); }
+      section { padding: 1.4rem 1rem; }
+      .section-title { font-size: 1.1rem; margin-bottom: .2rem; }
+      .section-sub { font-size: .85rem; margin-bottom: 1rem; }
 
+      /* ── Hide MidiControl UI panel ── */
       .midicontrol-panel { display: none; }
 
-      /* ── Product titles & descriptions ── */
-      .product-title { font-size: 1.25rem; }
-      .product-desc { font-size: .88rem; }
-      .feature-list li { font-size: .83rem; }
-      .product-badge { font-size: .68rem; }
-      .product-links .link-chip { font-size: .8rem; }
+      /* ── Product blocks ── */
+      .product-title { font-size: 1.1rem; margin-bottom: .3rem; }
+      .product-desc { font-size: .83rem; margin-bottom: .75rem; }
+      .feature-list { gap: .4rem; margin-bottom: .75rem; }
+      .feature-list li { font-size: .8rem; }
+      .product-badge { font-size: .65rem; padding: 2px 9px; margin-bottom: .6rem; }
 
-      /* ── Link chips — bigger tap targets ── */
-      .link-chip {
-        padding: 10px 16px;
-        font-size: .9rem;
-        min-height: 44px;
-        align-items: center;
-      }
+      /* ── Link chips ── */
+      .link-chip { padding: 8px 12px; font-size: .78rem; min-height: 40px; }
+      .product-links { gap: .5rem; }
 
-      /* ── Thumb grid — fewer columns on small screens ── */
-      .thumb-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); column-gap: 12px; }
-      .thumb-item img { height: 75px; }
-
-
+      /* ── Thumb grid ── */
+      .thumb-group { padding: .6rem .7rem .8rem; }
+      .thumb-grid { grid-template-columns: repeat(auto-fill, minmax(95px, 1fr)); column-gap: 8px; row-gap: 8px; }
+      .thumb-item img { height: 65px; }
+      .thumb-caption { font-size: .65rem; }
 
       /* ── SHA-256 tooltip → tap-to-expand on touch ── */
       .sha-tooltip {
@@ -641,10 +639,9 @@
         display: none;
       }
       .sha-tooltip.mobile-open { display: block !important; }
-      /* "Tap to expand" hint text after the hash line */
       [style*="cursor:help"]::after {
         content: ' 👆 tap for info';
-        font-size: .68rem;
+        font-size: .65rem;
         font-family: 'Inter', sans-serif;
         color: var(--highlight);
         letter-spacing: 0;
@@ -653,47 +650,68 @@
       }
 
       /* ── Router photos ── */
-      .router-photos { gap: 1rem; }
+      .router-photos { gap: .5rem; }
+      .router-photo-item img { max-height: none; object-fit: cover; width: 100%; height: auto; }
 
-      /* ── Pricing spec table ── */
-      .spec-table { font-size: .85rem; }
-      .spec-table td { padding: 8px 0; }
+      /* ── Price card ── */
+      .price-num { font-size: 1.8rem; }
+      .spec-table { font-size: .8rem; }
+      .spec-table td { padding: 6px 0; }
 
-      /* ── MIDI overview grid ── */
-      .midi-grid { grid-template-columns: 1fr; }
+      /* ── MIDI overview ── */
+      .midi-grid { grid-template-columns: 1fr; gap: .75rem; }
       .midi-two-col { grid-template-columns: 1fr; }
+      .midi-card { padding: .75rem; }
+      .midi-card h3 { font-size: .88rem; }
+      .midi-card p, .midi-card ul li { font-size: .8rem; }
+      .midi-intro { font-size: .85rem; padding: .75rem .9rem; }
+      .midi-section-head { font-size: .88rem; margin: 1.25rem 0 .6rem; }
 
       /* ── Contact form ── */
-      .contact-form { padding: 0 .25rem; }
+      .contact-band { padding: 1.5rem 1rem; }
+      .contact-band h2 { font-size: 1.1rem; }
+      .contact-band p { font-size: .85rem; margin-bottom: 1rem; }
+      .contact-form { padding: 0; }
       .contact-form input,
       .contact-form textarea,
-      .contact-form select { font-size: 16px; padding: 13px 14px; min-height: 48px; }
-      .contact-form textarea { min-height: 140px; }
-      .contact-form-submit button { width: 100%; padding: 15px; font-size: 1rem; min-height: 52px; }
-      .contact-form-row { grid-template-columns: 1fr; }
+      .contact-form select { font-size: 16px; padding: 11px 12px; min-height: 44px; }
+      .contact-form textarea { min-height: 120px; }
+      .contact-form-submit button { width: 100%; padding: 13px; font-size: .95rem; min-height: 48px; }
+      .contact-form-row { grid-template-columns: 1fr; gap: .65rem; }
+      .contact-form { gap: .65rem; }
 
-      /* ── Copyright grid ── */
-      .copyright-grid { grid-template-columns: 1fr; }
+      /* ── Copyright ── */
+      .copyright-notice { padding: 1.5rem 1rem; }
+      .copyright-grid { grid-template-columns: 1fr; gap: .75rem; }
+      .copyright-item { padding: .75rem; }
+      .copyright-notice-title { font-size: 1rem; }
+      .copyright-notice-lead { font-size: .82rem; }
 
       /* ── Footer ── */
-      .site-footer-inner { flex-direction: column; gap: 1.5rem; }
+      .site-footer-inner { flex-direction: column; gap: 1.25rem; padding: 1.5rem 1rem; }
       .site-footer-col { text-align: left; }
+      .site-footer-bottom { font-size: .75rem; padding: .75rem 1rem; flex-direction: column; gap: .4rem; text-align: center; }
 
-      /* ── Flow diagram — scroll horizontally if needed ── */
-      .diagram-wrap { padding: .75rem; overflow-x: auto; }
-      .flow-svg { min-width: 480px; }
+      /* ── Flow diagram — scroll horizontally ── */
+      .diagram-wrap { padding: .6rem; overflow-x: auto; }
+      .flow-svg { min-width: 460px; }
 
-      /* ── Screenshot panel ── */
-      .screenshot-main { min-height: 180px; }
-      .ui-sidebar { width: 110px; }
+      /* ── Screenshot panels ── */
+      .screenshot-main { min-height: 160px; }
+      .ui-sidebar { width: 100px; }
+      .ui-sidebar-item { font-size: .7rem; }
+      .ui-row { font-size: .7rem; }
     }
 
-    /* Extra-small phones (≤ 400px) */
-    @media (max-width: 400px) {
-      .hero h1 { font-size: 1.55rem; }
-      .thumb-grid { grid-template-columns: repeat(2, 1fr); column-gap: 8px; }
-      section { padding: 1.75rem 1rem; }
-      nav { padding: 0 .85rem; }
+    /* Extra-small phones (≤ 390px — iPhone SE, 13 mini) */
+    @media (max-width: 390px) {
+      body { font-size: 14px; }
+      .hero h1 { font-size: 1.2rem; }
+      .thumb-grid { grid-template-columns: repeat(2, 1fr); column-gap: 6px; }
+      section { padding: 1.1rem .85rem; }
+      nav { padding: 0 .75rem; }
+      .nav-logo-text { font-size: .72rem; }
+      .product-title { font-size: 1rem; }
     }
 
     /* ── Hamburger ── */
@@ -1877,7 +1895,7 @@
     <span><a href="#">Back to top ↑</a></span>
   </div>
   <div style="text-align:center; padding:.5rem 2rem 1rem; font-size:.72rem; color:rgba(255,255,255,0.3); font-family:monospace; letter-spacing:.05em;">
-    Build 20260629 1909
+    Build 20260629 1916
   </div>
 </footer>
 
