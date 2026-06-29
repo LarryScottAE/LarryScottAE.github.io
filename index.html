@@ -692,9 +692,9 @@
       .site-footer-col { text-align: left; }
       .site-footer-bottom { font-size: .75rem; padding: .75rem 1rem; flex-direction: column; gap: .4rem; text-align: center; }
 
-      /* ── Flow diagram — scroll horizontally ── */
-      .diagram-wrap { padding: .6rem; overflow-x: auto; }
-      .flow-svg { min-width: 460px; }
+      /* ── Flow diagram — scale to fit on mobile ── */
+      .diagram-wrap { padding: .6rem; overflow-x: hidden; }
+      .flow-svg { min-width: 0; width: 100%; height: auto; }
 
       /* ── Screenshot panels ── */
       .screenshot-main { min-height: 160px; }
@@ -1071,46 +1071,244 @@
   <div class="product-block reverse">
     <!-- Flow diagram -->
     <div class="diagram-wrap" aria-label="MidiOrganize workflow diagram">
-      <svg class="flow-svg" viewBox="0 0 440 320" role="img" aria-label="Workflow: MIDI loops through MidiOrganize into DAW then tone generator">
+      <svg class="flow-svg" id="mo-diagram" viewBox="0 0 440 370" role="img" aria-label="Animated workflow: MIDI loops through MidiOrganize into DAW, then forking to VST or external tone generator">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M2 1L8 5L2 9" fill="none" stroke="#1a5f8a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </marker>
           <marker id="arr-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M2 1L8 5L2 9" fill="none" stroke="#ffe066" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#c45200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#1a7a3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+          <!-- Glow filter for active boxes -->
+          <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
         </defs>
-        <rect x="20" y="20" width="120" height="54" rx="8" fill="rgba(26,95,138,.10)" stroke="rgba(26,95,138,.4)" stroke-width="0.8"/>
-        <text x="80" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#0d1f2d" font-weight="600">MIDI Loops</text>
-        <text x="80" y="62" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#4a6a82">Groove Monkee / any</text>
-        <line x1="80" y1="74" x2="80" y2="108" stroke="rgba(26,95,138,.5)" stroke-width="1" marker-end="url(#arr)" stroke-dasharray="4 3"/>
-        <rect x="12" y="108" width="136" height="70" rx="8" fill="rgba(26,95,138,.16)" stroke="#ffe066" stroke-width="1.2"/>
-        <text x="80" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#1a5f8a" font-weight="700">MidiOrganize</text>
-        <text x="80" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#4a6a82">Browse · Preview</text>
-        <text x="80" y="166" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#4a6a82">Drag &amp; Drop</text>
-        <line x1="148" y1="143" x2="198" y2="143" stroke="rgba(26,95,138,.5)" stroke-width="1" marker-end="url(#arr)"/>
-        <text x="173" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">drag</text>
-        <rect x="198" y="108" width="120" height="70" rx="8" fill="rgba(26,95,138,.08)" stroke="rgba(26,95,138,.35)" stroke-width="0.8"/>
-        <text x="258" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#0d1f2d" font-weight="700">DAW</text>
-        <text x="258" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#4a6a82">Reaper / ProTools</text>
-        <text x="258" y="166" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#4a6a82">Cubase</text>
-        <line x1="318" y1="143" x2="368" y2="143" stroke="rgba(26,95,138,.7)" stroke-width="1" marker-end="url(#arr-gold)" stroke-dasharray="4 3"/>
-        <text x="343" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">MIDI</text>
-        <rect x="368" y="108" width="56" height="70" rx="8" fill="rgba(26,95,138,.06)" stroke="rgba(26,95,138,.25)" stroke-width="0.8"/>
-        <text x="396" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#0d1f2d" font-weight="600">Tone</text>
-        <text x="396" y="148" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#0d1f2d" font-weight="600">Gen</text>
-        <text x="396" y="164" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">Integra-7</text>
-        <rect x="12"  y="210" width="124" height="46" rx="6" fill="rgba(26,95,138,.06)" stroke="rgba(26,95,138,.15)" stroke-width="0.5"/>
-        <text x="74"  y="229" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#1a5f8a" font-weight="600">No VST cost</text>
-        <text x="74"  y="246" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"  fill="#4a6a82">Saves $100s/yr</text>
-        <rect x="160" y="210" width="124" height="46" rx="6" fill="rgba(26,95,138,.06)" stroke="rgba(26,95,138,.15)" stroke-width="0.5"/>
-        <text x="222" y="229" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#1a5f8a" font-weight="600">No CPU load</text>
-        <text x="222" y="246" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"  fill="#4a6a82">External sound gen</text>
-        <rect x="308" y="210" width="116" height="46" rx="6" fill="rgba(26,95,138,.06)" stroke="rgba(26,95,138,.15)" stroke-width="0.5"/>
-        <text x="366" y="229" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#1a5f8a" font-weight="600">No internet</text>
-        <text x="366" y="246" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"  fill="#4a6a82">Offline forever</text>
-        <text x="220" y="292" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#4a6a82">MidiOrganize workflow: loops → preview → drag into DAW → external tone generator</text>
+
+        <!-- ── MIDI Loops box ── -->
+        <g id="mo-box-loops" opacity="0">
+          <rect x="20" y="20" width="120" height="54" rx="8" fill="rgba(26,95,138,.10)" stroke="rgba(26,95,138,.4)" stroke-width="0.8"/>
+          <text x="80" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#0d1f2d" font-weight="600">MIDI Loops</text>
+          <text x="80" y="62" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Groove Monkee / any</text>
+        </g>
+
+        <!-- ── Arrow: loops → MidiOrganize (animated dash travel) ── -->
+        <line id="mo-arr1" x1="80" y1="74" x2="80" y2="108" stroke="rgba(26,95,138,.5)" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="4 3" stroke-dashoffset="34" opacity="0"/>
+
+        <!-- ── MidiOrganize box ── -->
+        <g id="mo-box-mo" opacity="0">
+          <rect x="12" y="108" width="136" height="70" rx="8" fill="rgba(26,95,138,.16)" stroke="#ffe066" stroke-width="1.5"/>
+          <text x="80" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1a5f8a" font-weight="700">MidiOrganize</text>
+          <text x="80" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Browse · Preview</text>
+          <text x="80" y="166" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Drag &amp; Drop</text>
+        </g>
+
+        <!-- ── Arrow: MidiOrganize → DAW ── -->
+        <line id="mo-arr2" x1="148" y1="143" x2="210" y2="143" stroke="rgba(26,95,138,.6)" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="62 62" stroke-dashoffset="62" opacity="0"/>
+        <text id="mo-arr2-lbl" x="179" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82" opacity="0">drag</text>
+
+        <!-- ── DAW box ── -->
+        <g id="mo-box-daw" opacity="0">
+          <rect x="210" y="108" width="110" height="70" rx="8" fill="rgba(26,95,138,.08)" stroke="rgba(26,95,138,.45)" stroke-width="1"/>
+          <text x="265" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#0d1f2d" font-weight="700">DAW Track</text>
+          <text x="265" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Reaper · ProTools</text>
+          <text x="265" y="166" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Cubase · any</text>
+        </g>
+
+        <!-- ── Fork stem + horizontal bar ── -->
+        <line id="mo-fork-v" x1="265" y1="178" x2="265" y2="205" stroke="rgba(26,95,138,.5)" stroke-width="1.5" stroke-dasharray="27 27" stroke-dashoffset="27" opacity="0"/>
+        <line id="mo-fork-h" x1="170" y1="205" x2="360" y2="205" stroke="rgba(26,95,138,.4)" stroke-width="1.5" stroke-dasharray="190 190" stroke-dashoffset="190" opacity="0"/>
+
+        <!-- ── Arrow fork left → VST ── -->
+        <line id="mo-arr-vst" x1="170" y1="205" x2="170" y2="228" stroke="#1a7a3a" stroke-width="1.5" marker-end="url(#arr-green)" stroke-dasharray="23 23" stroke-dashoffset="23" opacity="0"/>
+
+        <!-- ── VST box ── -->
+        <g id="mo-box-vst" opacity="0">
+          <rect x="110" y="228" width="120" height="62" rx="8" fill="rgba(26,122,58,.07)" stroke="rgba(26,122,58,.45)" stroke-width="0.9"/>
+          <text x="170" y="251" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1a7a3a" font-weight="700">VST</text>
+          <text x="170" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Route track output</text>
+          <text x="170" y="282" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">to any drum VST</text>
+          <text x="170" y="310" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1a7a3a">Option 1</text>
+        </g>
+
+        <!-- ── Arrow fork right → Tone Gen ── -->
+        <line id="mo-arr-tg" x1="360" y1="205" x2="360" y2="228" stroke="#c45200" stroke-width="1.5" marker-end="url(#arr-gold)" stroke-dasharray="23 23" stroke-dashoffset="23" opacity="0"/>
+
+        <!-- ── Tone Generator box ── -->
+        <g id="mo-box-tg" opacity="0">
+          <rect x="300" y="228" width="120" height="62" rx="8" fill="rgba(196,82,0,.07)" stroke="rgba(196,82,0,.50)" stroke-width="0.9"/>
+          <text x="360" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#c45200" font-weight="700">Tone Generator</text>
+          <text x="360" y="265" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Integra-7 / any</text>
+          <text x="360" y="281" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Zero CPU · Superior sound</text>
+          <text x="360" y="310" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#c45200">Option 2 — recommended</text>
+        </g>
+
+        <!-- ── Travelling signal dot ── -->
+        <circle id="mo-dot" r="5" fill="#1a5f8a" opacity="0"/>
+
+        <!-- Footer caption -->
+        <text x="220" y="350" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">MidiOrganize: drag loops into DAW, then route to VST or external tone generator</text>
       </svg>
+
+      <script>
+      (function() {
+        // Easing helpers
+        function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+        function lerp(a,b,t) { return a + (b-a)*t; }
+
+        // Animate element opacity
+        function fadeIn(el, duration, delay, from, to) {
+          from = from === undefined ? 0 : from;
+          to   = to   === undefined ? 1 : to;
+          setTimeout(function() {
+            var start = null;
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min((ts - start) / duration, 1);
+              el.setAttribute('opacity', lerp(from, to, ease(p)));
+              if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+          }, delay);
+        }
+
+        // Animate stroke-dashoffset (draw a line)
+        function drawLine(el, duration, delay) {
+          el.setAttribute('opacity', '1');
+          setTimeout(function() {
+            var total = parseFloat(el.getAttribute('stroke-dasharray').split(' ')[0]);
+            var start = null;
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min((ts - start) / duration, 1);
+              el.setAttribute('stroke-dashoffset', lerp(total, 0, ease(p)));
+              if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+          }, delay);
+        }
+
+        // Pulse a box border
+        function pulseBox(rectEl, color, times) {
+          var i = 0;
+          function doPulse() {
+            if (i >= times * 2) return;
+            var brightening = (i % 2 === 0);
+            var start = null, duration = 300;
+            var origStroke = rectEl.getAttribute('stroke');
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min((ts - start) / duration, 1);
+              var alpha = brightening ? lerp(0.45, 1, ease(p)) : lerp(1, 0.45, ease(p));
+              rectEl.setAttribute('stroke-width', brightening ? lerp(0.9, 2.5, ease(p)) : lerp(2.5, 0.9, ease(p)));
+              if (p < 1) { requestAnimationFrame(step); }
+              else { i++; doPulse(); }
+            }
+            requestAnimationFrame(step);
+          }
+          doPulse();
+        }
+
+        // Moving dot along a path of points [[x,y],...]
+        function moveDot(dot, points, duration, delay, color) {
+          setTimeout(function() {
+            dot.setAttribute('opacity', '1');
+            dot.setAttribute('fill', color || '#1a5f8a');
+            var totalSegs = points.length - 1;
+            var start = null;
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min((ts - start) / duration, 1);
+              var seg = Math.min(Math.floor(p * totalSegs), totalSegs - 1);
+              var segP = (p * totalSegs) - seg;
+              var x = lerp(points[seg][0], points[seg+1][0], ease(segP));
+              var y = lerp(points[seg][1], points[seg+1][1], ease(segP));
+              dot.setAttribute('cx', x);
+              dot.setAttribute('cy', y);
+              if (p < 1) requestAnimationFrame(step);
+              else dot.setAttribute('opacity', '0');
+            }
+            requestAnimationFrame(step);
+          }, delay);
+        }
+
+        var svg = document.getElementById('mo-diagram');
+
+        function runSequence() {
+          // Stage 1 (0ms): MIDI Loops box fades in
+          fadeIn(document.getElementById('mo-box-loops'), 400, 0);
+
+          // Stage 2 (500ms): arrow 1 draws down
+          drawLine(document.getElementById('mo-arr1'), 300, 500);
+
+          // Stage 3 (900ms): MidiOrganize box fades in + pulse
+          fadeIn(document.getElementById('mo-box-mo'), 400, 900);
+
+          // Stage 4 (1400ms): arrow 2 draws right
+          drawLine(document.getElementById('mo-arr2'), 350, 1400);
+          fadeIn(document.getElementById('mo-arr2-lbl'), 200, 1600);
+
+          // Stage 5 (1900ms): DAW box fades in
+          fadeIn(document.getElementById('mo-box-daw'), 400, 1900);
+
+          // Stage 6 (2500ms): fork stem draws down
+          drawLine(document.getElementById('mo-fork-v'), 250, 2500);
+
+          // Stage 7 (2800ms): fork horizontal bar draws
+          drawLine(document.getElementById('mo-fork-h'), 350, 2800);
+
+          // Stage 8 (3200ms): both fork arrows draw simultaneously
+          drawLine(document.getElementById('mo-arr-vst'), 250, 3200);
+          drawLine(document.getElementById('mo-arr-tg'),  250, 3200);
+
+          // Stage 9 (3500ms): both output boxes fade in
+          fadeIn(document.getElementById('mo-box-vst'), 400, 3500);
+          fadeIn(document.getElementById('mo-box-tg'),  400, 3500);
+
+          // Stage 10 (4200ms+): travelling signal dots loop
+          var dot = document.getElementById('mo-dot');
+
+          function fireSignal() {
+            // Alternate between VST path and TG path
+            var useVST = (Math.random() > 0.4); // TG slightly favoured
+            var color  = useVST ? '#1a7a3a' : '#c45200';
+            var path   = useVST
+              ? [[80,20],[80,108],[148,143],[210,143],[265,143],[265,205],[170,205],[170,228],[170,290]]
+              : [[80,20],[80,108],[148,143],[210,143],[265,143],[265,205],[360,205],[360,228],[360,290]];
+            moveDot(dot, path, 1800, 0, color);
+            setTimeout(fireSignal, 2200 + Math.random() * 600);
+          }
+
+          setTimeout(fireSignal, 4200);
+        }
+
+        // Use IntersectionObserver to trigger when diagram scrolls into view
+        if ('IntersectionObserver' in window) {
+          var triggered = false;
+          var obs = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting && !triggered) {
+              triggered = true;
+              runSequence();
+            }
+          }, { threshold: 0.3 });
+          obs.observe(svg);
+        } else {
+          runSequence();
+        }
+      })();
+      </script>
     </div>
 
     <div>
@@ -1118,8 +1316,9 @@
       <h2 class="product-title">Ditch the expensive drum VSTs</h2>
       <p class="product-desc">
         MidiOrganize is a standalone Windows MIDI loop librarian. Browse, preview, and drag MIDI loops directly into
-        your DAW — then route the output to an external tone generator. Superior sound, zero CPU overhead,
-        no license key, no activation server, no internet connectivity required.
+        your DAW track and route the track output to a VST. For superior sound, route the track output to an external
+        tone generator. This has many benefits: zero CPU overhead, no license key, no activation server, and no
+        required internet connectivity to use VST!
       </p>
       <ul class="feature-list">
         <li>Familiar drill-down look and feel matching popular drum VSTs</li>
@@ -1895,7 +2094,7 @@
     <span><a href="#">Back to top ↑</a></span>
   </div>
   <div style="text-align:center; padding:.5rem 2rem 1rem; font-size:.72rem; color:rgba(255,255,255,0.3); font-family:monospace; letter-spacing:.05em;">
-    Build 20260629 1916
+    Build 20260629 1940
   </div>
 </footer>
 
