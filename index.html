@@ -1069,6 +1069,15 @@
   <p class="section-sub" style="max-width:100%;">Drag-and-drop MIDI loops from MidiOrganize to your Digital Analog Workstation (DAW). No VST license. No internet. No CPU tax.</p>
 
   <div class="product-block reverse">
+    <!-- Opening screen screenshot -->
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <a href="images/organize1L.png" target="_blank" rel="noopener"
+         title="Click to view full size: MidiOrganize opening screen"
+         style="display:block; border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
+        <img src="images/organize1L.png"
+             alt="MidiOrganize opening screen — browse and preview MIDI loops"
+             style="width:100%; height:auto; display:block; border-radius:10px;" loading="lazy" />
+      </a>
     <!-- Flow diagram -->
     <div class="diagram-wrap" aria-label="MidiOrganize workflow diagram">
       <svg class="flow-svg" id="mo-diagram" viewBox="0 0 440 370" role="img" aria-label="Animated workflow: MIDI loops through MidiOrganize into DAW, then forking to VST or external tone generator">
@@ -1287,8 +1296,8 @@
             var path   = useVST
               ? [[80,20],[80,108],[148,143],[210,143],[265,143],[265,205],[170,205],[170,228],[170,290]]
               : [[80,20],[80,108],[148,143],[210,143],[265,143],[265,205],[360,205],[360,228],[360,290]];
-            moveDot(dot, path, 1800, 0, color);
-            setTimeout(fireSignal, 2200 + Math.random() * 600);
+            moveDot(dot, path, 6000, 0, color);
+            setTimeout(fireSignal, 7000 + Math.random() * 1000);
           }
 
           setTimeout(fireSignal, 4200);
@@ -1310,6 +1319,7 @@
       })();
       </script>
     </div>
+    </div><!-- end screenshot+diagram flex column -->
 
     <div>
       <span class="product-badge badge-free">Free Software</span>
@@ -2094,7 +2104,7 @@
     <span><a href="#">Back to top ↑</a></span>
   </div>
   <div style="text-align:center; padding:.5rem 2rem 1rem; font-size:.72rem; color:rgba(255,255,255,0.3); font-family:monospace; letter-spacing:.05em;">
-    Build 20260629 1940
+    Build 20260629 1955
   </div>
 </footer>
 
