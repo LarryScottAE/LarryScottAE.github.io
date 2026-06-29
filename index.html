@@ -580,7 +580,12 @@
 
       /* ── Nav ── */
       nav { padding: 0 1.1rem; height: 60px; }
-      .nav-logo-text { font-size: 1.1rem; letter-spacing: .06em; }
+      .nav-logo-text { font-size: .82rem; letter-spacing: .03em; }
+      .nav-logo svg { width: 32px; height: 32px; }
+      .nav-midi-basics { display: none !important; }
+
+      /* ── Router photo — constrain size on mobile ── */
+      .router-photo-item img { max-height: 220px; object-fit: contain; width: 100%; }
       .nav-links a { font-size: 1rem; padding: 12px 18px; }
 
       /* ── Hero ── */
@@ -783,7 +788,7 @@
     <li><a href="#midicontrol" title="Free MIDI librarian with Roland Integra-7 support">MidiControl</a></li>
     <li><a href="#midiorganize" title="Free MIDI loop organizer for your DAW">MidiOrganize</a></li>
     <li><a href="#midixlate" title="Custom hardware MIDI router — 7×7 ports, 84 MHz ARM processor">MidiXLate Router</a></li>
-    <li><a href="#midi-overview" title="Comprehensive MIDI concepts guide — notes, CC, SysEx, channels and more">MIDI Basics</a></li>
+    <li><a href="#midi-overview" title="Comprehensive MIDI concepts guide — notes, CC, SysEx, channels and more" class="nav-midi-basics">MIDI Basics</a></li>
   </ul>
   <div style="display:flex; align-items:center; gap:1rem; justify-content:flex-end;">
     <a href="#contact" class="nav-cta" title="Jump to contact form">Contact</a>
