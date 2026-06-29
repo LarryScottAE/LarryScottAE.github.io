@@ -570,6 +570,121 @@
       .nav-hamburger { display: flex; }
     }
 
+    /* =====================================================
+       MOBILE OPTIMIZATIONS  (iPhone / Galaxy / touch devices)
+       ===================================================== */
+    @media (max-width: 760px) {
+
+      /* ── Base typography ── */
+      body { font-size: 17px; line-height: 1.75; }
+
+      /* ── Nav ── */
+      nav { padding: 0 1.1rem; height: 60px; }
+      .nav-logo-text { font-size: 1.1rem; letter-spacing: .06em; }
+      .nav-links a { font-size: 1rem; padding: 12px 18px; }
+
+      /* ── Hero ── */
+      .hero { min-height: auto; padding: 2rem 1.25rem 1.25rem; }
+      .hero h1 { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+      .hero p { font-size: 1.05rem; }
+      .hero-eyebrow { font-size: .75rem; }
+      .btn-primary,
+      .btn-outline { padding: 14px 24px; font-size: 1rem; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
+      .hero-buttons { gap: .75rem; }
+      .hero-stat .num { font-size: 1.65rem; }
+
+      /* ── Sections ── */
+      section { padding: 2rem 1.25rem; }
+      .section-title { font-size: clamp(1.25rem, 5vw, 1.7rem); }
+
+      /* ── Product titles & descriptions ── */
+      .product-title { font-size: 1.6rem; }
+      .product-desc { font-size: 1rem; }
+      .feature-list li { font-size: .97rem; }
+
+      /* ── Link chips — bigger tap targets ── */
+      .link-chip {
+        padding: 10px 16px;
+        font-size: .9rem;
+        min-height: 44px;
+        align-items: center;
+      }
+
+      /* ── Thumb grid — fewer columns on small screens ── */
+      .thumb-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); column-gap: 12px; }
+      .thumb-item img { height: 75px; }
+
+
+
+      /* ── SHA-256 tooltip → tap-to-expand on touch ── */
+      .sha-tooltip {
+        position: static !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        width: 100% !important;
+        bottom: auto !important;
+        left: auto !important;
+        box-shadow: none !important;
+        border-radius: 6px !important;
+        margin-top: 8px !important;
+        display: none;
+      }
+      .sha-tooltip.mobile-open { display: block !important; }
+      /* "Tap to expand" hint text after the hash line */
+      [style*="cursor:help"]::after {
+        content: ' 👆 tap for info';
+        font-size: .68rem;
+        font-family: 'Inter', sans-serif;
+        color: var(--highlight);
+        letter-spacing: 0;
+        display: block;
+        margin-top: 3px;
+      }
+
+      /* ── Router photos ── */
+      .router-photos { gap: 1rem; }
+
+      /* ── Pricing spec table ── */
+      .spec-table { font-size: .85rem; }
+      .spec-table td { padding: 8px 0; }
+
+      /* ── MIDI overview grid ── */
+      .midi-grid { grid-template-columns: 1fr; }
+      .midi-two-col { grid-template-columns: 1fr; }
+
+      /* ── Contact form ── */
+      .contact-form { padding: 0 .25rem; }
+      .contact-form input,
+      .contact-form textarea,
+      .contact-form select { font-size: 16px; padding: 13px 14px; min-height: 48px; }
+      .contact-form textarea { min-height: 140px; }
+      .contact-form-submit button { width: 100%; padding: 15px; font-size: 1rem; min-height: 52px; }
+      .contact-form-row { grid-template-columns: 1fr; }
+
+      /* ── Copyright grid ── */
+      .copyright-grid { grid-template-columns: 1fr; }
+
+      /* ── Footer ── */
+      .site-footer-inner { flex-direction: column; gap: 1.5rem; }
+      .site-footer-col { text-align: left; }
+
+      /* ── Flow diagram — scroll horizontally if needed ── */
+      .diagram-wrap { padding: .75rem; overflow-x: auto; }
+      .flow-svg { min-width: 480px; }
+
+      /* ── Screenshot panel ── */
+      .screenshot-main { min-height: 180px; }
+      .ui-sidebar { width: 110px; }
+    }
+
+    /* Extra-small phones (≤ 400px) */
+    @media (max-width: 400px) {
+      .hero h1 { font-size: 1.55rem; }
+      .thumb-grid { grid-template-columns: repeat(2, 1fr); column-gap: 8px; }
+      section { padding: 1.75rem 1rem; }
+      nav { padding: 0 .85rem; }
+    }
+
     /* ── Hamburger ── */
     .nav-hamburger {
       display: none;
@@ -1621,6 +1736,28 @@
 </div>
 
 <script>
+  // SHA-256 tap-to-expand on touch devices
+  (function() {
+    function isTouchDevice() { return window.matchMedia('(max-width: 760px)').matches; }
+    document.querySelectorAll('.sha-tooltip').forEach(function(tooltip) {
+      var parent = tooltip.parentElement;
+      if (!parent) return;
+      parent.addEventListener('click', function(e) {
+        if (!isTouchDevice()) return;
+        tooltip.classList.toggle('mobile-open');
+      });
+      // Disable the hover-based inline style on mobile
+      parent.addEventListener('mouseenter', function() {
+        if (isTouchDevice()) return;
+        tooltip.style.opacity = '1'; tooltip.style.pointerEvents = 'auto';
+      });
+      parent.addEventListener('mouseleave', function() {
+        if (isTouchDevice()) return;
+        tooltip.style.opacity = '0'; tooltip.style.pointerEvents = 'none';
+      });
+    });
+  })();
+
   // Set subject dropdown when router inquiry buttons are clicked
   ['btnInquireRouter', 'btnInquireRental'].forEach(function(id) {
     var btn = document.getElementById(id);
