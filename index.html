@@ -614,7 +614,7 @@
       .product-title { font-size: 1.1rem; margin-bottom: .3rem; }
       .product-desc { font-size: .83rem; margin-bottom: .75rem; }
       .feature-list { gap: .4rem; margin-bottom: .75rem; }
-      .feature-list li { font-size: .8rem; }
+      .feature-list li { font-size: .70rem; }
       .product-badge { font-size: .65rem; padding: 2px 9px; margin-bottom: .6rem; }
 
       /* ── Link chips ── */
@@ -720,6 +720,23 @@
       .ui-sidebar { width: 100px; }
       .ui-sidebar-item { font-size: .7rem; }
       .ui-row { font-size: .7rem; }
+
+      /* ── Roland Integra-7 panel — compact on mobile ── */
+      .integra7-panel { margin-top: .75rem !important; }
+      .integra7-panel .screenshot-bar a { font-size: .72rem !important; white-space: normal; text-align: center; line-height: 1.3; }
+      .integra7-panel .screenshot-main { padding: .75rem !important; gap: 8px !important; }
+      .integra7-panel .screenshot-main [style*="font-size:1.3rem"] { font-size: .95rem !important; }
+      .integra7-panel .screenshot-main [style*="font-size:.72rem"] { font-size: .62rem !important; }
+      .integra7-panel .screenshot-main [style*="font-size:.82rem"] { font-size: .7rem !important; }
+      .integra7-panel .screenshot-main [style*="padding:.75rem"] { padding: .5rem !important; }
+      .integra7-panel .screenshot-main [style*="gap:10px"] { gap: 6px !important; }
+      .integra7-panel .screenshot-main [style*="gap:7px"] { gap: 5px !important; }
+      .integra7-panel .screenshot-main img { width: 100% !important; }
+
+      /* ── MidiControl buttons — smaller on mobile ── */
+      #midicontrol .link-chip { font-size: .72rem; padding: 7px 10px; min-height: 36px; width: auto !important; max-width: 85% !important; justify-content: flex-start; text-align: left; }
+      #midicontrol .link-chip[href*="Integra7-Tutorial"],
+      #midicontrol .link-chip[href*="setupMidiControl"] { font-size: .64rem; }
 
       /* ── Fix inline-width link chips overflowing on mobile ── */
       .product-links .link-chip,
@@ -1028,7 +1045,7 @@
     </div>
 
     <!-- Roland Integra-7 info panel -->
-    <div class="screenshot-panel" aria-label="Roland Integra-7 overview" style="margin-top:1.5rem;">
+    <div class="screenshot-panel integra7-panel" aria-label="Roland Integra-7 overview" style="margin-top:1.5rem;">
       <div class="screenshot-bar">
         <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
         <a href="https://www.roland.com/us/products/integra-7/" target="_blank" rel="noopener" title="View the Roland Integra-7 on Roland.com" style="margin:0 auto; font-weight:700; font-size:1rem; color:var(--highlight); text-decoration:none; white-space:nowrap;">Roland Integra-7 SuperNATURAL Sound Module ↗</a>
@@ -2159,7 +2176,7 @@
     <span><a href="#">Back to top ↑</a></span>
   </div>
   <div style="text-align:center; padding:.5rem 2rem 1rem; font-size:.72rem; color:rgba(255,255,255,0.3); font-family:monospace; letter-spacing:.05em;">
-    Build 20260629 2024
+    Build 20260701 0120
   </div>
 </footer>
 
