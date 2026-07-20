@@ -171,9 +171,9 @@
 
     /* ── Hero ── */
     .hero {
-      min-height: 18vh;
+      min-height: 30vh;
       display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center; padding: .75rem 2rem .75rem;
+      text-align: center; padding: 1.5rem 2rem 1.25rem;
       background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(26,95,138,.07) 0%, transparent 60%), var(--navy);
       position: relative; overflow: hidden;
     }
@@ -184,8 +184,8 @@
         repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(26,95,138,.04) 40px);
       pointer-events: none;
     }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(26,95,138,.08); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; font-weight: 500; color: var(--highlight); letter-spacing: .06em; text-transform: uppercase; margin-bottom: .75rem; }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); max-width: 780px; color: var(--text); margin-bottom: .4rem; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(26,95,138,.08); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; font-weight: 500; color: var(--highlight); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); max-width: 780px; color: var(--text); margin-bottom: .75rem; }
     .hero h1 span { color: var(--highlight); }
     .hero p { font-size: 1.15rem; color: var(--muted); max-width: 560px; margin-bottom: 1.5rem; }
     .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
@@ -202,67 +202,17 @@
     section { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; }
     .section-title { font-size: clamp(1.3rem, 3vw, 1.9rem); margin-bottom: .3rem; }
     .section-sub { color: var(--muted); margin-bottom: 1.5rem; max-width: 540px; }
-
-    /* ── Option E: glowing highlight bar for product section headings ── */
-    #mc-heading, #mo-heading, #mx-heading {
-      border-left: 4px solid #1a5f8a;
-      padding-left: .75rem;
-      background: linear-gradient(90deg, rgba(26,95,138,.18) 0%, rgba(26,95,138,.09) 100%);
-      border-radius: 0 6px 6px 0;
-      display: block;
-      color: var(--text);
-    }
     .divider { width: 100%; border: none; border-top: 1px solid var(--border); margin: 0 auto; }
     .divider-dark { width: 100%; border: none; border-top: 2px solid #1a5f8a; margin: 0 auto; opacity: 0.55; }
     .product-block { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
     .product-block.reverse { direction: rtl; }
     .product-block.reverse > * { direction: ltr; }
 
-    /* ── 1. Scroll-triggered fade-in ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── 2. Product section cards ── */
-    .product-card {
-      background: var(--navy);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: 0 2px 16px rgba(13,31,45,.07), 0 1px 4px rgba(13,31,45,.04);
-      padding: 2rem 2rem 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      transition: box-shadow .3s ease;
-    }
-    .product-card:hover {
-      box-shadow: 0 6px 32px rgba(26,95,138,.10), 0 2px 8px rgba(13,31,45,.06);
-    }
-
-    /* ── 3. Alternating section backgrounds ── */
-    .section-band {
-      width: 100%;
-    }
-    .section-band:nth-child(odd) {
-      background: var(--navy);
-    }
-    .section-band:nth-child(even) {
-      background: rgba(26,95,138,.035);
-    }
-
-    /* ── Widen product sections by 10% ── */
-    #midicontrol, #midiorganize, #midixlate { max-width: 1210px; }
-
     /* ── Badges & chips ── */
     .product-badge { display: inline-block; padding: 3px 12px; border-radius: 20px; font-size: .75rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; margin-bottom: .8rem; }
     .badge-free { background: rgba(26,95,138,.10); color: var(--highlight); border: 1px solid rgba(26,95,138,.30); font-weight: 700; }
     .badge-hw   { background: rgba(196,82,0,.10);  color: var(--warm);      border: 1px solid rgba(196,82,0,.30); }
-    .product-title { font-size: 1.5rem; margin-bottom: .4rem; }
+    .product-title { font-size: 1.9rem; margin-bottom: .4rem; }
     .product-desc  { color: var(--muted); margin-bottom: 1rem; font-size: .97rem; }
     .feature-list { list-style: none; display: flex; flex-direction: column; gap: .55rem; margin-bottom: 1rem; }
     .feature-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .93rem; color: var(--muted); }
@@ -556,7 +506,7 @@
     }
 
     /* ── Contact / footer ── */
-    .contact-band { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 2px 16px rgba(13,31,45,.07), 0 1px 4px rgba(13,31,45,.04); padding: 2.5rem 2rem; text-align: center; max-width: 1100px; margin: 2rem auto; }
+    .contact-band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid rgba(26,95,138,.15); padding: 2.5rem 2rem; text-align: center; }
     .contact-band h2 { font-size: 1.4rem; margin-bottom: .5rem; }
     .contact-band p  { color: var(--muted); margin-bottom: 1.5rem; }
     .contact-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -720,7 +670,7 @@
       .midi-section-head { font-size: .88rem; margin: 1.25rem 0 .6rem; }
 
       /* ── Contact form ── */
-      .contact-band { padding: 1.5rem 1rem; border-radius: 10px; margin: 1rem; box-shadow: none; }
+      .contact-band { padding: 1.5rem 1rem; }
       .contact-band h2 { font-size: 1.1rem; }
       .contact-band p { font-size: .85rem; margin-bottom: 1rem; }
       .contact-form { padding: 0; }
@@ -748,10 +698,6 @@
       .diagram-wrap { padding: .6rem; overflow-x: hidden; }
       .flow-svg { min-width: 0; width: 100%; height: auto; }
 
-      /* ── Disable fade-in and flatten cards on mobile ── */
-      .fade-in { opacity: 1 !important; transform: none !important; }
-      .product-card { padding: 1rem; border-radius: 10px; box-shadow: none; }
-
       /* ── Hide MIDI Basics section on mobile ── */
       #midi-overview { display: none; }
 
@@ -765,9 +711,9 @@
       #midixlate    { border-top: 4px solid #1a5f8a; background: linear-gradient(180deg, rgba(26,95,138,.05) 0%, transparent 60px); border-radius: 0 0 8px 8px; }
 
       /* Section title color per product */
-      #midicontrol  .section-title { border-left: 4px solid #1a5f8a; padding-left: .6rem; background: linear-gradient(90deg, rgba(26,95,138,.18) 0%, rgba(26,95,138,.09) 100%); border-radius: 0 4px 4px 0; color: var(--text); }
-      #midiorganize .section-title { border-left: 4px solid #1a5f8a; padding-left: .6rem; background: linear-gradient(90deg, rgba(26,95,138,.18) 0%, rgba(26,95,138,.09) 100%); border-radius: 0 4px 4px 0; color: var(--text); }
-      #midixlate    .section-title { border-left: 4px solid #1a5f8a; padding-left: .6rem; background: linear-gradient(90deg, rgba(26,95,138,.18) 0%, rgba(26,95,138,.09) 100%); border-radius: 0 4px 4px 0; color: var(--text); }
+      #midicontrol  .section-title { color: #1a5f8a; }
+      #midiorganize .section-title { color: #1a5f8a; }
+      #midixlate    .section-title { color: #1a5f8a; }
 
       /* ── Screenshot panels ── */
       .screenshot-main { min-height: 160px; }
@@ -958,19 +904,20 @@
     <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#1a5f8a"/></svg>
     Free MIDI Software and Custom Built Hardware Tools
   </div>
-  <h1>Free MIDI Software &amp;<br/>Custom MIDI Hardware<br/><span>for Music Professionals</span></h1>
-  <p style="max-width:68ch;">Sierra Digital Audio builds free Windows utilities and custom hardware for musicians who demand reliable, low-latency MIDI workflows — from bedroom studios to touring rigs.</p>
+  <h1>Free MIDI Software &amp; Custom MIDI Hardware<br/><span>for Music Professionals</span></h1>
+  <p style="max-width:80%;">Sierra Digital Audio builds free Windows utilities and custom hardware for musicians who demand reliable, low-latency MIDI workflows — from bedroom studios to touring rigs.</p>
   <div class="hero-buttons">
   </div>
 </header>
 
 <hr class="divider-dark" style="margin-top:0;" />
-<div class="section-band">
+
+
 <!-- ── MIDICONTROL ── -->
 <section id="midicontrol" aria-labelledby="mc-heading" style="padding-top:1.25rem;">
-  <div class="product-card fade-in">
-  <h2 class="section-title fade-in" id="mc-heading"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" width="36" height="18" style="display:inline-block; vertical-align:middle; margin-right:8px; margin-bottom:3px;" aria-hidden="true"><rect x="0" y="0" width="48" height="24" rx="3" fill="#1a5f8a"/><rect x="1" y="1" width="46" height="22" rx="2.5" fill="#f8fafc"/><rect x="1" y="1" width="46" height="14" rx="2" fill="#f8fafc"/><!-- white keys --><line x1="7" y1="1" x2="7" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="13" y1="1" x2="13" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="19" y1="1" x2="19" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="25" y1="1" x2="25" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="31" y1="1" x2="31" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="37" y1="1" x2="37" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="43" y1="1" x2="43" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><!-- black keys --><rect x="4.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="10.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="22.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="28.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="34.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/></svg>MidiControl</h2>
-  <p class="section-sub fade-in" style="max-width:100%;">A Windows MIDI command librarian and patch preview tool with first-class Roland Integra-7 MIDI tone generator support.</p>
+  <h2 class="section-title" id="mc-heading">🎹 MidiControl</h2>
+  <p class="section-sub" style="max-width:100%;">A Windows MIDI command librarian and patch preview tool with first-class Roland Integra-7 MIDI tone generator support.</p>
+
   <div class="product-block">
     <div>
       <span class="product-badge badge-free">Free Software</span>
@@ -1028,16 +975,73 @@
     <!-- Right column: both panels stacked -->
     <div style="display:flex; flex-direction:column; gap:1.5rem;">
 
-    <!-- Combo panel: MidiControl opening screen -->
-    <div class="screenshot-panel midicontrol-panel" aria-label="MidiControl opening screen">
+    <!-- Combo panel: stats + setlist + before/after -->
+    <div class="screenshot-panel midicontrol-panel" aria-label="MidiControl overview">
       <div class="screenshot-bar">
         <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-        <span class="screenshot-bar-title midicontrol-subtitle" style="margin:0 auto; font-weight:700; font-size:1rem;">MidiControl — Opening Screen</span>
+        <span class="screenshot-bar-title midicontrol-subtitle" style="margin:0 auto; font-weight:700; font-size:1rem;">MidiControl — Patch Changes Simplified</span>
       </div>
-      <a href="images/control1L.png" target="_blank" rel="noopener" title="Click to view full size: MidiControl opening screen">
-        <img src="images/control1L.png" alt="MidiControl free MIDI software for Windows — opening screen"
-             style="width:100%; height:auto; display:block; border-radius:0 0 10px 10px;" loading="lazy" />
-      </a>
+      <div class="screenshot-main" style="padding: 1.25rem; display:flex; flex-direction:column; gap:14px;">
+
+        <!-- Stats row -->
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+          <div style="background:var(--surface); border-radius:8px; padding:.75rem; text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--highlight); line-height:1;">2,000</div>
+            <div style="font-size:.72rem; color:var(--muted); margin-top:3px;">MIDI commands</div>
+          </div>
+          <div style="background:var(--surface); border-radius:8px; padding:.75rem; text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--highlight); line-height:1;">24</div>
+            <div style="font-size:.72rem; color:var(--muted); margin-top:3px;">Bookmarks</div>
+          </div>
+          <div style="background:var(--surface); border-radius:8px; padding:.75rem; text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--highlight); line-height:1;">1-click</div>
+            <div style="font-size:.72rem; color:var(--muted); margin-top:3px;">Patch send</div>
+          </div>
+        </div>
+
+        <!-- Setlist -->
+        <div style="border-top:1px solid var(--border); padding-top:12px;">
+          <div style="font-size:.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px; display:grid; grid-template-columns:1.5rem 1fr 1fr auto; gap:8px; padding:0 6px;">
+            <span>#</span><span>Setlist:Song</span><span>Sound</span><span></span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:5px;">
+            <div style="display:grid; grid-template-columns:1.5rem 1fr 1fr auto; gap:8px; align-items:center; background:rgba(26,95,138,.10); border-radius:6px; padding:7px 6px; border:1px solid rgba(26,95,138,.25);">
+              <span style="font-size:.75rem; font-weight:700; color:var(--highlight);">1</span>
+              <span style="font-size:.78rem; font-weight:600; color:var(--text);">Opening number</span>
+              <span style="font-size:.72rem; color:var(--muted);">Grand Piano</span>
+              <button onclick="this.textContent='✓ Sent'; this.style.background='rgba(0,128,64,.12)'; this.style.color='#0a6e3a'; this.style.borderColor='rgba(0,128,64,.3)';" style="font-size:.7rem; padding:3px 9px; border-radius:5px; border:1px solid rgba(26,95,138,.3); background:var(--navy); color:var(--highlight); cursor:pointer; white-space:nowrap;">▶ Send</button>
+            </div>
+            <div style="display:grid; grid-template-columns:1.5rem 1fr 1fr auto; gap:8px; align-items:center; background:var(--surface); border-radius:6px; padding:7px 6px;">
+              <span style="font-size:.75rem; font-weight:700; color:var(--muted);">2</span>
+              <span style="font-size:.78rem; font-weight:600; color:var(--text);">Slow ballad</span>
+              <span style="font-size:.72rem; color:var(--muted);">String Ensemble</span>
+              <button onclick="this.textContent='✓ Sent'; this.style.background='rgba(0,128,64,.12)'; this.style.color='#0a6e3a'; this.style.borderColor='rgba(0,128,64,.3)';" style="font-size:.7rem; padding:3px 9px; border-radius:5px; border:1px solid var(--border); background:var(--navy); color:var(--text); cursor:pointer; white-space:nowrap;">▶ Send</button>
+            </div>
+            <div style="display:grid; grid-template-columns:1.5rem 1fr 1fr auto; gap:8px; align-items:center; background:var(--surface); border-radius:6px; padding:7px 6px;">
+              <span style="font-size:.75rem; font-weight:700; color:var(--muted);">3</span>
+              <span style="font-size:.78rem; font-weight:600; color:var(--text);">Big finish</span>
+              <span style="font-size:.72rem; color:var(--muted);">French Horn Sect.</span>
+              <button onclick="this.textContent='✓ Sent'; this.style.background='rgba(0,128,64,.12)'; this.style.color='#0a6e3a'; this.style.borderColor='rgba(0,128,64,.3)';" style="font-size:.7rem; padding:3px 9px; border-radius:5px; border:1px solid var(--border); background:var(--navy); color:var(--text); cursor:pointer; white-space:nowrap;">▶ Send</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Before / After -->
+        <div style="border-top:1px solid var(--border); padding-top:12px; display:grid; grid-template-columns:1fr auto 1fr; gap:10px; align-items:center;">
+          <div style="background:rgba(196,82,0,.07); border:1px solid rgba(196,82,0,.2); border-radius:8px; padding:.75rem; text-align:center;">
+            <div style="font-size:.7rem; font-weight:600; color:var(--warm); margin-bottom:4px; text-transform:uppercase; letter-spacing:.05em;">Without</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:var(--warm);">~30 sec</div>
+            <div style="font-size:.68rem; color:var(--warm); margin-top:2px; opacity:.8;">menu diving</div>
+          </div>
+          <div style="text-align:center; color:var(--muted); font-size:1rem;">→</div>
+          <div style="background:rgba(0,128,64,.07); border:1px solid rgba(0,128,64,.2); border-radius:8px; padding:.75rem; text-align:center;">
+            <div style="font-size:.7rem; font-weight:600; color:#0a6e3a; margin-bottom:4px; text-transform:uppercase; letter-spacing:.05em;">With MidiControl</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#0a6e3a;">&lt; 1 sec</div>
+            <div style="font-size:.68rem; color:#0a6e3a; margin-top:2px; opacity:.8;">one click</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <!-- Roland Integra-7 info panel -->
@@ -1126,309 +1130,268 @@
       </a>
      </div>
   </fieldset>
-  </div><!-- end product-card -->
 </section>
-</div><!-- end section-band -->
 
 <hr class="divider-dark" />
-<div class="section-band">
+
+
 <!-- ── MIDIORGANIZE ── -->
 <section id="midiorganize" aria-labelledby="mo-heading">
-  <div class="product-card fade-in">
-  <h2 class="section-title fade-in" id="mo-heading">🥁 MidiOrganize</h2>
-  <p class="section-sub fade-in" style="max-width:100%;">Drag-and-drop MIDI loops from MidiOrganize to your Digital Analog Workstation (DAW). No VST license. No internet. No CPU tax.</p>
+  <h2 class="section-title" id="mo-heading">🥁 MidiOrganize</h2>
+  <p class="section-sub" style="max-width:100%;">Drag-and-drop MIDI loops from MidiOrganize to your Digital Analog Workstation (DAW). No VST license. No internet. No CPU tax.</p>
+
   <div class="product-block reverse">
     <!-- Opening screen screenshot -->
     <div style="display:flex; flex-direction:column; gap:1rem;">
       <a href="images/organize1L.png" target="_blank" rel="noopener"
          title="Click to view full size: MidiOrganize opening screen"
-         id="mo-screenshot-link"
          style="display:block; border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
-        <img src="images/organize1L.png" id="mo-screenshot-img"
+        <img src="images/organize1L.png"
              alt="MidiOrganize opening screen — browse and preview MIDI loops"
              style="width:100%; height:auto; display:block; border-radius:10px;" loading="lazy" />
       </a>
-      <div style="height:1rem;"></div>
-    <!-- MidiOrganize Animation v3 -->
-    <div id="mo-wrap" aria-label="MidiOrganize workflow animation" style="border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
-      <div id="mo-app" style="display:grid; grid-template-columns:1fr 1fr; width:100%; min-height:0; height:100%; background:#1a1a2e; border-radius:10px; overflow:hidden; font-family:'Inter',monospace; position:relative;">
+    <!-- Flow diagram -->
+    <div class="diagram-wrap" aria-label="MidiOrganize workflow diagram">
+      <svg class="flow-svg" id="mo-diagram" viewBox="0 0 440 370" role="img" aria-label="Animated workflow: MIDI loops through MidiOrganize into DAW, then forking to VST or external tone generator">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#1a5f8a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+          <marker id="arr-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#c45200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#1a7a3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+          <!-- Glow filter for active boxes -->
+          <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
 
-        <!-- ── LEFT PANE: MidiOrganize ── -->
-        <div style="display:flex; flex-direction:column; border-right:1px solid rgba(26,95,138,.3);">
-          <!-- Title bar -->
-          <div style="background:#0f3460; padding:5px 8px; display:flex; align-items:center; gap:6px; border-bottom:1px solid rgba(26,95,138,.4);">
-            <span style="width:8px;height:8px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#28c840;display:inline-block;"></span>
-            <span style="font-size:.62rem; color:#7dd3fc; font-weight:700; margin-left:4px; letter-spacing:.04em;">MidiOrganize</span>
-          </div>
-          <!-- Breadcrumb -->
-          <div id="mo-bc" style="font-size:.6rem; color:#94a3b8; padding:4px 8px; background:#16213e; border-bottom:1px solid rgba(26,95,138,.2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">📚 Bookmarks</div>
-          <!-- List -->
-          <div id="mo-list" style="flex:1; overflow:hidden; padding:4px 0;"></div>
-          <!-- Waveform preview -->
-          <div style="border-top:1px solid rgba(26,95,138,.2); background:#0f3460; padding:5px 8px;">
-            <div style="font-size:.58rem; color:#64748b; margin-bottom:3px;">▶ Preview</div>
-            <div id="mo-pname" style="font-size:.6rem; color:#7dd3fc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-height:12px;">—</div>
-            <div id="mo-wave" style="display:flex; align-items:center; gap:1px; height:18px; margin-top:3px;"></div>
-          </div>
-        </div>
+        <!-- ── MIDI Loops box ── -->
+        <g id="mo-box-loops" opacity="0">
+          <rect x="20" y="20" width="120" height="54" rx="8" fill="rgba(26,95,138,.10)" stroke="rgba(26,95,138,.4)" stroke-width="0.8"/>
+          <text x="80" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#0d1f2d" font-weight="600">MIDI Loops</text>
+          <text x="80" y="62" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Groove Monkee / any</text>
+        </g>
 
-        <!-- ── RIGHT PANE: Reaper DAW ── -->
-        <div style="display:flex; flex-direction:column;">
-          <!-- Title bar -->
-          <div style="background:#1c1c1c; padding:5px 8px; display:flex; align-items:center; gap:6px; border-bottom:1px solid rgba(255,255,255,.08);">
-            <span style="width:8px;height:8px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#28c840;display:inline-block;"></span>
-            <span style="font-size:.62rem; color:#d4d4d4; font-weight:700; margin-left:4px; letter-spacing:.04em;">DAW - Reaper</span>
-            <span style="font-size:.55rem; color:#64748b; margin-left:auto;">Session_01.rpp</span>
-          </div>
-          <!-- Transport bar -->
-          <div style="background:#252525; padding:3px 8px; border-bottom:1px solid rgba(255,255,255,.06); display:flex; align-items:center; gap:6px;">
-            <span style="font-size:.7rem; color:#28c840;">▶</span>
-            <span style="font-size:.7rem; color:#d4d4d4;">■</span>
-            <span style="font-size:.7rem; color:#d4d4d4;">⏺</span>
-            <span id="mo-tc" style="font-size:.6rem; color:#4ade80; font-family:monospace; margin-left:auto;">0:00.000</span>
-          </div>
-          <!-- Track headers + timeline -->
-          <div style="flex:1; display:flex; flex-direction:column; overflow:hidden;">
-            <!-- Track rows -->
-            <div id="mo-daw-tracks" style="flex:1; display:flex; flex-direction:column; gap:0;">
-              <!-- populated by JS -->
-            </div>
-          </div>
-          <!-- Waveform display area -->
-          <div style="border-top:1px solid rgba(255,255,255,.08); background:#1a1a1a; padding:4px 8px;">
-            <div style="font-size:.55rem; color:#64748b; margin-bottom:2px;">MIDI Item</div>
-            <div id="mo-daw-wave" style="display:flex; align-items:center; gap:1px; height:22px;"></div>
-          </div>
-        </div>
+        <!-- ── Arrow: loops → MidiOrganize (animated dash travel) ── -->
+        <line id="mo-arr1" x1="80" y1="74" x2="80" y2="108" stroke="rgba(26,95,138,.5)" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="4 3" stroke-dashoffset="34" opacity="0"/>
 
-        <!-- Cursor + ghost -->
-        <div id="mo-cur" style="position:absolute;pointer-events:none;opacity:0;z-index:20;transition:opacity .2s;">
-          <svg width="13" height="17" viewBox="0 0 16 20" fill="none"><path d="M1 1l13 8-6 1-3 6z" fill="white" stroke="#1a5f8a" stroke-width="1.2"/></svg>
-        </div>
-        <div id="mo-gho" style="position:absolute;pointer-events:none;opacity:0;background:#1a5f8a;color:#fff;font-size:.58rem;padding:2px 7px;border-radius:3px;white-space:nowrap;z-index:19;box-shadow:0 2px 8px rgba(0,0,0,.6);">🎵</div>
+        <!-- ── MidiOrganize box ── -->
+        <g id="mo-box-mo" opacity="0">
+          <rect x="12" y="108" width="136" height="70" rx="8" fill="rgba(26,95,138,.16)" stroke="#ffe066" stroke-width="1.5"/>
+          <text x="80" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1a5f8a" font-weight="700">MidiOrganize</text>
+          <text x="80" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Browse · Preview</text>
+          <text x="80" y="166" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Drag &amp; Drop</text>
+        </g>
 
-      </div>
+        <!-- ── Arrow: MidiOrganize → DAW ── -->
+        <line id="mo-arr2" x1="148" y1="143" x2="210" y2="143" stroke="rgba(26,95,138,.6)" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="62 62" stroke-dashoffset="62" opacity="0"/>
+        <text id="mo-arr2-lbl" x="179" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82" opacity="0">drag</text>
+
+        <!-- ── DAW box ── -->
+        <g id="mo-box-daw" opacity="0">
+          <rect x="210" y="108" width="110" height="70" rx="8" fill="rgba(26,95,138,.08)" stroke="rgba(26,95,138,.45)" stroke-width="1"/>
+          <text x="265" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#0d1f2d" font-weight="700">DAW Track</text>
+          <text x="265" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Reaper · ProTools</text>
+          <text x="265" y="166" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Cubase · any</text>
+        </g>
+
+        <!-- ── Fork stem + horizontal bar ── -->
+        <line id="mo-fork-v" x1="265" y1="178" x2="265" y2="205" stroke="rgba(26,95,138,.5)" stroke-width="1.5" stroke-dasharray="27 27" stroke-dashoffset="27" opacity="0"/>
+        <line id="mo-fork-h" x1="170" y1="205" x2="360" y2="205" stroke="rgba(26,95,138,.4)" stroke-width="1.5" stroke-dasharray="190 190" stroke-dashoffset="190" opacity="0"/>
+
+        <!-- ── Arrow fork left → VST ── -->
+        <line id="mo-arr-vst" x1="170" y1="205" x2="170" y2="228" stroke="#1a7a3a" stroke-width="1.5" marker-end="url(#arr-green)" stroke-dasharray="23 23" stroke-dashoffset="23" opacity="0"/>
+
+        <!-- ── VST box ── -->
+        <g id="mo-box-vst" opacity="0">
+          <rect x="110" y="228" width="120" height="62" rx="8" fill="rgba(26,122,58,.07)" stroke="rgba(26,122,58,.45)" stroke-width="0.9"/>
+          <text x="170" y="251" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1a7a3a" font-weight="700">VST</text>
+          <text x="170" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Route track output</text>
+          <text x="170" y="282" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">to any drum VST</text>
+          <text x="170" y="310" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1a7a3a">Option 1</text>
+        </g>
+
+        <!-- ── Arrow fork right → Tone Gen ── -->
+        <line id="mo-arr-tg" x1="360" y1="205" x2="360" y2="228" stroke="#c45200" stroke-width="1.5" marker-end="url(#arr-gold)" stroke-dasharray="23 23" stroke-dashoffset="23" opacity="0"/>
+
+        <!-- ── Tone Generator box ── -->
+        <g id="mo-box-tg" opacity="0">
+          <rect x="300" y="228" width="120" height="62" rx="8" fill="rgba(196,82,0,.07)" stroke="rgba(196,82,0,.50)" stroke-width="0.9"/>
+          <text x="360" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#c45200" font-weight="700">Tone Generator</text>
+          <text x="360" y="265" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Integra-7 / any</text>
+          <text x="360" y="281" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">Zero CPU · Superior sound</text>
+          <text x="360" y="310" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#c45200">Option 2 — recommended</text>
+        </g>
+
+        <!-- ── Travelling signal dot ── -->
+        <circle id="mo-dot" r="5" fill="#1a5f8a" opacity="0"/>
+
+        <!-- Footer caption -->
+        <text x="220" y="350" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4a6a82">MidiOrganize: drag loops into DAW, then route to VST or external tone generator</text>
+      </svg>
+
+      <script>
+      (function() {
+        // Easing helpers
+        function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+        function lerp(a,b,t) { return a + (b-a)*t; }
+
+        // Animate element opacity
+        function fadeIn(el, duration, delay, from, to) {
+          from = from === undefined ? 0 : from;
+          to   = to   === undefined ? 1 : to;
+          setTimeout(function() {
+            var start = null;
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min((ts - start) / duration, 1);
+              el.setAttribute('opacity', lerp(from, to, ease(p)));
+              if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+          }, delay);
+        }
+
+        // Animate stroke-dashoffset (draw a line)
+        function drawLine(el, duration, delay) {
+          el.setAttribute('opacity', '1');
+          setTimeout(function() {
+            var total = parseFloat(el.getAttribute('stroke-dasharray').split(' ')[0]);
+            var start = null;
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min((ts - start) / duration, 1);
+              el.setAttribute('stroke-dashoffset', lerp(total, 0, ease(p)));
+              if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+          }, delay);
+        }
+
+        // Pulse a box border
+        function pulseBox(rectEl, color, times) {
+          var i = 0;
+          function doPulse() {
+            if (i >= times * 2) return;
+            var brightening = (i % 2 === 0);
+            var start = null, duration = 300;
+            var origStroke = rectEl.getAttribute('stroke');
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min((ts - start) / duration, 1);
+              var alpha = brightening ? lerp(0.45, 1, ease(p)) : lerp(1, 0.45, ease(p));
+              rectEl.setAttribute('stroke-width', brightening ? lerp(0.9, 2.5, ease(p)) : lerp(2.5, 0.9, ease(p)));
+              if (p < 1) { requestAnimationFrame(step); }
+              else { i++; doPulse(); }
+            }
+            requestAnimationFrame(step);
+          }
+          doPulse();
+        }
+
+        // Moving dot along a path of points [[x,y],...]
+        function moveDot(dot, points, duration, delay, color) {
+          setTimeout(function() {
+            dot.setAttribute('opacity', '1');
+            dot.setAttribute('fill', color || '#1a5f8a');
+            var totalSegs = points.length - 1;
+            var start = null;
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min((ts - start) / duration, 1);
+              var seg = Math.min(Math.floor(p * totalSegs), totalSegs - 1);
+              var segP = (p * totalSegs) - seg;
+              var x = lerp(points[seg][0], points[seg+1][0], ease(segP));
+              var y = lerp(points[seg][1], points[seg+1][1], ease(segP));
+              dot.setAttribute('cx', x);
+              dot.setAttribute('cy', y);
+              if (p < 1) requestAnimationFrame(step);
+              else dot.setAttribute('opacity', '0');
+            }
+            requestAnimationFrame(step);
+          }, delay);
+        }
+
+        var svg = document.getElementById('mo-diagram');
+
+        function runSequence() {
+          // Stage 1 (0ms): MIDI Loops box fades in
+          fadeIn(document.getElementById('mo-box-loops'), 400, 0);
+
+          // Stage 2 (500ms): arrow 1 draws down
+          drawLine(document.getElementById('mo-arr1'), 300, 500);
+
+          // Stage 3 (900ms): MidiOrganize box fades in + pulse
+          fadeIn(document.getElementById('mo-box-mo'), 400, 900);
+
+          // Stage 4 (1400ms): arrow 2 draws right
+          drawLine(document.getElementById('mo-arr2'), 350, 1400);
+          fadeIn(document.getElementById('mo-arr2-lbl'), 200, 1600);
+
+          // Stage 5 (1900ms): DAW box fades in
+          fadeIn(document.getElementById('mo-box-daw'), 400, 1900);
+
+          // Stage 6 (2500ms): fork stem draws down
+          drawLine(document.getElementById('mo-fork-v'), 250, 2500);
+
+          // Stage 7 (2800ms): fork horizontal bar draws
+          drawLine(document.getElementById('mo-fork-h'), 350, 2800);
+
+          // Stage 8 (3200ms): both fork arrows draw simultaneously
+          drawLine(document.getElementById('mo-arr-vst'), 250, 3200);
+          drawLine(document.getElementById('mo-arr-tg'),  250, 3200);
+
+          // Stage 9 (3500ms): both output boxes fade in
+          fadeIn(document.getElementById('mo-box-vst'), 400, 3500);
+          fadeIn(document.getElementById('mo-box-tg'),  400, 3500);
+
+          // Stage 10 (4200ms+): travelling signal dots loop
+          var dot = document.getElementById('mo-dot');
+
+          function fireSignal() {
+            // Alternate between VST path and TG path
+            var useVST = (Math.random() > 0.4); // TG slightly favoured
+            var color  = useVST ? '#1a7a3a' : '#c45200';
+            var path   = useVST
+              ? [[80,20],[80,108],[148,143],[210,143],[265,143],[265,205],[170,205],[170,228],[170,290]]
+              : [[80,20],[80,108],[148,143],[210,143],[265,143],[265,205],[360,205],[360,228],[360,290]];
+            moveDot(dot, path, 6000, 0, color);
+            setTimeout(fireSignal, 7000 + Math.random() * 1000);
+          }
+
+          setTimeout(fireSignal, 4200);
+        }
+
+        // Use IntersectionObserver to trigger when diagram scrolls into view
+        if ('IntersectionObserver' in window) {
+          var triggered = false;
+          var obs = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting && !triggered) {
+              triggered = true;
+              runSequence();
+            }
+          }, { threshold: 0.3 });
+          obs.observe(svg);
+        } else {
+          runSequence();
+        }
+      })();
+      </script>
     </div>
-
-    <style>
-      .mo-row { display:flex; align-items:center; gap:6px; font-size:.65rem; padding:5px 10px; color:#94a3b8; cursor:pointer; transition:background .15s,color .15s; border-left:2px solid transparent; }
-      .mo-row:hover,.mo-row.hi { background:rgba(26,95,138,.2); color:#7dd3fc; border-left-color:#1a5f8a; }
-      .mo-row.drag { opacity:.3; }
-      .mo-daw-row { display:flex; align-items:stretch; border-bottom:1px solid rgba(255,255,255,.05); min-height:36px; }
-      .mo-daw-label { width:70px; background:#2a2a2a; border-right:1px solid rgba(255,255,255,.08); font-size:.58rem; color:#94a3b8; padding:4px 6px; display:flex; align-items:center; flex-shrink:0; }
-      .mo-daw-lane { flex:1; background:#1e1e1e; position:relative; overflow:hidden; }
-      .mo-daw-lane.target { background:#1a2a1a; }
-      .mo-clip { position:absolute; top:3px; height:calc(100%-6px); background:rgba(26,95,138,.5); border:1px solid rgba(26,95,138,.8); border-radius:3px; display:flex; align-items:center; padding:0 4px; font-size:.55rem; color:#7dd3fc; white-space:nowrap; overflow:hidden; opacity:0; transition:opacity .4s; }
-    </style>
-
-    <script>
-    (function(){
-      var app    = document.getElementById('mo-app');
-      var listEl = document.getElementById('mo-list');
-      var bcEl   = document.getElementById('mo-bc');
-      var pnEl   = document.getElementById('mo-pname');
-      var waveEl = document.getElementById('mo-wave');
-      var dawWaveEl = document.getElementById('mo-daw-wave');
-      var tcEl   = document.getElementById('mo-tc');
-      var curEl  = document.getElementById('mo-cur');
-      var ghoEl  = document.getElementById('mo-gho');
-      var tracksEl = document.getElementById('mo-daw-tracks');
-
-      // Build waveform bars
-      function buildWave(el, count, col) {
-        el.innerHTML = '';
-        for(var i=0;i<count;i++){
-          var b=document.createElement('div');
-          b.style.cssText='width:3px;border-radius:2px;background:'+col+';height:4px;opacity:.2;transition:height .1s,opacity .1s;flex-shrink:0;';
-          el.appendChild(b);
-        }
-      }
-      buildWave(waveEl, 22, '#1a5f8a');
-      buildWave(dawWaveEl, 28, '#2d9cdb');
-
-      var wInt=null;
-      function startWave(el){ wInt=setInterval(function(){ [].forEach.call(el.children,function(b){ b.style.height=(Math.random()*15+3)+'px'; b.style.opacity=(Math.random()*.6+.3); }); },100); }
-      function stopWave(el){ clearInterval(wInt); [].forEach.call(el.children,function(b){b.style.height='4px';b.style.opacity='.2';}); }
-
-      // DAW tracks
-      var dawTracks = ['Guitar','Keys','Bass','Drums1','Drums2'];
-      dawTracks.forEach(function(t,i){
-        var row=document.createElement('div'); row.className='mo-daw-row'; row.id='mo-daw-row-'+i;
-        var lbl=document.createElement('div'); lbl.className='mo-daw-label'; lbl.textContent=t;
-        var lane=document.createElement('div'); lane.className='mo-daw-lane'; lane.id='mo-lane-'+i;
-        // Pre-fill some clips on existing tracks
-        if(i<4){
-          var clip=document.createElement('div'); clip.className='mo-clip';
-          clip.style.left='0'; clip.style.width=(30+Math.random()*40)+'%'; clip.style.opacity='1';
-          clip.textContent = t+' Pt1';
-          lane.appendChild(clip);
-        }
-        row.appendChild(lbl); row.appendChild(lane); tracksEl.appendChild(row);
-      });
-
-      // Timecode tick
-      var tcVal=0, tcInt=null;
-      function startTC(){ tcInt=setInterval(function(){ tcVal+=0.033; var m=Math.floor(tcVal/60); var s=(tcVal%60).toFixed(3); tcEl.textContent=m+':'+(s<10?'0':'')+s; },33); }
-
-      // Easing
-      function ease(t){ return t<.5?2*t*t:-1+(4-2*t)*t; }
-      function lerp(a,b,t){ return a+(b-a)*t; }
-
-      // Render list
-      function renderList(items, icon){
-        listEl.innerHTML='';
-        items.forEach(function(item,i){
-          var row=document.createElement('div'); row.className='mo-row'; row.id='mo-r-'+i;
-          row.innerHTML='<span style="color:#475569;font-size:.58rem;width:12px;flex-shrink:0;">'+(i+1)+'</span><span>'+icon+' '+item+'</span>';
-          listEl.appendChild(row);
-        });
-      }
-
-      // Move cursor to element
-      function moveTo(el, fromPos, cb){
-        var aRect=app.getBoundingClientRect();
-        var eRect=el.getBoundingClientRect();
-        var ex=eRect.left-aRect.left+eRect.width*.25;
-        var ey=eRect.top-aRect.top+eRect.height*.5;
-        var sx=fromPos?fromPos.x:ex; var sy=fromPos?fromPos.y:ey;
-        curEl.style.left=sx+'px'; curEl.style.top=sy+'px'; curEl.style.opacity='1';
-        var st=null,dur=520;
-        function step(ts){ if(!st)st=ts; var p=Math.min((ts-st)/dur,1),ep=ease(p);
-          curEl.style.left=lerp(sx,ex,ep)+'px'; curEl.style.top=lerp(sy,ey,ep)+'px';
-          if(p<1)requestAnimationFrame(step); else cb&&cb({x:ex,y:ey}); }
-        requestAnimationFrame(step);
-      }
-
-      // Click flash
-      function clickEl(el, pos, cb){
-        moveTo(el, pos, function(p){
-          el.classList.add('hi');
-          setTimeout(function(){ cb&&cb(p); },350);
-        });
-      }
-
-      // Drag from el to target lane
-      function dragTo(fromEl, toLane, label, pos, cb){
-        var aRect=app.getBoundingClientRect();
-        var fRect=fromEl.getBoundingClientRect();
-        var tRect=toLane.getBoundingClientRect();
-        var sx=fRect.left-aRect.left+fRect.width*.3, sy=fRect.top-aRect.top+fRect.height*.5;
-        var ex=tRect.left-aRect.left+tRect.width*.3, ey=tRect.top-aRect.top+tRect.height*.5;
-        fromEl.classList.add('drag');
-        ghoEl.textContent='🎵 '+label; ghoEl.style.left=(sx+12)+'px'; ghoEl.style.top=(sy-8)+'px'; ghoEl.style.opacity='1';
-        toLane.classList.add('target');
-        curEl.style.left=sx+'px'; curEl.style.top=sy+'px';
-        var st=null,dur=1100;
-        function step(ts){ if(!st)st=ts; var p=Math.min((ts-st)/dur,1),ep=ease(p);
-          var cx=lerp(sx,ex,ep), cy=lerp(sy,ey,ep);
-          curEl.style.left=cx+'px'; curEl.style.top=cy+'px';
-          ghoEl.style.left=(cx+12)+'px'; ghoEl.style.top=(cy-8)+'px';
-          if(p<1)requestAnimationFrame(step);
-          else{ curEl.style.opacity='0'; ghoEl.style.opacity='0'; cb&&cb(); }
-        }
-        requestAnimationFrame(step);
-      }
-
-      // Main sequence
-      function run(){
-        var pos=null;
-        stopWave(waveEl); stopWave(dawWaveEl); clearInterval(tcInt); tcVal=0; tcEl.textContent='0:00.000';
-
-        // Step 1: show bookmarks
-        bcEl.textContent='📚 Bookmarks';
-        renderList(['Drums Groove Monkee','Drums Setlist 1','Drums Setlist 2','Bass Grooves','Piano Grooves'],'📌');
-
-        setTimeout(function(){
-          startTC();
-          // Step 2: click bookmark 1 (Groove Monkee)
-          clickEl(document.getElementById('mo-r-0'), pos, function(p){
-            pos=p; pnEl.textContent='Groove Monkee'; startWave(waveEl);
-            setTimeout(function(){
-              stopWave(waveEl);
-              // Step 3: drill into genre list
-              bcEl.textContent='📌 Groove Monkee';
-              renderList(['Blues Riffs','Rock Riffs','Jazz Riffs','Funk Riffs'],'📁');
-
-              setTimeout(function(){
-                // Step 4: click Rock Riffs
-                clickEl(document.getElementById('mo-r-1'), pos, function(p){
-                  pos=p; pnEl.textContent='Rock Riffs';
-                  setTimeout(function(){
-                    // Step 5: drill into rock riff list
-                    bcEl.textContent='📁 Rock Riffs';
-                    renderList(['Rock Riff 1','Rock Riff 2','Rock Riff 3','Rock Riff 4'],'🎵');
-
-                    setTimeout(function(){
-                      // Step 6: click Rock Riff 1 to preview
-                      clickEl(document.getElementById('mo-r-0'), pos, function(p){
-                        pos=p; pnEl.textContent='Rock Riff 1.mid'; startWave(waveEl);
-                        setTimeout(function(){
-                          // Step 7: drag to MIDI track (track index 4)
-                          var fromEl=document.getElementById('mo-r-0');
-                          var toLane=document.getElementById('mo-lane-4');
-                          dragTo(fromEl, toLane, 'Rock Riff 1', pos, function(){
-                            stopWave(waveEl);
-                            fromEl.classList.remove('drag','hi');
-                            toLane.classList.remove('target');
-                            // Drop clip into lane
-                            var clip=document.createElement('div'); clip.className='mo-clip';
-                            clip.style.left='2%'; clip.style.width='55%'; clip.textContent='Rock Riff 1';
-                            toLane.appendChild(clip);
-                            setTimeout(function(){ clip.style.opacity='1'; startWave(dawWaveEl); },50);
-                            // Success status
-                            pnEl.textContent='✓ Rock Riff 1 → MIDI track';
-                            // Restart after pause
-                            setTimeout(function(){
-                              stopWave(dawWaveEl); clearInterval(tcInt);
-                              // Remove clip for next run
-                              toLane.removeChild(clip);
-                              [].forEach.call(listEl.querySelectorAll('.mo-row'),function(r){r.classList.remove('hi','drag');});
-                              setTimeout(run, 600);
-                            }, 3000);
-                          });
-                        }, 800);
-                      });
-                    }, 700);
-                  }, 500);
-                });
-              }, 800);
-            }, 900);
-          });
-        }, 700);
-      }
-
-      // Trigger on scroll
-      if('IntersectionObserver' in window){
-        var started=false;
-        new IntersectionObserver(function(entries){
-          if(entries[0].isIntersecting&&!started){started=true;setTimeout(run,500);}
-        },{threshold:0.3}).observe(app);
-      } else { setTimeout(run,500); }
-
-      // Match animation height to screenshot + 10%
-      function syncHeight() {
-        var img = document.getElementById('mo-screenshot-img');
-        var wrap = document.getElementById('mo-wrap');
-        if (img && wrap && img.offsetHeight > 0) {
-          var h = Math.round(img.offsetHeight * 1.21);
-          wrap.style.height = h + 'px';
-          app.style.height  = h + 'px';
-        }
-      }
-      var img = document.getElementById('mo-screenshot-img');
-      if (img) {
-        if (img.complete) { syncHeight(); }
-        else { img.addEventListener('load', syncHeight); }
-      }
-      window.addEventListener('resize', syncHeight);
-    })();
-    </script>
-
-                </div><!-- end screenshot+diagram flex column -->
+    </div><!-- end screenshot+diagram flex column -->
 
     <div>
       <span class="product-badge badge-free">Free Software</span>
@@ -1505,17 +1468,16 @@
       </a>
     </div>
   </fieldset>
-  </div><!-- end product-card -->
 </section>
-</div><!-- end section-band -->
 
 <hr class="divider-dark" />
-<div class="section-band">
+
+
 <!-- ── MIDIXLATE ── -->
 <section id="midixlate" aria-labelledby="mx-heading">
-  <div class="product-card fade-in">
-  <h2 class="section-title fade-in" id="mx-heading">🔀 MidiXLate Router</h2>
-  <p class="section-sub fade-in" style="max-width:100%;">Highly configurable MIDI hardware router for complex studio and live-performance networks.</p>
+  <h2 class="section-title" id="mx-heading">🔀 MidiXLate Router</h2>
+  <p class="section-sub" style="max-width:100%;">Highly configurable MIDI hardware router for complex studio and live-performance networks.</p>
+
   <div class="product-block">
     <div>
       <span class="product-badge badge-hw">Custom Hardware</span>
@@ -1853,14 +1815,13 @@
      
     </div>
   </fieldset>
-  </div><!-- end product-card -->
 </section>
-</div><!-- end section-band -->
 
 <hr class="divider-dark" />
-<br>
+
+
 <!-- ── MIDI OVERVIEW ── -->
-<section id="midi-overview" aria-labelledby="midi-heading" style="padding-top:.5rem;">
+<section id="midi-overview" aria-labelledby="midi-heading">
   <h2 class="section-title" id="midi-heading">MIDI Basics</h2>
   <p class="section-sub">Everything a musician needs to understand MIDI — from first principles to advanced routing.</p>
 
@@ -2085,23 +2046,6 @@
 </div>
 
 <script>
-  // ── Scroll fade-in animations ──
-  (function() {
-    if (!('IntersectionObserver' in window)) {
-      document.querySelectorAll('.fade-in').forEach(function(el) { el.classList.add('visible'); });
-      return;
-    }
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-in').forEach(function(el) { obs.observe(el); });
-  })();
-
   // SHA-256 tap-to-expand on touch devices
   (function() {
     function isTouchDevice() { return window.matchMedia('(max-width: 760px)').matches; }
@@ -2206,20 +2150,8 @@
 <footer class="site-footer">
   <div class="site-footer-inner">
     <div class="site-footer-brand">
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:.25rem;">
-        <svg width="36" height="36" viewBox="0 0 88 88" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-          <rect width="88" height="88" rx="10" fill="rgba(255,255,255,.12)"/>
-          <polygon points="44,12 14,68 74,68" fill="#2d7ab0"/>
-          <polygon points="28,68 14,68 28,38 42,68" fill="rgba(255,255,255,.15)"/>
-          <polygon points="60,68 74,68 60,38 46,68" fill="rgba(255,255,255,.15)"/>
-          <polygon points="44,14 30,40 58,40" fill="white" opacity="0.92"/>
-          <polygon points="16,68 28,40 34,55 22,68" fill="white" opacity="0.55"/>
-          <polygon points="72,68 60,40 66,55 76,68" fill="white" opacity="0.55"/>
-          <polyline points="8,58 16,58 20,50 24,66 28,46 32,72 36,54 40,58 44,58 48,58 52,50 56,64 60,52 64,58 72,58 80,58" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-        </svg>
-        <span class="logo-text">Sierra Digital Audio</span>
-      </div>
-      <p>Free MIDI software and custom hardware. Hand-built in the Sierra Nevada, Truckee CA.</p>
+      <span class="logo-text">Sierra Digital Audio</span>
+      <p>Free MIDI software and custom hardware for musicians. Hand-built in the Sierra Nevada, Truckee CA.</p>
       <a href="https://www.buymeacoffee.com/sierradigitalaudio" target="_blank" rel="noopener" title="Buy Larry a coffee!" style="display:inline-block; margin-top:.5rem;">
         <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:32px; width:auto; border-radius:6px;" />
       </a>
