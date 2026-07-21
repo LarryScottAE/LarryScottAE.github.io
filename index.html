@@ -956,13 +956,13 @@
 
 
 <!-- ── HERO ── -->
-<header class="hero" role="banner">
-  <div class="hero-eyebrow">
-    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#1a5f8a"/></svg>
+<header class="hero" role="banner" style="padding:.6rem 2rem .5rem; min-height:auto;">
+  <div class="hero-eyebrow" style="margin-bottom:.4rem; padding:3px 12px; font-size:.72rem;">
+    <svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="#1a5f8a"/></svg>
     Free MIDI Software and Custom Built Hardware Tools
   </div>
-  <h1>Free MIDI Software &amp;<br/>Custom MIDI Hardware<br/><span>for Music Professionals</span></h1>
-  <p style="max-width:68ch;">Sierra Digital Audio builds free Windows utilities and custom hardware for musicians who demand reliable, low-latency MIDI workflows — from bedroom studios to touring rigs.</p>
+  <h1 style="font-size:clamp(1.4rem,4vw,2.2rem); margin-bottom:.3rem;">Free MIDI Software & Custom MIDI Hardware<br/><span>for Music Professionals</span></h1>
+  <p style="max-width:68ch; font-size:.88rem; margin-bottom:.3rem;">Sierra Digital Audio builds free Windows utilities and custom hardware for musicians who demand reliable, low-latency MIDI workflows — from bedroom studios to touring rigs.</p>
   <div class="hero-buttons">
   </div>
 </header>
@@ -984,7 +984,7 @@
         24 bookmarks hold up to 2,000 commands, grouped by device, song, or setlist.
       </p>
       <ul class="feature-list">
-        <li>24 user bookmarks, up to 2,000 MIDI commands per session</li>
+        <li>24 user bookmarks, up to 2,000 MIDI (bank change, patch change, control change, notes, and sys ex) commands per session</li>
         <li>Organize your MIDI groups to meet your specific needs (such as MIDI commands by instrument, song, setlist, device, ....)</li>
         <li>Send program-change, control-change, bank-change, and system exclusive commands to any MIDI device</li>
         <li>Utilities provided to mass update MIDI devices, troubleshoot MIDI devices, and back up / restore your configuration</li>
@@ -1054,18 +1054,18 @@
         <div style="margin:-.4rem -.4rem 0 -.4rem; border-radius:0; overflow:hidden; border-bottom:1px solid var(--border);">
           <img src="images/Integra-7.jpg" alt="Roland Integra-7 sound module" style="width:100%; height:auto; display:block; border-radius:0;" />
         </div>
-        <div style="display:flex; flex-direction:row; gap:5px; padding-bottom:.4rem;">
-          <div style="background:var(--surface); border-radius:6px; padding:.3rem .6rem; display:flex; align-items:center; justify-content:center; gap:6px; flex:1;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; color:var(--highlight);">6,000+</span>
-            <span style="font-size:.68rem; color:var(--muted);">sounds</span>
+        <div style="display:flex; flex-direction:row; gap:5px; padding-bottom:.2rem;">
+          <div style="background:var(--surface); border-radius:6px; padding:.15rem .5rem; display:flex; align-items:center; justify-content:center; gap:5px; flex:1;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:.85rem; font-weight:700; color:var(--highlight);">6,000+</span>
+            <span style="font-size:.62rem; color:var(--muted);">sounds</span>
           </div>
-          <div style="background:var(--surface); border-radius:6px; padding:.3rem .6rem; display:flex; align-items:center; justify-content:center; gap:6px; flex:1;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; color:var(--highlight);">16-part</span>
-            <span style="font-size:.68rem; color:var(--muted);">multitimbral</span>
+          <div style="background:var(--surface); border-radius:6px; padding:.15rem .5rem; display:flex; align-items:center; justify-content:center; gap:5px; flex:1;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:.85rem; font-weight:700; color:var(--highlight);">16-part</span>
+            <span style="font-size:.62rem; color:var(--muted);">multitimbral</span>
           </div>
-          <div style="background:var(--surface); border-radius:6px; padding:.3rem .6rem; display:flex; align-items:center; justify-content:center; gap:6px; flex:1;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; color:var(--highlight);">128</span>
-            <span style="font-size:.68rem; color:var(--muted);">polyphony</span>
+          <div style="background:var(--surface); border-radius:6px; padding:.15rem .5rem; display:flex; align-items:center; justify-content:center; gap:5px; flex:1;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:.85rem; font-weight:700; color:var(--highlight);">128</span>
+            <span style="font-size:.62rem; color:var(--muted);">polyphony</span>
           </div>
         </div>
       </div>
@@ -1073,8 +1073,8 @@
     </a>
 
     <!-- MidiControl animation -->
-    <div id="mc-anim-wrap" style="border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
-      <div id="mc-app" style="display:grid; grid-template-columns:1fr 1fr; width:100%; background:#1a1a2e; border-radius:10px; overflow:hidden; font-family:'Inter',monospace; position:relative; min-height:280px;">
+    <div id="mc-anim-wrap" style="border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10); height:320px;">
+      <div id="mc-app" style="display:grid; grid-template-columns:1fr 1fr; width:100%; height:320px; background:#1a1a2e; border-radius:10px; overflow:hidden; font-family:'Inter',monospace; position:relative;">
 
         <!-- LEFT: MidiControl -->
         <div style="display:flex; flex-direction:column; border-right:1px solid rgba(26,95,138,.3);">
@@ -1085,7 +1085,7 @@
             <span style="font-size:.62rem;color:#7dd3fc;font-weight:700;margin-left:4px;letter-spacing:.04em;">MidiControl</span>
           </div>
           <div id="mc-bc" style="font-size:.6rem;color:#94a3b8;padding:4px 8px;background:#16213e;border-bottom:1px solid rgba(26,95,138,.2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📚 Bookmarks</div>
-          <div id="mc-list" style="flex:1;overflow:hidden;padding:4px 0;"></div>
+          <div id="mc-list" style="flex:1;overflow-y:auto;overflow-x:hidden;padding:4px 0;"></div>
           <div style="border-top:1px solid rgba(26,95,138,.2);background:#0f3460;padding:5px 8px;">
             <div style="font-size:.58rem;color:#64748b;margin-bottom:2px;">Last sent:</div>
             <div id="mc-last-sent" style="font-size:.6rem;color:#4ade80;font-family:monospace;min-height:12px;">—</div>
@@ -1141,26 +1141,26 @@
 
           <!-- Knobs row -->
           <div style="margin:4px 8px 0; display:flex; justify-content:space-around; align-items:center;">
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line x1="6" y1="6" x2="9.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line x1="6" y1="6" x2="2.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line x1="6" y1="6" x2="9" y2="9" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line x1="6" y1="6" x2="3" y2="9" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line x1="6" y1="6" x2="9.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-0" x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-1" x1="6" y1="6" x2="9.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-2" x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-3" x1="6" y1="6" x2="2.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-4" x1="6" y1="6" x2="9" y2="9" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-5" x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-6" x1="6" y1="6" x2="3" y2="9" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-7" x1="6" y1="6" x2="9.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
           </div>
 
           <!-- Sliders row -->
           <div style="margin:3px 8px 0; display:flex; justify-content:space-around; align-items:flex-end; height:22px;">
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect x="0" y="6" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect x="0" y="12" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect x="0" y="4" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect x="0" y="9" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect x="0" y="14" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect x="0" y="7" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect x="0" y="3" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect x="0" y="11" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
+            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-0" x="0" y="6" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
+            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-1" x="0" y="12" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
+            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-2" x="0" y="4" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
+            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-3" x="0" y="9" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
+            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-4" x="0" y="14" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
+            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-5" x="0" y="7" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
+            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-6" x="0" y="3" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
+            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-7" x="0" y="11" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
           </div>
 
           <!-- MIDI 5-pin DIN jacks row -->
@@ -2226,7 +2226,7 @@
     var vuL     = document.getElementById('mc-vu-l').firstElementChild;
     var vuR     = document.getElementById('mc-vu-r').firstElementChild;
 
-    var bookmarks = ['DAW Reaper','Pedal Board','Keyboard','Axe FX Guitar','Integra-7 Synth'];
+    var bookmarks = ['DAW Reaper','Pedal Board','Keyboard','Axe FX Guitar','Integra-7 Synth','MU15 Drums','',''];
     var patches   = [
       {num:'1801',name:'Grand Piano'},
       {num:'1802',name:'Jazz Piano'},
@@ -2254,7 +2254,47 @@
     }
 
     // MIDI flash
+    // Knob positions (x2,y2 endpoint relative to center 6,6, radius ~4.5)
+    var knobPositions = [
+      [[6,1.5],[9.5,3],[6,10.5],[2.5,3],[9,9],[6,1.5],[3,9],[9.5,3]],  // patch set A
+      [[9.5,3],[6,1.5],[3,3],[9,9],[6,10.5],[2.5,9],[9.5,3],[6,1.5]],  // patch set B
+      [[3,3],[9,3],[6,10.5],[6,1.5],[9.5,9],[3,9],[9,9],[2.5,3]],      // patch set C
+    ];
+    var knobSet = 0;
+
+    function animateKnobsSliders() {
+      var positions = knobPositions[knobSet % knobPositions.length];
+      knobSet++;
+      // Animate knobs
+      for (var k = 0; k < 8; k++) {
+        (function(i, pos) {
+          var knob = document.getElementById('mc-knob-'+i);
+          if (!knob) return;
+          setTimeout(function() {
+            knob.setAttribute('x2', pos[0]);
+            knob.setAttribute('y2', pos[1]);
+            knob.setAttribute('stroke', '#ffffff');
+            setTimeout(function() { knob.setAttribute('stroke','#4ade80'); }, 200);
+          }, i * 60);
+        })(k, positions[k]);
+      }
+      // Animate sliders
+      for (var s = 0; s < 8; s++) {
+        (function(i) {
+          var sld = document.getElementById('mc-sld-'+i);
+          if (!sld) return;
+          var newY = Math.floor(Math.random() * 13) + 2;
+          setTimeout(function() {
+            sld.setAttribute('stroke', '#ffffff');
+            sld.setAttribute('y', newY);
+            setTimeout(function() { sld.setAttribute('stroke','#4ade80'); }, 200);
+          }, i * 60 + 30);
+        })(s);
+      }
+    }
+
     function flashMidi(name, num) {
+      animateKnobsSliders();
       ledEl.style.background = '#4ade80';
       statusEl.textContent = 'PC '+num;
       patchEl.style.opacity = '0';
@@ -2360,7 +2400,8 @@
         var bm = document.getElementById('mc-bm-4');
         if (!bm) return;
         clickRow(bm, function() {
-          renderPatches();
+          setTimeout(function() {
+            renderPatches();
 
           // Step 2: walk through patches one by one
           var idx = 0;
@@ -2392,6 +2433,7 @@
             });
           }
           setTimeout(sendNext, 720);
+          }, 1000); // end 1s pause after bookmark click
         });
       }, 800);
     }
