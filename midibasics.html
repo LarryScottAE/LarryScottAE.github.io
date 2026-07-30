@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MIDI Basics — Complete Guide to MIDI for Musicians | Sierra Digital Audio</title>
+  <meta name="description" content="A complete guide to MIDI for musicians. Learn MIDI message types (Note, CC, Program Change, SysEx), channels, connections, routing, and common CC numbers. From first principles to advanced setups." />
+  <meta name="keywords" content="MIDI basics, MIDI tutorial, MIDI for musicians, MIDI messages, MIDI control change, MIDI program change, MIDI channels, MIDI SysEx, MIDI routing, MIDI connections, learn MIDI, MIDI guide" />
+  <meta name="author" content="Larry Scott, Sierra Digital Audio" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sierradigitalaudio.com/midibasics.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="MIDI Basics — Complete Guide for Musicians" />
+  <meta property="og:description" content="Learn MIDI from first principles. Message types, channels, connections, routing, CC numbers, SysEx and more — everything a musician needs to understand MIDI." />
+  <meta property="og:url" content="https://sierradigitalaudio.com/midibasics.html" />
+  <meta property="og:site_name" content="Sierra Digital Audio" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MIDI Basics — Complete Guide for Musicians" />
+  <meta name="twitter:description" content="Learn MIDI from first principles. Message types, channels, connections, routing and CC numbers explained." />
+  <meta property="og:image" content="https://sierradigitalaudio.com/images/RouterFaceAndRearS.jpg" />
+
+  <meta name="google-site-verification" content="9vhQaLH1LUnKAVoGK3txvca9S0Jj-luOEG-WX3fEHJA" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "MIDI Basics — Complete Guide for Musicians",
+    "description": "A comprehensive guide to MIDI for musicians covering message types, channels, connections, routing, and common CC numbers.",
+    "url": "https://sierradigitalaudio.com/midibasics.html",
+    "author": { "@type": "Person", "name": "Larry Scott" },
+    "publisher": { "@type": "Organization", "name": "Sierra Digital Audio", "url": "https://sierradigitalaudio.com/" },
+    "mainEntityOfPage": "https://sierradigitalaudio.com/midibasics.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #ffffff; --highlight: #1a5f8a; --text: #0d1f2d;
+      --muted: #4a6a82; --surface: #f0f6fb; --card: #e0edf6;
+      --border: rgba(26,95,138,0.18); --r: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--text); font-size: 16px; line-height: 1.7; }
+    h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
+    a { color: var(--highlight); text-decoration: none; }
+    a:hover { opacity: .8; }
+    img { max-width: 100%; height: auto; border-radius: var(--r); display: block; }
+
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 2px solid #1a5f8a; padding: 0 2rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 68px; }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .nav-logo-text { background: linear-gradient(90deg, #1a5f8a 0%, #2d9cdb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-transform: uppercase; letter-spacing: .12em; font-size: 1.1rem; }
+    .nav-links { display: flex; gap: 8px; list-style: none; }
+    .nav-links a { color: #ffffff; font-size: 0.82rem; font-weight: 600; padding: 6px 14px; border-radius: 20px; background: var(--highlight); display: inline-flex; align-items: center; transition: background .2s; white-space: nowrap; }
+    .nav-links a:hover, .nav-links a.active { background: #0d3d5c; color: #ffffff; opacity: 1; }
+    .nav-cta { background: var(--highlight); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; display: inline-flex; align-items: center; white-space: nowrap; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; margin-left: 1rem; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--highlight); border-radius: 2px; transition: transform .2s, opacity .2s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #0d1f2d 0%, #1a3a5c 50%, #1a5f8a 100%); color: #ffffff; padding: 3rem 2rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,.03) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,.03) 40px); pointer-events: none; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 5px 16px; font-size: .78rem; font-weight: 600; color: #ffffff; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); color: #ffffff; margin-bottom: .75rem; }
+    .hero h1 span { color: #7dd3fc; }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,.8); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    /* Layout */
+    .breadcrumb { font-size: .82rem; color: var(--muted); padding: .75rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb a { color: var(--highlight); }
+    .breadcrumb span { margin: 0 .4rem; }
+    section { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .section-title { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: .4rem; }
+    .section-sub { color: var(--muted); margin-bottom: 1.75rem; font-size: 1rem; }
+    .divider-dark { width: 100%; border: none; border-top: 2px solid rgba(26,95,138,.4); margin: 0; }
+
+    /* MIDI-specific styles */
+    .midi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem; margin-top: 1.25rem; }
+    .midi-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 1rem; }
+    .midi-card-icon { font-size: 1.3rem; margin-bottom: .35rem; }
+    .midi-card h3 { font-size: .95rem; font-weight: 600; margin-bottom: .35rem; color: var(--text); }
+    .midi-card p  { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+    .midi-card ul { list-style: none; margin-top: .5rem; display: flex; flex-direction: column; gap: .3rem; }
+    .midi-card ul li { font-size: .82rem; color: var(--muted); display: flex; align-items: baseline; gap: 6px; }
+    .midi-card ul li::before { content: '→'; color: var(--highlight); font-size: .75rem; flex-shrink: 0; }
+    .midi-val { display: inline-block; background: rgba(26,95,138,.12); color: var(--highlight); border: 1px solid rgba(26,95,138,.25); border-radius: 4px; font-size: .72rem; font-weight: 600; padding: 1px 6px; margin-left: 2px; }
+    .midi-section-head { font-size: .95rem; font-weight: 600; color: var(--highlight); font-family: 'Space Grotesk', sans-serif; margin: 1.75rem 0 .75rem; padding-bottom: .35rem; border-bottom: 2px solid rgba(26,95,138,.2); }
+    .midi-intro { background: var(--surface); border-left: 3px solid var(--highlight); border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin-bottom: 1.5rem; font-size: .93rem; color: var(--text); line-height: 1.6; }
+    .midi-intro strong { color: var(--highlight); }
+    .midi-cc-table { width: 100%; border-collapse: collapse; font-size: .82rem; margin-top: .75rem; }
+    .midi-cc-table th { text-align: left; padding: 5px 8px; background: rgba(26,95,138,.1); color: var(--highlight); font-weight: 600; border-bottom: 1px solid rgba(26,95,138,.2); }
+    .midi-cc-table td { padding: 5px 8px; border-bottom: 1px solid rgba(26,95,138,.08); color: var(--muted); vertical-align: top; }
+    .midi-cc-table td:first-child { color: var(--highlight); font-weight: 600; white-space: nowrap; }
+    .midi-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+
+    .midi-anchor { scroll-margin-top: 90px; }
+
+    /* Related products */
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    .related-card { background: var(--navy); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: box-shadow .2s; }
+    .related-card:hover { box-shadow: 0 4px 20px rgba(26,95,138,.12); }
+    .related-card h3 { font-size: 1.1rem; margin-bottom: .4rem; }
+    .related-card p { font-size: .88rem; color: var(--muted); margin-bottom: 1rem; }
+    .link-chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 8px; font-size: .88rem; font-weight: 500; border: 1px solid var(--border); background: var(--surface); color: var(--highlight); transition: background .2s; }
+    .link-chip:hover { background: rgba(26,95,138,.08); opacity: 1; color: var(--highlight); }
+
+    /* Footer */
+    .site-footer { background: #1a5f8a; color: #ffffff; padding: 3rem 2rem 2rem; }
+    .site-footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.25); }
+    .site-footer-brand { display: flex; flex-direction: column; gap: .5rem; }
+    .site-footer-brand .logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; color: #ffffff; }
+    .site-footer-brand p { font-size: .82rem; line-height: 1.6; color: #ffffff; }
+    .site-footer-col h4 { font-family: 'Space Grotesk', sans-serif; font-size: .8rem; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: .08em; margin-bottom: .75rem; }
+    .site-footer-col a { display: block; font-size: .85rem; color: #ffffff; margin-bottom: .4rem; }
+    .site-footer-bottom { max-width: 1100px; margin: 1.5rem auto 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; font-size: .78rem; color: #ffffff; }
+
+
+    /* ── iPhone / narrow mobile optimizations ── */
+    @media (max-width: 480px) {
+      /* Fix overflow from fixed-width buttons */
+      .link-chip { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+
+      /* Prevent nowrap headings overflowing */
+      h1, .hero h1 { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; font-size: 1.4rem !important; }
+
+      /* Hero stats: 2×2 grid on small screens */
+      .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+      .hero-stat .num { font-size: 1.3rem; }
+      .hero-stat .label { font-size: .68rem; }
+
+      /* Hero ctas stack vertically */
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-outline-white { width: 100%; max-width: 320px; text-align: center; justify-content: center; }
+
+      /* SHA hash: allow break */
+      .sha-tooltip, [style*="font-family:monospace"] { word-break: break-all; overflow-wrap: break-word; }
+
+      /* Prevent iOS font-size zoom on interactive elements */
+      input, select, textarea, button, .link-chip, .btn-primary, .nav-cta { font-size: 16px !important; }
+
+      /* Animations: hide on very small screens to prevent layout issues */
+      #mc-anim-wrap, #mo-wrap { display: none; }
+
+      /* Product card padding tighter */
+      .product-card { padding: 1rem; }
+
+      /* Section sub text */
+      .section-sub { font-size: .88rem; }
+
+      /* Thumb grid smaller */
+      .thumb-item img { height: 70px; }
+
+      /* Nav logo text smaller */
+      .nav-logo-text { font-size: .85rem; letter-spacing: .06em; }
+    }
+
+    @media (max-width: 760px) {
+      nav { padding: 0 1rem; height: 56px; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(255,255,255,.98); border-bottom: 2px solid #1a5f8a; padding: 1rem 1.5rem; gap: .75rem; z-index: 99; }
+      .nav-hamburger { display: flex; }
+      .hero { padding: 2rem 1.25rem 1.5rem; }
+      .hero h1 { font-size: 1.75rem; }
+      section { padding: 1.75rem 1.1rem; }
+      .midi-grid { grid-template-columns: 1fr; }
+      .midi-two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .site-footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Sierra Digital Audio home">
+    <svg width="38" height="38" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="88" height="88" rx="10" fill="#1a5f8a"/>
+      <polygon points="44,12 14,68 74,68" fill="#2d7ab0"/><polygon points="28,68 14,68 28,38 42,68" fill="#1a5f8a"/>
+      <polygon points="60,68 74,68 60,38 46,68" fill="#1a5f8a"/><polygon points="44,14 30,40 58,40" fill="white" opacity="0.92"/>
+      <polygon points="16,68 28,40 34,55 22,68" fill="white" opacity="0.55"/><polygon points="72,68 60,40 66,55 76,68" fill="white" opacity="0.55"/>
+      <polyline points="8,58 16,58 20,50 24,66 28,46 32,72 36,54 40,58 44,58 48,58 52,50 56,64 60,52 64,58 72,58 80,58" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    </svg>
+    <span class="nav-logo-text">Sierra Digital Audio</span>
+  </a>
+  </div>
+  <ul class="nav-links" role="list" style="justify-content:center;">
+    <li><a href="index.html" style="background:#4a6a82;" title="Home">🏠</a></li>
+    <li><a href="midicontrol.html">MidiControl</a></li>
+    <li><a href="midiorganize.html">MidiOrganize</a></li>
+    <li><a href="midixlate.html">MidiXLate Router</a></li>
+    <li><a href="midibasics.html" class="active">MIDI Basics</a></li>
+  </ul>
+  <div style="display:flex; align-items:center; justify-content:flex-end; gap:.6rem;">
+    
+    <a href="contact.html" class="nav-cta">Contact</a>
+    <button class="nav-hamburger" aria-label="Toggle navigation menu" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open');"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+
+<header class="hero" role="banner">
+  <div class="hero-eyebrow">🎵 Comprehensive MIDI Reference</div>
+  <h1>MIDI Basics — <span>Everything a Musician Needs to Know</span></h1>
+  <p class="hero-sub" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;">From first principles to advanced routing — a complete guide to MIDI for musicians.</p>
+  <div style="display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin-top:1.25rem;">
+    <a href="#what-is-midi" style="background:rgba(255,255,255,.15); color:#ffffff; border:1px solid rgba(255,255,255,.35); border-radius:20px; padding:5px 14px; font-size:.82rem; font-weight:600; text-decoration:none;">What is MIDI?</a>
+    <a href="#message-types" style="background:rgba(255,255,255,.15); color:#ffffff; border:1px solid rgba(255,255,255,.35); border-radius:20px; padding:5px 14px; font-size:.82rem; font-weight:600; text-decoration:none;">Message types</a>
+    <a href="#channels" style="background:rgba(255,255,255,.15); color:#ffffff; border:1px solid rgba(255,255,255,.35); border-radius:20px; padding:5px 14px; font-size:.82rem; font-weight:600; text-decoration:none;">MIDI channels</a>
+    <a href="#system-messages" style="background:rgba(255,255,255,.15); color:#ffffff; border:1px solid rgba(255,255,255,.35); border-radius:20px; padding:5px 14px; font-size:.82rem; font-weight:600; text-decoration:none;">System messages</a>
+    <a href="#cc-reference" style="background:rgba(255,255,255,.15); color:#ffffff; border:1px solid rgba(255,255,255,.35); border-radius:20px; padding:5px 14px; font-size:.82rem; font-weight:600; text-decoration:none;">CC numbers</a>
+    <a href="#related" style="background:rgba(255,255,255,.15); color:#ffffff; border:1px solid rgba(255,255,255,.35); border-radius:20px; padding:5px 14px; font-size:.82rem; font-weight:600; text-decoration:none;">SDA tools</a>
+  </div>
+</header>
+
+<div style="max-width:1100px; margin:0 auto; padding:3rem 2rem 0;">
+
+  <!-- What is MIDI -->
+  <h2 id="what-is-midi" class="midi-anchor" style="font-family:'Space Grotesk',sans-serif; font-size:clamp(1.4rem,3vw,2rem); border-left:4px solid #1a5f8a; padding-left:.75rem; background:linear-gradient(90deg,rgba(26,95,138,.18) 0%,rgba(26,95,138,.09) 100%); border-radius:0 6px 6px 0; display:block; margin-top:0; margin-bottom:.4rem;">What is MIDI?</h2>
+  <div class="midi-intro" style="margin-top:1rem;">
+    <strong>MIDI is not sound.</strong> Musical Instrument Digital Interface (developed in 1981) is a digital language — a set of instructions that tells instruments, computers, and hardware what to play, when to play it, and how. Think of it like sheet music: the score tells a performer what to do, but the performer's instrument produces the actual sound. MIDI works the same way — it carries performance data, not audio.
+  </div>
+
+  <!-- Message types -->
+  <h2 class="midi-section-head midi-anchor" id="message-types">Core message types</h2>
+  <div class="midi-grid" role="list" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">🎵</div>
+      <h3>Note On / Note Off</h3>
+      <p>The most fundamental MIDI messages. When you press a key, a <em>Note On</em> message fires containing three values:</p>
+      <ul>
+        <li><strong>Note number</strong> <span class="midi-val">0–127</span> — which pitch (middle C = 60)</li>
+        <li><strong>Velocity</strong> <span class="midi-val">0–127</span> — how hard the key was struck</li>
+        <li><strong>Channel</strong> <span class="midi-val">1–16</span> — which device receives it</li>
+      </ul>
+      <p style="margin-top:.5rem;font-size:.82rem;color:var(--muted)">A velocity of 0 is treated as Note Off. Duration is the time between Note On and Note Off.</p>
+    </div>
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">🎛️</div>
+      <h3>Control Change (CC)</h3>
+      <p>Sliders, knobs, foot pedals, and wheels send CC messages to adjust performance parameters in real time. Values always range <span class="midi-val">0–127</span>.</p>
+      <ul>
+        <li><strong>CC 1</strong> — Modulation wheel</li>
+        <li><strong>CC 7</strong> — Channel volume</li>
+        <li><strong>CC 10</strong> — Pan (left/right)</li>
+        <li><strong>CC 11</strong> — Expression</li>
+        <li><strong>CC 64</strong> — Sustain pedal</li>
+        <li><strong>CC 121</strong> — Reset all controllers</li>
+      </ul>
+    </div>
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">🎼</div>
+      <h3>Program Change (PC)</h3>
+      <p>Instructs a device to switch to a different sound patch or preset instantly. Essential for live performance.</p>
+      <ul>
+        <li>Range: <span class="midi-val">0–127</span> (128 patches per bank)</li>
+        <li>Combined with <strong>Bank Select</strong> (CC 0 / CC 32) for thousands of patches</li>
+        <li>Roland Integra-7 uses PC + bank to select from 6,000+ SuperNATURAL tones</li>
+      </ul>
+    </div>
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">〰️</div>
+      <h3>Pitch Bend</h3>
+      <p>A dedicated message for smooth pitch variation. Uses 14-bit resolution (<span class="midi-val">0–16383</span>) for silky-smooth bends.</p>
+      <ul>
+        <li>Center value (no bend) = 8192</li>
+        <li>Spring-loaded: snaps back to center when released</li>
+        <li>Bend range is configurable per device (typically ±2 semitones)</li>
+      </ul>
+    </div>
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">👆</div>
+      <h3>Aftertouch</h3>
+      <p>Pressure applied to a key <em>after</em> it is fully depressed. Adds powerful expressive control.</p>
+      <ul>
+        <li><strong>Channel aftertouch</strong> — one pressure value for all held keys (most common)</li>
+        <li><strong>Polyphonic aftertouch</strong> — individual pressure per key (rare, expensive)</li>
+        <li>Commonly mapped to vibrato, filter cutoff, or volume swell</li>
+      </ul>
+    </div>
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">🏭</div>
+      <h3>System Exclusive (SysEx)</h3>
+      <p>A free-form message type that each manufacturer defines for their own devices. Can be any length.</p>
+      <ul>
+        <li>Patch backup and restore (dump synth settings to PC)</li>
+        <li>Deep parameter editing not possible via CC</li>
+        <li>Firmware updates on some devices</li>
+        <li>Roland Integra-7 relies heavily on SysEx for tone control</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Channels -->
+  <h2 class="midi-section-head midi-anchor" id="channels">MIDI channels</h2>
+  <div class="midi-intro" style="margin-bottom:.75rem">
+    MIDI supports <strong>16 independent channels</strong> on a single cable — like 16 separate lanes on a highway. Each device is configured to listen on one or more channels, so you can connect many instruments to the same cable and control them independently.
+  </div>
+  <div class="midi-two-col">
+    <div class="midi-card">
+      <h3>How channels work</h3>
+      <ul>
+        <li>Each Note On, CC, and PC message carries a channel number <span class="midi-val">1–16</span></li>
+        <li>A device ignores messages addressed to channels it isn't set to receive</li>
+        <li><strong>Channel 10</strong> is universally reserved for drums in General MIDI</li>
+        <li>Multi-timbral devices (like the Integra-7) can receive on all 16 channels simultaneously, playing a different instrument on each</li>
+      </ul>
+    </div>
+    <div class="midi-card">
+      <h3>Omni mode vs. poly mode</h3>
+      <ul>
+        <li><strong>Omni On</strong> — device responds to all channels (useful for testing)</li>
+        <li><strong>Omni Off</strong> — device responds only to its assigned channel</li>
+        <li><strong>Poly mode</strong> — multiple notes play simultaneously on one channel</li>
+        <li><strong>Mono mode</strong> — one note at a time per channel (useful for wind controllers and legato synths)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- System messages -->
+  <h2 class="midi-section-head midi-anchor" id="system-messages">System messages</h2>
+  <div class="midi-grid" role="list">
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">⏱️</div>
+      <h3>MIDI Clock &amp; Sync</h3>
+      <p>24 timing pulses are sent per quarter note, allowing all connected devices to stay in perfect tempo sync.</p>
+      <ul>
+        <li><strong>Start / Stop / Continue</strong> — transport control commands</li>
+        <li><strong>Song Position Pointer</strong> — jump to a specific beat in a sequence</li>
+        <li>One master device sends clock; all others follow</li>
+      </ul>
+    </div>
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">🔌</div>
+      <h3>MIDI Connections</h3>
+      <p>Physical MIDI uses 5-pin DIN connectors on three ports:</p>
+      <ul>
+        <li><strong>MIDI OUT</strong> — transmits data from this device</li>
+        <li><strong>MIDI IN</strong> — receives data from another device</li>
+        <li><strong>MIDI THRU</strong> — passes IN data straight through unchanged (for daisy-chaining)</li>
+        <li>USB-MIDI is now standard on most modern gear</li>
+        <li>A MIDI interface connects DIN devices to a computer's USB port</li>
+      </ul>
+    </div>
+    <div class="midi-card" role="listitem">
+      <div class="midi-card-icon">🔀</div>
+      <h3>Hub vs. Router</h3>
+      <p>How you connect multiple MIDI devices matters enormously for performance and simplicity.</p>
+      <ul>
+        <li><strong>Hub / Thru box</strong> — broadcasts every incoming message to all connected devices; simple but noisy</li>
+        <li><strong>Router (MidiXLate)</strong> — inspects each packet and sends it only to its intended destination</li>
+        <li>For 1–3 devices, a hub is fine. For complex rigs, a router is essential.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CC Reference -->
+  <h2 class="midi-section-head midi-anchor" id="cc-reference">Common CC numbers quick reference</h2>
+  <table class="midi-cc-table" aria-label="Common MIDI Control Change numbers">
+    <thead>
+      <tr><th>CC #</th><th>Name</th><th>Typical use</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>CC 0</td><td>Bank Select MSB</td><td>Select patch bank (high byte); always paired with CC 32 then a Program Change</td></tr>
+      <tr><td>CC 1</td><td>Modulation</td><td>Vibrato depth, LFO intensity — the mod wheel on most keyboards</td></tr>
+      <tr><td>CC 7</td><td>Channel Volume</td><td>Overall volume of the channel (distinct from velocity)</td></tr>
+      <tr><td>CC 10</td><td>Pan</td><td>Stereo position: 0 = hard left, 64 = center, 127 = hard right</td></tr>
+      <tr><td>CC 11</td><td>Expression</td><td>Fine volume control within a phrase; used for swells and dynamics</td></tr>
+      <tr><td>CC 32</td><td>Bank Select LSB</td><td>Select patch bank (low byte); paired with CC 0</td></tr>
+      <tr><td>CC 64</td><td>Sustain Pedal</td><td>0–63 = off, 64–127 = on; holds notes after keys are released</td></tr>
+      <tr><td>CC 65</td><td>Portamento</td><td>On/off switch for gliding between notes</td></tr>
+      <tr><td>CC 71</td><td>Resonance</td><td>Filter resonance / timbre brightness</td></tr>
+      <tr><td>CC 74</td><td>Brightness</td><td>Filter cutoff frequency</td></tr>
+      <tr><td>CC 91</td><td>Reverb Send</td><td>Amount of signal sent to the reverb effect</td></tr>
+      <tr><td>CC 93</td><td>Chorus Send</td><td>Amount of signal sent to the chorus effect</td></tr>
+      <tr><td>CC 121</td><td>Reset All Controllers</td><td>Resets all CC values to default — useful when stuck notes occur</td></tr>
+      <tr><td>CC 123</td><td>All Notes Off</td><td>Emergency stop for stuck or hung notes</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Related products -->
+  <h2 class="midi-section-head midi-anchor" id="related">Sierra Digital Audio MIDI tools</h2>
+  <p style="color:var(--muted); font-size:.94rem; margin-bottom:1rem;">Put this knowledge to work with free software and custom hardware from Sierra Digital Audio.</p>
+  <div class="related-grid">
+    <div class="related-card">
+      <h3>🎹 MidiControl</h3>
+      <p>Free Windows MIDI command librarian. Send any program change, control change, bank change, or SysEx command with one click. First-class Roland Integra-7 support.</p>
+      <a href="midicontrol.html" class="link-chip" style="display:inline-flex;">Learn more →</a>
+    </div>
+    <div class="related-card">
+      <h3>🥁 MidiOrganize</h3>
+      <p>Free Windows MIDI loop librarian. Browse, preview, and drag MIDI loops into your DAW. No VST license, no CPU overhead, fully offline.</p>
+      <a href="midiorganize.html" class="link-chip" style="display:inline-flex;">Learn more →</a>
+    </div>
+    <div class="related-card">
+      <h3>🔀 MidiXLate Router</h3>
+      <p>Custom-built hardware MIDI router with 7×7 DIN ports. Route, filter, translate, and lock MIDI channels between any devices. 84 MHz ARM Cortex-M3.</p>
+      <a href="midixlate.html" class="link-chip" style="display:inline-flex;">Learn more →</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-brand">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:.25rem;">
+        <svg width="36" height="36" viewBox="0 0 88 88" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect width="88" height="88" rx="10" fill="rgba(255,255,255,.12)"/>
+          <polygon points="44,12 14,68 74,68" fill="#2d7ab0"/><polygon points="28,68 14,68 28,38 42,68" fill="rgba(255,255,255,.15)"/>
+          <polygon points="60,68 74,68 60,38 46,68" fill="rgba(255,255,255,.15)"/><polygon points="44,14 30,40 58,40" fill="white" opacity="0.92"/>
+          <polygon points="16,68 28,40 34,55 22,68" fill="white" opacity="0.55"/><polygon points="72,68 60,40 66,55 76,68" fill="white" opacity="0.55"/>
+          <polyline points="8,58 16,58 20,50 24,66 28,46 32,72 36,54 40,58 44,58 48,58 52,50 56,64 60,52 64,58 72,58 80,58" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+        </svg>
+        <span class="logo-text">Sierra Digital Audio</span>
+      </div>
+      <p>Free MIDI software and custom hardware. Hand-built in the Sierra Nevada, Truckee CA.</p>
+      <a href="https://www.buymeacoffee.com/sierradigitalaudio" target="_blank" rel="noopener" style="display:inline-block; margin-top:.5rem;">
+        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:32px; width:auto; border-radius:6px;" />
+      </a>
+    </div>
+    <div class="site-footer-col">
+      <h4>Products</h4>
+      <a href="midicontrol.html">MidiControl</a>
+      <a href="midiorganize.html">MidiOrganize</a>
+      <a href="midixlate.html">MidiXLate Router</a>
+      <a href="midibasics.html">MIDI Basics</a>
+    </div>
+    <div class="site-footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:SierraDigitalAudio@gmail.com?subject=Sierra Digital Audio Inquiry">SierraDigitalAudio@gmail.com</a>
+      <a href="tel:+19257652883">925-765-2883</a>
+      <span style="font-size:.82rem; color:rgba(255,255,255,.4); margin-top:.25rem; display:block;">📍 Truckee, CA 96161 USA</span>
+    </div>
+  </div>
+  <div class="site-footer-bottom">
+    <span>Copyright &copy; 2011–2026 Sierra Digital Audio &nbsp;·&nbsp; All software free for personal and professional use</span>
+    <span><a href="#">Back to top ↑</a></span>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.nav-hamburger').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

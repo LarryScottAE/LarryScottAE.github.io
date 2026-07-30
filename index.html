@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Sierra Digital Audio — Free MIDI Software & Custom MIDI Hardware</title>
-  <meta name="description" content="Free MIDI software for Windows: MidiControl (Roland Integra-7 librarian), MidiOrganize (loop organizer), and MidiXLate (hardware router) for studios and live performers." />
+  <meta name="description" content="Free Windows MIDI software and custom hardware for musicians. MidiControl (patch changer, Roland Integra-7 support), MidiOrganize (MIDI loop librarian), and MidiXLate (hardware MIDI router). Free download, Windows 10 and 11." />
+  <meta name="keywords" content="free MIDI software Windows, MIDI patch changer, MIDI loop organizer, hardware MIDI router, Roland Integra-7 software, free MIDI download, MIDI librarian Windows, Sierra Digital Audio" />
   <meta name="author" content="Larry Scott, Sierra Digital Audio" />
   <meta name="robots" content="index, follow" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="canonical" href="https://sierradigitalaudio.com/" />
 
   <meta property="og:type" content="website" />
@@ -86,6 +88,31 @@
         "featureList": "MIDI loop browser, drag and drop to DAW, MIDI preview, Groove Monkee compatible, offline, no VST required"
       },
       {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is MidiControl?",
+            "acceptedAnswer": { "@type": "Answer", "text": "MidiControl is a free Windows MIDI command librarian that lets you send program-change, control-change, bank-change, and SysEx commands to any MIDI device with a single click. It includes full Roland Integra-7 support with instant preview of 6,000+ tones." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is MidiOrganize?",
+            "acceptedAnswer": { "@type": "Answer", "text": "MidiOrganize is a free standalone Windows MIDI loop librarian. Browse, preview, and drag MIDI loops directly into your DAW. Compatible with Groove Monkee and any MIDI files. No VST license, no CPU overhead, fully offline." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is MidiXLate?",
+            "acceptedAnswer": { "@type": "Answer", "text": "MidiXLate is a custom-built hardware MIDI router with 7×7 DIN ports and an 84 MHz ARM Cortex-M3 processor. It routes, filters, translates, and locks MIDI channels between any devices with less than 1ms latency. Hand-built in Truckee, CA." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the software really free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. MidiControl and MidiOrganize are completely free for personal and professional use. There is no license key, no activation server, and no internet connection required." }
+          }
+        ]
+      },
+      {
         "@type": "Product",
         "name": "MidiXLate MIDI Router",
         "url": "https://sierradigitalaudio.com/#midixlate",
@@ -159,9 +186,9 @@
       font-size: 1.1rem;
     }
     .nav-links { display: flex; gap: 12px; list-style: none; }
-    .nav-links a { color: #ffffff; font-size: 0.88rem; font-weight: 600; transition: background .2s; padding: 7px 18px; border-radius: 20px; background: var(--highlight); display: inline-flex; align-items: center; line-height: 1.4; }
+    .nav-links a { color: #ffffff; font-size: 0.82rem; font-weight: 600; transition: background .2s; padding: 6px 14px; border-radius: 20px; background: var(--highlight); display: inline-flex; align-items: center; line-height: 1.4; white-space: nowrap; }
     .nav-links a:hover { background: var(--navy-rim); color: #ffffff; }
-    .nav-cta { background: var(--highlight); color: #ffffff; padding: 7px 18px; border-radius: 20px; font-size: 0.88rem; font-weight: 600; transition: background .2s; line-height: 1.4; display: inline-flex; align-items: center; }
+    .nav-cta { background: var(--highlight); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; transition: background .2s; line-height: 1.4; display: inline-flex; align-items: center; }
     .nav-cta:hover { background: var(--navy-rim); color: #ffffff; }
     .nav-coffee {
       display: inline-flex; align-items: center;
@@ -173,8 +200,9 @@
     .hero {
       min-height: 18vh;
       display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center; padding: .75rem 2rem .75rem;
-      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(26,95,138,.07) 0%, transparent 60%), var(--navy);
+      text-align: center; padding: 1.25rem 2rem 1.25rem;
+      background: linear-gradient(135deg, #0d1f2d 0%, #1a3a5c 50%, #1a5f8a 100%);
+      color: #ffffff;
       position: relative; overflow: hidden;
     }
     .hero::before {
@@ -184,10 +212,10 @@
         repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(26,95,138,.04) 40px);
       pointer-events: none;
     }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(26,95,138,.08); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; font-weight: 500; color: var(--highlight); letter-spacing: .06em; text-transform: uppercase; margin-bottom: .75rem; }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); max-width: 780px; color: var(--text); margin-bottom: .4rem; }
-    .hero h1 span { color: var(--highlight); }
-    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 560px; margin-bottom: 1.5rem; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; font-weight: 500; color: #ffffff; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .75rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); max-width: 780px; color: #ffffff; margin-bottom: .4rem; }
+    .hero h1 span { color: #7dd3fc; }
+    .hero p { font-size: 1.15rem; color: rgba(255,255,255,.8); max-width: 560px; margin-bottom: 1.5rem; }
     .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
     .btn-primary { background: var(--highlight); color: #ffffff; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: .95rem; transition: background .2s, transform .15s; }
     .btn-primary:hover { background: var(--navy-rim); transform: translateY(-1px); color: #ffffff; }
@@ -559,7 +587,7 @@
     }
 
     /* ── Contact / footer ── */
-    .contact-band { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 2px 16px rgba(13,31,45,.07), 0 1px 4px rgba(13,31,45,.04); padding: 2.5rem 2rem; text-align: center; max-width: 1100px; margin: 2rem auto; }
+    .contact-band { background: #cccccc; border: 1px solid #b8b8b8; border-radius: 16px; box-shadow: 0 2px 16px rgba(13,31,45,.07), 0 1px 4px rgba(13,31,45,.04); padding: 2.5rem 2rem; text-align: center; max-width: 1100px; margin: 2rem auto; }
     .contact-band h2 { font-size: 1.4rem; margin-bottom: .5rem; }
     .contact-band p  { color: var(--muted); margin-bottom: 1.5rem; }
     .contact-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -613,6 +641,46 @@
     footer { text-align: center; padding: 2rem; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--border); }
     footer a { color: var(--muted); }
     footer a:hover { color: var(--highlight); }
+
+
+    /* ── iPhone / narrow mobile optimizations ── */
+    @media (max-width: 480px) {
+      /* Fix overflow from fixed-width buttons */
+      .link-chip { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+
+      /* Prevent nowrap headings overflowing */
+      h1, .hero h1 { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; font-size: 1.4rem !important; }
+
+      /* Hero stats: 2×2 grid on small screens */
+      .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+      .hero-stat .num { font-size: 1.3rem; }
+      .hero-stat .label { font-size: .68rem; }
+
+      /* Hero ctas stack vertically */
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-outline-white { width: 100%; max-width: 320px; text-align: center; justify-content: center; }
+
+      /* SHA hash: allow break */
+      .sha-tooltip, [style*="font-family:monospace"] { word-break: break-all; overflow-wrap: break-word; }
+
+      /* Prevent iOS font-size zoom on interactive elements */
+      input, select, textarea, button, .link-chip, .btn-primary, .nav-cta { font-size: 16px !important; }
+
+      /* Animations: hide on very small screens to prevent layout issues */
+      #mc-anim-wrap, #mo-wrap { display: none; }
+
+      /* Product card padding tighter */
+      .product-card { padding: 1rem; }
+
+      /* Section sub text */
+      .section-sub { font-size: .88rem; }
+
+      /* Thumb grid smaller */
+      .thumb-item img { height: 70px; }
+
+      /* Nav logo text smaller */
+      .nav-logo-text { font-size: .85rem; letter-spacing: .06em; }
+    }
 
     @media (max-width: 760px) {
       .product-block { grid-template-columns: 1fr; }
@@ -938,13 +1006,13 @@
     <span class="nav-logo-text">Sierra Digital Audio<span class="nav-mobile-label">(mobile phone summarized layout)</span></span>
   </a>
   <ul class="nav-links" role="list" style="justify-content:center;">
-    <li><a href="#midicontrol" title="Free MIDI librarian with Roland Integra-7 support">MidiControl</a></li>
-    <li><a href="#midiorganize" title="Free MIDI loop organizer for your DAW">MidiOrganize</a></li>
-    <li><a href="#midixlate" title="Custom hardware MIDI router — 7×7 ports, 84 MHz ARM processor">MidiXLate Router</a></li>
-    <li><a href="#midi-overview" title="Comprehensive MIDI concepts guide — notes, CC, SysEx, channels and more" class="nav-midi-basics">MIDI Basics</a></li>
+    <li><a href="midicontrol.html" title="Free MIDI librarian with Roland Integra-7 support">MidiControl</a></li>
+    <li><a href="midiorganize.html" title="Free MIDI loop organizer for your DAW">MidiOrganize</a></li>
+    <li><a href="midixlate.html" title="Custom hardware MIDI router — 7×7 ports, 84 MHz ARM processor">MidiXLate Router</a></li>
+    <li><a href="midibasics.html" title="Comprehensive MIDI concepts guide — notes, CC, SysEx, channels and more" class="nav-midi-basics">MIDI Basics</a></li>
   </ul>
   <div style="display:flex; align-items:center; gap:1rem; justify-content:flex-end;">
-    <a href="#contact" class="nav-cta" title="Jump to contact form">Contact</a>
+    <a href="contact.html" class="nav-cta" title="Contact Sierra Digital Audio">Contact</a>
     <a href="https://buymeacoffee.com/sierradigitalaudio" class="nav-coffee" target="_blank" rel="noopener" title="Buy Larry a coffee!">
       <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:34px; width:auto; border-radius:6px;" />
     </a>
@@ -972,247 +1040,32 @@
 <!-- ── MIDICONTROL ── -->
 <section id="midicontrol" aria-labelledby="mc-heading" style="padding-top:1.25rem;">
   <div class="product-card fade-in">
-  <h2 class="section-title fade-in" id="mc-heading"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" width="36" height="18" style="display:inline-block; vertical-align:middle; margin-right:8px; margin-bottom:3px;" aria-hidden="true"><rect x="0" y="0" width="48" height="24" rx="3" fill="#1a5f8a"/><rect x="1" y="1" width="46" height="22" rx="2.5" fill="#f8fafc"/><rect x="1" y="1" width="46" height="14" rx="2" fill="#f8fafc"/><!-- white keys --><line x1="7" y1="1" x2="7" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="13" y1="1" x2="13" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="19" y1="1" x2="19" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="25" y1="1" x2="25" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="31" y1="1" x2="31" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="37" y1="1" x2="37" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="43" y1="1" x2="43" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><!-- black keys --><rect x="4.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="10.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="22.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="28.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="34.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/></svg>MidiControl</h2>
+  <h2 class="section-title fade-in" id="mc-heading"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" width="36" height="18" style="display:inline-block; vertical-align:middle; margin-right:8px; margin-bottom:3px;" aria-hidden="true"><rect x="0" y="0" width="48" height="24" rx="3" fill="#1a5f8a"/><rect x="1" y="1" width="46" height="22" rx="2.5" fill="#f8fafc"/><rect x="1" y="1" width="46" height="14" rx="2" fill="#f8fafc"/><line x1="7" y1="1" x2="7" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="13" y1="1" x2="13" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="19" y1="1" x2="19" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="25" y1="1" x2="25" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="31" y1="1" x2="31" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="37" y1="1" x2="37" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><line x1="43" y1="1" x2="43" y2="23" stroke="#1a5f8a" stroke-width="0.6" opacity="0.3"/><rect x="4.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="10.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="22.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="28.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/><rect x="34.5" y="1" width="4" height="13" rx="1" fill="#1a5f8a"/></svg>MidiControl</h2>
   <p class="section-sub fade-in" style="max-width:100%;">A Windows MIDI command librarian and patch preview tool with first-class Roland Integra-7 MIDI tone generator support.</p>
   <div class="product-block">
     <div>
       <span class="product-badge badge-free">Free Software</span>
       <h2 class="product-title">Command every patch from your desktop</h2>
       <p class="product-desc">
-        MidiControl lets you build organized lists of MIDI program-change, control-change, bank-change, and system exclusive commands,
-        then fire them with a single click. Stop hunting through hardware menus mid-session.
-        24 bookmarks hold up to 2,000 commands, grouped by device, song, or setlist.
+        Build organized lists of MIDI program-change, control-change, bank-change, and SysEx commands — then fire any one with a single click. 24 bookmarks hold up to 2,000 commands grouped by device, song, or setlist. Includes full Roland Integra-7 support with instant preview of 6,000+ tones.
       </p>
       <ul class="feature-list">
-        <li>24 user bookmarks, up to 2,000 MIDI (bank change, patch change, control change, notes, and sys ex) commands per session</li>
-        <li>Organize your MIDI groups to meet your specific needs (such as MIDI commands by instrument, song, setlist, device, ....)</li>
-        <li>Send program-change, control-change, bank-change, and system exclusive commands to any MIDI device</li>
-        <li>Utilities provided to mass update MIDI devices, troubleshoot MIDI devices, and back up / restore your configuration</li>
-        <li>Free optional Roland Integra-7 sound module bundle included</li>
-        <li>Advanced search features to easily find the 'right tone' across all 6,000+ Integra-7 tones</li>
-        <li>Instant patch preview of all 6,000+ Roland Integra-7 tones with flexible preview options</li>
-        <li>Bookmark favorite Integra-7 tones for fast setlist access</li>
-        <li>Works with any USB-MIDI or DIN-MIDI interface</li>
+        <li>24 bookmarks · up to 2,000 MIDI commands per session</li>
+        <li>Supports bank change, patch change, control change, notes, and SysEx</li>
+        <li>Full Roland Integra-7 bundle — browse &amp; preview 6,000+ tones</li>
+        <li>Works with any USB-MIDI or DIN-MIDI interface · 100% offline</li>
       </ul>
-      <div class="product-links">
-       
- 	    <a href="https://sierradigitalaudio.com/tutorials/MidiControl_V1.6_Tutorial.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 11-minute MidiControl video tutorial" style="width:220px; justify-content:center;"
-		   >▶ MidiControl 1.6 Video Tutorial (11 min, 80 meg)</a>
-        
-		<a href="https://sierradigitalaudio.com/tutorials/MidiControl-Integra7-Tutorial.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 6-minute Roland Integra-7 tutorial" style="width:220px; justify-content:center;"
-		   >▶ MidiControl 1.6 Roland Integra-7 Tutorial (6 min, 80 meg)</a>
-        
-		<a href="https://sierradigitalaudio.com/downloads/INTEGRA-7_SoundList.pdf" class="link-chip" target="_blank" rel="noopener" title="Download the complete Roland Integra-7 sound list PDF" style="width:220px; justify-content:center;">
-		   <span style="background:#c0392b; color:#fff; font-size:.65rem; font-weight:700; padding:1px 5px; border-radius:3px; margin-right:4px; letter-spacing:.04em;">PDF</span>
-		   Integra-7 Sound List</a>
-        
-		<a href="https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads" class="link-chip" target="_blank" rel="noopener" title="View the MidiControl source code repository" style="width:220px; justify-content:center;"
-		   >📦 GitHub Repository</a>
-
-        <a href="./index.html" class="link-chip" target="popup" onclick="window.open('./downloads/setupMidiControl-V1.7.exe','popup','width=1600'); return false;" title="Download MidiControl Version 1.7 April 2026 installer" style="width:455px; justify-content:center;"
-		   >🔽 Download MidiControl Version 1.7 April 2026 installer (.exe)</a>
-		   
-        <div style="width:100%; font-size:.72rem; color:var(--muted); font-family:monospace; padding:4px 2px; letter-spacing:.02em; position:relative; cursor:help; display:inline-block;"
-             onmouseenter="this.querySelector('.sha-tooltip').style.opacity='1'; this.querySelector('.sha-tooltip').style.pointerEvents='auto';"
-             onmouseleave="this.querySelector('.sha-tooltip').style.opacity='0'; this.querySelector('.sha-tooltip').style.pointerEvents='none';">
-          MidiControl installer's digital fingerprint / SHA-256 hash value: 9AEF4049D9AE4EC97B2D623A9954B063BCF85A1099C9F3F51F0B143F911BA7BB
-          <div class="sha-tooltip" style="opacity:0; pointer-events:none; transition:opacity .2s ease; position:absolute; bottom:calc(100% + 8px); left:0; width:340px; background:#1a5f8a; color:#ffffff; font-family:'Inter',sans-serif; font-size:.75rem; font-weight:400; line-height:1.6; padding:10px 13px; border-radius:8px; box-shadow:0 4px 16px rgba(26,95,138,.25); z-index:50; letter-spacing:0;">
-            <strong style="display:block; margin-bottom:4px; font-size:.78rem;">What is a SHA-256 hash?</strong>
-            A unique 64-character digital fingerprint calculated from the installer file. If even one byte is altered — by corruption or tampering — the hash changes completely. Comparing it to this value confirms you have a safe, unmodified copy.
-            <strong style="display:block; margin-top:8px; margin-bottom:4px; font-size:.78rem;">How to verify (Windows PowerShell):</strong>
-            <span style="display:block; background:rgba(255,255,255,.15); border-radius:4px; padding:4px 8px; font-family:monospace; font-size:.72rem;">Get-FileHash setupMidiControl-V1.7.exe -Algorithm SHA256</span>
-            <span style="display:block; margin-top:6px;">Compare the <em>Hash</em> value in the output to the fingerprint above — they should match exactly.</span>
-            <div style="position:absolute; bottom:-6px; left:20px; width:12px; height:12px; background:#1a5f8a; transform:rotate(45deg); border-radius:1px;"></div>
-          </div>
-        </div>
+      <div class="product-links" style="margin-top:1rem;">
+        <a href="./downloads/setupMidiControl-V1.7.exe" class="link-chip" onclick="window.open('./downloads/setupMidiControl-V1.7.exe','popup','width=1600'); return false;" title="Download MidiControl Version 1.7">🔽 Download MidiControl v1.7 — Free</a>
+        <a href="midicontrol.html" class="link-chip" title="Full MidiControl product page — screenshots, FAQ, tutorials">More information →</a>
       </div>
     </div>
-
-    <!-- Right column: both panels stacked -->
-    <div style="display:flex; flex-direction:column; gap:1.5rem;">
-
-    <!-- Combo panel: MidiControl opening screen -->
-    <div class="screenshot-panel midicontrol-panel" aria-label="MidiControl opening screen">
-      <div class="screenshot-bar">
-        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-        <span class="screenshot-bar-title midicontrol-subtitle" style="margin:0 auto; font-weight:700; font-size:1rem;">MidiControl — Opening Screen</span>
-      </div>
-      <a href="images/control1L.png" target="_blank" rel="noopener" title="Click to view full size: MidiControl opening screen">
-        <img src="images/control1L.png" alt="MidiControl free MIDI software for Windows — opening screen"
-             style="width:100%; height:auto; display:block; border-radius:0 0 10px 10px;" loading="lazy" />
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <a href="images/control1L.png" target="_blank" rel="noopener" title="Click to view full size: MidiControl opening screen" style="display:block; border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
+        <img src="images/control1L.png" alt="MidiControl free MIDI software for Windows — opening screen" style="width:100%; height:auto; display:block; border-radius:10px;" loading="lazy" />
       </a>
     </div>
-
-    <!-- Roland Integra-7 info panel -->
-    <a href="https://www.roland.com/us/products/integra-7/" target="_blank" rel="noopener" title="View the Roland Integra-7 on Roland.com" style="display:block; text-decoration:none;">
-    <div class="screenshot-panel integra7-panel" aria-label="Roland Integra-7 overview" style="cursor:pointer;">
-      <div class="screenshot-bar">
-        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-        <span style="margin:0 auto; font-weight:700; font-size:1rem; color:var(--highlight); white-space:nowrap;">Roland Integra-7 SuperNATURAL Sound Module ↗</span>
-      </div>
-      <div class="screenshot-main" style="padding:.4rem .4rem 0 .4rem; display:flex; flex-direction:column; gap:5px; min-height:0;">
-        <div style="margin:-.4rem -.4rem 0 -.4rem; border-radius:0; overflow:hidden; border-bottom:1px solid var(--border);">
-          <img src="images/Integra-7.jpg" alt="Roland Integra-7 sound module" style="width:100%; height:auto; display:block; border-radius:0;" />
-        </div>
-        <div style="display:flex; flex-direction:row; gap:5px; padding-bottom:.2rem;">
-          <div style="background:var(--surface); border-radius:6px; padding:.15rem .5rem; display:flex; align-items:center; justify-content:center; gap:5px; flex:1;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-size:.85rem; font-weight:700; color:var(--highlight);">6,000+</span>
-            <span style="font-size:.62rem; color:var(--muted);">sounds</span>
-          </div>
-          <div style="background:var(--surface); border-radius:6px; padding:.15rem .5rem; display:flex; align-items:center; justify-content:center; gap:5px; flex:1;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-size:.85rem; font-weight:700; color:var(--highlight);">16-part</span>
-            <span style="font-size:.62rem; color:var(--muted);">multitimbral</span>
-          </div>
-          <div style="background:var(--surface); border-radius:6px; padding:.15rem .5rem; display:flex; align-items:center; justify-content:center; gap:5px; flex:1;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-size:.85rem; font-weight:700; color:var(--highlight);">128</span>
-            <span style="font-size:.62rem; color:var(--muted);">polyphony</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    </a>
-
-    <!-- MidiControl animation -->
-    <div id="mc-anim-wrap" style="border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10); height:320px;">
-      <div id="mc-app" style="display:grid; grid-template-columns:1fr 1fr; width:100%; height:320px; background:#1a1a2e; border-radius:10px; overflow:hidden; font-family:'Inter',monospace; position:relative;">
-
-        <!-- LEFT: MidiControl -->
-        <div style="display:flex; flex-direction:column; border-right:1px solid rgba(26,95,138,.3);">
-          <div style="background:#0f3460; padding:5px 8px; display:flex; align-items:center; gap:6px; border-bottom:1px solid rgba(26,95,138,.4);">
-            <span style="width:8px;height:8px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#28c840;display:inline-block;"></span>
-            <span style="font-size:.62rem;color:#7dd3fc;font-weight:700;margin-left:4px;letter-spacing:.04em;">MidiControl</span>
-          </div>
-          <div id="mc-bc" style="font-size:.6rem;color:#94a3b8;padding:4px 8px;background:#16213e;border-bottom:1px solid rgba(26,95,138,.2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📚 Bookmarks</div>
-          <div id="mc-list" style="flex:1;overflow-y:auto;overflow-x:hidden;padding:4px 0;"></div>
-          <div style="border-top:1px solid rgba(26,95,138,.2);background:#0f3460;padding:5px 8px;">
-            <div style="font-size:.58rem;color:#64748b;margin-bottom:2px;">Last sent:</div>
-            <div id="mc-last-sent" style="font-size:.6rem;color:#4ade80;font-family:monospace;min-height:12px;">—</div>
-          </div>
-        </div>
-
-        <!-- RIGHT: Roland Integra-7 -->
-        <div style="display:flex; flex-direction:column; background:#111827;">
-          <div style="background:#1c1c1c;padding:5px 8px;display:flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,.08);">
-            <span style="width:8px;height:8px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#28c840;display:inline-block;"></span>
-            <span style="font-size:.62rem;color:#d4d4d4;font-weight:700;margin-left:4px;letter-spacing:.04em;">MIDI Device</span>
-          </div>
-          <!-- LCD display -->
-          <div style="margin:8px;background:#1a2a1a;border:1px solid #2a4a2a;border-radius:4px;padding:8px 10px;">
-            <div style="font-size:.65rem;color:#7dd3fc;font-weight:700;letter-spacing:.06em;margin-bottom:5px;border-bottom:1px solid #2a4a2a;padding-bottom:4px;">Roland Integra-7</div>
-            <div style="font-size:.55rem;color:#ffffff;font-weight:700;letter-spacing:.1em;margin-bottom:4px;">Current Patch</div>
-            <div id="mc-patch-name" style="font-family:'Space Grotesk',monospace;font-size:1rem;font-weight:700;color:#4ade80;letter-spacing:.05em;min-height:22px;transition:opacity .2s;">Strings</div>
-            <div style="display:flex;justify-content:space-between;margin-top:4px;">
-              <span id="mc-patch-num" style="font-size:.6rem;color:#4a7a4a;font-family:monospace;">PC: 1810</span>
-              <span style="font-size:.6rem;color:#4a7a4a;">CH: 1</span>
-            </div>
-          </div>
-          <!-- VU meters -->
-          <div style="margin:0 8px;display:grid;grid-template-columns:1fr 1fr;gap:4px;">
-            <div>
-              <div style="font-size:.5rem;color:#4a7a4a;margin-bottom:2px;">L</div>
-              <div id="mc-vu-l" style="height:6px;background:#1a2a1a;border-radius:3px;overflow:hidden;"><div style="height:100%;background:linear-gradient(90deg,#4ade80,#fbbf24);width:0%;transition:width .15s;border-radius:3px;"></div></div>
-            </div>
-            <div>
-              <div style="font-size:.5rem;color:#4a7a4a;margin-bottom:2px;">R</div>
-              <div id="mc-vu-r" style="height:6px;background:#1a2a1a;border-radius:3px;overflow:hidden;"><div style="height:100%;background:linear-gradient(90deg,#4ade80,#fbbf24);width:0%;transition:width .15s;border-radius:3px;"></div></div>
-            </div>
-          </div>
-          <!-- MIDI activity -->
-          <div style="margin:6px 8px 0;display:flex;align-items:center;gap:5px;">
-            <span id="mc-midi-led" style="width:7px;height:7px;border-radius:50%;background:#1a2a1a;flex-shrink:0;transition:background .1s;"></span>
-            <span style="font-size:.55rem;color:#4a7a4a;font-family:monospace;">MIDI IN</span>
-            <span id="mc-midi-status" style="font-size:.55rem;color:#4a7a4a;margin-left:auto;font-family:monospace;">READY</span>
-          </div>
-          <!-- Part display -->
-          <div style="margin:6px 8px;display:grid;grid-template-columns:repeat(8,1fr);gap:2px;">
-            <div id="mc-part-1" style="background:#0a3a0a;border:1px solid #1a4a1a;border-radius:2px;padding:2px;text-align:center;font-size:.45rem;color:#4ade80;">P1</div>
-            <div style="background:#0a1a2e;border:1px solid #1a2a3e;border-radius:2px;padding:2px;text-align:center;font-size:.45rem;color:#1a5f8a;">P2</div>
-            <div style="background:#0a1a2e;border:1px solid #1a2a3e;border-radius:2px;padding:2px;text-align:center;font-size:.45rem;color:#1a5f8a;">P3</div>
-            <div style="background:#0a1a2e;border:1px solid #1a2a3e;border-radius:2px;padding:2px;text-align:center;font-size:.45rem;color:#1a5f8a;">P4</div>
-            <div style="background:#0a1a2e;border:1px solid #1a2a3e;border-radius:2px;padding:2px;text-align:center;font-size:.45rem;color:#1a5f8a;">P5</div>
-            <div style="background:#0a1a2e;border:1px solid #1a2a3e;border-radius:2px;padding:2px;text-align:center;font-size:.45rem;color:#1a5f8a;">P6</div>
-            <div style="background:#0a1a2e;border:1px solid #1a2a3e;border-radius:2px;padding:2px;text-align:center;font-size:.45rem;color:#1a5f8a;">P7</div>
-            <div style="background:#0a1a2e;border:1px solid #1a2a3e;border-radius:2px;padding:2px;text-align:center;font-size:.45rem;color:#1a5f8a;">P8</div>
-          </div>
-
-          <!-- Knobs row -->
-          <div style="margin:4px 8px 0; display:flex; justify-content:space-around; align-items:center;">
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-0" x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-1" x1="6" y1="6" x2="9.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-2" x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-3" x1="6" y1="6" x2="2.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-4" x1="6" y1="6" x2="9" y2="9" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-5" x1="6" y1="6" x2="6" y2="1.5" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-6" x1="6" y1="6" x2="3" y2="9" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#1c2a1c" stroke="#2a4a2a" stroke-width="1"/><line id="mc-knob-7" x1="6" y1="6" x2="9.5" y2="3" stroke="#4ade80" stroke-width="1.2" stroke-linecap="round"/></svg>
-          </div>
-
-          <!-- Sliders row -->
-          <div style="margin:3px 8px 0; display:flex; justify-content:space-around; align-items:flex-end; height:22px;">
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-0" x="0" y="6" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-1" x="0" y="12" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-2" x="0" y="4" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-3" x="0" y="9" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-4" x="0" y="14" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-5" x="0" y="7" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-6" x="0" y="3" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-            <svg width="6" height="22" viewBox="0 0 6 22"><rect x="2.5" y="0" width="1" height="22" rx=".5" fill="#2a4a2a"/><rect id="mc-sld-7" x="0" y="11" width="6" height="5" rx="1" fill="#1c3a1c" stroke="#4ade80" stroke-width=".8"/></svg>
-          </div>
-
-          <!-- MIDI 5-pin DIN jacks row -->
-          <div style="margin:3px 8px 4px; display:flex; justify-content:space-around; align-items:center;">
-            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#111" stroke="#4a7a4a" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width=".7"/><circle cx="7" cy="3" r=".9" fill="#4ade80"/><circle cx="11" cy="5.5" r=".9" fill="#4ade80"/><circle cx="9.5" cy="10" r=".9" fill="#4ade80"/><circle cx="4.5" cy="10" r=".9" fill="#4ade80"/><circle cx="3" cy="5.5" r=".9" fill="#4ade80"/></svg>
-            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#111" stroke="#4a7a4a" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width=".7"/><circle cx="7" cy="3" r=".9" fill="#4ade80"/><circle cx="11" cy="5.5" r=".9" fill="#4ade80"/><circle cx="9.5" cy="10" r=".9" fill="#4ade80"/><circle cx="4.5" cy="10" r=".9" fill="#4ade80"/><circle cx="3" cy="5.5" r=".9" fill="#4ade80"/></svg>
-            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#111" stroke="#4a7a4a" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width=".7"/><circle cx="7" cy="3" r=".9" fill="#4ade80"/><circle cx="11" cy="5.5" r=".9" fill="#4ade80"/><circle cx="9.5" cy="10" r=".9" fill="#4ade80"/><circle cx="4.5" cy="10" r=".9" fill="#4ade80"/><circle cx="3" cy="5.5" r=".9" fill="#4ade80"/></svg>
-            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#111" stroke="#4a7a4a" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width=".7"/><circle cx="7" cy="3" r=".9" fill="#4ade80"/><circle cx="11" cy="5.5" r=".9" fill="#4ade80"/><circle cx="9.5" cy="10" r=".9" fill="#4ade80"/><circle cx="4.5" cy="10" r=".9" fill="#4ade80"/><circle cx="3" cy="5.5" r=".9" fill="#4ade80"/></svg>
-            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#111" stroke="#4a7a4a" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width=".7"/><circle cx="7" cy="3" r=".9" fill="#4ade80"/><circle cx="11" cy="5.5" r=".9" fill="#4ade80"/><circle cx="9.5" cy="10" r=".9" fill="#4ade80"/><circle cx="4.5" cy="10" r=".9" fill="#4ade80"/><circle cx="3" cy="5.5" r=".9" fill="#4ade80"/></svg>
-            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#111" stroke="#4a7a4a" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width=".7"/><circle cx="7" cy="3" r=".9" fill="#4ade80"/><circle cx="11" cy="5.5" r=".9" fill="#4ade80"/><circle cx="9.5" cy="10" r=".9" fill="#4ade80"/><circle cx="4.5" cy="10" r=".9" fill="#4ade80"/><circle cx="3" cy="5.5" r=".9" fill="#4ade80"/></svg>
-            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#111" stroke="#4a7a4a" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width=".7"/><circle cx="7" cy="3" r=".9" fill="#4ade80"/><circle cx="11" cy="5.5" r=".9" fill="#4ade80"/><circle cx="9.5" cy="10" r=".9" fill="#4ade80"/><circle cx="4.5" cy="10" r=".9" fill="#4ade80"/><circle cx="3" cy="5.5" r=".9" fill="#4ade80"/></svg>
-            <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#111" stroke="#4a7a4a" stroke-width="1"/><circle cx="7" cy="7" r="2.5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width=".7"/><circle cx="7" cy="3" r=".9" fill="#4ade80"/><circle cx="11" cy="5.5" r=".9" fill="#4ade80"/><circle cx="9.5" cy="10" r=".9" fill="#4ade80"/><circle cx="4.5" cy="10" r=".9" fill="#4ade80"/><circle cx="3" cy="5.5" r=".9" fill="#4ade80"/></svg>
-          </div>
-        </div>
-
-        <!-- Cursor -->
-        <div id="mc-cur" style="position:absolute;pointer-events:none;opacity:0;z-index:20;transition:opacity .2s;">
-          <svg width="13" height="17" viewBox="0 0 16 20" fill="none"><path d="M1 1l13 8-6 1-3 6z" fill="white" stroke="#1a5f8a" stroke-width="1.2"/></svg>
-        </div>
-
-      </div>
-    </div>
-
-    </div><!-- end right column -->
-  </div><!-- end product-block -->
-
-  <!-- ── MidiControl screenshot thumbnails ── -->
-  <fieldset class="thumb-group" aria-label="MidiControl screenshots">
-    <legend class="thumb-legend">Screenshots — click any image to view full size</legend>
-    <div class="thumb-grid">
-      <a href="images/control1L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiControl screenshot 1 — Opening screen" title="Click to view full size: Opening screen">
-        <img src="images/control1L.png" alt="MidiControl free MIDI software for Windows — opening screen" loading="lazy" /> 
-        <span class="thumb-caption">Opening screen</span>
-      </a>
-      <a href="images/control2L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiControl screenshot 2 — Bookmark management" title="Click to view full size: Bookmark management">
-        <img src="images/control2L.png" alt="MidiControl MIDI librarian — bookmark management for setlists" loading="lazy" />
-        <span class="thumb-caption">Bookmark management</span>
-      </a>
-      <a href="images/control3L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiControl screenshot 3 — Build MIDI commands" title="Click to view full size: Build MIDI commands">
-        <img src="images/control3L.png" alt="MidiControl — building MIDI program-change and control-change commands" loading="lazy" />
-        <span class="thumb-caption">Build MIDI commands</span>
-      </a>
-      <a href="images/control5L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiControl screenshot 4 — MIDI utilities" title="Click to view full size: MIDI utilities">
-        <img src="images/control5L.png" alt="MidiControl MIDI utilities — troubleshoot and mass-update MIDI devices" loading="lazy" />
-        <span class="thumb-caption">MIDI utilities</span>
-      </a>
-      <a href="images/control7L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiControl screenshot 5 — Roland Integra-7 module" title="Click to view full size: Roland Integra-7 module">
-        <img src="images/control7L.png" alt="MidiControl Roland Integra-7 patch preview — browse 6000+ SuperNATURAL tones" loading="lazy" />
-        <span class="thumb-caption">Roland Integra-7</span>
-      </a>
-     </div>
-  </fieldset>
+  </div>
   </div><!-- end product-card -->
 </section>
 </div><!-- end section-band -->
@@ -1223,375 +1076,31 @@
 <section id="midiorganize" aria-labelledby="mo-heading">
   <div class="product-card fade-in">
   <h2 class="section-title fade-in" id="mo-heading">🥁 MidiOrganize</h2>
-  <p class="section-sub fade-in" style="max-width:100%;">Drag-and-drop MIDI loops from MidiOrganize to your Digital Analog Workstation (DAW). No VST license. No internet. No CPU tax.</p>
+  <p class="section-sub fade-in" style="max-width:100%;">Drag-and-drop MIDI loops from MidiOrganize to your DAW. No VST license. No internet. No CPU tax.</p>
   <div class="product-block reverse">
-    <!-- Opening screen screenshot -->
-    <div style="display:flex; flex-direction:column; gap:1rem;">
-      <a href="images/organize1L.png" target="_blank" rel="noopener"
-         title="Click to view full size: MidiOrganize opening screen"
-         id="mo-screenshot-link"
-         style="display:block; border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
-        <img src="images/organize1L.png" id="mo-screenshot-img"
-             alt="MidiOrganize opening screen — browse and preview MIDI loops"
-             style="width:100%; height:auto; display:block; border-radius:10px;" loading="lazy" />
-      </a>
-      <div style="height:1rem;"></div>
-    <!-- MidiOrganize Animation v3 -->
-    <div id="mo-wrap" aria-label="MidiOrganize workflow animation" style="border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
-      <div id="mo-app" style="display:grid; grid-template-columns:1fr 1fr; width:100%; min-height:0; height:100%; background:#1a1a2e; border-radius:10px; overflow:hidden; font-family:'Inter',monospace; position:relative;">
-
-        <!-- ── LEFT PANE: MidiOrganize ── -->
-        <div style="display:flex; flex-direction:column; border-right:1px solid rgba(26,95,138,.3);">
-          <!-- Title bar -->
-          <div style="background:#0f3460; padding:5px 8px; display:flex; align-items:center; gap:6px; border-bottom:1px solid rgba(26,95,138,.4);">
-            <span style="width:8px;height:8px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#28c840;display:inline-block;"></span>
-            <span style="font-size:.62rem; color:#7dd3fc; font-weight:700; margin-left:4px; letter-spacing:.04em;">MidiOrganize</span>
-          </div>
-          <!-- Breadcrumb -->
-          <div id="mo-bc" style="font-size:.6rem; color:#94a3b8; padding:4px 8px; background:#16213e; border-bottom:1px solid rgba(26,95,138,.2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">📚 Bookmarks</div>
-          <!-- List -->
-          <div id="mo-list" style="flex:1; overflow:hidden; padding:4px 0;"></div>
-          <!-- Waveform preview -->
-          <div style="border-top:1px solid rgba(26,95,138,.2); background:#0f3460; padding:5px 8px;">
-            <div style="font-size:.58rem; color:#64748b; margin-bottom:3px;">▶ Preview</div>
-            <div id="mo-pname" style="font-size:.6rem; color:#7dd3fc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-height:12px;">—</div>
-            <div id="mo-wave" style="display:flex; align-items:center; gap:1px; height:18px; margin-top:3px;"></div>
-          </div>
-        </div>
-
-        <!-- ── RIGHT PANE: Reaper DAW ── -->
-        <div style="display:flex; flex-direction:column;">
-          <!-- Title bar -->
-          <div style="background:#1c1c1c; padding:5px 8px; display:flex; align-items:center; gap:6px; border-bottom:1px solid rgba(255,255,255,.08);">
-            <span style="width:8px;height:8px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
-            <span style="width:8px;height:8px;border-radius:50%;background:#28c840;display:inline-block;"></span>
-            <span style="font-size:.62rem; color:#d4d4d4; font-weight:700; margin-left:4px; letter-spacing:.04em;">DAW - Reaper</span>
-            <span style="font-size:.55rem; color:#64748b; margin-left:auto;">Session_01.rpp</span>
-          </div>
-          <!-- Transport bar -->
-          <div style="background:#252525; padding:3px 8px; border-bottom:1px solid rgba(255,255,255,.06); display:flex; align-items:center; gap:6px;">
-            <span style="font-size:.7rem; color:#28c840;">▶</span>
-            <span style="font-size:.7rem; color:#d4d4d4;">■</span>
-            <span style="font-size:.7rem; color:#d4d4d4;">⏺</span>
-            <span id="mo-tc" style="font-size:.6rem; color:#4ade80; font-family:monospace; margin-left:auto;">0:00.000</span>
-          </div>
-          <!-- Track headers + timeline -->
-          <div style="flex:1; display:flex; flex-direction:column; overflow:hidden;">
-            <!-- Track rows -->
-            <div id="mo-daw-tracks" style="flex:1; display:flex; flex-direction:column; gap:0;">
-              <!-- populated by JS -->
-            </div>
-          </div>
-          <!-- Waveform display area -->
-          <div style="border-top:1px solid rgba(255,255,255,.08); background:#1a1a1a; padding:4px 8px;">
-            <div style="font-size:.55rem; color:#64748b; margin-bottom:2px;">MIDI Item</div>
-            <div id="mo-daw-wave" style="display:flex; align-items:center; gap:1px; height:22px;"></div>
-          </div>
-        </div>
-
-        <!-- Cursor + ghost -->
-        <div id="mo-cur" style="position:absolute;pointer-events:none;opacity:0;z-index:20;transition:opacity .2s;">
-          <svg width="13" height="17" viewBox="0 0 16 20" fill="none"><path d="M1 1l13 8-6 1-3 6z" fill="white" stroke="#1a5f8a" stroke-width="1.2"/></svg>
-        </div>
-        <div id="mo-gho" style="position:absolute;pointer-events:none;opacity:0;background:#1a5f8a;color:#fff;font-size:.58rem;padding:2px 7px;border-radius:3px;white-space:nowrap;z-index:19;box-shadow:0 2px 8px rgba(0,0,0,.6);">🎵</div>
-
-      </div>
-    </div>
-
-    <style>
-      .mo-row { display:flex; align-items:center; gap:6px; font-size:.65rem; padding:5px 10px; color:#94a3b8; cursor:pointer; transition:background .15s,color .15s; border-left:2px solid transparent; }
-      .mo-row:hover,.mo-row.hi { background:rgba(26,95,138,.2); color:#7dd3fc; border-left-color:#1a5f8a; }
-      .mo-row.drag { opacity:.3; }
-      .mo-daw-row { display:flex; align-items:stretch; border-bottom:1px solid rgba(255,255,255,.05); min-height:36px; }
-      .mo-daw-label { width:70px; background:#2a2a2a; border-right:1px solid rgba(255,255,255,.08); font-size:.58rem; color:#94a3b8; padding:4px 6px; display:flex; align-items:center; flex-shrink:0; }
-      .mo-daw-lane { flex:1; background:#1e1e1e; position:relative; overflow:hidden; }
-      .mo-daw-lane.target { background:#1a2a1a; }
-      .mo-clip { position:absolute; top:3px; height:calc(100%-6px); background:rgba(26,95,138,.5); border:1px solid rgba(26,95,138,.8); border-radius:3px; display:flex; align-items:center; padding:0 4px; font-size:.55rem; color:#7dd3fc; white-space:nowrap; overflow:hidden; opacity:0; transition:opacity .4s; }
-    </style>
-
-    <script>
-    (function(){
-      var app    = document.getElementById('mo-app');
-      var listEl = document.getElementById('mo-list');
-      var bcEl   = document.getElementById('mo-bc');
-      var pnEl   = document.getElementById('mo-pname');
-      var waveEl = document.getElementById('mo-wave');
-      var dawWaveEl = document.getElementById('mo-daw-wave');
-      var tcEl   = document.getElementById('mo-tc');
-      var curEl  = document.getElementById('mo-cur');
-      var ghoEl  = document.getElementById('mo-gho');
-      var tracksEl = document.getElementById('mo-daw-tracks');
-
-      // Build waveform bars
-      function buildWave(el, count, col) {
-        el.innerHTML = '';
-        for(var i=0;i<count;i++){
-          var b=document.createElement('div');
-          b.style.cssText='width:3px;border-radius:2px;background:'+col+';height:4px;opacity:.2;transition:height .1s,opacity .1s;flex-shrink:0;';
-          el.appendChild(b);
-        }
-      }
-      buildWave(waveEl, 22, '#1a5f8a');
-      buildWave(dawWaveEl, 28, '#2d9cdb');
-
-      var wInt=null;
-      function startWave(el){ wInt=setInterval(function(){ [].forEach.call(el.children,function(b){ b.style.height=(Math.random()*15+3)+'px'; b.style.opacity=(Math.random()*.6+.3); }); },100); }
-      function stopWave(el){ clearInterval(wInt); [].forEach.call(el.children,function(b){b.style.height='4px';b.style.opacity='.2';}); }
-
-      // DAW tracks
-      var dawTracks = ['Guitar','Keys','Bass','Drums1','Drums2'];
-      dawTracks.forEach(function(t,i){
-        var row=document.createElement('div'); row.className='mo-daw-row'; row.id='mo-daw-row-'+i;
-        var lbl=document.createElement('div'); lbl.className='mo-daw-label'; lbl.textContent=t;
-        var lane=document.createElement('div'); lane.className='mo-daw-lane'; lane.id='mo-lane-'+i;
-        // Pre-fill some clips on existing tracks
-        if(i<4){
-          var clip=document.createElement('div'); clip.className='mo-clip';
-          clip.style.left='0'; clip.style.width=(30+Math.random()*40)+'%'; clip.style.opacity='1';
-          clip.textContent = t+' Pt1';
-          lane.appendChild(clip);
-        }
-        row.appendChild(lbl); row.appendChild(lane); tracksEl.appendChild(row);
-      });
-
-      // Timecode tick
-      var tcVal=0, tcInt=null;
-      function startTC(){ tcInt=setInterval(function(){ tcVal+=0.033; var m=Math.floor(tcVal/60); var s=(tcVal%60).toFixed(3); tcEl.textContent=m+':'+(s<10?'0':'')+s; },33); }
-
-      // Easing
-      function ease(t){ return t<.5?2*t*t:-1+(4-2*t)*t; }
-      function lerp(a,b,t){ return a+(b-a)*t; }
-
-      // Render list
-      function renderList(items, icon){
-        listEl.innerHTML='';
-        items.forEach(function(item,i){
-          var row=document.createElement('div'); row.className='mo-row'; row.id='mo-r-'+i;
-          row.innerHTML='<span style="color:#475569;font-size:.58rem;width:12px;flex-shrink:0;">'+(i+1)+'</span><span>'+icon+' '+item+'</span>';
-          listEl.appendChild(row);
-        });
-      }
-
-      // Move cursor to element
-      function moveTo(el, fromPos, cb){
-        var aRect=app.getBoundingClientRect();
-        var eRect=el.getBoundingClientRect();
-        var ex=eRect.left-aRect.left+eRect.width*.25;
-        var ey=eRect.top-aRect.top+eRect.height*.5;
-        var sx=fromPos?fromPos.x:ex; var sy=fromPos?fromPos.y:ey;
-        curEl.style.left=sx+'px'; curEl.style.top=sy+'px'; curEl.style.opacity='1';
-        var st=null,dur=520;
-        function step(ts){ if(!st)st=ts; var p=Math.min((ts-st)/dur,1),ep=ease(p);
-          curEl.style.left=lerp(sx,ex,ep)+'px'; curEl.style.top=lerp(sy,ey,ep)+'px';
-          if(p<1)requestAnimationFrame(step); else cb&&cb({x:ex,y:ey}); }
-        requestAnimationFrame(step);
-      }
-
-      // Click flash
-      function clickEl(el, pos, cb){
-        moveTo(el, pos, function(p){
-          el.classList.add('hi');
-          setTimeout(function(){ cb&&cb(p); },350);
-        });
-      }
-
-      // Drag from el to target lane
-      function dragTo(fromEl, toLane, label, pos, cb){
-        var aRect=app.getBoundingClientRect();
-        var fRect=fromEl.getBoundingClientRect();
-        var tRect=toLane.getBoundingClientRect();
-        var sx=fRect.left-aRect.left+fRect.width*.3, sy=fRect.top-aRect.top+fRect.height*.5;
-        var ex=tRect.left-aRect.left+tRect.width*.3, ey=tRect.top-aRect.top+tRect.height*.5;
-        fromEl.classList.add('drag');
-        ghoEl.textContent='🎵 '+label; ghoEl.style.left=(sx+12)+'px'; ghoEl.style.top=(sy-8)+'px'; ghoEl.style.opacity='1';
-        toLane.classList.add('target');
-        curEl.style.left=sx+'px'; curEl.style.top=sy+'px';
-        var st=null,dur=1100;
-        function step(ts){ if(!st)st=ts; var p=Math.min((ts-st)/dur,1),ep=ease(p);
-          var cx=lerp(sx,ex,ep), cy=lerp(sy,ey,ep);
-          curEl.style.left=cx+'px'; curEl.style.top=cy+'px';
-          ghoEl.style.left=(cx+12)+'px'; ghoEl.style.top=(cy-8)+'px';
-          if(p<1)requestAnimationFrame(step);
-          else{ curEl.style.opacity='0'; ghoEl.style.opacity='0'; cb&&cb(); }
-        }
-        requestAnimationFrame(step);
-      }
-
-      // Main sequence
-      function run(){
-        var pos=null;
-        stopWave(waveEl); stopWave(dawWaveEl); clearInterval(tcInt); tcVal=0; tcEl.textContent='0:00.000';
-
-        // Step 1: show bookmarks
-        bcEl.textContent='📚 Bookmarks';
-        renderList(['Drums Groove Monkee','Drums Setlist 1','Drums Setlist 2','Bass Grooves','Piano Grooves'],'📌');
-
-        setTimeout(function(){
-          startTC();
-          // Step 2: click bookmark 1 (Groove Monkee)
-          clickEl(document.getElementById('mo-r-0'), pos, function(p){
-            pos=p; pnEl.textContent='Groove Monkee'; startWave(waveEl);
-            setTimeout(function(){
-              stopWave(waveEl);
-              // Step 3: drill into genre list
-              bcEl.textContent='📌 Groove Monkee';
-              renderList(['Blues Riffs','Rock Riffs','Jazz Riffs','Funk Riffs'],'📁');
-
-              setTimeout(function(){
-                // Step 4: click Rock Riffs
-                clickEl(document.getElementById('mo-r-1'), pos, function(p){
-                  pos=p; pnEl.textContent='Rock Riffs';
-                  setTimeout(function(){
-                    // Step 5: drill into rock riff list
-                    bcEl.textContent='📁 Rock Riffs';
-                    renderList(['Rock Riff 1','Rock Riff 2','Rock Riff 3','Rock Riff 4'],'🎵');
-
-                    setTimeout(function(){
-                      // Step 6: click Rock Riff 1 to preview
-                      clickEl(document.getElementById('mo-r-0'), pos, function(p){
-                        pos=p; pnEl.textContent='Rock Riff 1.mid'; startWave(waveEl);
-                        setTimeout(function(){
-                          // Step 7: drag to MIDI track (track index 4)
-                          var fromEl=document.getElementById('mo-r-0');
-                          var toLane=document.getElementById('mo-lane-4');
-                          dragTo(fromEl, toLane, 'Rock Riff 1', pos, function(){
-                            stopWave(waveEl);
-                            fromEl.classList.remove('drag','hi');
-                            toLane.classList.remove('target');
-                            // Drop clip into lane
-                            var clip=document.createElement('div'); clip.className='mo-clip';
-                            clip.style.left='2%'; clip.style.width='55%'; clip.textContent='Rock Riff 1';
-                            toLane.appendChild(clip);
-                            setTimeout(function(){ clip.style.opacity='1'; startWave(dawWaveEl); },50);
-                            // Success status
-                            pnEl.textContent='✓ Rock Riff 1 → MIDI track';
-                            // Restart after pause
-                            setTimeout(function(){
-                              stopWave(dawWaveEl); clearInterval(tcInt);
-                              // Remove clip for next run
-                              toLane.removeChild(clip);
-                              [].forEach.call(listEl.querySelectorAll('.mo-row'),function(r){r.classList.remove('hi','drag');});
-                              setTimeout(run, 600);
-                            }, 3000);
-                          });
-                        }, 800);
-                      });
-                    }, 700);
-                  }, 500);
-                });
-              }, 800);
-            }, 900);
-          });
-        }, 700);
-      }
-
-      // Trigger on scroll
-      if('IntersectionObserver' in window){
-        var started=false;
-        new IntersectionObserver(function(entries){
-          if(entries[0].isIntersecting&&!started){started=true;setTimeout(run,500);}
-        },{threshold:0.3}).observe(app);
-      } else { setTimeout(run,500); }
-
-      // Match animation height to screenshot + 10%
-      function syncHeight() {
-        var img = document.getElementById('mo-screenshot-img');
-        var wrap = document.getElementById('mo-wrap');
-        if (img && wrap && img.offsetHeight > 0) {
-          var h = Math.round(img.offsetHeight * 1.21);
-          wrap.style.height = h + 'px';
-          app.style.height  = h + 'px';
-        }
-      }
-      var img = document.getElementById('mo-screenshot-img');
-      if (img) {
-        if (img.complete) { syncHeight(); }
-        else { img.addEventListener('load', syncHeight); }
-      }
-      window.addEventListener('resize', syncHeight);
-    })();
-    </script>
-
-                </div><!-- end screenshot+diagram flex column -->
-
     <div>
       <span class="product-badge badge-free">Free Software</span>
       <h2 class="product-title">Ditch the expensive drum VSTs</h2>
       <p class="product-desc">
-        MidiOrganize is a standalone Windows MIDI loop librarian. Browse, preview, and drag MIDI loops directly into
-        your DAW track and route the track output to a VST. For superior sound, route the track output to an external
-        tone generator. This has many benefits: zero CPU overhead, no license key, no activation server, and no
-        required internet connectivity to use VST!
+        A standalone Windows MIDI loop librarian. Browse, preview, and drag MIDI loops into your DAW track — then route to a VST or external tone generator for superior sound with zero CPU overhead.
       </p>
       <ul class="feature-list">
-        <li>Familiar drill-down look and feel matching popular drum VSTs</li>
-        <li>Preview any MIDI loop inside MidiOrganize before importing to your DAW project</li>
-        <li>Drag and drop MIDI loops directly into DAW MIDI tracks</li>
-        <li>Compatible with Groove Monkee free drum loops and all web MIDI libraries</li>
-        <li>Completely offline — no activation, no subscription, ever</li>
-        <li>Eliminates VST CPU latency and audio dropout issues</li>
+        <li>Drill-down loop browser — compatible with Groove Monkee and all MIDI libraries</li>
+        <li>Preview any loop before dragging to your DAW</li>
+        <li>Zero CPU overhead · no license key · fully offline</li>
+        <li>Route output to VST or external tone generator</li>
       </ul>
-      <div class="product-links">
-
-        <a href="https://sierradigitalaudio.com/tutorials/MidiOrganize-Tutorial.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 8-minute MidiOrganize video tutorial"
-		>▶ MidiOrganize Video Tutorial (8 min / 760 Meg)</a>
-
-        <a href="https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads" class="link-chip" target="_blank" rel="noopener" title="View the MidiControl source code repository" style="min-width:197px; justify-content:center;"
-		>📦 GitHub Repository</a>
-
-        <a href="https://groovemonkee.com" class="link-chip" target="_blank" rel="noopener" title="Download free MIDI drum loops from Groove Monkee"
-		>🥁 Groove Monkee Free Loops</a>
-
-        <a href="./index.html" class="link-chip" target="popup" onclick="window.open('./downloads/setupMidiOrganize-V1.5.exe','popup','width=1600'); return false;" title="Download MidiOrganize Version 1.5 April 2026 installer"
-		>🔽 MidiOrganize Version 1.5 March 2026 installer (.exe)</a>
-
-
-        <div style="width:100%; font-size:.72rem; color:var(--muted); font-family:monospace; padding:4px 2px; letter-spacing:.02em; position:relative; cursor:help; display:inline-block;"
-             onmouseenter="this.querySelector('.sha-tooltip').style.opacity='1'; this.querySelector('.sha-tooltip').style.pointerEvents='auto';"
-             onmouseleave="this.querySelector('.sha-tooltip').style.opacity='0'; this.querySelector('.sha-tooltip').style.pointerEvents='none';">
-          MidiOrganize installer's digital fingerprint / SHA-256 hash value: 9AEF4049D9AE4EC97B2D623A9954B063BCF85A1099C9F3F51F0B143F911BA7BB
-          <div class="sha-tooltip" style="opacity:0; pointer-events:none; transition:opacity .2s ease; position:absolute; bottom:calc(100% + 8px); left:0; width:340px; background:#1a5f8a; color:#ffffff; font-family:'Inter',sans-serif; font-size:.75rem; font-weight:400; line-height:1.6; padding:10px 13px; border-radius:8px; box-shadow:0 4px 16px rgba(26,95,138,.25); z-index:50; letter-spacing:0;">
-            <strong style="display:block; margin-bottom:4px; font-size:.78rem;">What is a SHA-256 hash?</strong>
-            A unique 64-character digital fingerprint calculated from the installer file. If even one byte is altered — by corruption or tampering — the hash changes completely. Comparing it to this value confirms you have a safe, unmodified copy.
-            <strong style="display:block; margin-top:8px; margin-bottom:4px; font-size:.78rem;">How to verify (Windows PowerShell):</strong>
-            <span style="display:block; background:rgba(255,255,255,.15); border-radius:4px; padding:4px 8px; font-family:monospace; font-size:.72rem;">Get-FileHash setupMidiOrganize-V1.5.exe -Algorithm SHA256</span>
-            <span style="display:block; margin-top:6px;">Compare the <em>Hash</em> value in the output to the fingerprint above — they should match exactly.</span>
-            <div style="position:absolute; bottom:-6px; left:20px; width:12px; height:12px; background:#1a5f8a; transform:rotate(45deg); border-radius:1px;"></div>
-          </div>
-        </div>
+      <div class="product-links" style="margin-top:1rem;">
+        <a href="./downloads/setupMidiOrganize-V1.5.exe" class="link-chip" onclick="window.open('./downloads/setupMidiOrganize-V1.5.exe','popup','width=1600'); return false;" title="Download MidiOrganize Version 1.5">🔽 Download MidiOrganize v1.5 — Free</a>
+        <a href="midiorganize.html" class="link-chip" title="Full MidiOrganize product page — screenshots, FAQ, tutorials">More information →</a>
       </div>
     </div>
-  </div>
-
-  <!-- ── MidiOrganize screenshot thumbnails ── -->
-  <fieldset class="thumb-group" aria-label="MidiOrganize screenshots">
-    <legend class="thumb-legend">Screenshots — click any image to view full size</legend>
-    <div class="thumb-grid">
-      <a href="images/organize1L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiOrganize screenshot 1 — Opening screen" title="Click to view full size: Opening screen">
-        <img src="images/organize1L.png" alt="MidiOrganize free MIDI loop organizer for Windows — opening screen" loading="lazy" />
-        <span class="thumb-caption">Opening screen</span>
-      </a>
-      <a href="images/organize2L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiOrganize screenshot 2 — Bookmark introduction" title="Click to view full size: Bookmark introduction">
-        <img src="images/organize2L.png" alt="MidiOrganize MIDI loop librarian — bookmark introduction" loading="lazy" />
-        <span class="thumb-caption">Bookmark introduction</span>
-      </a>
-      <a href="images/organize3L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiOrganize screenshot 3 — Bookmark management" title="Click to view full size: Bookmark management">
-        <img src="images/organize3L.png" alt="MidiOrganize — managing MIDI loop bookmarks for DAW integration" loading="lazy" />
-        <span class="thumb-caption">Bookmark management</span>
-      </a>
-      <a href="images/organize4L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiOrganize screenshot 4 — Search MIDI files" title="Click to view full size: Search MIDI files">
-        <img src="images/organize4L.png" alt="MidiOrganize — searching MIDI drum loop files" loading="lazy" />
-        <span class="thumb-caption">Search MIDI files</span>
-      </a>
-      <a href="images/organize5L.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiOrganize screenshot 5 — Preview MIDI file" title="Click to view full size: Preview MIDI file">
-        <img src="images/organize5L.png" alt="MidiOrganize — previewing a MIDI loop before drag and drop to DAW" loading="lazy" />
-        <span class="thumb-caption">Preview MIDI file</span>
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <a href="images/organize1L.png" target="_blank" rel="noopener" title="Click to view full size: MidiOrganize opening screen" style="display:block; border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
+        <img src="images/organize1L.png" alt="MidiOrganize free MIDI loop librarian for Windows — opening screen" style="width:100%; height:auto; display:block; border-radius:10px;" loading="lazy" />
       </a>
     </div>
-  </fieldset>
+  </div>
   </div><!-- end product-card -->
 </section>
 </div><!-- end section-band -->
@@ -1608,567 +1117,39 @@
       <span class="product-badge badge-hw">Custom Hardware</span>
       <h2 class="product-title">True MIDI routing, built in the Sierra Nevada</h2>
       <p class="product-desc">
-        Unlike a MIDI hub that broadcasts everything to everyone, MidiXLate inspects every MIDI data packet and
-        routes it exactly where it needs to go. Define routing, filtering, translation, and channel rules from your PC, then
-        download them to the router. A blazingly fast 84 MHz ARM Cortex-M3 CPU processes each MIDI message in microseconds —
-        far below any perceptible latency.
+        Unlike a MIDI hub, MidiXLate inspects every packet and routes it exactly where it needs to go. Define routing, filtering, translation, and channel rules from your PC — then the 84 MHz ARM Cortex-M3 handles everything in microseconds.
       </p>
       <ul class="feature-list">
-        <li>Custom built hardware router with 7 MIDI In x 7 MIDI Out ports</li>
-        <li>PC configuration app with visual rule builder</li>
-        <li>Intuitive port routing as simple as a click of the mouse!</li>
-        <li>Filter MIDI commands (note, PC, CC, SysEx) by input &amp; output port</li>
-        <li>Translate MIDI commands from one format to another</li>
-        <li>Channel locking feature for more granular MIDI control</li>
-        <li>Extensive MIDI monitoring and debugging features built into router</li>
-        <li>Extremely fast Atmel SAM3X8E ARM Cortex-M3, 84 MHz processor</li>
-        <li>Test drive by renting before purchase. Rent applied to purchase.</li>
+        <li>7 MIDI In × 7 MIDI Out DIN ports + 1 USB-C</li>
+        <li>Filter by message type (Note, CC, PC, SysEx) per port</li>
+        <li>&lt;1ms latency · 84 MHz ARM Cortex-M3 processor</li>
+        <li>Rent before you buy — $150/mo applied to $850 purchase</li>
       </ul>
-      <div class="product-links">
-        <a href="#contact" id="btnInquireRental" class="link-chip" title="Jump to contact form to ask about renting or buying a MidiXLate router"
-		   >✉ Inquire about rental / purchase</a>
-
-        <a href="./index.html" class="link-chip" target="popup" onclick="window.open('./downloads/setupMidiXlate-V1.5.exe','popup','width=1600'); return false;" title="Download MidiXLate Version 1.5 July 2026 installer"
- 		   >🔽 MidiXLate Version 1.5 July 2026 installer (.exe)</a>
-
-        <a href="https://sierradigitalaudio.com/tutorials/Tutorial_MidiXLate_Hardware.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 6-minute MidiXLate Hardware video tutorial" style="width:220px; justify-content:center;"
-		   >▶ MidiXLate Hardware Tutorial (6 min, 65 meg)</a>
-
-        <a href="https://sierradigitalaudio.com/tutorials/Tutorial_MidiXLate_Software.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 8-minute MidiXLate Software video tutorial" style="width:220px; justify-content:center;"
-		   >▶ MidiXLate Software Tutorial (8 min, 75 meg)</a>
-
-        <div style="width:100%; font-size:.72rem; color:var(--muted); font-family:monospace; padding:4px 2px; letter-spacing:.02em; position:relative; cursor:help; display:inline-block;"
-             onmouseenter="this.querySelector('.sha-tooltip').style.opacity='1'; this.querySelector('.sha-tooltip').style.pointerEvents='auto';"
-             onmouseleave="this.querySelector('.sha-tooltip').style.opacity='0'; this.querySelector('.sha-tooltip').style.pointerEvents='none';">
-          MidiXLate installer's digital fingerprint / SHA-256 hash value: 5F546B9CA6DF67B4DD55EED60D76917C5466840F69C1D73CE07BABBB32F7B15E
-          <div class="sha-tooltip" style="opacity:0; pointer-events:none; transition:opacity .2s ease; position:absolute; bottom:calc(100% + 8px); left:0; width:340px; background:#1a5f8a; color:#ffffff; font-family:'Inter',sans-serif; font-size:.75rem; font-weight:400; line-height:1.6; padding:10px 13px; border-radius:8px; box-shadow:0 4px 16px rgba(26,95,138,.25); z-index:50; letter-spacing:0;">
-            <strong style="display:block; margin-bottom:4px; font-size:.78rem;">What is a SHA-256 hash?</strong>
-            A unique 64-character digital fingerprint calculated from the installer file. If even one byte is altered — by corruption or tampering — the hash changes completely. Comparing it to this value confirms you have a safe, unmodified copy.
-            <strong style="display:block; margin-top:8px; margin-bottom:4px; font-size:.78rem;">How to verify (Windows PowerShell):</strong>
-            <span style="display:block; background:rgba(255,255,255,.15); border-radius:4px; padding:4px 8px; font-family:monospace; font-size:.72rem;">Get-FileHash setupMidiXlate-V1.5.exe -Algorithm SHA256</span>
-            <span style="display:block; margin-top:6px;">Compare the <em>Hash</em> value in the output to the fingerprint above — they should match exactly.</span>
-            <div style="position:absolute; bottom:-6px; left:20px; width:12px; height:12px; background:#1a5f8a; transform:rotate(45deg); border-radius:1px;"></div>
-          </div>
-        </div>
+      <div class="product-links" style="margin-top:1rem;">
+        <a href="contact.html" class="link-chip">✉ Inquire about rental / purchase</a>
+        <a href="midixlate.html" class="link-chip" title="Full MidiXLate product page — specs, photos, FAQ">More information →</a>
       </div>
     </div>
-
-    <div style="display:flex; flex-direction:column; gap:4rem;">
-    <!-- Hardware photos -->
-    <div class="router-photos" aria-label="MidiXLate hardware photos">
-      <div style="font-family:'Space Grotesk',sans-serif; font-size:.9rem; font-weight:700; color:#ffffff; text-align:center; padding:.5rem 1rem; background: linear-gradient(135deg, #1a5f8a 0%, #2d7ab0 100%); border-radius:6px 6px 0 0; letter-spacing:.04em;">MidiXLate Router Front and Rear View</div>
-      <a href="images/RouterFaceAndRearS.jpg" target="_blank" rel="noopener" class="router-photo-item" style="margin-top:0; border-radius:0 0 10px 10px;" title="Click to view full size: Router front panel" 
-	  onclick="window.open('images/RouterFaceAndRearM.jpg','_blank','noopener,noreferrer,width=1400,height=1100'); return false;">
-        <img src="images/RouterFaceAndRearS.jpg"  alt="MidiXLate router front panel showing 7 MIDI input and output ports" loading="lazy" />
-        <span class="router-photo-caption">click to enlarge</span>
-      </a>
-    </div>
-
-    <!-- Router routing diagram -->
-    <div class="diagram-wrap" aria-label="MidiXLate routing architecture diagram">
-      <div style="font-family:'Space Grotesk',sans-serif; font-size:.9rem; font-weight:700; color:#ffffff; text-align:center; padding:.5rem 1rem; background: linear-gradient(135deg, #1a5f8a 0%, #2d7ab0 100%); border-radius:6px 6px 0 0; margin:-1rem -1rem .75rem -1rem; letter-spacing:.04em;">MidiXLate Connection Example</div>
-      <svg class="flow-svg" viewBox="0 0 480 420" role="img" aria-label="Animated MIDI routing diagram showing devices connecting through MidiXLate router" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M2 1L8 5L2 9" fill="none" stroke="#1a5f8a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </marker>
-          <marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M2 1L8 5L2 9" fill="none" stroke="#c45200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </marker>
-          <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <filter id="glow-sm" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="1.5" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-
-        <!-- PC MIDI top center -->
-        <rect x="185" y="52" width="110" height="38" rx="8" fill="rgba(26,95,138,.08)" stroke="#1a5f8a" stroke-width="1.2" filter="url(#glow-sm)">
-          <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
-          <animate attributeName="fill-opacity" values="0.05;0.14;0.05" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
-        </rect>
-        <text x="240" y="68" text-anchor="middle" font-family="Space Grotesk,Inter,sans-serif" font-size="11" fill="#1a5f8a" font-weight="700">PC MIDI</text>
-        <text x="240" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">PC USB-C Port 1</text>
-        <line x1="240" y1="90" x2="240" y2="155" stroke="#1a5f8a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr2)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.7s" begin="0.5s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#1a5f8a">
-          <animateMotion dur="1.3s" begin="0.5s" repeatCount="indefinite" path="M240,90 L240,155"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.3s" begin="0.5s" repeatCount="indefinite"/>
-        </circle>
-
-        <!-- Left inputs -->
-        <rect x="8" y="88" width="110" height="36" rx="6" fill="rgba(26,95,138,.08)" stroke="#1a5f8a" stroke-width="0.8">
-          <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" begin="0s" repeatCount="indefinite"/>
-        </rect>
-        <text x="63" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0d1f2d" font-weight="600">Keyboard</text>
-        <text x="63" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">Port 1</text>
-
-        <rect x="8" y="155" width="110" height="36" rx="6" fill="rgba(26,95,138,.08)" stroke="#1a5f8a" stroke-width="0.8">
-          <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" begin="1s" repeatCount="indefinite"/>
-        </rect>
-        <text x="63" y="177" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0d1f2d" font-weight="600">Drum Pad</text>
-        <text x="63" y="187" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">Port 2</text>
-
-        <rect x="8" y="222" width="110" height="36" rx="6" fill="rgba(26,95,138,.08)" stroke="#1a5f8a" stroke-width="0.8">
-          <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" begin="2s" repeatCount="indefinite"/>
-        </rect>
-        <text x="63" y="244" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0d1f2d" font-weight="600">DAW Out</text>
-        <text x="63" y="254" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">Port 4</text>
-
-        <!-- Pedalboard -->
-        <rect x="8" y="289" width="110" height="36" rx="6" fill="rgba(26,95,138,.08)" stroke="#1a5f8a" stroke-width="0.8">
-          <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" begin="2.5s" repeatCount="indefinite"/>
-        </rect>
-        <text x="63" y="311" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0d1f2d" font-weight="600">Pedalboard</text>
-        <text x="63" y="321" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">Port 5</text>
-
-        <!-- Input lines -->
-        <line x1="118" y1="106" x2="175" y2="180" stroke="#1a5f8a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr2)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="0s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="0s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#1a5f8a">
-          <animateMotion dur="1.2s" begin="0s" repeatCount="indefinite" path="M118,106 L175,180"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="0s" repeatCount="indefinite"/>
-        </circle>
-
-        <line x1="118" y1="173" x2="175" y2="205" stroke="#1a5f8a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr2)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="0.4s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#1a5f8a">
-          <animateMotion dur="1.2s" begin="0.5s" repeatCount="indefinite" path="M118,173 L175,205"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="0.5s" repeatCount="indefinite"/>
-        </circle>
-
-        <line x1="118" y1="240" x2="175" y2="230" stroke="#1a5f8a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr2)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="0.8s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="2s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#1a5f8a">
-          <animateMotion dur="1.2s" begin="1s" repeatCount="indefinite" path="M118,240 L175,230"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="1s" repeatCount="indefinite"/>
-        </circle>
-
-        <!-- Pedalboard → MidiXLate -->
-        <line x1="118" y1="307" x2="175" y2="245" stroke="#1a5f8a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr2)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="1.2s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="2.5s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#1a5f8a">
-          <animateMotion dur="1.2s" begin="1.4s" repeatCount="indefinite" path="M118,307 L175,245"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="1.4s" repeatCount="indefinite"/>
-        </circle>
-
-        <!-- MidiXLate center box -->
-        <rect x="175" y="155" width="130" height="100" rx="10" fill="rgba(26,95,138,.10)" stroke="#1a5f8a" stroke-width="2" filter="url(#glow)">
-          <animate attributeName="stroke-width" values="1.5;2.5;1.5" dur="2s" repeatCount="indefinite"/>
-          <animate attributeName="fill-opacity" values="0.08;0.18;0.08" dur="2s" repeatCount="indefinite"/>
-        </rect>
-        <text x="240" y="193" text-anchor="middle" font-family="Space Grotesk,Inter,sans-serif" font-size="14" fill="#1a5f8a" font-weight="700">MidiXLate</text>
-        <text x="240" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">ARM Cortex-M3 · 84 MHz</text>
-        <text x="240" y="231" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">7x7 MIDI ports · Route · Filter · Translate</text>
-        <rect x="180" y="160" width="120" height="90" rx="8" fill="none" stroke="#1a5f8a" stroke-width="0.6">
-          <animate attributeName="stroke-opacity" values="0;0.4;0" dur="2s" repeatCount="indefinite"/>
-        </rect>
-
-        <!-- Output lines -->
-        <line x1="305" y1="180" x2="362" y2="106" stroke="#c45200" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr3)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="0.2s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="0.3s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#c45200">
-          <animateMotion dur="1.2s" begin="0.2s" repeatCount="indefinite" path="M305,180 L362,106"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="0.2s" repeatCount="indefinite"/>
-        </circle>
-
-        <line x1="305" y1="205" x2="362" y2="173" stroke="#c45200" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr3)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="0.6s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="1.3s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#c45200">
-          <animateMotion dur="1.2s" begin="0.7s" repeatCount="indefinite" path="M305,205 L362,173"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="0.7s" repeatCount="indefinite"/>
-        </circle>
-
-        <line x1="305" y1="230" x2="362" y2="240" stroke="#c45200" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr3)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="1s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="2.3s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#c45200">
-          <animateMotion dur="1.2s" begin="1.2s" repeatCount="indefinite" path="M305,230 L362,240"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="1.2s" repeatCount="indefinite"/>
-        </circle>
-
-        <!-- MidiXLate → Fractal Axe -->
-        <line x1="305" y1="245" x2="362" y2="307" stroke="#c45200" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr3)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="1.4s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="2.7s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#c45200">
-          <animateMotion dur="1.2s" begin="1.6s" repeatCount="indefinite" path="M305,245 L362,307"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="1.6s" repeatCount="indefinite"/>
-        </circle>
-
-        <!-- Right output devices -->
-        <rect x="362" y="88" width="110" height="36" rx="6" fill="rgba(196,82,0,.06)" stroke="#c45200" stroke-width="0.8">
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="3s" begin="0.2s" repeatCount="indefinite"/>
-        </rect>
-        <text x="417" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0d1f2d" font-weight="600">Integra-7</text>
-        <text x="417" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">synth</text>
-
-        <rect x="362" y="155" width="110" height="36" rx="6" fill="rgba(196,82,0,.06)" stroke="#c45200" stroke-width="0.8">
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="3s" begin="1.2s" repeatCount="indefinite"/>
-        </rect>
-        <text x="417" y="177" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0d1f2d" font-weight="600">Yamaha MU 15</text>
-        <text x="417" y="187" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">Tone Generator</text>
-
-        <rect x="362" y="222" width="110" height="36" rx="6" fill="rgba(196,82,0,.06)" stroke="#c45200" stroke-width="0.8">
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="3s" begin="2.2s" repeatCount="indefinite"/>
-        </rect>
-        <text x="417" y="244" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0d1f2d" font-weight="600">Reaper DAW</text>
-        <text x="417" y="254" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">record / playback</text>
-
-        <!-- Fractal Axe -->
-        <rect x="362" y="289" width="110" height="36" rx="6" fill="rgba(196,82,0,.06)" stroke="#c45200" stroke-width="0.8">
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="3s" begin="2.7s" repeatCount="indefinite"/>
-        </rect>
-        <text x="417" y="311" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0d1f2d" font-weight="600">Fractal Axe</text>
-        <text x="417" y="321" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">guitar effects</text>
-
-        <!-- PC Config bottom center -->
-        <rect x="185" y="320" width="110" height="38" rx="6" fill="rgba(26,95,138,.05)" stroke="#1a5f8a" stroke-width="0.8" filter="url(#glow-sm)">
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="3s" begin="1.5s" repeatCount="indefinite"/>
-          <animate attributeName="fill-opacity" values="0.03;0.10;0.03" dur="3s" begin="1.5s" repeatCount="indefinite"/>
-        </rect>
-        <text x="240" y="337" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#0d1f2d" font-weight="600">PC Config App</text>
-        <text x="240" y="350" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4a6a82">Config via USB-C Port 2</text>
-        <line x1="240" y1="320" x2="240" y2="255" stroke="#1a5f8a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr2)">
-          <animate attributeName="stroke-dashoffset" values="18;0" dur="0.8s" begin="1.5s" repeatCount="indefinite"/>
-          <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
-        </line>
-        <circle r="3" fill="#1a5f8a">
-          <animateMotion dur="1.2s" begin="1.5s" repeatCount="indefinite" path="M240,320 L240,255"/>
-          <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="1.5s" repeatCount="indefinite"/>
-        </circle>
-
-        <!-- Footer -->
-        <text x="240" y="410" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#4a6a82">Blue = MIDI In &#183; Orange = MIDI Out &#183; Packets route only to intended destinations</text>
-      </svg>
-    </div>
-    </div><!-- end flex column -->
-  </div>
-
-  <!-- Pricing card -->
-  <div class="price-card" style="margin-top:3.5rem">
-    <div>
-      <div style="font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem">Purchase price</div>
-      <div class="price-num">$850</div>
-      <div class="price-label">Hand-built in Truckee, CA · includes email support</div>
-      <div style="margin-top:.9rem;font-size:.88rem;color:var(--muted)">
-        <strong style="color:var(--text)">Rent before you buy:</strong> $150/month (customer pays shipping both ways). Rental cost applies toward purchase price.
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(26,95,138,.10);">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:.85rem; font-weight:700; color:#ffffff; text-align:center; padding:.4rem 1rem; background:linear-gradient(135deg,#1a5f8a 0%,#2d7ab0 100%); letter-spacing:.04em;">MidiXLate Router — Front &amp; Rear View</div>
+        <a href="images/RouterFaceAndRearS.jpg" onclick="window.open('images/RouterFaceAndRearM.jpg','_blank','noopener,noreferrer,width=1400,height=1100'); return false;" title="Click to enlarge">
+          <img src="images/RouterFaceAndRearS.jpg" alt="MidiXLate hardware MIDI router front and rear panel" style="width:100%; height:auto; display:block; border-radius:0;" loading="lazy" />
+        </a>
       </div>
-      <a href="#contact" id="btnInquireRouter" class="btn-primary" style="display:inline-block;margin-top:.9rem">Inquire about your custom built router!</a>
-    </div>
-    <div>
-      <div style="font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem">Specifications</div>
-      <table class="spec-table">
-        <tr><td>Processor</td><td>Atmel SAM3X8E ARM Cortex-M3</td></tr>
-        <tr><td>Clock speed</td><td>84 MHz (1000+ MIDI cmds / sec)</td></tr>
-        <tr><td>MIDI ports</td><td>6 MIDI DIN in/out, 1 USB-C in/out</td></tr>
-        <tr><td>Latency</td><td>&lt;1 ms (microsecond processing)</td></tr>
-        <tr><td>Configuration</td><td>via USB-C Port 2 from PC app</td></tr>
-        <tr><td>Logging</td><td>via USB-C Port 2 to PC TTY</td></tr>
-        <tr><td>Filtering</td><td>Note / CC / PC / SysEx per port</td></tr>
-        <tr><td>Translation</td><td>Note ↔ CC and more</td></tr>
-        <tr><td>Availability</td><td>Limited — custom builds</td></tr>
-      </table>
     </div>
   </div>
-
-  <!-- ── MidiXLate screenshot thumbnails ── -->
-  <fieldset class="thumb-group" aria-label="MidiXLate router photos and configuration screenshots">
-    <legend class="thumb-legend">Photos &amp; configuration screens — click any image to view full size</legend>
-    <div class="thumb-grid">
-      <a href="images/RouterFaceS.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate router front panel" title="Click to view full size: Router front panel">
-        <img src="images/RouterFaceS.jpg" alt="MidiXLate hardware MIDI router — front panel with 6 DIN MIDI ports" loading="lazy" />
-        <span class="thumb-caption">Front panel</span>
-      </a>
-      <a href="images/RouterRearS.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate router rear panel" title="Click to view full size: Router rear panel">
-        <img src="images/RouterRearS.jpg" alt="MidiXLate hardware MIDI router — rear panel connections" loading="lazy" />
-        <span class="thumb-caption">Rear panel</span>
-      </a>
-      <a href="images/RouterConfig1.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate PC configuration screen 1" title="Click to view full size: PC configuration screen 1">
-        <img src="images/RouterConfig1.jpg" alt="MidiXLate MIDI router PC configuration app — routing rules screen" loading="lazy" />
-        <span class="thumb-caption">PC config - screen 1</span>
-      </a>
-      <a href="images/RouterConfig2.png" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate PC configuration screen 2" title="Click to view full size: PC configuration screen 2">
-        <img src="images/RouterConfig2.jpg" alt="MidiXLate MIDI router PC configuration app — port filtering screen" loading="lazy" />
-        <span class="thumb-caption">PC config - screen 2</span>
-      </a>
-      <a href="images/RouterConfig3.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate PC configuration screen 3" title="Click to view full size: PC configuration screen 3">
-        <img src="images/RouterConfig3.jpg" alt="MidiXLate MIDI router PC configuration app — MIDI translation screen" loading="lazy" />
-        <span class="thumb-caption">PC config - screen 3</span>
-      </a>
-      <div style="grid-column: 1 / -1; margin: 0; padding: 0; height: 0;"></div>
-      <a href="images/TFT1s.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate TFT power on stats" title="Click to view full size: TFT power on stats">
-        <img src="images/TFT1s.jpg" alt="MidiXLate hardware MIDI router — TFT display power on statistics" loading="lazy" />
-        <span class="thumb-caption">TFT - power on stats</span>
-      </a>
-	   <a href="images/TFT5s.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate TFT display device name view" title="Click to view full size: TFT display — device name view">
-        <img src="images/TFT5s.jpg" alt="MidiXLate MIDI router — TFT display showing connected device names" loading="lazy" />
-        <span class="thumb-caption">TFT - device name view</span>
-      </a>
-	  <a href="images/TFT4s.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate TFT routing view" title="Click to view full size: TFT display — routing view">
-        <img src="images/TFT4s.jpg" alt="MidiXLate MIDI router — TFT display showing MIDI routing configuration" loading="lazy" />
-        <span class="thumb-caption">TFT - routing view</span>
-      </a>
-      <a href="images/TFT2s.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate TFT port filter view" title="Click to view full size: TFT display — port filter view">
-        <img src="images/TFT2s.jpg" alt="MidiXLate MIDI router — TFT display showing port filter settings" loading="lazy" />
-        <span class="thumb-caption">TFT - port filter view</span>
-      </a>
-      <a href="images/TFT3s.jpg" target="_blank" rel="noopener" class="thumb-item" aria-label="MidiXLate TFT display channel lock view" title="Click to view full size: TFT display — channel lock">
-        <img src="images/TFT3s.jpg" alt="MidiXLate MIDI router — TFT display showing channel lock configuration" loading="lazy" />
-        <span class="thumb-caption">TFT - channel lock view</span>
-      </a>
-  
-     
-    </div>
-  </fieldset>
   </div><!-- end product-card -->
 </section>
 </div><!-- end section-band -->
 
-<hr class="divider-dark" />
-<br>
-<!-- ── MIDI OVERVIEW ── -->
-<section id="midi-overview" aria-labelledby="midi-heading" style="padding-top:.5rem;">
-  <h2 class="section-title" id="midi-heading">MIDI Basics</h2>
-  <p class="section-sub">Everything a musician needs to understand MIDI — from first principles to advanced routing.</p>
-
-  <div class="midi-intro">
-    <strong>MIDI is not sound.</strong> Musical Instrument Digital Interface (developed in 1981) is a digital language — a set of instructions that tells instruments, computers, and hardware what to play, when to play it, and how. Think of it like sheet music: the score tells a performer what to do, but the performer's instrument produces the actual sound. MIDI works the same way — it carries performance data, not audio.
-  </div>
-
-  <!-- ── Message types ── -->
-  <div class="midi-section-head">Core message types</div>
-  <div class="midi-grid" role="list" style="grid-template-columns: repeat(3, 1fr);">
-
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">🎵</div>
-      <h3>Note On / Note Off</h3>
-      <p>The most fundamental MIDI messages. When you press a key, a <em>Note On</em> message fires containing three values:</p>
-      <ul>
-        <li><strong>Note number</strong> <span class="midi-val">0–127</span> — which pitch (middle C = 60)</li>
-        <li><strong>Velocity</strong> <span class="midi-val">0–127</span> — how hard the key was struck</li>
-        <li><strong>Channel</strong> <span class="midi-val">1–16</span> — which device receives it</li>
-      </ul>
-      <p style="margin-top:.5rem;font-size:.82rem;color:var(--muted)">A velocity of 0 is treated as Note Off. Duration is the time between Note On and Note Off.</p>
-    </div>
-
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">🎛️</div>
-      <h3>Control Change (CC)</h3>
-      <p>Sliders, knobs, foot pedals, and wheels send CC messages to adjust performance parameters in real time. Values always range <span class="midi-val">0–127</span>.</p>
-      <ul>
-        <li><strong>CC 1</strong> — Modulation wheel</li>
-        <li><strong>CC 7</strong> — Channel volume</li>
-        <li><strong>CC 10</strong> — Pan (left/right)</li>
-        <li><strong>CC 11</strong> — Expression</li>
-        <li><strong>CC 64</strong> — Sustain pedal</li>
-        <li><strong>CC 121</strong> — Reset all controllers</li>
-      </ul>
-    </div>
-
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">🎼</div>
-      <h3>Program Change (PC)</h3>
-      <p>Instructs a device to switch to a different sound patch or preset instantly. Essential for live performance — send a single PC message to recall an entire instrument configuration.</p>
-      <ul>
-        <li>Range: <span class="midi-val">0–127</span> (128 patches per bank)</li>
-        <li>Combined with <strong>Bank Select</strong> (CC 0 / CC 32) for access to thousands of patches</li>
-        <li>Roland Integra-7 uses PC + bank to select from 6,000+ SuperNATURAL tones</li>
-      </ul>
-    </div>
-
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">〰️</div>
-      <h3>Pitch Bend</h3>
-      <p>A dedicated message for smooth pitch variation — the wheel or lever on most keyboards. Uses 14-bit resolution (<span class="midi-val">0–16383</span>) for silky-smooth bends, far finer than a standard CC.</p>
-      <ul>
-        <li>Center value (no bend) = 8192</li>
-        <li>Spring-loaded: snaps back to center when released</li>
-        <li>Bend range is configurable per device (typically ±2 semitones)</li>
-      </ul>
-    </div>
-
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">👆</div>
-      <h3>Aftertouch</h3>
-      <p>Pressure applied to a key <em>after</em> it is fully depressed. Not all keyboards support it, but it adds powerful expressive control.</p>
-      <ul>
-        <li><strong>Channel aftertouch</strong> — one pressure value for all held keys (most common)</li>
-        <li><strong>Polyphonic aftertouch</strong> — individual pressure per key (rare, expensive)</li>
-        <li>Commonly mapped to vibrato, filter cutoff, or volume swell</li>
-      </ul>
-    </div>
-
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">🏭</div>
-      <h3>System Exclusive (SysEx)</h3>
-      <p>A free-form message type that each manufacturer defines for their own devices. Unlike standard MIDI, SysEx can be any length and carry any data.</p>
-      <ul>
-        <li>Patch backup and restore (dump your synth settings to PC)</li>
-        <li>Deep parameter editing not possible via CC</li>
-        <li>Firmware updates on some devices</li>
-        <li>Roland Integra-7 relies heavily on SysEx for tone control</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- ── Channels ── -->
-  <div class="midi-section-head">MIDI channels</div>
-  <div class="midi-intro" style="margin-bottom:.75rem">
-    MIDI supports <strong>16 independent channels</strong> on a single cable — like 16 separate lanes on a highway. Each device is configured to listen on one or more channels, so you can connect many instruments to the same cable and control them independently.
-  </div>
-  <div class="midi-two-col">
-    <div class="midi-card">
-      <h3>How channels work</h3>
-      <ul>
-        <li>Each Note On, CC, and PC message carries a channel number <span class="midi-val">1–16</span></li>
-        <li>A device ignores messages addressed to channels it isn't set to receive</li>
-        <li><strong>Channel 10</strong> is universally reserved for drums in General MIDI</li>
-        <li>Multi-timbral devices (like the Integra-7) can receive on all 16 channels simultaneously, playing a different instrument on each</li>
-      </ul>
-    </div>
-    <div class="midi-card">
-      <h3>Omni mode vs. poly mode</h3>
-      <ul>
-        <li><strong>Omni On</strong> — device responds to all channels (useful for testing)</li>
-        <li><strong>Omni Off</strong> — device responds only to its assigned channel</li>
-        <li><strong>Poly mode</strong> — multiple notes play simultaneously on one channel</li>
-        <li><strong>Mono mode</strong> — one note at a time per channel (useful for wind controllers and legato synths)</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ── System messages ── -->
-  <div class="midi-section-head">System messages</div>
-  <div class="midi-grid" role="list">
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">⏱️</div>
-      <h3>MIDI Clock &amp; Sync</h3>
-      <p>24 timing pulses are sent per quarter note, allowing all connected devices to stay in perfect tempo sync. Essential when using drum machines, arpeggiators, or sequencers together.</p>
-      <ul>
-        <li><strong>Start / Stop / Continue</strong> — transport control commands</li>
-        <li><strong>Song Position Pointer</strong> — jump to a specific beat in a sequence</li>
-        <li>One master device sends clock; all others follow</li>
-      </ul>
-    </div>
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">🔌</div>
-      <h3>MIDI Connections</h3>
-      <p>Physical MIDI uses 5-pin DIN connectors on three ports:</p>
-      <ul>
-        <li><strong>MIDI OUT</strong> — transmits data from this device</li>
-        <li><strong>MIDI IN</strong> — receives data from another device</li>
-        <li><strong>MIDI THRU</strong> — passes IN data straight through unchanged (for daisy-chaining)</li>
-        <li>USB-MIDI is now standard on most modern gear</li>
-        <li>A MIDI interface connects DIN devices to a computer's USB port</li>
-      </ul>
-    </div>
-    <div class="midi-card" role="listitem">
-      <div class="midi-card-icon">🔀</div>
-      <h3>Hub vs. Router</h3>
-      <p>How you connect multiple MIDI devices matters enormously for performance and simplicity.</p>
-      <ul>
-        <li><strong>Hub / Thru box</strong> — broadcasts every incoming message to all connected devices; simple but noisy and hard to configure per-device</li>
-        <li><strong>Router (MidiXLate)</strong> — inspects each packet and sends it only to its intended destination; reduces network traffic, eliminates conflicts, simplifies per-device setup</li>
-        <li>For 1–3 devices, a hub is fine. For complex rigs, a router is essential.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ── Common CC reference ── -->
-  <div class="midi-section-head">Common CC numbers quick reference</div>
-  <table class="midi-cc-table" aria-label="Common MIDI Control Change numbers">
-    <thead>
-      <tr><th>CC #</th><th>Name</th><th>Typical use</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>CC 0</td><td>Bank Select MSB</td><td>Select patch bank (high byte); always paired with CC 32 then a Program Change</td></tr>
-      <tr><td>CC 1</td><td>Modulation</td><td>Vibrato depth, LFO intensity — the mod wheel on most keyboards</td></tr>
-      <tr><td>CC 7</td><td>Channel Volume</td><td>Overall volume of the channel (distinct from velocity)</td></tr>
-      <tr><td>CC 10</td><td>Pan</td><td>Stereo position: 0 = hard left, 64 = center, 127 = hard right</td></tr>
-      <tr><td>CC 11</td><td>Expression</td><td>Fine volume control within a phrase; used for swells and dynamics</td></tr>
-      <tr><td>CC 32</td><td>Bank Select LSB</td><td>Select patch bank (low byte); paired with CC 0</td></tr>
-      <tr><td>CC 64</td><td>Sustain Pedal</td><td>0–63 = off, 64–127 = on; holds notes after keys are released</td></tr>
-      <tr><td>CC 65</td><td>Portamento</td><td>On/off switch for gliding between notes</td></tr>
-      <tr><td>CC 71</td><td>Resonance</td><td>Filter resonance / timbre brightness</td></tr>
-      <tr><td>CC 74</td><td>Brightness</td><td>Filter cutoff frequency</td></tr>
-      <tr><td>CC 91</td><td>Reverb Send</td><td>Amount of signal sent to the reverb effect</td></tr>
-      <tr><td>CC 93</td><td>Chorus Send</td><td>Amount of signal sent to the chorus effect</td></tr>
-      <tr><td>CC 121</td><td>Reset All Controllers</td><td>Resets all CC values to default — useful when stuck notes occur</td></tr>
-      <tr><td>CC 123</td><td>All Notes Off</td><td>Emergency stop for stuck or hung notes</td></tr>
-    </tbody>
-  </table>
-
-</section>
-
-<hr class="divider" />
-
 
 <!-- ── CONTACT ── -->
-<div class="contact-band" id="contact">
+<div class="contact-band" id="contact" style="text-align:center;">
   <h2>Ready to upgrade your MIDI workflow?</h2>
   <p>Questions about any product, router availability, or custom engineering work — Larry responds personally.</p>
-
-  <form class="contact-form" id="contactForm">
-    <div class="contact-form-row">
-      <div>
-        <label for="cf-name">Your name</label>
-        <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required />
-      </div>
-      <div>
-        <label for="cf-email">Email address</label>
-        <input type="email" id="cf-email" name="email" placeholder="jane@example.com" required />
-      </div>
-    </div>
-    <div>
-      <label for="cf-subject">Subject</label>
-      <select id="cf-subject" name="subject">
-        <option value="MidiControl question">MidiControl question</option>
-        <option value="MidiOrganize question">MidiOrganize question</option>
-        <option value="MidiXLate router inquiry">MidiXLate router inquiry</option>
-        <option value="Custom engineering">Custom engineering</option>
-        <option value="General inquiry" selected>General inquiry</option>
-        <option value="Creative feedback">Creative feedback</option>
-      </select>
-    </div>
-    <div>
-      <label for="cf-message">Message</label>
-      <textarea id="cf-message" name="message" placeholder="Tell Larry what you're working on…" required></textarea>
-    </div>
-    <div class="contact-form-submit">
-      <button type="submit" id="cfSubmit">Send Message</button>
-      <div class="form-status" id="cfStatus" aria-live="polite"></div>
-    </div>
-  </form>
-
-  <div class="contact-row" style="margin-top:1.5rem;">
-    <a href="https://buymeacoffee.com/sierradigitalaudio" class="nav-coffee" target="_blank" rel="noopener" title="Support Sierra Digital Audio — every coffee is appreciated!">
-      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height:44px; width:auto; border-radius:8px;" />
-    </a>
-  </div>
-  <p style="margin-top:.9rem;font-size:.85rem;color:var(--muted)">
-    📍 13155 Falcon Point Place, Truckee, CA 96161 USA &nbsp;·&nbsp; 📞 925-765-2883
-  </p>
+  <a href="contact.html" class="btn-primary" style="display:inline-block; margin-top:.5rem;">✉ Go to Contact Page</a>
+  <p style="margin-top:1rem; font-size:.85rem; color:var(--muted);">📍 Truckee, CA 96161 &nbsp;·&nbsp; 📞 925-765-2883 &nbsp;·&nbsp; SierraDigitalAudio@gmail.com</p>
 </div>
 
 <script>
@@ -2549,10 +1530,10 @@
     </div>
     <div class="site-footer-col">
       <h4>Products</h4>
-      <a href="#midicontrol">MidiControl</a>
-      <a href="#midiorganize">MidiOrganize</a>
-      <a href="#midixlate">MidiXLate Router</a>
-      <a href="#midi-overview">MIDI Basics</a>
+      <a href="midicontrol.html">MidiControl</a>
+      <a href="midiorganize.html">MidiOrganize</a>
+      <a href="midixlate.html">MidiXLate Router</a>
+      <a href="midibasics.html">MIDI Basics</a>
     </div>
     <div class="site-footer-col">
       <h4>Contact</h4>
