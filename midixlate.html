@@ -316,6 +316,10 @@
 
     /* ── iPhone / narrow mobile optimizations ── */
     @media (max-width: 480px) {
+      /* Hide Download and Contact buttons on mobile */
+      .nav-dl-btn { display: none !important; }
+      .nav-contact-btn { display: none !important; }
+
       /* Fix overflow from fixed-width buttons */
       .link-chip { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
 
@@ -402,8 +406,8 @@
     <li><a href="midibasics.html">MIDI Basics</a></li>
   </ul>
   <div style="display:flex; align-items:center; justify-content:flex-end; gap:.6rem;">
-    <a href="./downloads/setupMidiXlate-V1.5.exe" class="nav-cta" style="background:#1a7a3a;">🔽 Download</a>
-    <a href="contact.html" class="nav-cta">Contact</a>
+    <a href="./downloads/setupMidiXlate-V1.5.exe" class="nav-cta nav-dl-btn" style="background:#1a7a3a;">🔽 Download</a>
+    <a href="contact.html" class="nav-cta nav-contact-btn">Contact</a>
     <button class="nav-hamburger" aria-label="Toggle navigation menu" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open');">
       <span></span><span></span><span></span>
     </button>
