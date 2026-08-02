@@ -24,12 +24,12 @@
     img { max-width: 100%; height: auto; border-radius: var(--r); display: block; }
     nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 2px solid #1a5f8a; padding: 0 2rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 68px; }
     .nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 10px; }
-    .nav-logo-text { background: linear-gradient(90deg, #1a5f8a 0%, #2d9cdb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-transform: uppercase; letter-spacing: .12em; font-size: 1.1rem; }
+    .nav-logo-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: linear-gradient(90deg, #1a5f8a 0%, #2d9cdb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-transform: uppercase; letter-spacing: .12em; font-size: 1.1rem; }
     .nav-links { display: flex; gap: 12px; list-style: none; }
     .nav-links a { color: #ffffff; font-size: 0.82rem; font-weight: 600; padding: 6px 14px; border-radius: 20px; background: var(--highlight); display: inline-flex; align-items: center; transition: background .2s; white-space: nowrap; }
     .nav-links a:hover, .nav-links a.active { background: #0d3d5c; color: #ffffff; opacity: 1; }
     .nav-cta { background: var(--highlight); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; display: inline-flex; align-items: center; }
-    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; margin-left: 1rem; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 12px; border: none; background: none; margin-left: 1rem; min-width: 44px; min-height: 44px; justify-content: center; align-items: center; -webkit-tap-highlight-color: rgba(26,95,138,.15); }
     .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--highlight); border-radius: 2px; transition: transform .2s, opacity .2s; }
     .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
@@ -74,6 +74,7 @@
 
     /* ── iPhone / narrow mobile optimizations ── */
     @media (max-width: 480px) {
+      .nav-contact-btn { display: none !important; }
       /* Fix overflow from fixed-width buttons */
       .link-chip { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
 
@@ -108,14 +109,14 @@
       .thumb-item img { height: 70px; }
 
       /* Nav logo text smaller */
-      .nav-logo-text { font-size: .85rem; letter-spacing: .06em; }
+      .nav-logo-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: .85rem; letter-spacing: .06em; }
     }
 
     @media (max-width: 760px) {
-      nav { padding: 0 1rem; height: 56px; }
+      nav { padding: 0 1rem; height: 56px; display: flex; justify-content: space-between; align-items: center; }
       .nav-links { display: none; }
       .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(255,255,255,.98); border-bottom: 2px solid #1a5f8a; padding: 1rem 1.5rem; gap: .75rem; z-index: 99; }
-      .nav-hamburger { display: flex; }
+      .nav-hamburger { display: flex; margin-left: auto; }
       .hero { padding: 2rem 1.25rem 1.5rem; }
       .page-wrap { padding: 1.75rem 1.1rem 3rem; }
       .contact-form-row { grid-template-columns: 1fr; }
@@ -147,7 +148,7 @@
   </ul>
   <div style="display:flex; align-items:center; justify-content:flex-end; gap:.6rem;">
     
-    <a href="contact.html" class="nav-cta">Contact</a>
+    <a href="contact.html" class="nav-cta nav-contact-btn">Contact</a>
     <button class="nav-hamburger" aria-label="Toggle navigation menu" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open');"><span></span><span></span><span></span></button>
   </div>
 </nav>
