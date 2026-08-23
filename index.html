@@ -1467,6 +1467,17 @@
       btn.textContent = 'Send Message';
     }
   });
+
+  // Shasta AgTech visit counter (silent — no display, once per session)
+  // sessionStorage clears when the tab/browser closes, so this fires once
+  // per visit rather than once per page load within the same visit.
+  // Cross-domain call to shastaagtech.com; mode:'no-cors' means we never
+  // read the response, so no CORS configuration is needed server-side.
+  (function () {
+    if (sessionStorage.getItem('sda_visit_counted')) return;
+    sessionStorage.setItem('sda_visit_counted', '1');
+    fetch('https://shastaagtech.com/api/sda-counter/sda_index_visits', { mode: 'no-cors' }).catch(function () {});
+  })();
 </script>
 
 

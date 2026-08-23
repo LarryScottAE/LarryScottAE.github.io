@@ -406,7 +406,7 @@
     <li><a href="midibasics.html">MIDI Basics</a></li>
   </ul>
   <div style="display:flex; align-items:center; justify-content:flex-end; gap:.6rem;">
-    <a href="./downloads/setupMidiOrganize-V1.5.exe" class="nav-cta nav-dl-btn" style="background:#1a7a3a;">🔽 Download</a>
+    <a href="./downloads/setupMidiOrganize-V1.5.exe" data-sda-counter="midiorganize_installer_downloads" class="nav-cta nav-dl-btn" style="background:#1a7a3a;">🔽 Download</a>
     <a href="contact.html" class="nav-cta nav-contact-btn">Contact</a>
     <button class="nav-hamburger" aria-label="Toggle navigation menu" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open');">
       <span></span><span></span><span></span>
@@ -422,7 +422,7 @@
   <h1 style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;">MidiOrganize &mdash; <span>Free MIDI Loop Librarian</span> for Your DAW</h1>
   <p class="hero-sub">Browse, preview, and drag MIDI loops directly into Reaper, Cubase, or any DAW. No expensive VST license. No CPU overhead. No internet connection. Ever.</p>
   <div class="hero-ctas">
-    <a href="./downloads/setupMidiOrganize-V1.5.exe" class="btn-primary">&#128317; Free Download &mdash; v1.5</a>
+    <a href="./downloads/setupMidiOrganize-V1.5.exe" data-sda-counter="midiorganize_installer_downloads" class="btn-primary">&#128317; Free Download &mdash; v1.5</a>
     <a href="#midiorganize" class="btn-outline-white">See Features</a>
   </div>
   <div class="hero-stats">
@@ -458,7 +458,7 @@
       </ul>
       <div class="product-links">
 
-        <a href="https://sierradigitalaudio.com/tutorials/MidiOrganize-Tutorial.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 8-minute MidiOrganize video tutorial" style="width:455px; justify-content:center;"
+        <a href="https://sierradigitalaudio.com/tutorials/MidiOrganize-Tutorial.mp4" data-sda-counter="midiorganize_tutorial_downloads" class="link-chip" target="_blank" rel="noopener" title="Watch the 8-minute MidiOrganize video tutorial" style="width:455px; justify-content:center;"
 		>▶ MidiOrganize Video Tutorial (8 min / 760 Meg)</a>
 
         <a href="https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads" class="link-chip" target="_blank" rel="noopener" title="View the MidiControl source code repository" style="width:455px; justify-content:center;"
@@ -467,7 +467,7 @@
         <a href="https://groovemonkee.com" class="link-chip" target="_blank" rel="noopener" title="Download free MIDI drum loops from Groove Monkee" style="width:455px; justify-content:center;"
 		>🥁 Groove Monkee Free Loops</a>
 
-        <a href="./index.html" class="link-chip" target="popup" onclick="window.open('./downloads/setupMidiOrganize-V1.5.exe','popup','width=1600'); return false;" title="Download MidiOrganize Version 1.5 April 2026 installer" style="width:455px; justify-content:center;"
+        <a href="./index.html" data-sda-counter="midiorganize_installer_downloads" class="link-chip" target="popup" onclick="window.open('./downloads/setupMidiOrganize-V1.5.exe','popup','width=1600'); return false;" title="Download MidiOrganize Version 1.5 April 2026 installer" style="width:455px; justify-content:center;"
 		>🔽 MidiOrganize Version 1.5 March 2026 installer (.exe)</a>
 
         <div style="width:100%; font-size:.72rem; color:var(--muted); font-family:monospace; padding:4px 2px; letter-spacing:.02em; position:relative; cursor:help; display:inline-block;"
@@ -1097,6 +1097,16 @@
   } else {
     document.querySelectorAll('.fade-in').forEach(function(el) { el.classList.add('visible'); });
   }
+
+  // Shasta AgTech usage counters (silent — no display, fire-and-forget)
+  // Cross-domain call to shastaagtech.com; mode:'no-cors' means we never
+  // read the response, so no CORS configuration is needed server-side.
+  document.querySelectorAll('[data-sda-counter]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var name = el.getAttribute('data-sda-counter');
+      fetch('https://shastaagtech.com/api/sda-counter/' + encodeURIComponent(name), { mode: 'no-cors' }).catch(function () {});
+    });
+  });
 </script>
 
 

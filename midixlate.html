@@ -406,7 +406,7 @@
     <li><a href="midibasics.html">MIDI Basics</a></li>
   </ul>
   <div style="display:flex; align-items:center; justify-content:flex-end; gap:.6rem;">
-    <a href="./downloads/setupMidiXlate-V1.5.exe" class="nav-cta nav-dl-btn" style="background:#1a7a3a;">🔽 Download</a>
+    <a href="./downloads/setupMidiXlate-V1.5.exe" data-sda-counter="midixlate_installer_downloads" class="nav-cta nav-dl-btn" style="background:#1a7a3a;">🔽 Download</a>
     <a href="contact.html" class="nav-cta nav-contact-btn">Contact</a>
     <button class="nav-hamburger" aria-label="Toggle navigation menu" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open');">
       <span></span><span></span><span></span>
@@ -465,9 +465,9 @@
         </ul>
         <div class="product-links" style="margin-top:1.25rem;">
           <a href="contact.html" class="link-chip">✉ Inquire about rental / purchase</a>
-          <a href="./downloads/setupMidiXlate-V1.5.exe" class="link-chip">🔽 MidiXLate Version 1.5 installer (.exe)</a>
-          <a href="https://sierradigitalaudio.com/tutorials/Tutorial_MidiXLate_Hardware.mp4" class="link-chip" target="_blank" rel="noopener">▶ Hardware Tutorial (6 min)</a>
-          <a href="https://sierradigitalaudio.com/tutorials/Tutorial_MidiXLate_Software.mp4" class="link-chip" target="_blank" rel="noopener">▶ Software Tutorial (8 min)</a>
+          <a href="./downloads/setupMidiXlate-V1.5.exe" data-sda-counter="midixlate_installer_downloads" class="link-chip">🔽 MidiXLate Version 1.5 installer (.exe)</a>
+          <a href="https://sierradigitalaudio.com/tutorials/Tutorial_MidiXLate_Hardware.mp4" data-sda-counter="midixlate_tutorial_downloads" class="link-chip" target="_blank" rel="noopener">▶ Hardware Tutorial (6 min)</a>
+          <a href="https://sierradigitalaudio.com/tutorials/Tutorial_MidiXLate_Software.mp4" data-sda-counter="midixlate_tutorial_downloads" class="link-chip" target="_blank" rel="noopener">▶ Software Tutorial (8 min)</a>
           <div style="font-size:.72rem; color:var(--muted); font-family:monospace; padding:4px 2px; position:relative; cursor:help; display:inline-block;"
                onmouseenter="this.querySelector('.sha-tooltip').style.opacity='1'; this.querySelector('.sha-tooltip').style.pointerEvents='auto';"
                onmouseleave="this.querySelector('.sha-tooltip').style.opacity='0'; this.querySelector('.sha-tooltip').style.pointerEvents='none';">
@@ -807,6 +807,16 @@
   } else {
     document.querySelectorAll('.fade-in').forEach(function(el) { el.classList.add('visible'); });
   }
+
+  // Shasta AgTech usage counters (silent — no display, fire-and-forget)
+  // Cross-domain call to shastaagtech.com; mode:'no-cors' means we never
+  // read the response, so no CORS configuration is needed server-side.
+  document.querySelectorAll('[data-sda-counter]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var name = el.getAttribute('data-sda-counter');
+      fetch('https://shastaagtech.com/api/sda-counter/' + encodeURIComponent(name), { mode: 'no-cors' }).catch(function () {});
+    });
+  });
 </script>
 
 </body>

@@ -406,7 +406,7 @@
     <li><a href="midibasics.html">MIDI Basics</a></li>
   </ul>
   <div style="display:flex; align-items:center; justify-content:flex-end; gap:.6rem;">
-    <a href="./downloads/setupMidiControl-V1.7.exe" class="nav-cta nav-dl-btn" style="background:#1a7a3a;">🔽 Download</a>
+    <a href="./downloads/setupMidiControl-V1.7.exe" data-sda-counter="midicontrol_installer_downloads" class="nav-cta nav-dl-btn" style="background:#1a7a3a;">🔽 Download</a>
     <a href="contact.html" class="nav-cta nav-contact-btn">Contact</a>
     <button class="nav-hamburger" aria-label="Toggle navigation menu" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').classList.toggle('open');">
       <span></span><span></span><span></span>
@@ -422,7 +422,7 @@
   <h1>MidiControl &mdash; <span>One-Click MIDI</span><br/>Patch Changes for Windows</h1>
   <p class="hero-sub">Stop hunting through hardware menus. Build organised lists of patch changes, control changes and SysEx commands &mdash; fire any one with a single click.</p>
   <div class="hero-ctas">
-    <a href="./downloads/setupMidiControl-V1.7.exe" class="btn-primary">&#128317; Free Download &mdash; v1.7</a>
+    <a href="./downloads/setupMidiControl-V1.7.exe" data-sda-counter="midicontrol_installer_downloads" class="btn-primary">&#128317; Free Download &mdash; v1.7</a>
     <a href="#midicontrol" class="btn-outline-white">See Features</a>
   </div>
   <div class="hero-stats">
@@ -460,10 +460,10 @@
       </ul>
       <div class="product-links">
        
- 	    <a href="https://sierradigitalaudio.com/tutorials/MidiControl_V1.6_Tutorial.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 11-minute MidiControl video tutorial" style="width:455px; justify-content:center;"
+ 	    <a href="https://sierradigitalaudio.com/tutorials/MidiControl_V1.6_Tutorial.mp4" data-sda-counter="midicontrol_tutorial_downloads" class="link-chip" target="_blank" rel="noopener" title="Watch the 11-minute MidiControl video tutorial" style="width:455px; justify-content:center;"
 		   >▶ MidiControl 1.6 Video Tutorial (11 min, 80 meg)</a>
         
-		<a href="https://sierradigitalaudio.com/tutorials/MidiControl-Integra7-Tutorial.mp4" class="link-chip" target="_blank" rel="noopener" title="Watch the 6-minute Roland Integra-7 tutorial" style="width:455px; justify-content:center;"
+		<a href="https://sierradigitalaudio.com/tutorials/MidiControl-Integra7-Tutorial.mp4" data-sda-counter="midicontrol_tutorial_downloads" class="link-chip" target="_blank" rel="noopener" title="Watch the 6-minute Roland Integra-7 tutorial" style="width:455px; justify-content:center;"
 		   >▶ MidiControl 1.6 Roland Integra-7 Tutorial (6 min, 80 meg)</a>
         
 		<a href="https://sierradigitalaudio.com/downloads/INTEGRA-7_SoundList.pdf" class="link-chip" target="_blank" rel="noopener" title="Download the complete Roland Integra-7 sound list PDF" style="width:455px; justify-content:center;">
@@ -473,7 +473,7 @@
 		<a href="https://github.com/LarryScottAE/LarryScottAE.github.io/tree/main/downloads" class="link-chip" target="_blank" rel="noopener" title="View the MidiControl source code repository" style="width:455px; justify-content:center;"
 		   >📦 GitHub Repository</a>
 
-        <a href="./index.html" class="link-chip" target="popup" onclick="window.open('./downloads/setupMidiControl-V1.7.exe','popup','width=1600'); return false;" title="Download MidiControl Version 1.7 April 2026 installer" style="width:455px; justify-content:center;"
+        <a href="./index.html" data-sda-counter="midicontrol_installer_downloads" class="link-chip" target="popup" onclick="window.open('./downloads/setupMidiControl-V1.7.exe','popup','width=1600'); return false;" title="Download MidiControl Version 1.7 April 2026 installer" style="width:455px; justify-content:center;"
 		   >🔽 Download MidiControl Version 1.7 April 2026 installer (.exe)</a>
 		   
         <div style="width:100%; font-size:.72rem; color:var(--muted); font-family:monospace; padding:4px 2px; letter-spacing:.02em; position:relative; cursor:help; display:inline-block;"
@@ -992,6 +992,16 @@
   } else {
     document.querySelectorAll('.fade-in').forEach(function(el) { el.classList.add('visible'); });
   }
+
+  // Shasta AgTech usage counters (silent — no display, fire-and-forget)
+  // Cross-domain call to shastaagtech.com; mode:'no-cors' means we never
+  // read the response, so no CORS configuration is needed server-side.
+  document.querySelectorAll('[data-sda-counter]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var name = el.getAttribute('data-sda-counter');
+      fetch('https://shastaagtech.com/api/sda-counter/' + encodeURIComponent(name), { mode: 'no-cors' }).catch(function () {});
+    });
+  });
 </script>
 
 
