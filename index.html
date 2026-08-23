@@ -1467,8 +1467,15 @@
       btn.textContent = 'Send Message';
     }
   });
+</script>
 
+<script>
   // Shasta AgTech visit counter (silent — no display, once per session)
+  // Deliberately isolated in its own <script> block: an uncaught error in
+  // any OTHER script on this page (e.g. a null-element bug) stops that
+  // block's remaining code from running, but does not affect a separate
+  // <script> tag — so the counter still fires even if something else
+  // on the page is broken.
   // sessionStorage clears when the tab/browser closes, so this fires once
   // per visit rather than once per page load within the same visit.
   // Cross-domain call to shastaagtech.com; mode:'no-cors' means we never
@@ -1479,6 +1486,7 @@
     fetch('https://shastaagtech.com/api/sda-counter/sda_index_visits', { mode: 'no-cors' }).catch(function () {});
   })();
 </script>
+
 
 
 <!-- ── COPYRIGHT NOTICE ── -->
