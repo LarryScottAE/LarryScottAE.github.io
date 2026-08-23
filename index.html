@@ -1428,45 +1428,6 @@
       }, {threshold:0.3}).observe(app);
     } else { setTimeout(run, 720); }
   })();
-
-  // Set subject dropdown when router inquiry buttons are clicked
-  ['btnInquireRouter', 'btnInquireRental'].forEach(function(id) {
-    var btn = document.getElementById(id);
-    if (btn) btn.addEventListener('click', function() {
-      document.getElementById('cf-subject').value = 'MidiXLate router inquiry';
-    });
-  });
-
-  document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn    = document.getElementById('cfSubmit');
-    const status = document.getElementById('cfStatus');
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    status.className = 'form-status';
-    status.textContent = '';
-    try {
-      const res = await fetch('https://formspree.io/f/xnjkqkjp', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(this)
-      });
-      if (res.ok) {
-        status.className = 'form-status success';
-        status.textContent = '✓ Message sent! Larry will be in touch soon.';
-        this.reset();
-      } else {
-        const data = await res.json();
-        throw new Error((data.errors || []).map(x => x.message).join(', ') || 'Submission failed');
-      }
-    } catch (err) {
-      status.className = 'form-status error';
-      status.textContent = '✗ ' + (err.message || 'Something went wrong — please try again.');
-    } finally {
-      btn.disabled = false;
-      btn.textContent = 'Send Message';
-    }
-  });
 </script>
 
 <script>
