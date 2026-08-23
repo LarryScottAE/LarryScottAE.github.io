@@ -807,8 +807,14 @@
   } else {
     document.querySelectorAll('.fade-in').forEach(function(el) { el.classList.add('visible'); });
   }
+</script>
 
+<script>
   // Shasta AgTech usage counters (silent — no display, fire-and-forget)
+  // Deliberately isolated in its own <script> block: an uncaught error in
+  // any OTHER script on this page stops that block's remaining code from
+  // running, but does not affect a separate <script> tag — so the
+  // counters still fire even if something else on the page is broken.
   // Cross-domain call to shastaagtech.com; mode:'no-cors' means we never
   // read the response, so no CORS configuration is needed server-side.
   document.querySelectorAll('[data-sda-counter]').forEach(function (el) {
